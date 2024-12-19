@@ -6,9 +6,7 @@
 
 ### Contact Information
 
-- **Phone:** +46
 - **Email:** [eshadi@kth.se](eshadi@kth.se)
-- **Address: Stockholm, Sweden
 - **LinkedIn:** [seyed-ehsan-hadi](https://www.linkedin.com/in/seyed-ehsan-hadi)
 - **Google Scholar:** [Google Scholar Profile](https://scholar.google.com/citations?hl=en&user=aqsQc48AAAAJ)
 - **Visa Status:** 🟢 **Swedish Resident**
