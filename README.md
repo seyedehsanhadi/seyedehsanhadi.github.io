@@ -5,59 +5,84 @@
     <title>Seyed Ehsan Hadi CV</title>
 <style>
     :root {
-        --primary-color: #8A9A5B;     /* Moss Green */
-        --secondary-color: #9BE0FC;    /* Sky Blue */
-        --accent-color: #FFDAB9;       /* Peach */
-        --dark-bg: #2c2c2c;
-        --text-color: #e0e0e0;
-        --highlight: #BEC496;          /* Pastel Green */
+        --bg-primary: #0a0a0f;
+        --bg-secondary: #151520;
+        --bg-tertiary: #1e1e2a;
+        --accent-primary: #7B68EE;    /* Soft Purple */
+        --accent-secondary: #00CED1;   /* Turquoise */
+        --accent-tertiary: #FF6B6B;    /* Coral */
+        --text-primary: #ffffff;
+        --text-secondary: #b3b3cc;
+        --text-muted: #666680;
+        --gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     }
 
     body {
-        font-family: 'Roboto', Arial, sans-serif;
+        font-family: 'Inter', 'Roboto', sans-serif;
         margin: 0;
         padding: 20px;
-        background-color: #f0f4f8;
-        color: #333;
-        background: linear-gradient(135deg, #f4f7f6, #e7f7f4);
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        background: linear-gradient(135deg, #0a0a0f 0%, #151520 100%);
+        min-height: 100vh;
     }
 
     .container {
         max-width: 1200px;
         margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
+        background-color: var(--bg-secondary);
+        border-radius: 20px;
         overflow: hidden;
-        backdrop-filter: blur(10px);
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .header {
         display: flex;
-        background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+        background: var(--bg-tertiary);
         padding: 40px;
-        color: #fff;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--gradient);
     }
 
     .photo {
         width: 180px;
         height: 180px;
         border-radius: 15px;
-        border: 4px solid rgba(255, 255, 255, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid var(--accent-primary);
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba(123, 104, 238, 0.2);
     }
 
     .photo:hover {
         transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 30px rgba(123, 104, 238, 0.4);
+    }
+
+    .name {
+        font-size: 2.5em;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
     }
 
     .tab {
-        background: var(--highlight);
+        background: var(--bg-tertiary);
         padding: 10px;
-        border-radius: 10px 10px 0 0;
         display: flex;
         gap: 5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .tab button {
@@ -65,57 +90,187 @@
         border: none;
         padding: 12px 24px;
         border-radius: 8px;
-        color: #2c2c2c;
+        color: var(--text-secondary);
         font-weight: 500;
         transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
     }
 
-    .tab button:hover {
-        background: rgba(255, 255, 255, 0.2);
+    .tab button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--gradient);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: -1;
+    }
+
+    .tab button:hover::before {
+        opacity: 0.1;
     }
 
     .tab button.active {
-        background: var(--accent-color);
-        color: #333;
+        color: var(--text-primary);
+        background: var(--gradient);
     }
 
     .skill-item {
-        background: linear-gradient(120deg, var(--primary-color), var(--highlight));
-        color: white;
+        background: var(--bg-tertiary);
+        color: var(--text-primary);
         padding: 8px 16px;
         border-radius: 20px;
         margin: 5px;
         display: inline-block;
-        transition: transform 0.2s ease;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .skill-item:hover {
-        transform: scale(1.05);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(123, 104, 238, 0.2);
+        border-color: var(--accent-primary);
     }
 
     .contact-item {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 10px;
+        background: var(--bg-tertiary);
+        padding: 12px;
         border-radius: 8px;
         margin: 8px 0;
-        transition: background-color 0.3s ease;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .contact-item:hover {
-        background: rgba(255, 255, 255, 0.2);
+        transform: translateX(5px);
+        border-color: var(--accent-secondary);
     }
 
     .tabcontent {
         padding: 30px;
-        animation: fadeIn 0.5s ease;
-        background: linear-gradient(135deg, #ffffff, #f9f9f9);
+        animation: slideIn 0.5s ease;
+        background: var(--bg-secondary);
     }
 
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--bg-secondary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--accent-primary);
+        border-radius: 4px;
+    }
+
+    /* Neon Glow Effects */
+    .highlight {
+        position: relative;
+    }
+
+    .highlight::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0 0 20px var(--accent-primary);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .highlight:hover::after {
+        opacity: 0.5;
+    }
+
+    /* Glass Effect Cards */
+    .card {
+        background: rgba(30, 30, 42, 0.6);
+        backdrop-filter: blur(12px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        margin: 10px 0;
+    }
+
+    /* Progress Bars */
+    .progress-bar {
+        height: 4px;
+        background: var(--bg-tertiary);
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    .progress-bar-fill {
+        height: 100%;
+        background: var(--gradient);
+        transition: width 0.3s ease;
     }
 </style>
+
+<script>
+    // Add smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Add tab functionality with animations
+    function openTab(evt, tabName) {
+        const tabcontent = document.getElementsByClassName("tabcontent");
+        const tablinks = document.getElementsByClassName("tablinks");
+
+        // Hide all tabs
+        Array.from(tabcontent).forEach(tab => {
+            tab.style.display = "none";
+        });
+
+        // Remove active class
+        Array.from(tablinks).forEach(link => {
+            link.className = link.className.replace(" active", "");
+        });
+
+        // Show current tab with animation
+        const currentTab = document.getElementById(tabName);
+        currentTab.style.display = "block";
+        currentTab.style.animation = "slideIn 0.5s ease";
+        evt.currentTarget.className += " active";
+    }
+
+    // Add hover effects for skill items
+    document.querySelectorAll('.skill-item').forEach(item => {
+        item.addEventListener('mouseover', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+        item.addEventListener('mouseout', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+</script>
+
 
 </head>
 <body>
