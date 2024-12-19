@@ -3,173 +3,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seyed Ehsan Hadi CV</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-        
-        :root {
-            --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --primary-color: #bb86fc;
-            --secondary-color: #03dac6;
-            --dark-bg: #1e1e1e;
-        }
-        
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: all 0.3s ease;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 2px solid var(--primary-color);
-        }
-        
-        .header-left, .header-right {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--primary-color);
-            transition: transform 0.3s ease;
-        }
-        
-        .photo:hover {
-            transform: scale(1.05);
-        }
-        
-        .name {
-            font-size: 2.5em;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        .title {
-            font-size: 1.5em;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-        }
-        
-        .contact-item {
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-        }
-        
-        .contact-item i {
-            margin-right: 10px;
-            color: var(--primary-color);
-        }
-        
-        .tab {
-            display: flex;
-            justify-content: space-around;
-            background-color: var(--dark-bg);
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        
-        .tab button {
-            background-color: transparent;
-            border: none;
-            color: var(--text-color);
-            cursor: pointer;
-            font-size: 1.1em;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .tab button:hover, .tab button.active {
-            background-color: var(--primary-color);
-            color: var(--bg-color);
-        }
-        
-        .tabcontent {
-            display: none;
-            padding: 20px;
-            background-color: var(--dark-bg);
-            margin-top: 20px;
-            border-radius: 5px;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .skill-category {
-            font-weight: bold;
-            color: var(--secondary-color);
-            margin-top: 15px;
-        }
-        
-        .skill-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .skill-item {
-            background-color: var(--primary-color);
-            color: var(--bg-color);
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            transition: transform 0.3s ease;
-        }
-        
-        .skill-item:hover {
-            transform: translateY(-3px);
-        }
-        
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        a:hover {
-            color: var(--secondary-color);
-        }
-        
-        .impact-highlights {
-            margin-top: 20px;
-        }
-        
-        .impact-item {
-            margin: 10px 0;
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        .impact-item:before {
-            content: "•";
-            color: var(--secondary-color);
-            position: absolute;
-            left: 0;
-        }
-    </style>
+<style>
+    :root {
+        --primary-color: #8A9A5B;     /* Moss Green */
+        --secondary-color: #9BE0FC;    /* Sky Blue */
+        --accent-color: #FFDAB9;       /* Peach */
+        --dark-bg: #2c2c2c;
+        --text-color: #e0e0e0;
+        --highlight: #BEC496;          /* Pastel Green */
+    }
+
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f4f8;
+        color: #333;
+        background: linear-gradient(135deg, #f4f7f6, #e7f7f4);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+    }
+
+    .header {
+        display: flex;
+        background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+        padding: 40px;
+        color: #fff;
+    }
+
+    .photo {
+        width: 180px;
+        height: 180px;
+        border-radius: 15px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photo:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .tab {
+        background: var(--highlight);
+        padding: 10px;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        gap: 5px;
+    }
+
+    .tab button {
+        background: transparent;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        color: #2c2c2c;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .tab button:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .tab button.active {
+        background: var(--accent-color);
+        color: #333;
+    }
+
+    .skill-item {
+        background: linear-gradient(120deg, var(--primary-color), var(--highlight));
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        margin: 5px;
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+
+    .skill-item:hover {
+        transform: scale(1.05);
+    }
+
+    .contact-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        border-radius: 8px;
+        margin: 8px 0;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .tabcontent {
+        padding: 30px;
+        animation: fadeIn 0.5s ease;
+        background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
 </head>
 <body>
     <div class="container">
