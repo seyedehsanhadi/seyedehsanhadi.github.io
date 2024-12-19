@@ -9,21 +9,21 @@
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f0f4f8;
-            color: #333;
+            background-color: #121212;
+            color: #e0e0e0;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background-color: #ffffff;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background-color: #1e1e1e;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
             border-radius: 8px;
             overflow: hidden;
         }
         .header {
             display: flex;
-            background-color: #2c3e50;
-            color: #ecf0f1;
+            background-color: #2c2c2c;
+            color: #ffffff;
             padding: 30px;
         }
         .header-left { width: 30%; padding-right: 30px; }
@@ -33,7 +33,7 @@
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #ecf0f1;
+            border: 4px solid #bb86fc;
         }
         .contact { margin-top: 20px; }
         .contact-item {
@@ -43,17 +43,18 @@
         }
         .contact-item i {
             margin-right: 10px;
-            color: #3498db;
+            color: #bb86fc;
         }
         .name {
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 10px;
+            color: #bb86fc;
         }
         .title {
             font-size: 24px;
             font-style: italic;
-            color: #3498db;
+            color: #03dac6;
             margin-bottom: 20px;
         }
         .summary {
@@ -62,7 +63,7 @@
             margin-bottom: 20px;
         }
         .impact-highlights {
-            background-color: #ecf0f1;
+            background-color: #2c2c2c;
             padding: 20px;
             border-radius: 8px;
         }
@@ -73,13 +74,13 @@
         }
         .impact-item:before {
             content: "•";
-            color: #3498db;
+            color: #03dac6;
             position: absolute;
             left: 0;
         }
         .tab {
             overflow: hidden;
-            background-color: #f1f1f1;
+            background-color: #2c2c2c;
             border-radius: 8px 8px 0 0;
         }
         .tab button {
@@ -91,16 +92,17 @@
             padding: 14px 16px;
             transition: 0.3s;
             font-size: 17px;
+            color: #e0e0e0;
         }
-        .tab button:hover { background-color: #ddd; }
+        .tab button:hover { background-color: #3c3c3c; }
         .tab button.active {
-            background-color: #3498db;
-            color: white;
+            background-color: #bb86fc;
+            color: #121212;
         }
         .tabcontent {
             display: none;
             padding: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #3c3c3c;
             border-top: none;
             border-radius: 0 0 8px 8px;
             animation: fadeEffect 1s;
@@ -111,10 +113,12 @@
         }
         .skill-category {
             font-weight: bold;
-            color: #2c3e50;
+            color: #03dac6;
             margin-top: 15px;
         }
         .skill-items { margin-left: 20px; }
+        a { color: #bb86fc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -128,7 +132,7 @@
                     <div class="contact-item"><i class="fas fa-map-marker-alt"></i> 4, 183 59 Stockholm, Sweden</div>
                     <div class="contact-item"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/seyed-ehsan-hadi">seyed-ehsan-hadi</a></div>
                     <div class="contact-item"><i class="fas fa-globe"></i> <a href="https://scholar.google.com/citations?hl=en&user=aqsQc48AAAAJ">Google Scholar</a></div>
-                    <div class="contact-item"><i class="fas fa-check"></i> <span style="color: #2ecc71;">Swedish Resident</span></div>
+                    <div class="contact-item"><i class="fas fa-check"></i> <span style="color: #03dac6;">Swedish Resident</span></div>
                 </div>
             </div>
             <div class="header-right">
