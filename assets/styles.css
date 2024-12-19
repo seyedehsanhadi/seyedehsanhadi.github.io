@@ -28,3 +28,12 @@
   border: 1px solid #ccc;
   border-top: none;
 }
+
+/* Additional styles for sections */
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  color: #0066cc;
+}
