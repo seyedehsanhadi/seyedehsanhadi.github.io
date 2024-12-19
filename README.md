@@ -8,13 +8,15 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #f4f4f9;
         }
 
         .tab {
             overflow: hidden;
             border: 1px solid #ccc;
-            background-color: #f1f1f1;
+            background-color: #fff;
             border-radius: 5px 5px 0 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .tab button {
@@ -23,10 +25,12 @@
             border: none;
             outline: none;
             cursor: pointer;
-            padding: 14px 16px;
+            padding: 14px 20px;
             transition: 0.3s;
             font-size: 16px;
             border-right: 1px solid #ccc;
+            position: relative;
+            z-index: 1;
         }
 
         .tab button:last-child {
@@ -38,7 +42,10 @@
         }
 
         .tab button.active {
-            background-color: #ccc;
+            background-color: #007BFF;
+            color: white;
+            border-bottom: 2px solid #fff;
+            z-index: 2;
         }
 
         .tabcontent {
@@ -48,6 +55,14 @@
             border-top: none;
             border-radius: 0 0 5px 5px;
             background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+        }
+
+        .tabcontent.active {
+            display: block;
+            opacity: 1;
         }
 
         .tabcontent h3 {
@@ -57,6 +72,15 @@
         .tabcontent ul {
             list-style-type: disc;
             padding-left: 20px;
+        }
+
+        /* Additional Styling for Content */
+        .tabcontent p, .tabcontent li {
+            color: #333;
+        }
+
+        .tabcontent h3 {
+            color: #007BFF;
         }
     </style>
 </head>
@@ -102,13 +126,13 @@ function openProject(evt, projectName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+        tabcontent[i].classList.remove("active");
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(projectName).style.display = "block";
+    document.getElementById(projectName).classList.add("active");
     evt.currentTarget.className += " active";
 }
 
