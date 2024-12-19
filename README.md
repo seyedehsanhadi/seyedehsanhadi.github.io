@@ -194,6 +194,19 @@
         .tabcontent h3 {
             color: #007BFF;
         }
+
+        .skill-category {
+            font-weight: bold;
+        }
+
+        .skill-items ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .skill-items li {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -305,3 +318,11 @@
     </div>
 </div>
 
+<div class="section">
+    <div class="section-title">Projects</div>
+    <div class="section-content">
+        <div class="projects-tab">
+            <button class="tablinks" onclick="openProject(event, 'Project1')" id="defaultOpen">Project 1</button>
+            <button class="tablinks" onclick="openProject(event, 'Project2')">Project 2</button>
+            <button class="tablinks" onclick="openProject(event, 'Project3')">Project 3</button>
+        </
