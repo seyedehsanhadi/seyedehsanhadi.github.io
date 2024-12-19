@@ -1,156 +1,212 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seyed Ehsan Hadi, PhD</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        nav {
-            display: flex;
-            flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .tablinks {
-            padding: 10px 15px;
-            border: none;
-            background-color: #f1f1f1;
-            cursor: pointer;
-            margin: 5px; /* Add some spacing between buttons */
-            border-radius: 5px; /* Rounded corners */
-        }
-        .tablinks.active {
-            background-color: #ddd;
-        }
-        .tabcontent, .project-content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-top: none;
-        }
-        .tabcontent.active, .project-content.active {
-            display: block;
-        }
-        .project-nav {
-            display: flex;
-            margin-bottom: 10px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 10px;
-            border-top: 1px solid #ddd;
-        }
-        @media (max-width: 600px) { /* Styles for smaller screens */
-            nav {
-                flex-direction: column; /* Stack buttons vertically */
-                align-items: stretch; /* Make buttons full width */
-            }
-            .tablinks {
-                margin: 5px 0; /* Adjust margin for vertical layout */
-            }
-        }
-    </style>
-</head>
-<body>
+# Seyed Ehsan Hadi, PhD
 
-    <header>
-        <h1>Seyed Ehsan Hadi, PhD</h1>
-        <h2>Materials Chemist | Project Manager</h2>
-    </header>
+![Profile Photo](photo.png)
 
-    <nav>
-        <button class="tablinks active" onclick="openSection(event, 'AboutMe')">About Me</button>
-        <button class="tablinks" onclick="openSection(event, 'ImpactHighlights')">Impact Highlights</button>
-        <button class="tablinks" onclick="openSection(event, 'Education')">Education</button>
-        <button class="tablinks" onclick="openSection(event, 'ProfessionalExperience')">Professional Experience</button>
-        <button class="tablinks" onclick="openSection(event, 'Publications')">Publications</button>
-        <button class="tablinks" onclick="openSection(event, 'TechnicalSkills')">Technical Skills</button>
-        <button class="tablinks" onclick="openSection(event, 'LanguagesGrantsAwards')">Languages, Grants & Awards</button>
-        <button class="tablinks" onclick="openSection(event, 'Projects')">Projects</button>
-    </nav>
+## Materials Chemist | Project Manager
 
-    <main>
-        <section class="tabcontent active" id="AboutMe">
-            <h2>About Me</h2>
-            <p>Multidisciplinary leader with 7+ years in materials science, driving R&D and optimizing processes for innovative materials.</p>
-        </section>
+---
 
-        <section class="tabcontent" id="ImpactHighlights">
-            <h2>Impact Highlights</h2>
-            <ul>
-                <li>Wallenberg Wood Science Center PhD Grant (2019-2023)</li>
-                <li>Stockholm University PhD Grant (2019-2024)</li>
-                <li>UNAM Fellowship and Bilkent University Scholarship (2017-2019)</li>
-                <li>TÜBİTAK Fellowship (2018-2019)</li>
-                <li>Published in peer-reviewed journals, including research on nanocellulose composites and magnetic foams.</li>
-                <li>Led multiple projects and mentored students, contributing to the development of future scientific talent.</li>
-                <li>Developed high-performance nanocomposite solutions for industrial applications.</li>
-            </ul>
-        </section>
+### Contact Information
 
-        <section class="tabcontent" id="Projects">
-            <h2>Projects</h2>
-            <nav class="project-nav">
-                <button class="tablinks active" onclick="openProject(event, 'Project1')">Project 1</button>
-                <button class="tablinks" onclick="openProject(event, 'Project2')">Project 2</button>
-                <button class="tablinks" onclick="openProject(event, 'Project3')">Project 3</button>
-            </nav>
-            <section class="project-content active" id="Project1">
-                <h3>Project 1: Advanced Fiber-Based Materials</h3>
-                <p>Leading research on the production of advanced fiber-based materials, focusing on sheet paper and foam applications.</p>
-                <ul>
-                    <li>Developing innovative methodologies for optimizing fiber processing and enhancing material properties.</li>
-                    <li>Collaborating with cross-functional teams to drive projects from concept to implementation, ensuring alignment with industry standards.</li>
-                </ul>
-            </section>
-            <section class="project-content" id="Project2"></section>
-            <section class="project-content" id="Project3"></section>
+- **Phone:** +46-
+- **Email:** [sy..com](mailto:sy..com)
+- **Address:** 4, 183 59 Stockholm, Sweden
+- **LinkedIn:** [seyed-ehsan-hadi](https://www.linkedin.com/in/seyed-ehsan-hadi)
+- **Google Scholar:** [Google Scholar Profile](https://scholar.google.com/citations?hl=en&user=aqsQc48AAAAJ)
+- **Visa Status:** 🟢 **Swedish Resident**
 
-        </section>
-    </main>
+---
 
-    <footer>
-        <p>Feel free to contact me if you have any questions or potential collaboration opportunities!</p>
-    </footer>
+## About Me
 
-    <script>
-        function openSection(evt, sectionName) {
-            let i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(sectionName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-        function openProject(evt, projectName) {
-            let i, projectContent, tablinks;
-            projectContent = document.getElementsByClassName("project-content");
-            for (i = 0; i < projectContent.length; i++) {
-                projectContent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(projectName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
+Multidisciplinary leader with 7+ years in materials science, driving R&D and optimizing processes for innovative materials.
 
-</body>
-</html>
+---
+
+## Impact Highlights
+
+- Wallenberg Wood Science Center PhD Grant (2019-2023)
+- Stockholm University PhD Grant (2019-2024)
+- UNAM Fellowship and Bilkent University Scholarship (2017-2019)
+- TÜBİTAK Fellowship (2018-2019)
+- Published in peer-reviewed journals, including research on nanocellulose composites and magnetic foams.
+- Led multiple projects and mentored students, contributing to the development of future scientific talent.
+- Developed high-performance nanocomposite solutions for industrial applications.
+
+---
+
+## Education
+
+### PhD in Materials Chemistry
+
+**Stockholm University, Sweden**
+*Thesis:* Colloidal Processing and Alignment of Wood-Based Dispersions and Hybrid Functional Foams
+*Supervisors:* Prof. Lennart Bergström, Prof. Aji Mathew
+**2019--2024**
+
+### M.Sc. in Materials Science and Nanotechnology
+
+**Bilkent University, Turkey**
+*Thesis:* One-Pot Synthesis of Hybrid Core-Shell Nanoparticles for Antibacterial Photodynamic Therapy
+*Supervisor:* Prof. Dönüş Tuncel
+**2017--2019**
+
+### B.Sc. in Chemical Engineering
+
+**University of Tehran, Iran**
+**2012--2017**
+
+---
+
+## Professional Experience
+
+### Postdoctoral Research Associate
+
+**KTH Royal Institute of Technology, Sweden**
+**2024-Ongoing**
+- Leading research on the production of advanced fiber-based materials, focusing on sheet paper and foam applications.
+- Developing innovative methodologies for optimizing fiber processing and enhancing material properties.
+- Collaborating with cross-functional teams to drive projects from concept to implementation, ensuring alignment with industry standards.
+
+### Senior Graduate Research Assistant
+
+**Stockholm University, Sweden**
+**2019-2024**
+- Led 6+ projects in experimental design and execution, resulting in multiple publications.
+- Mentored students at various levels, fostering the next generation of scientists.
+- Developed high-performance nanocomposites for targeted applications.
+- Optimized processes to achieve 95% bulk magnetite performance.
+
+### Junior Graduate Research Assistant
+
+**Bilkent University, Turkey**
+**2017-2019**
+- Conducted laboratory work and data analysis, contributing to publications.
+
+---
+
+## Publications
+
+1. **Hadi, S. E.**, Möller, E., et al. (2024). Hierarchical Incorporation of rGO into Anisotropic CNF Foams. *ACS Appl. Mater. Interfaces*, **16**, 45337.
+2. Di, A., Schiele, C., **Hadi, S. E.**, et al. (2023). Moisture-Resilient Aramid/Cellulose Nanofiber Foams. *Adv. Mater.*, **35**, 2305195.
+3. **Hadi, S. E.**, Yeprem, H. A., et al. (2023). Magnetic hybrid foams from Fe3O4@TA and TOCN. *RSC Adv.*, **13**, 13919.
+4. Moreno, A., Liu, J., **Hadi, S. E.**, et al. (2021). Unravelling the hydration barrier of lignin oleate nanoparticles. *Angew. Chem. Int. Ed.*, **60**, 20897.
+5. Özkan, M., **Hadi, S. E.**, et al. (2020). CB[7]-capped hybrid AuNPs for PDT/PTT therapy. *ACS Appl. Polym. Mater.*, **2**, 3840.
+6. Kumar, Y., **Hadi, S. E.**, et al. (2019). CB[7]-Porphyrin Photocatalyst for H2 Generation. *ChemCatChem*, **11**, 2994.
+
+---
+
+## Technical Skills
+
+### Characterization
+
+- **FEI Themis Z**: TEM/STEM for high-resolution imaging
+- **JEOL JEM-2100F**: TEM/STEM and Cryo-TEM
+- **JEOL IT800**: Cryo-SEM for low-temperature analysis
+- **JEOL JSM-7000F**: FE-SEM for surface imaging
+- **FEI Quanta 200**: ESEM for wet/non-conductive samples
+- **Anton Paar Rheometer**: Measures viscosity and flow
+- **TA Instruments**: TGA and DSC for thermal analysis
+- **Thermo Scientific K-Alpha**: XPS for surface analysis
+- **Bruker Alpha-II**: FT-IR for molecular identification
+- **Malvern Zetasizer**: DLS for particle size
+- **Panalytical X'Pert Pro**: PXRD for crystallography
+- **Varian Cary**: Fluorescence spectrophotometer
+- **Cary 300/Agilent Cary 5000**: UV-Vis spectrophotometer
+- **Universal Testing Machine**: Mechanical testing
+- **Leica Ultramicrotome**: Cuts ultra-thin sections
+
+### Software Proficiency
+
+- OriginLab, MS Office, ChemDraw, HighScore Plus, LaTeX
+
+### Soft Skills
+
+- Leadership, Strategic planning, Resource allocation
+
+---
+
+## Languages, Grants, Awards, Certifications
+
+### Languages
+
+- English (Near-native)
+- Persian (Native)
+
+### Grants and Awards
+
+- 🌟 Wallenberg Wood Science Center PhD Grant (2019-2023)
+- 🌟 Stockholm University PhD Grant (2019-2024)
+- 🌟 UNAM Fellowship and Bilkent University Scholarship (2017-2019)
+- 🌟 TÜBİTAK Fellowship (2018-2019)
+
+### Certifications
+
+- Certified Materials Scientist (2022)
+- Project Management Professional (PMP) (2021)
+
+---
+
+## Projects
+
+<style>
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+
+<div class="tab">
+  <button class="tablinks" onclick="openProject(event, 'Project1')" id="defaultOpen">Project 1</button>
+  <button class="tablinks" onclick="openProject(event, 'Project2')">Project 2</button>
+  <button class="tablinks" onclick="openProject(event, 'Project3')">Project 3</button>
+</div>
+
+<div id="Project1" class="tabcontent">
+  <h3>Project 1: Advanced Fiber-Based Materials</h3>
+  <p>Leading research on the production of advanced fiber-based materials, focusing on sheet paper and foam applications.</p>
+  <ul>
+    <li>Developing innovative methodologies for optimizing fiber processing and enhancing material properties.</li>
+    <li>Collaborating with cross-functional teams to drive projects from concept to implementation, ensuring alignment with industry standards.</li>
+  </ul>
+</div>
+
+<div id="Project2" class="tabcontent">
+  <h3>Project 2: Nanocomposite Solutions</h3>
+  <p>Developed high-performance nanocomposite solutions for industrial applications.</p>
+  <ul>
+    <li>Led 6+ projects in experimental design and execution, resulting in multiple publications.</li>
+    <li>Mentored students at various levels, fostering the next generation of scientists.</li>
+    <li>Optimized processes to achieve 95% bulk magnetite performance.</li>
+  </ul>
+</div>
+
+<div id="Project3" class="tabcontent">
+  <h3>Project 3: Hybrid Core-Shell Nanoparticles</h3>
+  <p>One-Pot Synthesis of Hybrid Core-Shell Nanoparticles for Antibacterial Photodynamic
