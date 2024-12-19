@@ -125,7 +125,7 @@
     <div class="container">
         <div class="header">
             <div class="header-left">
-                <img src="photo.png" alt="Photo" class="photo">
+                <img src="image_cv.png" alt="Photo" class="photo">
                 <div class="contact">
                     <div class="contact-item"><i class="fas fa-phone"></i> +46</div>
                     <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:s.com">sy..com</a></div>
