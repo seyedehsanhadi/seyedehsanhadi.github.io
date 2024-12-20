@@ -193,17 +193,30 @@
                     <span class="skill-tag">PyTorch</span>
                 </div>
             </div>
-            <div class="section">
-                <h2>Skill Proficiency</h2>
-                <div class="chart">
-                    <div class="bar" style="height: 90%;"></div>
-                    <div class="bar" style="height: 75%;"></div>
-                    <div class="bar" style="height: 85%;"></div>
-                    <div class="bar" style="height: 70%;"></div>
-                    <div class="bar" style="height: 80%;"></div>
-                </div>
-            </div>
+           <div class="section">
+    <h2>Skill Proficiency</h2>
+    <div class="chart">
+        <div class="bar" style="height: 90%;" title="Python: 90%">
+            <span class="label">Python</span>
         </div>
+        <div class="bar" style="height: 75%;" title="R: 75%">
+            <span class="label">R</span>
+        </div>
+        <div class="bar" style="height: 85%;" title="SQL: 85%">
+            <span class="label">SQL</span>
+        </div>
+        <div class="bar" style="height: 70%;" title="Machine Learning: 70%">
+            <span class="label">ML</span>
+        </div>
+        <div class="bar" style="height: 80%;" title="Data Visualization: 80%">
+            <span class="label">Data Viz</span>
+        </div>
+    </div>
+    <p style="text-align:center; margin-top:10px;">
+        * The chart represents self-assessed proficiency levels in various technical skills.
+    </p>
+</div>
+
 
         <div id="projects" class="tab-content">
             <div class="section">
