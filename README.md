@@ -1,133 +1,262 @@
-<style>
-    :root {
-        --bg-primary: #1e1e2a;        /* Dark background */
-        --bg-secondary: #2c2c2c;      /* Slightly lighter background */
-        --accent-primary: #0047AB;    /* Cobalt Blue - main accent */
-        --accent-secondary: #4682B4;  /* Steel Blue - secondary accent */
-        --text-primary: #e0e0e0;      /* Light text */
-        --text-secondary: #829ab1;    /* Muted blue text */
-        --border-color: #486581;      /* Dark blue border */
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Scientist Portfolio</title>
+    <style>
+        :root {
+            --bg-primary: #1a1b26;
+            --bg-secondary: #24283b;
+            --bg-tertiary: #2f334d;
+            --accent-primary: #7aa2f7;
+            --accent-secondary: #4682B4;
+            --text-primary: #c0caf5;
+            --text-secondary: #9aa5ce;
+            --text-muted: #565f89;
+            --border-color: #3b4261;
+            --hover-color: #3d59a1;
+        }
 
-    body {
-        font-family: 'Roboto', sans-serif;
-        background-color: var(--bg-primary);
-        color: var(--text-primary);
-        margin: 0;
-        padding: 20px;
-        line-height: 1.6;
-    }
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    h1, h2, h3, h4 {
-        color: var(--accent-secondary);
-        margin-top: 30px;
-    }
+        /* Headers */
+        h1, h2, h3, h4 {
+            color: var(--accent-primary);
+            margin-top: 30px;
+        }
 
-    h2 { 
-        border-bottom: 2px solid var(--border-color);
-    }
+        h1 { 
+            font-size: 2.5em; 
+            text-shadow: 0 0 10px rgba(122, 162, 247, 0.3);
+        }
 
-    a {
-        color: var(--accent-primary);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
+        h2 { 
+            font-size: 2em;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
 
-    a:hover {
-        color: var(--accent-secondary);
-    }
+        h3 { font-size: 1.5em; }
+        h4 { font-size: 1.2em; }
 
-    .section {
-        background-color: var(--bg-secondary);
-        border-radius: 8px;
-        padding: 20px;
-        margin: 20px 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border: 1px solid var(--border-color);
-    }
+        /* Sections */
+        .section {
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease;
+        }
 
-    .skill-tag {
-        background-color: rgba(70, 130, 180, 0.1);
-        border: 1px solid var(--accent-secondary);
-        border-radius: 15px;
-        padding: 5px 15px;
-        font-size: 0.9em;
-        transition: all 0.3s ease;
-    }
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
 
-    .skill-tag:hover {
-        background-color: var(--accent-primary);
-        color: var(--text-primary);
-    }
+        /* Education & Experience */
+        .education-item, .experience-item {
+            background-color: var(--bg-tertiary);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-primary);
+        }
 
-    li::before {
-        color: var(--accent-secondary);
-    }
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+        }
 
-    .publication {
-        border-left: 3px solid var(--accent-primary);
-        background-color: rgba(70, 130, 180, 0.1);
-    }
-</style>
+        .skill-tag {
+            background-color: var(--bg-tertiary);
+            color: var(--accent-primary);
+            border: 1px solid var(--accent-primary);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
 
-# Data Scientist
+        .skill-tag:hover {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            transform: translateY(-2px);
+        }
 
-#### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
+        /* Links */
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
 
-## Education
-- Ph.D., Physics | The University of Texas at Dallas (_May 2022_)								       		
-- M.S., Physics	| The University of Texas at Dallas (_December 2019_)	 			        		
-- B.S., Physics | The University of Texas at Dallas (_May 2017_)
+        a:hover {
+            color: var(--accent-secondary);
+            text-decoration: underline;
+        }
 
-## Work Experience
-**Data Scientist @ Toyota Financial Services (_June 2022 - Present_)**
-- Uncovered and corrected missing step in production data pipeline which impacted over 70% of active accounts
-- Redeveloped loan originations model which resulted in 50% improvement in model performance and saving 1 million dollars in potential losses
+        /* Lists */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-**Data Science Consultant @ Shawhin Talebi Ventures LLC (_December 2020 - Present_)**
-- Conducted data collection, processing, and analysis for novel study evaluating the impact of over 300 biometrics variables on human performance in hyper-realistic, live-fire training scenarios
-- Applied unsupervised deep learning approaches to longitudinal ICU data to discover novel sepsis sub-phenotypes
+        li {
+            margin: 12px 0;
+            padding-left: 20px;
+            position: relative;
+        }
 
-## Projects
-### Data-Driven EEG Band Discovery with Decision Trees
-[Publication](https://www.mdpi.com/1424-8220/22/8/3048)
+        li::before {
+            content: "▸";
+            color: var(--accent-primary);
+            position: absolute;
+            left: 0;
+        }
 
-Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+        /* Publications */
+        .publication {
+            background-color: var(--bg-tertiary);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-secondary);
+        }
 
-![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
+        /* Projects */
+        .project {
+            background-color: var(--bg-tertiary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
 
-### Decoding Physical and Cognitive Impacts of Particulate Matter Concentrations at Ultra-Fine Scales
-[Publication](https://www.mdpi.com/1424-8220/22/11/4240)
+        .project h3 {
+            color: var(--accent-secondary);
+            margin-top: 0;
+        }
 
-Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
+        /* Images */
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
 
-![Bike Study](/assets/img/bike_study.jpeg)
+        /* Emphasis */
+        em {
+            color: var(--accent-secondary);
+            font-style: normal;
+        }
 
-## Talks & Lectures
-- Causality: The new science of an old question - GSP Seminar, Fall 2021
-- Guest Lecture: Dimensionality Reduction - Big Data and Machine Learning for Scientific Discovery (PHYS 5336), Spring 2021
-- Guest Lecture: Fourier and Wavelet Transforms - Scientific Computing (PHYS 5315), Fall 2020
-- A Brief Introduction to Optimization - GSP Seminar, Fall 2019
-- Weeks of Welcome Poster Competition - UTD, Fall 2019
-- A Brief Introduction to Networks - GSP Seminar, Spring 2019
+        strong {
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
 
-- [Data Science YouTube](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
+        /* Dates and Timeline */
+        .date {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
 
-## Publications
-1. Talebi S., Lary D.J., Wijeratne L. OH., and Lary, T. Modeling Autonomic Pupillary Responses from External Stimuli Using Machine Learning (2019). DOI: 10.26717/BJSTR.2019.20.003446
-2. Wijeratne, L.O.; Kiv, D.R.; Aker, A.R.; Talebi, S.; Lary, D.J. Using Machine Learning for the Calibration of Airborne Particulate Sensors. Sensors 2020, 20, 99.
-3. Lary, D.J.; Schaefer, D.; Waczak, J.; Aker, A.; Barbosa, A.; Wijeratne, L.O.H.; Talebi, S.; Fernando, B.; Sadler, J.; Lary, T.; Lary, M.D. Autonomous Learning of New Environments with a Robotic Team Employing Hyper-Spectral Remote Sensing, Comprehensive In-Situ Sensing and Machine Learning. Sensors 2021, 21, 2240. https://doi.org/10.3390/s21062240
-4. Zhang, Y.; Wijeratne, L.O.H.; Talebi, S.; Lary, D.J. Machine Learning for Light Sensor Calibration. Sensors 2021, 21, 6259. https://doi.org/10.3390/s21186259
-5. Talebi, S.; Waczak, J.; Fernando, B.; Sridhar, A.; Lary, D.J. Data-Driven EEG Band Discovery with Decision Trees. Preprints 2022, 2022030145 (doi: 10.20944/preprints202203.0145.v1).
-6. Fernando, B.A.; Sridhar, A.; Talebi, S.; Waczak, J.; Lary, D.J. Unsupervised Blink Detection Using Eye Aspect Ratio Values. Preprints 2022, 2022030200 (doi: 10.20944/preprints202203.0200.v1).
-7. Talebi, S. et al. Decoding Physical and Cognitive Impacts of PM Concentrations at Ultra-fine Scales, 29 March 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1499191/v1]
-8. Lary, D.J. et al. (2022). Machine Learning, Big Data, and Spatial Tools: A Combination to Reveal Complex Facts That Impact Environmental Health. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_12
-9. Wijerante, L.O.H. et al. (2022). Advancement in Airborne Particulate Estimation Using Machine Learning. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_13
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
 
-- [Data Science Blog](https://medium.com/@shawhin)
+            .section {
+                padding: 15px;
+            }
+
+            .skills {
+                gap: 8px;
+            }
+
+            .skill-tag {
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Scientist</h1>
+
+        <div class="section">
+            <h4>Technical Skills</h4>
+            <div class="skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Snowflake</span>
+                <span class="skill-tag">MATLAB</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <strong>Ph.D., Physics</strong>
+                <div class="date">The University of Texas at Dallas (May 2022)</div>
+            </div>
+            <!-- Add other education items similarly -->
+        </div>
+
+        <div class="section">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <strong>Data Scientist @ Toyota Financial Services</strong>
+                <div class="date">June 2022 - Present</div>
+                <ul>
+                    <li>Uncovered and corrected missing step in production data pipeline which impacted over 70% of active accounts</li>
+                    <li>Redeveloped loan originations model which resulted in 50% improvement in model performance</li>
+                </ul>
+            </div>
+            <!-- Add other experience items similarly -->
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Data-Driven EEG Band Discovery with Decision Trees</h3>
+                <a href="#">Publication</a>
+                <p>Developed objective strategy for discovering optimal EEG bands based on signal power spectra using Python...</p>
+                <img src="/assets/img/eeg_band_discovery.jpeg" alt="EEG Band Discovery">
+            </div>
+            <!-- Add other projects similarly -->
+        </div>
+
+        <div class="section">
+            <h2>Publications</h2>
+            <div class="publication">
+                <p>1. Talebi S., Lary D.J., Wijeratne L. OH., and Lary, T. Modeling Autonomic Pupillary Responses from External Stimuli Using Machine Learning (2019).</p>
+            </div>
+            <!-- Add other publications similarly -->
+        </div>
+    </div>
+</body>
+</html>
