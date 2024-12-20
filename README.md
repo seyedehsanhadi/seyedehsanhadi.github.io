@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,7 +35,7 @@
             color: var(--primary-color);
             font-size: 2.8rem;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-weight: 700;
         }
 
@@ -87,14 +88,14 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .skills {
+        .skills, .projects, .publications {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
         }
 
-        .skill-tag {
+        .skill-tag, .project-tag, .publication-tag {
             background-color: var(--primary-color);
             color: white;
             border-radius: 20px;
@@ -103,7 +104,7 @@
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .skill-tag:hover {
+        .skill-tag:hover, .project-tag:hover, .publication-tag:hover {
             background-color: var(--hover-color);
             transform: scale(1.1);
         }
@@ -123,28 +124,6 @@
         th {
             background-color: var(--primary-color);
             color: white;
-        }
-
-        .chart {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            gap: 10px;
-            padding: 20px;
-            background-color: var(--section-bg);
-            border-radius: 12px;
-            height: 250px;
-        }
-
-        .bar {
-            width: 40px;
-            background-color: var(--accent-color);
-            border-radius: 5px;
-            transition: height 0.5s ease, background-color 0.3s ease;
-        }
-
-        .bar:hover {
-            background-color: var(--hover-color);
         }
 
         @keyframes fadeIn {
@@ -172,12 +151,24 @@
         <h1>Data Scientist Portfolio</h1>
 
         <div class="tabs">
-            <div class="tab active" onclick="openTab(event, 'skills')">Skills</div>
+            <div class="tab active" onclick="openTab(event, 'about')">About Me</div>
+            <div class="tab" onclick="openTab(event, 'skills')">Skills</div>
             <div class="tab" onclick="openTab(event, 'projects')">Projects</div>
             <div class="tab" onclick="openTab(event, 'publications')">Publications</div>
         </div>
 
-        <div id="skills" class="tab-content active">
+        <div id="about" class="tab-content active">
+            <div class="section">
+                <h2>About Me</h2>
+                <p>
+                    I am a passionate Data Scientist with expertise in leveraging data to drive impactful solutions.
+                    With a strong background in machine learning, statistics, and programming, I aim to solve 
+                    complex problems through innovative methodologies and tools.
+                </p>
+            </div>
+        </div>
+
+        <div id="skills" class="tab-content">
             <div class="section">
                 <h2>Technical Skills</h2>
                 <div class="skills">
@@ -189,34 +180,9 @@
                     <span class="skill-tag">Data Visualization</span>
                     <span class="skill-tag">AWS</span>
                     <span class="skill-tag">Spark</span>
-                    <span class="skill-tag">TensorFlow</span>
-                    <span class="skill-tag">PyTorch</span>
                 </div>
             </div>
-           <div class="section">
-    <h2>Skill Proficiency</h2>
-    <div class="chart">
-        <div class="bar" style="height: 90%;" title="Python: 90%">
-            <span class="label">Python</span>
         </div>
-        <div class="bar" style="height: 75%;" title="R: 75%">
-            <span class="label">R</span>
-        </div>
-        <div class="bar" style="height: 85%;" title="SQL: 85%">
-            <span class="label">SQL</span>
-        </div>
-        <div class="bar" style="height: 70%;" title="Machine Learning: 70%">
-            <span class="label">ML</span>
-        </div>
-        <div class="bar" style="height: 80%;" title="Data Visualization: 80%">
-            <span class="label">Data Viz</span>
-        </div>
-    </div>
-    <p style="text-align:center; margin-top:10px;">
-        * The chart represents self-assessed proficiency levels in various technical skills.
-    </p>
-</div>
-
 
         <div id="projects" class="tab-content">
             <div class="section">
@@ -228,19 +194,14 @@
                         <th>Technologies Used</th>
                     </tr>
                     <tr>
-                        <td>Predictive Maintenance Model</td>
-                        <td>Developed a machine learning model to predict equipment failures</td>
-                        <td>Python, Scikit-learn, TensorFlow</td>
+                        <td>Predictive Maintenance</td>
+                        <td>Developed a machine learning model to predict failures</td>
+                        <td>Python, Scikit-learn</td>
                     </tr>
                     <tr>
-                        <td>Customer Churn Analysis</td>
-                        <td>Analyzed customer data to predict and reduce churn rates</td>
-                        <td>R, ggplot2, Random Forest</td>
-                    </tr>
-                    <tr>
-                        <td>Real-time Fraud Detection</td>
-                        <td>Implemented a real-time fraud detection system for financial transactions</td>
-                        <td>Python, Spark, Kafka</td>
+                        <td>Fraud Detection</td>
+                        <td>Implemented a system for fraud detection</td>
+                        <td>Spark, Kafka</td>
                     </tr>
                 </table>
             </div>
@@ -248,11 +209,10 @@
 
         <div id="publications" class="tab-content">
             <div class="section">
-                <h2>Research Publications</h2>
+                <h2>Publications</h2>
                 <ul>
-                    <li>"Novel Approaches in Time Series Forecasting Using Deep Learning" - Journal of Data Science, 2023</li>
-                    <li>"Optimizing Large-Scale Recommendation Systems" - International Conference on Machine Learning, 2022</li>
-                    <li>"Ethical Considerations in AI-Driven Decision Making" - AI Ethics Symposium, 2021</li>
+                    <li>"Deep Learning in Time Series" - Journal of AI, 2023</li>
+                    <li>"Ethics in AI" - AI Symposium, 2021</li>
                 </ul>
             </div>
         </div>
