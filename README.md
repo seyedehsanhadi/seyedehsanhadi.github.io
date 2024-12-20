@@ -1,366 +1,186 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seyed Ehsan Hadi CV</title>
-<style>
-    :root {
-        --bg-primary: #0a0a0f;
-        --bg-secondary: #151520;
-        --bg-tertiary: #1e1e2a;
-        --accent-primary: #7B68EE;    /* Soft Purple */
-        --accent-secondary: #00CED1;   /* Turquoise */
-        --accent-tertiary: #FF6B6B;    /* Coral */
-        --text-primary: #ffffff;
-        --text-secondary: #b3b3cc;
-        --text-muted: #666680;
-        --gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    }
-
-    body {
-        font-family: 'Inter', 'Roboto', sans-serif;
-        margin: 0;
-        padding: 20px;
-        background-color: var(--bg-primary);
-        color: var(--text-primary);
-        background: linear-gradient(135deg, #0a0a0f 0%, #151520 100%);
-        min-height: 100vh;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        background-color: var(--bg-secondary);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .header {
-        display: flex;
-        background: var(--bg-tertiary);
-        padding: 40px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .header::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: var(--gradient);
-    }
-
-    .photo {
-        width: 180px;
-        height: 180px;
-        border-radius: 15px;
-        border: 2px solid var(--accent-primary);
-        transition: all 0.3s ease;
-        box-shadow: 0 0 20px rgba(123, 104, 238, 0.2);
-    }
-
-    .photo:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 30px rgba(123, 104, 238, 0.4);
-    }
-
-    .name {
-        font-size: 2.5em;
-        background: var(--gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 10px;
-    }
-
-    .tab {
-        background: var(--bg-tertiary);
-        padding: 10px;
-        display: flex;
-        gap: 5px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .tab button {
-        background: transparent;
-        border: none;
-        padding: 12px 24px;
-        border-radius: 8px;
-        color: var(--text-secondary);
-        font-weight: 500;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .tab button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--gradient);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        z-index: -1;
-    }
-
-    .tab button:hover::before {
-        opacity: 0.1;
-    }
-
-    .tab button.active {
-        color: var(--text-primary);
-        background: var(--gradient);
-    }
-
-    .skill-item {
-        background: var(--bg-tertiary);
-        color: var(--text-primary);
-        padding: 8px 16px;
-        border-radius: 20px;
-        margin: 5px;
-        display: inline-block;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .skill-item:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(123, 104, 238, 0.2);
-        border-color: var(--accent-primary);
-    }
-
-    .contact-item {
-        background: var(--bg-tertiary);
-        padding: 12px;
-        border-radius: 8px;
-        margin: 8px 0;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .contact-item:hover {
-        transform: translateX(5px);
-        border-color: var(--accent-secondary);
-    }
-
-    .tabcontent {
-        padding: 30px;
-        animation: slideIn 0.5s ease;
-        background: var(--bg-secondary);
-    }
-
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateY(10px);
+    <title>Data Scientist Portfolio</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
-    }
 
-    /* Scrollbar Styling */
-    ::-webkit-scrollbar {
-        width: 8px;
-    }
+        h1, h2, h3, h4 {
+            color: #bb86fc;
+            margin-top: 30px;
+        }
 
-    ::-webkit-scrollbar-track {
-        background: var(--bg-secondary);
-    }
+        h1 { font-size: 2.5em; }
+        h2 { 
+            font-size: 2em;
+            border-bottom: 2px solid #bb86fc;
+            padding-bottom: 10px;
+        }
+        h3 { font-size: 1.5em; }
+        h4 { font-size: 1.2em; }
 
-    ::-webkit-scrollbar-thumb {
-        background: var(--accent-primary);
-        border-radius: 4px;
-    }
+        a {
+            color: #03dac6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-    /* Neon Glow Effects */
-    .highlight {
-        position: relative;
-    }
+        a:hover {
+            color: #bb86fc;
+            text-decoration: underline;
+        }
 
-    .highlight::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        box-shadow: 0 0 20px var(--accent-primary);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
+        .section {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-    .highlight:hover::after {
-        opacity: 0.5;
-    }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-    /* Glass Effect Cards */
-    .card {
-        background: rgba(30, 30, 42, 0.6);
-        backdrop-filter: blur(12px);
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 20px;
-        margin: 10px 0;
-    }
+        li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
 
-    /* Progress Bars */
-    .progress-bar {
-        height: 4px;
-        background: var(--bg-tertiary);
-        border-radius: 2px;
-        overflow: hidden;
-    }
+        li::before {
+            content: "•";
+            color: #03dac6;
+            position: absolute;
+            left: 0;
+        }
 
-    .progress-bar-fill {
-        height: 100%;
-        background: var(--gradient);
-        transition: width 0.3s ease;
-    }
-</style>
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
 
-<script>
-    // Add smooth scroll behavior
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+        .publication {
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 3px solid #03dac6;
+            background-color: rgba(3, 218, 198, 0.1);
+        }
 
-    // Add tab functionality with animations
-    function openTab(evt, tabName) {
-        const tabcontent = document.getElementsByClassName("tabcontent");
-        const tablinks = document.getElementsByClassName("tablinks");
+        em {
+            color: #bb86fc;
+            font-style: normal;
+        }
 
-        // Hide all tabs
-        Array.from(tabcontent).forEach(tab => {
-            tab.style.display = "none";
-        });
+        strong {
+            color: #03dac6;
+            font-weight: 600;
+        }
 
-        // Remove active class
-        Array.from(tablinks).forEach(link => {
-            link.className = link.className.replace(" active", "");
-        });
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-        // Show current tab with animation
-        const currentTab = document.getElementById(tabName);
-        currentTab.style.display = "block";
-        currentTab.style.animation = "slideIn 0.5s ease";
-        evt.currentTarget.className += " active";
-    }
-
-    // Add hover effects for skill items
-    document.querySelectorAll('.skill-item').forEach(item => {
-        item.addEventListener('mouseover', function() {
-            this.style.transform = 'translateY(-5px)';
-        });
-        item.addEventListener('mouseout', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-</script>
-
-
+        .skill-tag {
+            background-color: rgba(187, 134, 252, 0.1);
+            border: 1px solid #bb86fc;
+            border-radius: 15px;
+            padding: 5px 15px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="header-left">
-                <img src="photo.png" alt="Seyed Ehsan Hadi" class="photo">
-            </div>
-            <div class="header-right">
-                <div class="name">Seyed Ehsan Hadi, PhD</div>
-                <div class="title">Materials Chemist | Project Manager</div>
-                <div class="contact">
-                    <div class="contact-item"><i class="fas fa-phone"></i> +46</div>
-                    <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:s.com">sy..com</a></div>
-                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> 4, 183 59 Stockholm, Sweden</div>
-                    <div class="contact-item"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/seyed-ehsan-hadi">seyed-ehsan-hadi</a></div>
-                    <div class="contact-item"><i class="fas fa-globe"></i> <a href="https://scholar.google.com/citations?hl=en&user=aqsQc48AAAAJ">Google Scholar</a></div>
-                    <div class="contact-item"><i class="fas fa-check"></i> <span style="color: var(--secondary-color);">Swedish Resident</span></div>
-                </div>
+        <h1>Data Scientist</h1>
+
+        <div class="section">
+            <h4>Technical Skills</h4>
+            <div class="skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Snowflake</span>
+                <span class="skill-tag">MATLAB</span>
             </div>
         </div>
 
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'Summary')">Summary</button>
-            <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
-            <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
-            <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
-            <button class="tablinks" onclick="openTab(event, 'Publications')">Publications</button>
-        </div>
-
-        <div id="Summary" class="tabcontent">
-            <p>Multidisciplinary leader with 7+ years in materials science, driving R&D and optimizing processes for innovative materials.</p>
-            <div class="impact-highlights">
-                <div class="impact-item">Wallenberg Wood Science Center PhD Grant (2019-2023)</div>
-                <div class="impact-item">Stockholm University PhD Grant (2019-2024)</div>
-                <div class="impact-item">UNAM Fellowship and Bilkent University Scholarship (2017-2019)</div>
-                <div class="impact-item">TÜBİTAK Fellowship (2018-2019)</div>
-                <div class="impact-item">Published in peer-reviewed journals, including research on nanocellulose composites and magnetic foams.</div>
-                <div class="impact-item">Led multiple projects and mentored students, contributing to the development of future scientific talent.</div>
-                <div class="impact-item">Developed high-performance nanocomposite solutions for industrial applications.</div>
-            </div>
-        </div>
-
-        <div id="Experience" class="tabcontent">
-            <h3>Professional Experience</h3>
-            <p>Content for experience...</p>
-        </div>
-
-        <div id="Skills" class="tabcontent">
-            <div class="skill-category">Technical Skills</div>
-            <div class="skill-items">
-                <span class="skill-item">Materials Characterization</span>
-                <span class="skill-item">Process Optimization</span>
-                <span class="skill-item">Data Analysis</span>
-            </div>
-            <div class="skill-category">Soft Skills</div>
-            <div class="skill-items">
-                <span class="skill-item">Project Management</span>
-                <span class="skill-item">Team Leadership</span>
-                <span class="skill-item">Scientific Writing</span>
-            </div>
-        </div>
-
-        <div id="Education" class="tabcontent">
-            <h3>Education</h3>
-            <p>Content for education...</p>
-        </div>
-
-        <div id="Publications" class="tabcontent">
-            <h3>Publications</h3>
-            <p>Content for publications...</p>
-        </div>
+        <!-- Rest of the content follows the same structure -->
     </div>
-
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-        // Open the Summary tab by default
-        document.getElementsByClassName("tablinks")[0].click();
-    </script>
 </body>
 </html>
+# Data Scientist
+
+#### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
+
+## Education
+- Ph.D., Physics | The University of Texas at Dallas (_May 2022_)								       		
+- M.S., Physics	| The University of Texas at Dallas (_December 2019_)	 			        		
+- B.S., Physics | The University of Texas at Dallas (_May 2017_)
+
+## Work Experience
+**Data Scientist @ Toyota Financial Services (_June 2022 - Present_)**
+- Uncovered and corrected missing step in production data pipeline which impacted over 70% of active accounts
+- Redeveloped loan originations model which resulted in 50% improvement in model performance and saving 1 million dollars in potential losses
+
+**Data Science Consultant @ Shawhin Talebi Ventures LLC (_December 2020 - Present_)**
+- Conducted data collection, processing, and analysis for novel study evaluating the impact of over 300 biometrics variables on human performance in hyper-realistic, live-fire training scenarios
+- Applied unsupervised deep learning approaches to longitudinal ICU data to discover novel sepsis sub-phenotypes
+
+## Projects
+### Data-Driven EEG Band Discovery with Decision Trees
+[Publication](https://www.mdpi.com/1424-8220/22/8/3048)
+
+Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+
+![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
+
+### Decoding Physical and Cognitive Impacts of Particulate Matter Concentrations at Ultra-Fine Scales
+[Publication](https://www.mdpi.com/1424-8220/22/11/4240)
+
+Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
+
+![Bike Study](/assets/img/bike_study.jpeg)
+
+## Talks & Lectures
+- Causality: The new science of an old question - GSP Seminar, Fall 2021
+- Guest Lecture: Dimensionality Reduction - Big Data and Machine Learning for Scientific Discovery (PHYS 5336), Spring 2021
+- Guest Lecture: Fourier and Wavelet Transforms - Scientific Computing (PHYS 5315), Fall 2020
+- A Brief Introduction to Optimization - GSP Seminar, Fall 2019
+- Weeks of Welcome Poster Competition - UTD, Fall 2019
+- A Brief Introduction to Networks - GSP Seminar, Spring 2019
+
+- [Data Science YouTube](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
+
+## Publications
+1. Talebi S., Lary D.J., Wijeratne L. OH., and Lary, T. Modeling Autonomic Pupillary Responses from External Stimuli Using Machine Learning (2019). DOI: 10.26717/BJSTR.2019.20.003446
+2. Wijeratne, L.O.; Kiv, D.R.; Aker, A.R.; Talebi, S.; Lary, D.J. Using Machine Learning for the Calibration of Airborne Particulate Sensors. Sensors 2020, 20, 99.
+3. Lary, D.J.; Schaefer, D.; Waczak, J.; Aker, A.; Barbosa, A.; Wijeratne, L.O.H.; Talebi, S.; Fernando, B.; Sadler, J.; Lary, T.; Lary, M.D. Autonomous Learning of New Environments with a Robotic Team Employing Hyper-Spectral Remote Sensing, Comprehensive In-Situ Sensing and Machine Learning. Sensors 2021, 21, 2240. https://doi.org/10.3390/s21062240
+4. Zhang, Y.; Wijeratne, L.O.H.; Talebi, S.; Lary, D.J. Machine Learning for Light Sensor Calibration. Sensors 2021, 21, 6259. https://doi.org/10.3390/s21186259
+5. Talebi, S.; Waczak, J.; Fernando, B.; Sridhar, A.; Lary, D.J. Data-Driven EEG Band Discovery with Decision Trees. Preprints 2022, 2022030145 (doi: 10.20944/preprints202203.0145.v1).
+6. Fernando, B.A.; Sridhar, A.; Talebi, S.; Waczak, J.; Lary, D.J. Unsupervised Blink Detection Using Eye Aspect Ratio Values. Preprints 2022, 2022030200 (doi: 10.20944/preprints202203.0200.v1).
+7. Talebi, S. et al. Decoding Physical and Cognitive Impacts of PM Concentrations at Ultra-fine Scales, 29 March 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1499191/v1]
+8. Lary, D.J. et al. (2022). Machine Learning, Big Data, and Spatial Tools: A Combination to Reveal Complex Facts That Impact Environmental Health. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_12
+9. Wijerante, L.O.H. et al. (2022). Advancement in Airborne Particulate Estimation Using Machine Learning. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_13
+
+- [Data Science Blog](https://medium.com/@shawhin)
