@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,35 +38,13 @@
         h1 { 
             font-size: clamp(2.5rem, 5vw, 4rem);
             text-align: center;
+            margin-bottom: 50px;
         }
 
         h2 { 
             font-size: 2em;
             border-bottom: 2px solid var(--accent-color);
             padding-bottom: 10px;
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--hover-color);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        a:hover::after {
-            transform: scaleX(1);
         }
 
         .section {
@@ -104,49 +81,162 @@
             transform: scale(1.05);
         }
 
-        @media (prefers-reduced-motion: no-preference) {
-            .section {
-                opacity: 0;
-                transform: translateY(20px);
-                transition: opacity 0.5s ease, transform 0.5s ease;
-            }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
 
-            .section.visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .tab {
+            background-color: var(--section-bg);
+            color: var(--text-color);
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab.active {
+            background-color: var(--accent-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid var(--accent-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+        }
+
+        .chart {
+            width: 100%;
+            height: 300px;
+            background-color: var(--section-bg);
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .bar {
+            width: 40px;
+            background-color: var(--accent-color);
+            transition: height 0.5s ease;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Data Scientist</h1>
+        <h1>Data Scientist Portfolio</h1>
 
-        <div class="section">
-            <h4>Technical Skills</h4>
-            <div class="skills">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">Snowflake</span>
-                <span class="skill-tag">MATLAB</span>
+        <div class="tabs">
+            <button class="tab active" onclick="openTab(event, 'skills')">Skills</button>
+            <button class="tab" onclick="openTab(event, 'projects')">Projects</button>
+            <button class="tab" onclick="openTab(event, 'publications')">Publications</button>
+        </div>
+
+        <div id="skills" class="tab-content active">
+            <div class="section">
+                <h2>Technical Skills</h2>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">R</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">Data Visualization</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Spark</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Skill Proficiency</h2>
+                <div class="chart">
+                    <div class="bar" style="height: 90%;"></div>
+                    <div class="bar" style="height: 75%;"></div>
+                    <div class="bar" style="height: 85%;"></div>
+                    <div class="bar" style="height: 70%;"></div>
+                    <div class="bar" style="height: 80%;"></div>
+                </div>
             </div>
         </div>
 
-        <!-- Rest of the content follows the same structure -->
-    </div>
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
+        <div id="projects" class="tab-content">
+            <div class="section">
+                <h2>Recent Projects</h2>
+                <table>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Description</th>
+                        <th>Technologies Used</th>
+                    </tr>
+                    <tr>
+                        <td>Predictive Maintenance Model</td>
+                        <td>Developed a machine learning model to predict equipment failures</td>
+                        <td>Python, Scikit-learn, TensorFlow</td>
+                    </tr>
+                    <tr>
+                        <td>Customer Churn Analysis</td>
+                        <td>Analyzed customer data to predict and reduce churn rates</td>
+                        <td>R, ggplot2, Random Forest</td>
+                    </tr>
+                    <tr>
+                        <td>Real-time Fraud Detection</td>
+                        <td>Implemented a real-time fraud detection system for financial transactions</td>
+                        <td>Python, Spark, Kafka</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
 
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
+        <div id="publications" class="tab-content">
+            <div class="section">
+                <h2>Research Publications</h2>
+                <ul>
+                    <li>"Novel Approaches in Time Series Forecasting Using Deep Learning" - Journal of Data Science, 2023</li>
+                    <li>"Optimizing Large-Scale Recommendation Systems" - International Conference on Machine Learning, 2022</li>
+                    <li>"Ethical Considerations in AI-Driven Decision Making" - AI Ethics Symposium, 2021</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
     </script>
 </body>
 </html>
