@@ -7,23 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #bb86fc;
-            --secondary-color: #03dac6;
-            --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --section-bg: #1e1e1e;
-        }
-
-        @property --angle {
-            syntax: '<angle>';
-            initial-value: 0deg;
-            inherits: false;
-        }
-
-        @keyframes rotate {
-            to {
-                --angle: 360deg;
-            }
+            --primary-color: #1E3A8A;
+            --secondary-color: #333333;
+            --accent-color: #C7AF6B;
+            --bg-color: #F7F7F7;
+            --text-color: #333333;
+            --section-bg: #FFFFFF;
         }
 
         body {
@@ -33,7 +22,6 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         .container {
@@ -51,16 +39,6 @@
         h1 { 
             font-size: clamp(2.5rem, 5vw, 4rem);
             text-align: center;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: hue-rotate 10s infinite linear;
-        }
-
-        @keyframes hue-rotate {
-            from { filter: hue-rotate(0deg); }
-            to { filter: hue-rotate(360deg); }
         }
 
         h2 { 
@@ -70,7 +48,7 @@
         }
 
         a {
-            color: var(--secondary-color);
+            color: var(--primary-color);
             text-decoration: none;
             transition: all 0.3s ease;
             position: relative;
@@ -83,7 +61,7 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color: var(--secondary-color);
+            background-color: var(--accent-color);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -94,16 +72,16 @@
 
         .section {
             background-color: var(--section-bg);
-            border-radius: 16px;
+            border-radius: 8px;
             padding: 30px;
             margin: 40px 0;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .section:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .skills {
@@ -113,8 +91,8 @@
         }
 
         .skill-tag {
-            background-color: rgba(187, 134, 252, 0.1);
-            border: 1px solid var(--primary-color);
+            background-color: var(--primary-color);
+            color: var(--bg-color);
             border-radius: 20px;
             padding: 8px 20px;
             font-size: 0.9em;
@@ -122,30 +100,21 @@
         }
 
         .skill-tag:hover {
-            background-color: var(--primary-color);
-            color: var(--bg-color);
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
             transform: scale(1.05);
         }
 
         @media (prefers-reduced-motion: no-preference) {
             .section {
-                position: relative;
-            }
-
-            .section::before {
-                content: '';
-                position: absolute;
-                inset: -2px;
-                z-index: -1;
-                background: conic-gradient(from var(--angle), var(--primary-color), var(--secondary-color), var(--primary-color));
-                border-radius: 18px;
-                animation: rotate 20s linear infinite;
                 opacity: 0;
-                transition: opacity 0.3s ease;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease, transform 0.5s ease;
             }
 
-            .section:hover::before {
+            .section.visible {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
@@ -171,16 +140,12 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('visible');
                 }
             });
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = 0;
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(section);
         });
     </script>
