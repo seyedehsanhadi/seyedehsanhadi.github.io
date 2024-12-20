@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,11 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #bb86fc;
-            --secondary-color: #03dac6;
+            --primary-color: #1E3A8A;
+            --accent-color: #3B82F6;
             --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --section-bg: #1e1e1e;
+            --text-color: #E0E0E0;
+            --section-bg: #1E1E1E;
+            --hover-color: #2563EB;
         }
 
         body {
@@ -20,47 +22,33 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
-            width: 100%;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
+        h1, h2, h3, h4 {
+            color: var(--accent-color);
+            margin-top: 30px;
+            font-weight: 700;
         }
 
-        h1 {
+        h1 { 
             font-size: clamp(2.5rem, 5vw, 4rem);
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: hue-rotate 10s infinite linear;
+            text-align: center;
         }
 
-        @keyframes hue-rotate {
-            from { filter: hue-rotate(0deg); }
-            to { filter: hue-rotate(360deg); }
-        }
-
-        h2 {
+        h2 { 
             font-size: 2em;
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 10px;
-            margin-top: 40px;
         }
 
         a {
-            color: var(--secondary-color);
+            color: var(--accent-color);
             text-decoration: none;
             transition: all 0.3s ease;
             position: relative;
@@ -73,7 +61,7 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color: var(--secondary-color);
+            background-color: var(--hover-color);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -84,28 +72,27 @@
 
         .section {
             background-color: var(--section-bg);
-            border-radius: 16px;
+            border-radius: 8px;
             padding: 30px;
-            margin: 20px 0;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            margin: 40px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .section:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            justify-content: center;
         }
 
         .skill-tag {
-            background-color: rgba(187, 134, 252, 0.1);
-            border: 1px solid var(--primary-color);
+            background-color: var(--primary-color);
+            color: var(--text-color);
             border-radius: 20px;
             padding: 8px 20px;
             font-size: 0.9em;
@@ -113,56 +100,30 @@
         }
 
         .skill-tag:hover {
-            background-color: var(--primary-color);
-            color: var(--bg-color);
+            background-color: var(--accent-color);
             transform: scale(1.05);
         }
 
         @media (prefers-reduced-motion: no-preference) {
-            .section::before {
-                content: '';
-                position: absolute;
-                inset: -2px;
-                z-index: -1;
-                background: conic-gradient(from var(--angle), var(--primary-color), var(--secondary-color), var(--primary-color));
-                border-radius: 18px;
-                animation: rotate 20s linear infinite;
+            .section {
                 opacity: 0;
-                transition: opacity 0.3s ease;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease, transform 0.5s ease;
             }
 
-            .section:hover::before {
+            .section.visible {
                 opacity: 1;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px 10px;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 1.8em;
-            }
-
-            .skill-tag {
-                font-size: 0.8em;
+                transform: translateY(0);
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Data Scientist</h1>
-        </div>
+        <h1>Data Scientist</h1>
 
         <div class="section">
-            <h2>Technical Skills</h2>
+            <h4>Technical Skills</h4>
             <div class="skills">
                 <span class="skill-tag">Python</span>
                 <span class="skill-tag">SQL</span>
@@ -178,16 +139,12 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('visible');
                 }
             });
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = 0;
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(section);
         });
     </script>
