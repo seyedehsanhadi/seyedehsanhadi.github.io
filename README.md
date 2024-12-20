@@ -6,12 +6,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4B5563;
-            --accent-color: #6B7280;
-            --bg-color: #F9FAFB;
-            --text-color: #374151;
-            --section-bg: #E5E7EB;
-            --hover-color: #9CA3AF;
+            --primary-color: #2C3E50;
+            --accent-color: #2980B9;
+            --bg-color: #ECF0F1;
+            --text-color: #2C3E50;
+            --section-bg: #FFFFFF;
+            --hover-color: #3498DB;
         }
 
         body {
@@ -21,6 +21,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .container {
@@ -29,85 +30,82 @@
             padding: 40px 20px;
         }
 
-        h1, h2, h3, h4 {
+        h1 {
             color: var(--primary-color);
-            margin-top: 20px;
-            font-weight: 600;
-        }
-
-        h1 { 
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             text-align: center;
             margin-bottom: 30px;
-        }
-
-        h2 { 
-            font-size: 1.5rem;
-            border-bottom: 1px solid var(--accent-color);
-            padding-bottom: 5px;
-        }
-
-        .section {
-            background-color: var(--section-bg);
-            border-radius: 8px;
-            padding: 20px;
-            margin: 30px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 20px;
-            padding: 6px 15px;
-            font-size: 0.85em;
-            transition: all 0.3s ease;
-        }
-
-        .skill-tag:hover {
-            background-color: var(--hover-color);
-            transform: scale(1.05);
+            font-weight: 700;
         }
 
         .tabs {
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             margin-bottom: 20px;
+            background-color: var(--section-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
         .tab {
+            flex: 1;
+            padding: 15px 20px;
+            text-align: center;
+            cursor: pointer;
             background-color: var(--section-bg);
             color: var(--text-color);
-            border: none;
-            padding: 8px 15px;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .tab.active {
+        .tab:hover, .tab.active {
             background-color: var(--primary-color);
             color: white;
         }
 
         .tab-content {
             display: none;
+            animation: fadeIn 0.5s ease-in-out;
         }
 
         .tab-content.active {
             display: block;
+        }
+
+        .section {
+            background-color: var(--section-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            padding: 10px 15px;
+            font-size: 0.9em;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background-color: var(--hover-color);
+            transform: scale(1.1);
         }
 
         table {
@@ -118,7 +116,7 @@
 
         th, td {
             border: 1px solid var(--primary-color);
-            padding: 10px;
+            padding: 12px;
             text-align: left;
         }
 
@@ -128,21 +126,44 @@
         }
 
         .chart {
-            width: 100%;
-            height: 250px;
-            background-color: var(--section-bg);
-            border-radius: 8px;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: flex-end;
-            padding: 15px;
-            box-sizing: border-box;
+            gap: 10px;
+            padding: 20px;
+            background-color: var(--section-bg);
+            border-radius: 12px;
+            height: 250px;
         }
 
         .bar {
-            width: 35px;
-            background-color: var(--primary-color);
-            transition: height 0.5s ease;
+            width: 40px;
+            background-color: var(--accent-color);
+            border-radius: 5px;
+            transition: height 0.5s ease, background-color 0.3s ease;
+        }
+
+        .bar:hover {
+            background-color: var(--hover-color);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -151,9 +172,9 @@
         <h1>Data Scientist Portfolio</h1>
 
         <div class="tabs">
-            <button class="tab active" onclick="openTab(event, 'skills')">Skills</button>
-            <button class="tab" onclick="openTab(event, 'projects')">Projects</button>
-            <button class="tab" onclick="openTab(event, 'publications')">Publications</button>
+            <div class="tab active" onclick="openTab(event, 'skills')">Skills</div>
+            <div class="tab" onclick="openTab(event, 'projects')">Projects</div>
+            <div class="tab" onclick="openTab(event, 'publications')">Publications</div>
         </div>
 
         <div id="skills" class="tab-content active">
