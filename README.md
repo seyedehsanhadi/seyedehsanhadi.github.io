@@ -1,8 +1,3 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Scientist Portfolio</title>
 <style>
     :root {
         --bg-primary: #1e1e2a;        /* Dark background */
@@ -80,8 +75,7 @@
         background-color: rgba(70, 130, 180, 0.1);
     }
 </style>
-</body>
-</html>
+
 # Data Scientist
 
 #### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
