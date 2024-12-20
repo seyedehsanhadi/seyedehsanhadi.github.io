@@ -6,12 +6,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1E3A8A;
-            --accent-color: #3B82F6;
-            --bg-color: #121212;
-            --text-color: #E0E0E0;
-            --section-bg: #1E1E1E;
-            --hover-color: #2563EB;
+            --primary-color: #4B5563;
+            --accent-color: #6B7280;
+            --bg-color: #F9FAFB;
+            --text-color: #374151;
+            --section-bg: #E5E7EB;
+            --hover-color: #9CA3AF;
         }
 
         body {
@@ -30,75 +30,76 @@
         }
 
         h1, h2, h3, h4 {
-            color: var(--accent-color);
-            margin-top: 30px;
-            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 20px;
+            font-weight: 600;
         }
 
         h1 { 
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         h2 { 
-            font-size: 2em;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 5px;
         }
 
         .section {
             background-color: var(--section-bg);
             border-radius: 8px;
-            padding: 30px;
-            margin: 40px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 10px;
         }
 
         .skill-tag {
             background-color: var(--primary-color);
-            color: var(--text-color);
+            color: white;
             border-radius: 20px;
-            padding: 8px 20px;
-            font-size: 0.9em;
+            padding: 6px 15px;
+            font-size: 0.85em;
             transition: all 0.3s ease;
         }
 
         .skill-tag:hover {
-            background-color: var(--accent-color);
+            background-color: var(--hover-color);
             transform: scale(1.05);
         }
 
         .tabs {
             display: flex;
             justify-content: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .tab {
             background-color: var(--section-bg);
             color: var(--text-color);
             border: none;
-            padding: 10px 20px;
+            padding: 8px 15px;
             margin: 0 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
         .tab.active {
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
+            color: white;
         }
 
         .tab-content {
@@ -112,35 +113,35 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         th, td {
-            border: 1px solid var(--accent-color);
-            padding: 12px;
+            border: 1px solid var(--primary-color);
+            padding: 10px;
             text-align: left;
         }
 
         th {
             background-color: var(--primary-color);
-            color: var(--text-color);
+            color: white;
         }
 
         .chart {
             width: 100%;
-            height: 300px;
+            height: 250px;
             background-color: var(--section-bg);
             border-radius: 8px;
             display: flex;
             justify-content: space-around;
             align-items: flex-end;
-            padding: 20px;
+            padding: 15px;
             box-sizing: border-box;
         }
 
         .bar {
-            width: 40px;
-            background-color: var(--accent-color);
+            width: 35px;
+            background-color: var(--primary-color);
             transition: height 0.5s ease;
         }
     </style>
