@@ -2,22 +2,26 @@
 
 /* CSS Variables for Theming */
 :root {
-  --primary-color: #2c3e50; /* Dark Blue for Trust and Professionalism */
-  --accent-color: #1abc9c;  /* Teal for Modern Touch */
-  --background-color: #ecf0f1; /* Light Gray for Neutral Background */
-  --text-color: #34495e; /* Dark Gray for Readability */
-  --header-bg: #2980b9; /* Blue Header */
-  --sidebar-bg: #34495e; /* Darker Sidebar */
-  --contact-sidebar-bg: #2c3e50; /* Dark Blue for Contact Sidebar */
-  --card-bg: #ffffff; /* White Cards */
-  --hover-bg: #1abc9c; /* Hover Color */
-  --link-color: #2980b9; /* Link Color */
-  --popup-bg: rgba(0, 0, 0, 0.5); /* Popup Overlay Background */
-  --close-btn-bg: var(--accent-color); /* Close Button Background */
-  --close-btn-hover-bg: #149174; /* Close Button Hover Background */
-  --radius: 8px; /* Border Radius */
-  --divider-color: #bdc3c7; /* Divider Color */
-  --button-text-color: #ffffff; /* Button Text Color */
+  --primary-color: #2c3e50;         /* Dark Blue (Trust and Professionalism) */
+  --accent-color: #1abc9c;          /* Teal (Modern Touch) */
+  --background-color: #ecf0f1;      /* Light Gray (Neutral Background) */
+  --text-color: #34495e;            /* Dark Gray (Readability) */
+  --header-bg: #2980b9;             /* Blue Header */
+  --sidebar-bg: #34495e;            /* Darker Sidebar */
+  --contact-sidebar-bg: #2c3e50;    /* Dark Blue (Contact Sidebar) */
+  --card-bg: #ffffff;               /* White Cards */
+  --hover-bg: #1abc9c;              /* Hover Color */
+  --link-color: #2980b9;            /* Link Color */
+  --popup-bg: rgba(0, 0, 0, 0.5);   /* Popup Overlay Background */
+  --close-btn-bg: var(--accent-color);  
+  --close-btn-hover-bg: #149174;    /* Close Button Hover Background */
+  --radius: 8px;                    /* Border Radius */
+  --divider-color: #bdc3c7;         /* Divider Color */
+  --button-text-color: #ffffff;     /* Button Text Color */
+
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Roboto Slab', serif;
+  --transition-speed: 0.3s;         /* Global transition speed */
 }
 
 /* Reset and Base Styles */
@@ -28,7 +32,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-primary);
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -36,16 +40,18 @@ body {
   min-height: 100vh;
 }
 
-/* Left Sidebar */
+/* -----------------------------------
+   LEFT SIDEBAR
+----------------------------------- */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 300px; /* Increased width from 250px to 300px */
+  width: 300px;                         /* Sidebar width (increased) */
   height: 100vh;
   background-color: var(--sidebar-bg);
   color: #ffffff;
-  padding: 2rem 1.5rem; /* Increased padding for better spacing */
+  padding: 2rem 1.5rem;                /* Enhanced padding */
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -61,20 +67,20 @@ body {
 
 /* Profile Picture */
 .profile-pic {
-  width: 140px; /* Increased size from 120px to 140px */
+  width: 140px;                /* Slightly larger profile picture */
   height: 140px;
   border-radius: 50%;
-  border: 4px solid var(--accent-color); /* Enhanced border for prominence */
+  border: 4px solid var(--accent-color);
   object-fit: cover;
-  margin: 0 auto 1rem auto; /* Centered with bottom margin */
+  margin: 0 auto 1rem auto;
 }
 
 /* Action Buttons */
 .sidebar-buttons {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* Increased gap for better spacing */
-  margin-top: 1rem; /* Adds space between profile picture and buttons */
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .download-btn,
@@ -82,26 +88,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.2rem; /* Increased padding for larger buttons */
+  padding: 0.75rem 1.2rem;
   background-color: var(--accent-color);
   color: var(--button-text-color);
   text-decoration: none;
   border-radius: var(--radius);
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-  font-size: 1rem; /* Increased font size for better readability */
+  transition: background-color var(--transition-speed), 
+              transform var(--transition-speed),
+              box-shadow var(--transition-speed);
+  font-size: 1rem;
   font-weight: 500;
 }
 
 .download-btn i,
 .portfolio-btn i {
-  margin-right: 0.6rem; /* Increased margin for better icon-text separation */
+  margin-right: 0.6rem;
 }
 
 .download-btn:hover,
 .portfolio-btn:hover {
-  background-color: #149174; /* Darker Teal on hover */
-  transform: translateY(-3px); /* Slight upward movement on hover */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+  background-color: #149174;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact Information */
@@ -119,14 +127,14 @@ body {
 .contact-info p i {
   margin-right: 0.6rem;
   color: var(--accent-color);
-  min-width: 24px; /* Increased width for better icon alignment */
+  min-width: 24px;
   text-align: center;
 }
 
 .contact-info a {
   color: var(--link-color);
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color var(--transition-speed);
 }
 
 .contact-info a:hover {
@@ -135,7 +143,7 @@ body {
 }
 
 .visa-status {
-  color: #27ae60; /* Green */
+  color: #27ae60;
   display: flex;
   align-items: center;
 }
@@ -152,28 +160,29 @@ body {
 }
 
 .nav-links li {
-  margin-bottom: 1.25rem; /* Increased margin for better spacing */
+  margin-bottom: 1.25rem;
 }
 
 .nav-links li a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.05rem; /* Slightly larger font */
+  font-size: 1.05rem;
   display: flex;
   align-items: center;
-  transition: color 0.3s, padding-left 0.3s;
-  padding-left: 0.6rem; /* Adjusted padding */
+  transition: color var(--transition-speed), 
+              padding-left var(--transition-speed);
+  padding-left: 0.6rem;
 }
 
 .nav-links li a i {
-  margin-right: 0.8rem; /* Increased margin for better icon spacing */
-  width: 24px; /* Consistent icon alignment */
+  margin-right: 0.8rem;
+  width: 24px;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
   color: var(--accent-color);
-  padding-left: 1.1rem; /* More indentation on hover */
+  padding-left: 1.1rem;
 }
 
 /* Sidebar Footer */
@@ -191,11 +200,13 @@ body {
   margin: 1rem 0;
 }
 
-/* Main Content */
+/* -----------------------------------
+   MAIN CONTENT
+----------------------------------- */
 .main-content {
-  margin-left: 320px; /* Updated margin to match the increased sidebar width */
+  margin-left: 320px; /* Matches sidebar width + margin */
   padding: 2.5rem;
-  width: calc(100% - 320px); /* Adjusted width accordingly */
+  width: calc(100% - 320px);
 }
 
 /* Header Section */
@@ -208,25 +219,25 @@ body {
 
 .header-details {
   flex: 1;
-  margin-left: 3rem; /* Increased margin for better spacing */
+  margin-left: 3rem;
 }
 
 .header-details h1 {
-  font-family: 'Roboto Slab', serif;
-  font-size: 3rem; /* Increased font size for prominence */
+  font-family: var(--font-secondary);
+  font-size: 3rem;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
 .header-details h2 {
-  font-size: 1.8rem; /* Increased font size */
+  font-size: 1.8rem;
   color: var(--accent-color);
   margin-bottom: 1.2rem;
   font-weight: 400;
 }
 
 .header-details p {
-  font-size: 1.1rem; /* Increased font size for better readability */
+  font-size: 1.1rem;
   color: var(--text-color);
   margin-bottom: 1.2rem;
   text-align: justify;
@@ -238,11 +249,11 @@ section {
 }
 
 section h2 {
-  font-family: 'Roboto Slab', serif;
-  font-size: 2.5rem; /* Increased font size */
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
-  border-bottom: 3px solid var(--accent-color); /* Thicker border */
+  border-bottom: 3px solid var(--accent-color);
   display: inline-block;
   padding-bottom: 0.4rem;
 }
@@ -250,15 +261,16 @@ section h2 {
 /* Cards */
 .card {
   background-color: var(--card-bg);
-  padding: 2rem; /* Increased padding for better content spacing */
+  padding: 2rem;
   border-radius: var(--radius);
   box-shadow: 0 6px 10px rgba(0,0,0,0.1);
   margin-bottom: 1.5rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform var(--transition-speed), 
+              box-shadow var(--transition-speed);
 }
 
 .card:hover {
-  transform: translateY(-7px); /* Slightly more upward movement */
+  transform: translateY(-7px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
@@ -277,10 +289,10 @@ section h2 {
   border: none;
   text-align: left;
   outline: none;
-  font-size: 1.2rem; /* Increased font size */
-  transition: background-color 0.3s;
+  font-size: 1.2rem;
+  transition: background-color var(--transition-speed);
   border-radius: var(--radius);
-  margin-bottom: 0.7rem; /* Increased margin for better spacing */
+  margin-bottom: 0.7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -290,42 +302,43 @@ section h2 {
   background-color: var(--hover-bg);
 }
 
-.accordion.active, .accordion:focus {
+.accordion.active,
+.accordion:focus {
   background-color: var(--hover-bg);
 }
 
 .accordion:after {
-  content: '\002B'; /* Plus sign */
-  font-size: 1.8rem; /* Larger icon */
+  content: '\002B';
+  font-size: 1.8rem;
   color: var(--primary-color);
-  transition: transform 0.3s;
+  transition: transform var(--transition-speed);
 }
 
 .accordion.active:after {
-  transform: rotate(45deg); /* Changes to 'X' sign */
+  transform: rotate(45deg);
 }
 
 .panel {
-  padding: 0 1.5rem; /* Increased padding */
+  padding: 0 1.5rem;
   background-color: #ffffff;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
-  border-left: 3px solid var(--accent-color); /* Thicker border */
+  border-left: 3px solid var(--accent-color);
   margin-bottom: 1.2rem;
 }
 
 /* Publications List */
 .publications-list {
   list-style-type: decimal;
-  padding-left: 1.8rem; /* Increased padding for better indentation */
+  padding-left: 1.8rem;
 }
 
 .publications-list li {
-  margin-bottom: 1rem; /* Increased margin for better spacing */
+  margin-bottom: 1rem;
   cursor: pointer;
-  transition: color 0.3s;
-  font-size: 1rem; /* Consistent font size */
+  transition: color var(--transition-speed);
+  font-size: 1rem;
 }
 
 .publications-list li:hover {
@@ -341,15 +354,15 @@ section h2 {
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem; /* Increased gap for better spacing */
+  gap: 1.5rem;
 }
 
 .skill-category {
-  flex: 1 1 350px; /* Increased minimum width for better content fit */
+  flex: 1 1 350px;
 }
 
 .skill-category h3 {
-  font-size: 1.6rem; /* Increased font size */
+  font-size: 1.6rem;
   color: var(--accent-color);
   margin-bottom: 1rem;
   display: flex;
@@ -357,7 +370,7 @@ section h2 {
 }
 
 .skill-category h3 i {
-  margin-right: 0.6rem; /* Increased margin for better icon spacing */
+  margin-right: 0.6rem;
 }
 
 .skills ul {
@@ -370,7 +383,7 @@ section h2 {
   display: flex;
   align-items: center;
   color: var(--text-color);
-  transition: color 0.3s;
+  transition: color var(--transition-speed);
   font-size: 1rem;
 }
 
@@ -392,7 +405,7 @@ section h2 {
 .references ul li {
   margin-bottom: 1.5rem;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color var(--transition-speed);
 }
 
 .references ul li:hover {
@@ -436,19 +449,20 @@ footer {
   border-radius: var(--radius);
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   width: 100%;
-  max-width: 700px; /* Increased max-width for more content space */
+  max-width: 700px; 
   position: relative;
   overflow-y: auto;
-  max-height: 95vh; /* Increased max-height for better content visibility */
+  max-height: 95vh;
 }
 
 .popup-content h3 {
   color: var(--primary-color);
   margin-bottom: 1rem;
-  font-size: 1.8rem; /* Increased font size */
+  font-size: 1.8rem;
 }
 
-.popup-content p, .popup-content ul {
+.popup-content p,
+.popup-content ul {
   margin-bottom: 1.2rem;
   font-size: 1rem;
 }
@@ -479,7 +493,7 @@ footer {
   border-radius: 50%;
   font-size: 1.4em;
   line-height: 1;
-  transition: background 0.3s;
+  transition: background var(--transition-speed);
 }
 
 .close-popup:hover {
@@ -489,11 +503,11 @@ footer {
 /* Responsive Design */
 @media (max-width: 1200px) {
   .sidebar {
-    width: 280px; /* Slight reduction for larger screens */
+    width: 280px; 
   }
 
   .main-content {
-    margin-left: 300px; /* Adjusted margin */
+    margin-left: 300px; 
     width: calc(100% - 300px);
   }
 
@@ -615,7 +629,7 @@ footer {
 
 @media (max-width: 576px) {
   .sidebar {
-    display: none; /* Hide sidebar on very small screens */
+    display: none;
   }
 
   .main-content {
