@@ -531,3 +531,44 @@ footer {
     flex-direction: column;
   }
 }
+
+/* assets/css/styles.css */
+
+/* Center the profile picture and buttons */
+.sidebar-header {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Style the action buttons */
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem; /* Adds space between profile picture and buttons */
+}
+
+.download-btn,
+.portfolio-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  background-color: #1abc9c; /* Teal color for consistency */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: var(--radius); /* Ensure you have a CSS variable for radius or replace with a value like 5px */
+  transition: background-color 0.3s;
+  font-size: 0.95rem;
+}
+
+.download-btn i,
+.portfolio-btn i {
+  margin-right: 0.5rem;
+}
+
+.download-btn:hover,
+.portfolio-btn:hover {
+  background-color: #149174; /* Darker Teal on hover */
+}
+
