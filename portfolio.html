@@ -16,179 +16,18 @@
 </head>
 <body>
   
-<!-- Top Navigation Bar -->
+  <!-- Top Navigation Bar -->
   <nav class="top-nav">
     <div class="top-nav-container">
       <div class="top-nav-title">Seyed Ehsan Hadi, PhD</div>
-      <button class="menu-toggle" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
       <ul class="top-nav-links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="portfolio.html" class="active">Portfolio</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="cv.html" data-link="cv">CV</a></li>
       </ul>
     </div>
   </nav>
-
-  <style>
-    /* Enhanced Top Navigation Styles */
-    .top-nav {
-      background-color: var(--header-bg);
-      padding: 1rem 2rem;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 4px var(--card-shadow);
-      transition: background-color 0.3s ease;
-    }
-
-    .top-nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .top-nav-title {
-      color: #ffffff;
-      font-size: 1.8rem;
-      font-family: var(--font-secondary);
-      font-weight: 700;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: #ffffff;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    .top-nav-links {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-
-    .top-nav-links li a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      position: relative;
-      transition: color var(--transition-speed);
-    }
-
-    .top-nav-links li a::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background: var(--nav-link-hover);
-      left: 0;
-      bottom: -4px;
-      transition: width var(--transition-speed);
-    }
-
-    .top-nav-links li a:hover::after,
-    .top-nav-links li a.active::after {
-      width: 100%;
-    }
-
-    .top-nav-links li a:hover,
-    .top-nav-links li a.active {
-      color: var(--nav-link-hover);
-    }
-
-    .top-nav-links li a[data-link="cv"] {
-      font-weight: 700;
-      font-size: 1.1rem;
-      background: var(--accent-color);
-      color: #ffffff;
-      padding: 0.5rem 1rem;
-      border-radius: var(--border-radius);
-      transition: background var(--transition-speed);
-    }
-
-    .top-nav-links li a[data-link="cv"]:hover {
-      background: var(--nav-link-hover);
-      color: #ffffff;
-    }
-
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .top-nav-links {
-        display: none;
-        flex-direction: column;
-        background: var(--header-bg);
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        padding: 1rem 2rem;
-        gap: 1rem;
-      }
-
-      .top-nav-links.active {
-        display: flex;
-      }
-    }
-
-    .menu-toggle.active + .top-nav-links {
-      display: flex;
-    }
-
-    .top-nav.scrolled {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-  </style>
-
-  <script>
-    // JavaScript for responsive menu toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.top-nav-links');
-      const topNav = document.querySelector('.top-nav');
-
-      menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-      });
-
-      // Change navigation bar style on scroll
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-          topNav.classList.add('scrolled');
-        } else {
-          topNav.classList.remove('scrolled');
-        }
-      });
-
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('.top-nav-links a').forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const targetId = e.target.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-    });
-  </script>
-
   
   <!-- Portfolio Content -->
   <div class="portfolio-content">
@@ -204,7 +43,7 @@
       
       <!-- Portfolio Card 1 -->
       <div class="portfolio-card clickable" onclick="showPopup('popup-project1')">
-        <img src="assets/images/composite1.png" alt="Composite Project 1">
+        <img src="assets/images/composite1.jpg" alt="Composite Project 1">
         <div class="portfolio-details">
           <h3>Nanocellulose-Reinforced Polymer Composites</h3>
           <p>Development of high-strength, lightweight polymer composites using nanocellulose as a reinforcing agent.</p>
@@ -265,7 +104,7 @@
     <div class="popup-content">
       <button class="close-popup" onclick="closePopup('popup-project1')">&times;</button>
       <h2>Nanocellulose-Reinforced Polymer Composites</h2>
-      <img src="assets/images/composite1_large.png" alt="Composite Project 1 Detail">
+      <img src="assets/images/composite1_large.jpg" alt="Composite Project 1 Detail">
       <p>This project focuses on the integration of nanocellulose fibers into polymer matrices to create composites with superior mechanical properties. The use of nanocellulose not only enhances strength and durability but also contributes to the sustainability of the materials by utilizing renewable resources.</p>
       <p><strong>Key Achievements:</strong></p>
       <ul>
@@ -277,7 +116,56 @@
     </div>
   </div>
   
-  <!-- Other Popups Omitted for Brevity -->
+  <!-- Project 2 Popup -->
+  <div id="popup-project2" class="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closePopup('popup-project2')">&times;</button>
+      <h2>Magnetic Hybrid Foams</h2>
+      <img src="assets/images/composite2_large.jpg" alt="Composite Project 2 Detail">
+      <p>Developed hybrid foams embedded with magnetic particles, enabling applications in smart materials and environmental remediation. These foams exhibit enhanced thermal insulation and can be manipulated using external magnetic fields.</p>
+      <p><strong>Key Achievements:</strong></p>
+      <ul>
+        <li>Introduced magnetic responsiveness to lightweight foam structures.</li>
+        <li>Enhanced thermal insulation properties by 25% compared to conventional foams.</li>
+        <li>Collaborated with industry partners for real-world application testing.</li>
+      </ul>
+      <p><a href="#">View Publication</a></p>
+    </div>
+  </div>
+  
+  <!-- Project 3 Popup -->
+  <div id="popup-project3" class="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closePopup('popup-project3')">&times;</button>
+      <h2>Fiber-Based Sustainable Packaging</h2>
+      <img src="assets/images/composite3_large.jpg" alt="Composite Project 3 Detail">
+      <p>Designed and developed sustainable packaging materials using natural fibers, aiming to reduce reliance on fossil-based plastics. The project emphasizes biodegradability and recyclability without compromising on performance.</p>
+      <p><strong>Key Achievements:</strong></p>
+      <ul>
+        <li>Created packaging prototypes with complete biodegradability.</li>
+        <li>Achieved comparable strength and flexibility to traditional plastic packaging.</li>
+        <li>Received a grant from the Environmental Sustainability Council.</li>
+      </ul>
+      <p><a href="#">View Publication</a></p>
+    </div>
+  </div>
+  
+  <!-- Project 4 Popup -->
+  <div id="popup-project4" class="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closePopup('popup-project4')">&times;</button>
+      <h2>High-Performance Carbon Nanotube Composites</h2>
+      <img src="assets/images/composite4_large.jpg" alt="Composite Project 4 Detail">
+      <p>Investigated the incorporation of carbon nanotubes (CNTs) into polymer matrices to significantly improve electrical conductivity and mechanical strength. This project opens avenues for advanced applications in electronics and aerospace industries.</p>
+      <p><strong>Key Achievements:</strong></p>
+      <ul>
+        <li>Enhanced electrical conductivity by 50% with minimal CNT addition.</li>
+        <li>Improved mechanical properties, achieving a 40% increase in modulus.</li>
+        <li>Presented findings at the International Conference on Nanotechnology.</li>
+      </ul>
+      <p><a href="#">View Publication</a></p>
+    </div>
+  </div>
   
   <!-- External JavaScript -->
   <script src="assets/js/scripts.js"></script>
