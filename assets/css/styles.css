@@ -50,6 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 /* Sidebar Header */
@@ -182,6 +183,12 @@ body {
   color: #7f8c8d;
   border-top: 1px solid var(--divider-color);
   padding-top: 1.5rem;
+}
+
+/* Divider Styling */
+.divider {
+  border: 0.3px solid var(--divider-color);
+  margin: 1rem 0;
 }
 
 /* Main Content */
@@ -479,7 +486,7 @@ footer {
   background: var(--close-btn-hover-bg);
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
 @media (max-width: 1200px) {
   .sidebar {
     width: 280px; /* Slight reduction for larger screens */
