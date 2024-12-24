@@ -6,64 +6,167 @@
   <title>Portfolio - Seyed Ehsan Hadi, PhD</title>
   
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- External CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 <body>
+  
   <!-- Top Navigation Bar -->
   <nav class="top-nav">
     <div class="top-nav-container">
-      <h2 class="top-nav-title">Seyed Ehsan Hadi, PhD - Portfolio</h2>
+      <div class="top-nav-title">Seyed Ehsan Hadi, PhD</div>
       <ul class="top-nav-links">
-        <li><a href="index.html"><i class="fas fa-user"></i> CV</a></li>
-        <li><a href="portfolio.html" class="active"><i class="fas fa-briefcase"></i> Portfolio</a></li>
-        <li><a href="https://github.com/seyedehsanhadi/portofino" target="_blank"><i class="fas fa-external-link-alt"></i> Portofino</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
-
+  
   <!-- Portfolio Content -->
   <div class="portfolio-content">
-    <header class="portfolio-header">
-      <h1>My Projects</h1>
-      <p>A curated selection of my work in materials chemistry and nanotechnology.</p>
-    </header>
-
-    <section class="portfolio-section">
-      <div class="portfolio-card">
-        <img src="assets/images/project1.jpg" alt="Project 1 Image">
+    
+    <!-- Portfolio Header -->
+    <div class="portfolio-header">
+      <h1>Composites Research Projects</h1>
+      <p>Explore my projects focused on the development and characterization of advanced composites, showcasing innovative solutions in materials science.</p>
+    </div>
+    
+    <!-- Portfolio Section -->
+    <div class="portfolio-section">
+      
+      <!-- Portfolio Card 1 -->
+      <div class="portfolio-card clickable" onclick="showPopup('popup-project1')">
+        <img src="assets/images/composite1.jpg" alt="Composite Project 1">
         <div class="portfolio-details">
-          <h3>Project Title 1</h3>
-          <p>Detailed description of Project 1, outlining objectives, methodologies, and outcomes.</p>
+          <h3>Nanocellulose-Reinforced Polymer Composites</h3>
+          <p>Development of high-strength, lightweight polymer composites using nanocellulose as a reinforcing agent.</p>
           <div class="portfolio-links">
-            <a href="https://github.com/seyedehsanhadi/project1" target="_blank"><i class="fas fa-external-link-alt"></i> GitHub</a>
-            <a href="https://example.com/project1" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#">Learn More</a>
+            <a href="#" class="fas fa-arrow-right"></a>
           </div>
         </div>
       </div>
-
-      <div class="portfolio-card">
-        <img src="assets/images/project2.jpg" alt="Project 2 Image">
+      
+      <!-- Portfolio Card 2 -->
+      <div class="portfolio-card clickable" onclick="showPopup('popup-project2')">
+        <img src="assets/images/composite2.jpg" alt="Composite Project 2">
         <div class="portfolio-details">
-          <h3>Project Title 2</h3>
-          <p>Detailed description of Project 2, highlighting innovative techniques and results.</p>
+          <h3>Magnetic Hybrid Foams</h3>
+          <p>Creating lightweight foams with embedded magnetic particles for smart material applications.</p>
           <div class="portfolio-links">
-            <a href="https://github.com/seyedehsanhadi/project2" target="_blank"><i class="fas fa-external-link-alt"></i> GitHub</a>
-            <a href="https://example.com/project2" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#">Learn More</a>
+            <a href="#" class="fas fa-arrow-right"></a>
           </div>
         </div>
       </div>
-
-      <!-- Add more portfolio cards as needed -->
-    </section>
+      
+      <!-- Portfolio Card 3 -->
+      <div class="portfolio-card clickable" onclick="showPopup('popup-project3')">
+        <img src="assets/images/composite3.jpg" alt="Composite Project 3">
+        <div class="portfolio-details">
+          <h3>Fiber-Based Sustainable Packaging</h3>
+          <p>Designing eco-friendly packaging materials using natural fibers to reduce environmental impact.</p>
+          <div class="portfolio-links">
+            <a href="#">Learn More</a>
+            <a href="#" class="fas fa-arrow-right"></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Portfolio Card 4 -->
+      <div class="portfolio-card clickable" onclick="showPopup('popup-project4')">
+        <img src="assets/images/composite4.jpg" alt="Composite Project 4">
+        <div class="portfolio-details">
+          <h3>High-Performance Carbon Nanotube Composites</h3>
+          <p>Enhancing mechanical and electrical properties of composites through the incorporation of carbon nanotubes.</p>
+          <div class="portfolio-links">
+            <a href="#">Learn More</a>
+            <a href="#" class="fas fa-arrow-right"></a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
   </div>
-
+  
+  <!-- Popup Modals -->
+  
+  <!-- Project 1 Popup -->
+  <div id="popup-project1" class="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closePopup('popup-project1')">&times;</button>
+      <h2>Nanocellulose-Reinforced Polymer Composites</h2>
+      <img src="assets/images/composite1_large.jpg" alt="Composite Project 1 Detail">
+      <p>This project focuses on the integration of nanocellulose fibers into polymer matrices to create composites with superior mechanical properties. The use of nanocellulose not only enhances strength and durability but also contributes to the sustainability of the materials by utilizing renewable resources.</p>
+      <p><strong>Key Achievements:</strong></p>
+      <ul>
+        <li>Achieved a 30% increase in tensile strength compared to traditional composites.</li>
+        <li>Reduced composite density by 15%, resulting in lightweight materials suitable for automotive applications.</li>
+        <li>Published findings in the <em>Journal of Composite Materials</em>.</li>
+      </ul>
+      <p><a href="#">View Publication</a></p>
+    </div>
+  </div>
+  
+  <!-- Project 2 Popup -->
+  <div id="popup-project2" class="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closePopup('popup-project2')">&times;</button>
+      <h2>Magnetic Hybrid Foams</h2>
+      <img src="assets/images/composite2_large.jpg" alt="Composite Project 2 Detail">
+      <p>Developed hybrid foams embedded with magnetic particles, enabling applications in smart materials and environmental remediation. These foams exhibit enhanced thermal insulation and can be manipulated using external magnetic fields.</p>
+      <p><strong>Key Achievements:</strong></p>
+      <ul>
+        <li>Introduced magnetic responsiveness to lightweight foam structures.</li>
+        <li>Enhanced thermal insulation properties by 25% compared to conventional foams.</li>
+        <li>Collaborated with industry partners for real-world application testing.</li>
+      </ul>
+      <p><a href="#">View Publication</a></p>
+    </div>
+  </div>
+  
+  <!-- Project 3 Popup -->
+  <div id="popup-project3" class="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closePopup('popup-project3')">&times;</button>
+      <h2>Fiber-Based Sustainable Packaging</h2>
+      <img src="assets/images/composite3_large.jpg" alt="Composite Project 3 Detail">
+      <p>Designed and developed sustainable packaging materials using natural fibers, aiming to reduce reliance on fossil-based plastics. The project emphasizes biodegradability and recyclability without compromising on performance.</p>
+      <p><strong>Key Achievements:</strong></p>
+      <ul>
+        <li>Created packaging prototypes with complete biodegradability.</li>
+        <li>Achieved comparable strength and flexibility to traditional plastic packaging.</li>
+        <li>Received a grant from the Environmental Sustainability Council.</li>
+      </ul>
+      <p><a href="#">View Publication</a></p>
+    </div>
+  </div>
+  
+  <!-- Project 4 Popup -->
+  <div id="popup-project4" class="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closePopup('popup-project4')">&times;</button>
+      <h2>High-Performance Carbon Nanotube Composites</h2>
+      <img src="assets/images/composite4_large.jpg" alt="Composite Project 4 Detail">
+      <p>Investigated the incorporation of carbon nanotubes (CNTs) into polymer matrices to significantly improve electrical conductivity and mechanical strength. This project opens avenues for advanced applications in electronics and aerospace industries.</p>
+      <p><strong>Key Achievements:</strong></p>
+      <ul>
+        <li>Enhanced electrical conductivity by 50% with minimal CNT addition.</li>
+        <li>Improved mechanical properties, achieving a 40% increase in modulus.</li>
+        <li>Presented findings at the International Conference on Nanotechnology.</li>
+      </ul>
+      <p><a href="#">View Publication</a></p>
+    </div>
+  </div>
+  
   <!-- External JavaScript -->
   <script src="assets/js/scripts.js"></script>
 </body>
