@@ -1,71 +1,47 @@
-/* assets/js/portfolio.js */
+// portfolio.js
 
-/* 
-  This script handles the popup functionality for each project card 
-  and prevents background scrolling when a popup is displayed.
-*/
-
-// Utility Functions
-function lockScroll() {
-  document.body.style.overflow = 'hidden';
-}
-
-function unlockScroll() {
-  document.body.style.overflow = 'auto';
-}
-
-// Show a specific project's popup
+// Function to show the project popup
 function showProjectPopup(popupId) {
   const popup = document.getElementById(popupId);
   if (popup) {
-    popup.style.display = 'flex';
+    popup.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
     popup.setAttribute('aria-hidden', 'false');
-    lockScroll();
-    // Move focus to the popup for accessibility
-    const firstFocusableElement = popup.querySelector('.popup-content');
-    if (firstFocusableElement) {
-      firstFocusableElement.focus();
-    }
+    // Focus on the popup for accessibility
+    popup.querySelector('.popup-content').focus();
   }
 }
 
-// Close a specific project's popup
+// Function to close the project popup
 function closeProjectPopup(popupId) {
   const popup = document.getElementById(popupId);
   if (popup) {
     popup.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore background scrolling
     popup.setAttribute('aria-hidden', 'true');
-    unlockScroll();
-    // Return focus to the back button
-    const backBtn = document.querySelector('.back-btn');
-    if (backBtn) {
-      backBtn.focus();
-    }
   }
 }
 
-// Close popup if clicking outside the popup content
-window.addEventListener('click', (e) => {
-  if (e.target.classList.contains('project-popup')) {
-    e.target.style.display = 'none';
-    e.target.setAttribute('aria-hidden', 'true');
-    unlockScroll();
-  }
+// Close popup when clicking outside the content
+document.addEventListener('click', function(event) {
+  const popups = document.querySelectorAll('.project-popup');
+  popups.forEach(popup => {
+    if (event.target === popup) {
+      popup.style.display = 'none';
+      document.body.style.overflow = 'auto';
+      popup.setAttribute('aria-hidden', 'true');
+    }
+  });
 });
 
-// Close popup with Escape key
-window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
+// Close popup on pressing the Esc key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
     const popups = document.querySelectorAll('.project-popup');
-    popups.forEach((popup) => {
+    popups.forEach(popup => {
       popup.style.display = 'none';
+      document.body.style.overflow = 'auto';
       popup.setAttribute('aria-hidden', 'true');
     });
-    unlockScroll();
-    // Return focus to the back button
-    const backBtn = document.querySelector('.back-btn');
-    if (backBtn) {
-      backBtn.focus();
-    }
   }
 });
