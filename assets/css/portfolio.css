@@ -4,12 +4,12 @@
 :root {
   /* Color Palette */
   --color-primary: #2c3e50;         /* Dark Blue - Trust, Professionalism */
-  --color-accent: #e74c3c;          /* Red - Attention, Action */
-  --color-secondary: #1abc9c;        /* Teal - Modernity, Freshness */
-  --color-background: #f8f9fa;       /* Light Gray - Neutral Background */
+  --color-accent: #1abc9c;          /* Teal - Modernity, Freshness */
+  --color-secondary: #f39c12;        /* Orange - Attention, Action */
+  --color-background: #f0f4f8;       /* Light Gray - Neutral Background */
   --color-text: #34495e;             /* Slate Gray - Readability */
-  --color-popup-bg: rgba(0, 0, 0, 0.8); /* Semi-transparent Black */
-  --color-close-btn: #e74c3c;        /* Red */
+  --color-popup-bg: rgba(0, 0, 0, 0.7); /* Semi-transparent Black */
+  --color-close-btn: #e74c3c;        /* Red - Urgency */
   --color-close-btn-hover: #c0392b;  /* Darker Red */
 
   /* Typography */
@@ -28,7 +28,7 @@
   /* Other */
   --border-radius: 8px;
   --transition-speed: 0.3s;
-  --box-shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
   --box-shadow-heavy: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -62,7 +62,7 @@ body {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--spacing-medium);
+  padding: var(--spacing-medium) var(--spacing-medium);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,7 +83,7 @@ body {
 .back-btn {
   text-decoration: none;
   color: #fff;
-  background: var(--color-accent);
+  background: var(--color-primary);
   padding: 0.6rem 1rem;
   border-radius: var(--border-radius);
   display: inline-flex;
@@ -183,7 +183,7 @@ body {
 
 .project-card h3 {
   font-size: 1.4rem;
-  color: var(--color-primary);
+  color: var(--color-accent);
   margin: var(--spacing-medium);
   font-family: var(--font-secondary);
 }
@@ -200,7 +200,7 @@ body {
   align-self: flex-start;
   background: var(--color-accent);
   border: none;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
   color: #fff;
   border-radius: var(--border-radius);
   cursor: pointer;
