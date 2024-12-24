@@ -19,13 +19,7 @@ function showProjectPopup(popupId) {
   const popup = document.getElementById(popupId);
   if (popup) {
     popup.style.display = 'flex';
-    popup.setAttribute('aria-hidden', 'false');
     lockScroll();
-    // Move focus to the popup for accessibility
-    const firstFocusableElement = popup.querySelector('.popup-content');
-    if (firstFocusableElement) {
-      firstFocusableElement.focus();
-    }
   }
 }
 
@@ -34,13 +28,7 @@ function closeProjectPopup(popupId) {
   const popup = document.getElementById(popupId);
   if (popup) {
     popup.style.display = 'none';
-    popup.setAttribute('aria-hidden', 'true');
     unlockScroll();
-    // Return focus to the back button
-    const backBtn = document.querySelector('.back-btn');
-    if (backBtn) {
-      backBtn.focus();
-    }
   }
 }
 
@@ -48,7 +36,6 @@ function closeProjectPopup(popupId) {
 window.addEventListener('click', (e) => {
   if (e.target.classList.contains('project-popup')) {
     e.target.style.display = 'none';
-    e.target.setAttribute('aria-hidden', 'true');
     unlockScroll();
   }
 });
@@ -59,13 +46,7 @@ window.addEventListener('keydown', (e) => {
     const popups = document.querySelectorAll('.project-popup');
     popups.forEach((popup) => {
       popup.style.display = 'none';
-      popup.setAttribute('aria-hidden', 'true');
     });
     unlockScroll();
-    // Return focus to the back button
-    const backBtn = document.querySelector('.back-btn');
-    if (backBtn) {
-      backBtn.focus();
-    }
   }
 });
