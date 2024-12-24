@@ -32,9 +32,6 @@
       <p><i class="fas fa-passport"></i> <strong>VISA STATUS:</strong> <span style="color: green;"><i class="fas fa-check-circle"></i> Swedish Resident</span></p>
     </div>
 
-
-
-
     <!-- Navigation Links -->
     <ul class="nav-links">
       <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
@@ -48,15 +45,14 @@
 
     <!-- Action Buttons -->
     <div class="sidebar-buttons">
-      <a href="CV_Seyed_Ehsan_Hadi.pdf" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
+      <a href="assets/CV_Seyed_Ehsan_Hadi.pdf" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
+      <a href="portfolio.html" class="portfolio-btn" target="_blank"><i class="fas fa-briefcase"></i> Portfolio</a>
     </div>
 
-
-    <div class="sidebar-footer">
-        &copy; 2024 Seyed Ehsan Hadi, PhD. All rights reserved.
-      </div>
-
-     </footer>
+    <!-- Footer in Sidebar -->
+    <footer class="sidebar-footer">
+      &copy; 2024 Seyed Ehsan Hadi, PhD. All rights reserved.
+    </footer>
   </nav>
 
   <!-- Main Content -->
@@ -260,8 +256,6 @@
       </div>
     </section>
   </div>
-
-  <!-- Footer Removed from Main Content -->
 
   <!-- Popup Modals -->
   
@@ -625,6 +619,18 @@
     </div>
   </div>
 
+  <div id="popup-skill-highscore-plus" class="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closePopup('popup-skill-highscore-plus')">&times;</button>
+      <h3>HighScore Plus</h3>
+      <ul>
+        <li>Software for analyzing X-ray diffraction (XRD) data, enabling phase identification and crystallographic analysis.</li>
+        <li>Used for interpreting complex diffraction patterns and quantifying crystalline phases in materials.</li>
+        <li>Assists in understanding the structural properties of synthesized nanocomposites.</li>
+      </ul>
+    </div>
+  </div>
+
   <!-- Soft Skills Popups -->
   <div id="popup-skill-leadership" class="popup">
     <div class="popup-content">
@@ -760,6 +766,10 @@
       </ul>
     </div>
   </div>
+
+  <!-- Popup Modals End -->
+  
+  <!-- External JavaScript -->
   <script src="assets/js/scripts.js"></script>
 </body>
 </html>
