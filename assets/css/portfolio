@@ -1,0 +1,136 @@
+/* assets/css/portfolio.css */
+
+/* Portfolio Specific Styles */
+body {
+  background-color: #f0f4f8; /* Light background for portfolio */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.top-nav {
+  background-color: #1abc9c; /* Teal color for top navigation */
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.top-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.top-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.top-nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.top-nav-links li a:hover,
+.top-nav-links li a.active {
+  color: #f39c12; /* Orange color on hover and active */
+}
+
+.portfolio-content {
+  margin-top: 80px; /* Space below the fixed top navigation */
+  padding: 2rem;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.portfolio-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-header p {
+  font-size: 1.2rem;
+  color: #34495e;
+}
+
+.portfolio-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.portfolio-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolio-details {
+  padding: 1rem;
+}
+
+.portfolio-details h3 {
+  font-size: 1.3rem;
+  color: #1abc9c;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-details p {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+.portfolio-links a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.portfolio-links a:hover {
+  color: #f39c12;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
