@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Seyed Ehsan Hadi, PhD</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Left Sidebar -->
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <h2>Seyed Ehsan Hadi, PhD</h2>
+      <img src="assets/images/photo.jpg" alt="Profile Picture" class="profile-pic">
+    </div>
 
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:sy@example.com">sy@example.com</a></p>
+      <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +46 [Your Phone Number]</p>
+      <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Stockholm, Sweden</p>
+      <p><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/seyed-ehsan-hadi" target="_blank">/seyed-ehsan-hadi</a></p>
+      <p><i class="fas fa-graduation-cap"></i> <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?hl=en&user=aqsQc48AAAAJ" target="_blank">Profile</a></p>
+      <p><i class="fas fa-passport"></i> <strong>VISA STATUS:</strong> <span style="color: green;"><i class="fas fa-check-circle"></i> Swedish Resident</span></p>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+      <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+      <li><a href="publications.html"><i class="fas fa-book"></i> Publications</a></li>
+      <li><a href="skills.html"><i class="fas fa-tools"></i> Skills</a></li>
+      <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+      <li><a href="additional-info.html"><i class="fas fa-info-circle"></i> Additional Info</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      <li><a href="https://github.com/seyedehsanhadi/portofino" target="_blank"><i class="fas fa-briefcase"></i> Portofino</a></li>
+    </ul>
+
+    <!-- Action Buttons -->
+    <div class="sidebar-buttons">
+      <a href="CV_Seyed_Ehsan_Hadi.pdf" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
+      <a href="https://github.com/seyedehsanhadi/portofino" class="portfolio-btn" target="_blank"><i class="fas fa-briefcase"></i> Portfolio</a>
+    </div>
+
+    <!-- Footer in Sidebar -->
+    <footer class="sidebar-footer">
+      &copy; 2024 Seyed Ehsan Hadi, PhD. All rights reserved.
+    </footer>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header Section -->
+    <header class="header">
+      <div class="header-details">
+        <h1>Seyed Ehsan Hadi, PhD</h1>
+        <h2>Materials Chemist | Project Manager</h2>
+        <p>Multidisciplinary leader with 7+ years in materials science, specializing in nanomaterial characterization and the development of advanced composites. Currently pursuing a Postdoctoral Research Associate position at KTH Royal Institute of Technology, focusing on fiber-based materials for industrial applications. Seeking opportunities in the USA to leverage expertise in materials processing, characterization, and application development within academia and industry.</p>
+      </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>As a dedicated materials chemist with extensive experience in the characterization of nanomaterials and the development of advanced composites, I have consistently driven research and development initiatives that bridge the gap between scientific innovation and practical applications. My tenure at esteemed institutions like Stockholm University and KTH Royal Institute of Technology has honed my skills in experimental design, data analysis, and interdisciplinary collaboration.</p>
+        <ul>
+          <li class="clickable" onclick="showPopup('popup-about-achievements')"><i class="fas fa-check-circle"></i> Secured multiple competitive grants and fellowships, including the Wallenberg Wood Science Center PhD Grant and TÜBİTAK Fellowship.</li>
+          <li class="clickable" onclick="showPopup('popup-about-publications')"><i class="fas fa-check-circle"></i> Published extensively in high-impact journals on nanocellulose composites and magnetic foams.</li>
+          <li class="clickable" onclick="showPopup('popup-about-projects')"><i class="fas fa-check-circle"></i> Developed high-performance nanocomposites for industrial applications and led interdisciplinary projects.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- Popup Modals -->
+  <!-- About Me Popups -->
+  <div id="popup-about-achievements" class="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closePopup('popup-about-achievements')">&times;</button>
+      <h3>Achievements</h3>
+      <ul>
+        <li>Secured multiple competitive grants and fellowships, demonstrating excellence and recognition in the field.</li>
+        <li>Successfully led interdisciplinary projects, fostering collaboration across various domains of materials science.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup-about-publications" class="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closePopup('popup-about-publications')">&times;</button>
+      <h3>Publications</h3>
+      <p>Authored and co-authored numerous papers in high-impact journals, contributing significantly to the advancement of nanocellulose composites and magnetic foam technologies.</p>
+    </div>
+  </div>
+
+  <div id="popup-about-projects" class="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closePopup('popup-about-projects')">&times;</button>
+      <h3>Projects</h3>
+      <ul>
+        <li>Developed innovative nanocomposites tailored for specific industrial applications, enhancing product performance and sustainability.</li>
+        <li>Led a team of researchers in the synthesis and characterization of advanced materials, achieving key project milestones.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
