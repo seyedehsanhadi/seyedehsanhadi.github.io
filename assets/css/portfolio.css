@@ -1,24 +1,27 @@
 /* assets/css/portfolio.css */
 
-/* CSS Variables for Theming */
+/* CSS Variables */
 :root {
-  --primary-color: #2c3e50;         /* Dark Blue for Trust/Professionalism */
-  --accent-color: #1abc9c;          /* Teal for Modern Touch */
-  --background-color: #f0f4f8;      /* Light Gray for Portfolio Background */
-  --text-color: #34495e;            /* Dark Gray for Readability */
-  --nav-color-hover: #f39c12;       /* Orange hover color */
-  --card-bg: #ffffff;               /* White Cards */
+  --bg-gradient-start: #38ada9;          /* Light Teal */
+  --bg-gradient-end: #2c3e50;            /* Dark Blue */
+  --accent-color: #1abc9c;              /* Teal */
+  --primary-color: #2c3e50;             /* Dark Blue */
+  --secondary-color: #f39c12;           /* Orange */
+  --text-color: #34495e;                /* Slate Gray */
+  --nav-bg: #ffffff;                    /* Nav Background (White) */
+  --card-bg: #ffffff;                   /* Card Background */
   --card-shadow: rgba(0, 0, 0, 0.1);
+  --popup-bg: rgba(0, 0, 0, 0.7);
+  --close-btn-bg: #e74c3c;              /* Red */
+  --close-btn-hover: #c0392b;           /* Darker Red */
   --radius: 8px;
   --transition-speed: 0.3s;
-  --popup-bg: rgba(0, 0, 0, 0.7);   /* Darker Overlay for Popups */
-  --close-btn-bg: #e74c3c;          /* Red close button */
-  --close-btn-hover: #c0392b;       /* Darker Red on Hover */
-  --font-primary: 'Montserrat', sans-serif;
+
+  --font-primary: 'Poppins', sans-serif;
   --font-secondary: 'Roboto', sans-serif;
 }
 
-/* Reset and Base Styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -26,199 +29,206 @@
 }
 
 body {
-  background-color: var(--background-color);
+  background: linear-gradient(
+    135deg,
+    var(--bg-gradient-start),
+    var(--bg-gradient-end)
+  );
   font-family: var(--font-primary);
   color: var(--text-color);
-  line-height: 1.6;
+  min-height: 100vh;
 }
 
-/* Top Navigation Bar */
-.top-nav {
-  background: linear-gradient(135deg, var(--accent-color), #16a085);
-  padding: 1rem 2rem;
+/* Minimal Top Navigation */
+.minimal-nav {
+  background: #fff;
+  box-shadow: 0 2px 6px var(--card-shadow);
   position: fixed;
-  width: 100%;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 4px var(--card-shadow);
+  width: 100%;
+  z-index: 999;
 }
 
-.top-nav-container {
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-.top-nav-title {
-  color: #fff;
-  font-size: 2rem;
+.nav-logo {
+  font-size: 1.5rem;
   font-weight: 600;
-  font-family: var(--font-secondary);
-}
-
-.top-nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.top-nav-links li a {
-  color: #fff;
   text-decoration: none;
-  font-size: 1.1rem;
-  position: relative;
-  transition: color var(--transition-speed);
+  color: var(--primary-color);
 }
 
-.top-nav-links li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  height: 2px;
-  width: 0%;
-  background-color: var(--nav-color-hover);
-  transition: width var(--transition-speed);
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.top-nav-links li a:hover::after,
-.top-nav-links li a.active::after {
-  width: 100%;
+.back-btn {
+  text-decoration: none;
+  color: #fff;
+  background: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  display: inline-flex;
+  align-items: center;
+  transition: background var(--transition-speed),
+              transform var(--transition-speed),
+              box-shadow var(--transition-speed);
 }
 
-.top-nav-links li a:hover,
-.top-nav-links li a.active {
-  color: var(--nav-color-hover);
+.back-btn i {
+  margin-right: 0.5rem;
+}
+
+.back-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Portfolio Content Wrapper */
-.portfolio-content {
-  margin-top: 80px; /* Space below fixed navbar */
+.portfolio-wrapper {
+  margin-top: 70px; /* space below nav */
   padding: 2rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Portfolio Header */
-.portfolio-header {
+/* Intro Section */
+.intro-section {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.portfolio-header h1 {
-  font-size: 3rem;
+.intro-section h1 {
+  font-size: 2.5rem;
+  font-family: var(--font-secondary);
   color: var(--primary-color);
   margin-bottom: 1rem;
-  font-family: var(--font-secondary);
 }
 
-.portfolio-header p {
-  font-size: 1.2rem;
+.intro-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
   color: var(--text-color);
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.5;
 }
 
-/* Portfolio Section Grid Layout */
-.portfolio-section {
+/* Projects Grid */
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 2rem;
 }
 
-/* Portfolio Cards */
-.portfolio-card {
-  background-color: var(--card-bg);
+/* Project Cards */
+.project-card {
+  background: var(--card-bg);
   border-radius: var(--radius);
-  box-shadow: 0 4px 6px var(--card-shadow);
+  box-shadow: 0 4px 8px var(--card-shadow);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform var(--transition-speed), 
-              box-shadow var(--transition-speed);
-}
-
-.portfolio-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px var(--card-shadow);
-}
-
-.portfolio-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform var(--transition-speed);
-}
-
-.portfolio-card:hover .portfolio-image {
-  transform: scale(1.05);
-}
-
-.portfolio-details {
-  flex-grow: 1;
-  padding: 1.5rem;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.portfolio-details h3 {
-  font-size: 1.5rem;
-  color: var(--accent-color);
-  margin-bottom: 0.5rem;
-  font-family: var(--font-secondary);
+.image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
 }
 
-.portfolio-details p {
-  font-size: 1rem;
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed);
+}
+
+.project-card:hover img {
+  transform: scale(1.03);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--card-shadow);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  margin: 1rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
   color: var(--text-color);
-  margin-bottom: 1rem;
+  margin: 0 1rem 1rem;
   line-height: 1.4;
 }
 
-.portfolio-links a {
-  display: inline-block;
-  margin-right: 0.5rem;
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color var(--transition-speed);
+.project-button {
+  margin: 0 1rem 1rem;
+  align-self: flex-start;
+  background: var(--accent-color);
+  border: none;
+  padding: 0.4rem 1rem;
+  color: #fff;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background var(--transition-speed),
+              transform var(--transition-speed),
+              box-shadow var(--transition-speed);
 }
 
-.portfolio-links a:hover {
-  color: var(--nav-color-hover);
+.project-button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Popup Styles */
-.popup {
-  display: none; /* hidden by default */
+/* Project Popups */
+.project-popup {
+  display: none;
   position: fixed;
   z-index: 2000;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: var(--popup-bg);
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .popup-content {
   background: var(--card-bg);
   padding: 2rem;
   border-radius: var(--radius);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   position: relative;
   overflow-y: auto;
   max-height: 90vh;
-  animation: fadeIn var(--transition-speed) ease-out;
+  animation: fadeIn var(--transition-speed) ease-out forwards;
 }
 
 .popup-content img {
@@ -229,17 +239,22 @@ body {
 }
 
 .popup-content h2 {
-  font-size: 2rem;
-  color: var(--primary-color);
+  font-size: 1.8rem;
   margin-bottom: 1rem;
-  font-family: var(--font-secondary);
+  color: var(--primary-color);
 }
 
 .popup-content p {
-  font-size: 1rem;
-  color: var(--text-color);
   margin-bottom: 1rem;
+  font-size: 1rem;
   line-height: 1.5;
+  color: var(--text-color);
+}
+
+.popup-content h4 {
+  margin-top: 1rem;
+  color: var(--accent-color);
+  font-size: 1.1rem;
 }
 
 .popup-content ul {
@@ -248,17 +263,28 @@ body {
   margin-bottom: 1.2rem;
 }
 
+.popup-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+  font-weight: 500;
+}
+
+.popup-link:hover {
+  color: var(--secondary-color);
+}
+
 .close-popup {
   position: absolute;
   top: 15px;
   right: 15px;
   background: var(--close-btn-bg);
-  color: #ffffff;
+  color: #fff;
   border: none;
   padding: 0.5rem 0.8rem;
-  cursor: pointer;
   border-radius: 50%;
   font-size: 1.2rem;
+  cursor: pointer;
   transition: background var(--transition-speed);
 }
 
@@ -266,60 +292,59 @@ body {
   background: var(--close-btn-hover);
 }
 
-/* Animations */
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
     transform: scale(0.95);
   }
-  to {
+  100% {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-/* Responsive Adjustments */
+/* Responsive Tweaks */
 @media (max-width: 768px) {
-  .top-nav-links {
+  .nav-container {
     flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .portfolio-header h1 {
-    font-size: 2.5rem;
+    gap: 0.8rem;
   }
 
-  .portfolio-header p {
-    font-size: 1.1rem;
+  .back-btn {
+    margin-top: 0.5rem;
   }
-  
-  .portfolio-section {
+
+  .intro-section h1 {
+    font-size: 2rem;
+  }
+
+  .intro-section p {
+    font-size: 1rem;
+  }
+
+  .projects-grid {
     grid-template-columns: 1fr;
   }
-  
-  .portfolio-details h3 {
-    font-size: 1.3rem;
-  }
-  
-  .portfolio-details p {
-    font-size: 0.95rem;
-  }
-  
-  .close-popup {
-    font-size: 1rem;
+
+  .project-card h3 {
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 576px) {
+  .intro-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .project-button {
+    font-size: 0.9rem;
+  }
+
   .popup-content {
     padding: 1.5rem;
   }
-  
+
   .popup-content h2 {
-    font-size: 1.8rem;
-  }
-  
-  .popup-content p {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
   }
 }
