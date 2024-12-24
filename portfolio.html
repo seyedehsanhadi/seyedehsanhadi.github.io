@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio - Seyed Ehsan Hadi, PhD</title>
   
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
   
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   
   <!-- External CSS -->
-  <link rel="stylesheet" href="assets/css/portfolio.css">
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
 </head>
 <body>
-  
   <!-- Top Navigation Bar -->
   <nav class="top-nav">
     <div class="top-nav-container">
@@ -31,22 +36,34 @@
   
   <!-- Portfolio Content -->
   <div class="portfolio-content">
-    
     <!-- Portfolio Header -->
     <div class="portfolio-header">
       <h1>Composites Research Projects</h1>
-      <p>Explore my projects focused on the development and characterization of advanced composites, showcasing innovative solutions in materials science.</p>
+      <p>
+        Explore my projects focused on the development and characterization of
+        advanced composites, showcasing innovative solutions in materials
+        science.
+      </p>
     </div>
     
     <!-- Portfolio Section -->
     <div class="portfolio-section">
-      
       <!-- Portfolio Card 1 -->
-      <div class="portfolio-card clickable" onclick="showPopup('popup-project1')">
-        <img src="assets/images/composite1.jpg" alt="Composite Project 1">
+      <div
+        class="portfolio-card clickable"
+        onclick="showPopup('popup-project1')"
+      >
+        <img
+          src="assets/images/composite1.jpg"
+          alt="Composite Project 1"
+          class="portfolio-image"
+        />
         <div class="portfolio-details">
           <h3>Nanocellulose-Reinforced Polymer Composites</h3>
-          <p>Development of high-strength, lightweight polymer composites using nanocellulose as a reinforcing agent.</p>
+          <p>
+            Development of high-strength, lightweight polymer composites using
+            nanocellulose as a reinforcing agent.
+          </p>
           <div class="portfolio-links">
             <a href="#">Learn More</a>
             <a href="#" class="fas fa-arrow-right"></a>
@@ -55,11 +72,21 @@
       </div>
       
       <!-- Portfolio Card 2 -->
-      <div class="portfolio-card clickable" onclick="showPopup('popup-project2')">
-        <img src="assets/images/composite2.jpg" alt="Composite Project 2">
+      <div
+        class="portfolio-card clickable"
+        onclick="showPopup('popup-project2')"
+      >
+        <img
+          src="assets/images/composite2.jpg"
+          alt="Composite Project 2"
+          class="portfolio-image"
+        />
         <div class="portfolio-details">
           <h3>Magnetic Hybrid Foams</h3>
-          <p>Creating lightweight foams with embedded magnetic particles for smart material applications.</p>
+          <p>
+            Creating lightweight foams with embedded magnetic particles for
+            smart material applications.
+          </p>
           <div class="portfolio-links">
             <a href="#">Learn More</a>
             <a href="#" class="fas fa-arrow-right"></a>
@@ -68,11 +95,21 @@
       </div>
       
       <!-- Portfolio Card 3 -->
-      <div class="portfolio-card clickable" onclick="showPopup('popup-project3')">
-        <img src="assets/images/composite3.jpg" alt="Composite Project 3">
+      <div
+        class="portfolio-card clickable"
+        onclick="showPopup('popup-project3')"
+      >
+        <img
+          src="assets/images/composite3.jpg"
+          alt="Composite Project 3"
+          class="portfolio-image"
+        />
         <div class="portfolio-details">
           <h3>Fiber-Based Sustainable Packaging</h3>
-          <p>Designing eco-friendly packaging materials using natural fibers to reduce environmental impact.</p>
+          <p>
+            Designing eco-friendly packaging materials using natural fibers to
+            reduce environmental impact.
+          </p>
           <div class="portfolio-links">
             <a href="#">Learn More</a>
             <a href="#" class="fas fa-arrow-right"></a>
@@ -81,20 +118,28 @@
       </div>
       
       <!-- Portfolio Card 4 -->
-      <div class="portfolio-card clickable" onclick="showPopup('popup-project4')">
-        <img src="assets/images/composite4.jpg" alt="Composite Project 4">
+      <div
+        class="portfolio-card clickable"
+        onclick="showPopup('popup-project4')"
+      >
+        <img
+          src="assets/images/composite4.jpg"
+          alt="Composite Project 4"
+          class="portfolio-image"
+        />
         <div class="portfolio-details">
           <h3>High-Performance Carbon Nanotube Composites</h3>
-          <p>Enhancing mechanical and electrical properties of composites through the incorporation of carbon nanotubes.</p>
+          <p>
+            Enhancing mechanical and electrical properties of composites through
+            the incorporation of carbon nanotubes.
+          </p>
           <div class="portfolio-links">
             <a href="#">Learn More</a>
             <a href="#" class="fas fa-arrow-right"></a>
           </div>
         </div>
       </div>
-      
     </div>
-    
   </div>
   
   <!-- Popup Modals -->
@@ -102,15 +147,34 @@
   <!-- Project 1 Popup -->
   <div id="popup-project1" class="popup">
     <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-project1')">&times;</button>
+      <button class="close-popup" onclick="closePopup('popup-project1')">
+        &times;
+      </button>
       <h2>Nanocellulose-Reinforced Polymer Composites</h2>
-      <img src="assets/images/composite1_large.jpg" alt="Composite Project 1 Detail">
-      <p>This project focuses on the integration of nanocellulose fibers into polymer matrices to create composites with superior mechanical properties. The use of nanocellulose not only enhances strength and durability but also contributes to the sustainability of the materials by utilizing renewable resources.</p>
+      <img
+        src="assets/images/composite1_large.jpg"
+        alt="Composite Project 1 Detail"
+      />
+      <p>
+        This project focuses on the integration of nanocellulose fibers into
+        polymer matrices to create composites with superior mechanical
+        properties. The use of nanocellulose not only enhances strength and
+        durability but also contributes to the sustainability of the materials
+        by utilizing renewable resources.
+      </p>
       <p><strong>Key Achievements:</strong></p>
       <ul>
-        <li>Achieved a 30% increase in tensile strength compared to traditional composites.</li>
-        <li>Reduced composite density by 15%, resulting in lightweight materials suitable for automotive applications.</li>
-        <li>Published findings in the <em>Journal of Composite Materials</em>.</li>
+        <li>
+          Achieved a 30% increase in tensile strength compared to
+          traditional composites.
+        </li>
+        <li>
+          Reduced composite density by 15%, resulting in lightweight
+          materials suitable for automotive applications.
+        </li>
+        <li>
+          Published findings in the <em>Journal of Composite Materials</em>.
+        </li>
       </ul>
       <p><a href="#">View Publication</a></p>
     </div>
@@ -119,15 +183,34 @@
   <!-- Project 2 Popup -->
   <div id="popup-project2" class="popup">
     <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-project2')">&times;</button>
+      <button class="close-popup" onclick="closePopup('popup-project2')">
+        &times;
+      </button>
       <h2>Magnetic Hybrid Foams</h2>
-      <img src="assets/images/composite2_large.jpg" alt="Composite Project 2 Detail">
-      <p>Developed hybrid foams embedded with magnetic particles, enabling applications in smart materials and environmental remediation. These foams exhibit enhanced thermal insulation and can be manipulated using external magnetic fields.</p>
+      <img
+        src="assets/images/composite2_large.jpg"
+        alt="Composite Project 2 Detail"
+      />
+      <p>
+        Developed hybrid foams embedded with magnetic particles, enabling
+        applications in smart materials and environmental remediation.
+        These foams exhibit enhanced thermal insulation and can be
+        manipulated using external magnetic fields.
+      </p>
       <p><strong>Key Achievements:</strong></p>
       <ul>
-        <li>Introduced magnetic responsiveness to lightweight foam structures.</li>
-        <li>Enhanced thermal insulation properties by 25% compared to conventional foams.</li>
-        <li>Collaborated with industry partners for real-world application testing.</li>
+        <li>
+          Introduced magnetic responsiveness to lightweight foam
+          structures.
+        </li>
+        <li>
+          Enhanced thermal insulation properties by 25% compared to
+          conventional foams.
+        </li>
+        <li>
+          Collaborated with industry partners for real-world application
+          testing.
+        </li>
       </ul>
       <p><a href="#">View Publication</a></p>
     </div>
@@ -136,15 +219,30 @@
   <!-- Project 3 Popup -->
   <div id="popup-project3" class="popup">
     <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-project3')">&times;</button>
+      <button class="close-popup" onclick="closePopup('popup-project3')">
+        &times;
+      </button>
       <h2>Fiber-Based Sustainable Packaging</h2>
-      <img src="assets/images/composite3_large.jpg" alt="Composite Project 3 Detail">
-      <p>Designed and developed sustainable packaging materials using natural fibers, aiming to reduce reliance on fossil-based plastics. The project emphasizes biodegradability and recyclability without compromising on performance.</p>
+      <img
+        src="assets/images/composite3_large.jpg"
+        alt="Composite Project 3 Detail"
+      />
+      <p>
+        Designed and developed sustainable packaging materials using
+        natural fibers, aiming to reduce reliance on fossil-based plastics.
+        The project emphasizes biodegradability and recyclability without
+        compromising on performance.
+      </p>
       <p><strong>Key Achievements:</strong></p>
       <ul>
         <li>Created packaging prototypes with complete biodegradability.</li>
-        <li>Achieved comparable strength and flexibility to traditional plastic packaging.</li>
-        <li>Received a grant from the Environmental Sustainability Council.</li>
+        <li>
+          Achieved comparable strength and flexibility to traditional
+          plastic packaging.
+        </li>
+        <li>
+          Received a grant from the Environmental Sustainability Council.
+        </li>
       </ul>
       <p><a href="#">View Publication</a></p>
     </div>
@@ -153,15 +251,34 @@
   <!-- Project 4 Popup -->
   <div id="popup-project4" class="popup">
     <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-project4')">&times;</button>
+      <button class="close-popup" onclick="closePopup('popup-project4')">
+        &times;
+      </button>
       <h2>High-Performance Carbon Nanotube Composites</h2>
-      <img src="assets/images/composite4_large.jpg" alt="Composite Project 4 Detail">
-      <p>Investigated the incorporation of carbon nanotubes (CNTs) into polymer matrices to significantly improve electrical conductivity and mechanical strength. This project opens avenues for advanced applications in electronics and aerospace industries.</p>
+      <img
+        src="assets/images/composite4_large.jpg"
+        alt="Composite Project 4 Detail"
+      />
+      <p>
+        Investigated the incorporation of carbon nanotubes (CNTs) into
+        polymer matrices to significantly improve electrical conductivity
+        and mechanical strength. This project opens avenues for advanced
+        applications in electronics and aerospace industries.
+      </p>
       <p><strong>Key Achievements:</strong></p>
       <ul>
-        <li>Enhanced electrical conductivity by 50% with minimal CNT addition.</li>
-        <li>Improved mechanical properties, achieving a 40% increase in modulus.</li>
-        <li>Presented findings at the International Conference on Nanotechnology.</li>
+        <li>
+          Enhanced electrical conductivity by 50% with minimal CNT
+          addition.
+        </li>
+        <li>
+          Improved mechanical properties, achieving a 40% increase in
+          modulus.
+        </li>
+        <li>
+          Presented findings at the International Conference on
+          Nanotechnology.
+        </li>
       </ul>
       <p><a href="#">View Publication</a></p>
     </div>
