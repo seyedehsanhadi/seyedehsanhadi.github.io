@@ -16,10 +16,13 @@
 </head>
 <body>
   
-  <!-- Top Navigation Bar -->
+<!-- Top Navigation Bar -->
   <nav class="top-nav">
     <div class="top-nav-container">
       <div class="top-nav-title">Seyed Ehsan Hadi, PhD</div>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
       <ul class="top-nav-links">
         <li><a href="about.html">About</a></li>
         <li><a href="portfolio.html" class="active">Portfolio</a></li>
@@ -28,6 +31,164 @@
       </ul>
     </div>
   </nav>
+
+  <style>
+    /* Enhanced Top Navigation Styles */
+    .top-nav {
+      background-color: var(--header-bg);
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 4px var(--card-shadow);
+      transition: background-color 0.3s ease;
+    }
+
+    .top-nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .top-nav-title {
+      color: #ffffff;
+      font-size: 1.8rem;
+      font-family: var(--font-secondary);
+      font-weight: 700;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .top-nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .top-nav-links li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      position: relative;
+      transition: color var(--transition-speed);
+    }
+
+    .top-nav-links li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: var(--nav-link-hover);
+      left: 0;
+      bottom: -4px;
+      transition: width var(--transition-speed);
+    }
+
+    .top-nav-links li a:hover::after,
+    .top-nav-links li a.active::after {
+      width: 100%;
+    }
+
+    .top-nav-links li a:hover,
+    .top-nav-links li a.active {
+      color: var(--nav-link-hover);
+    }
+
+    .top-nav-links li a[data-link="cv"] {
+      font-weight: 700;
+      font-size: 1.1rem;
+      background: var(--accent-color);
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: var(--border-radius);
+      transition: background var(--transition-speed);
+    }
+
+    .top-nav-links li a[data-link="cv"]:hover {
+      background: var(--nav-link-hover);
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .top-nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--header-bg);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        padding: 1rem 2rem;
+        gap: 1rem;
+      }
+
+      .top-nav-links.active {
+        display: flex;
+      }
+    }
+
+    .menu-toggle.active + .top-nav-links {
+      display: flex;
+    }
+
+    .top-nav.scrolled {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+
+  <script>
+    // JavaScript for responsive menu toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.top-nav-links');
+      const topNav = document.querySelector('.top-nav');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+
+      // Change navigation bar style on scroll
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          topNav.classList.add('scrolled');
+        } else {
+          topNav.classList.remove('scrolled');
+        }
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('.top-nav-links a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = e.target.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+
   
   <!-- Portfolio Content -->
   <div class="portfolio-content">
