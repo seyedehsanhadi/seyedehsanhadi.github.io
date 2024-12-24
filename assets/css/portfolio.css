@@ -1,5 +1,3 @@
-/* assets/css/portfolio.css */
-
 /* CSS Variables for Theming */
 :root {
   --primary-color: #2c3e50; /* Dark Blue for Trust and Professionalism */
@@ -93,6 +91,22 @@ body {
 .top-nav-links li a:hover,
 .top-nav-links li a.active {
   color: var(--nav-link-hover);
+}
+
+/* Updated for CV Link */
+.top-nav-links li a[data-link="cv"] {
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: var(--accent-color);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: background var(--transition-speed);
+}
+
+.top-nav-links li a[data-link="cv"]:hover {
+  background: var(--nav-link-hover);
+  color: #ffffff;
 }
 
 /* Portfolio Content */
