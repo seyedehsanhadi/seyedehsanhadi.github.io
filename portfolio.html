@@ -56,7 +56,7 @@
         onclick="showProjectPopup('popup-project1')"
       >
         <div class="image-container">
-          <img src="assets/images/composite1.jpg" alt="Project 1" />
+          <img src="assets/images/composite1.jpg" alt="Nanocellulose-Reinforced Composites" loading="lazy" />
         </div>
         <h3>Nanocellulose-Reinforced Composites</h3>
         <p>
@@ -71,7 +71,7 @@
         onclick="showProjectPopup('popup-project2')"
       >
         <div class="image-container">
-          <img src="assets/images/composite2.jpg" alt="Project 2" />
+          <img src="assets/images/composite2.jpg" alt="Magnetic Hybrid Foams" loading="lazy" />
         </div>
         <h3>Magnetic Hybrid Foams</h3>
         <p>
@@ -86,7 +86,7 @@
         onclick="showProjectPopup('popup-project3')"
       >
         <div class="image-container">
-          <img src="assets/images/composite3.jpg" alt="Project 3" />
+          <img src="assets/images/composite3.jpg" alt="Sustainable Fiber Packaging" loading="lazy" />
         </div>
         <h3>Sustainable Fiber Packaging</h3>
         <p>
@@ -101,7 +101,7 @@
         onclick="showProjectPopup('popup-project4')"
       >
         <div class="image-container">
-          <img src="assets/images/composite4.jpg" alt="Project 4" />
+          <img src="assets/images/composite4.jpg" alt="High-Performance CNT Composites" loading="lazy" />
         </div>
         <h3>High-Performance CNT Composites</h3>
         <p>
@@ -115,13 +115,11 @@
   <!-- Popup Modals -->
 
   <!-- Project 1 Popup -->
-  <div id="popup-project1" class="project-popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closeProjectPopup('popup-project1')">
-        &times;
-      </button>
-      <h2>Nanocellulose-Reinforced Composites</h2>
-      <img src="assets/images/composite1_large.jpg" alt="Project 1 Detail" />
+  <div id="popup-project1" class="project-popup" aria-hidden="true">
+    <div class="popup-content" role="dialog" aria-labelledby="popup-project1-title">
+      <button class="close-popup" onclick="closeProjectPopup('popup-project1')" aria-label="Close Popup">&times;</button>
+      <h2 id="popup-project1-title">Nanocellulose-Reinforced Composites</h2>
+      <img src="assets/images/composite1_large.jpg" alt="Nanocellulose-Reinforced Composites Detail" />
       <p>
         Integrating nanocellulose fibers into polymer matrices for improved
         tensile strength and reduced material weight. This approach harnesses
@@ -143,13 +141,11 @@
   </div>
 
   <!-- Project 2 Popup -->
-  <div id="popup-project2" class="project-popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closeProjectPopup('popup-project2')">
-        &times;
-      </button>
-      <h2>Magnetic Hybrid Foams</h2>
-      <img src="assets/images/composite2_large.jpg" alt="Project 2 Detail" />
+  <div id="popup-project2" class="project-popup" aria-hidden="true">
+    <div class="popup-content" role="dialog" aria-labelledby="popup-project2-title">
+      <button class="close-popup" onclick="closeProjectPopup('popup-project2')" aria-label="Close Popup">&times;</button>
+      <h2 id="popup-project2-title">Magnetic Hybrid Foams</h2>
+      <img src="assets/images/composite2_large.jpg" alt="Magnetic Hybrid Foams Detail" />
       <p>
         Engineered foams infused with magnetic particles to enable unique
         self-assembling and sensing functionalities. Ideal for aerospace
@@ -174,13 +170,11 @@
   </div>
 
   <!-- Project 3 Popup -->
-  <div id="popup-project3" class="project-popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closeProjectPopup('popup-project3')">
-        &times;
-      </button>
-      <h2>Sustainable Fiber Packaging</h2>
-      <img src="assets/images/composite3_large.jpg" alt="Project 3 Detail" />
+  <div id="popup-project3" class="project-popup" aria-hidden="true">
+    <div class="popup-content" role="dialog" aria-labelledby="popup-project3-title">
+      <button class="close-popup" onclick="closeProjectPopup('popup-project3')" aria-label="Close Popup">&times;</button>
+      <h2 id="popup-project3-title">Sustainable Fiber Packaging</h2>
+      <img src="assets/images/composite3_large.jpg" alt="Sustainable Fiber Packaging Detail" />
       <p>
         Biodegradable packaging materials constructed from natural fibers like
         hemp and jute. Aiming to reduce petrochemical plastic usage and advance
@@ -202,13 +196,11 @@
   </div>
 
   <!-- Project 4 Popup -->
-  <div id="popup-project4" class="project-popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closeProjectPopup('popup-project4')">
-        &times;
-      </button>
-      <h2>High-Performance Carbon Nanotube Composites</h2>
-      <img src="assets/images/composite4_large.jpg" alt="Project 4 Detail" />
+  <div id="popup-project4" class="project-popup" aria-hidden="true">
+    <div class="popup-content" role="dialog" aria-labelledby="popup-project4-title">
+      <button class="close-popup" onclick="closeProjectPopup('popup-project4')" aria-label="Close Popup">&times;</button>
+      <h2 id="popup-project4-title">High-Performance CNT Composites</h2>
+      <img src="assets/images/composite4_large.jpg" alt="High-Performance CNT Composites Detail" />
       <p>
         Investigating the incorporation of carbon nanotubes (CNTs) into polymer
         matrices to significantly improve electrical conductivity and mechanical
