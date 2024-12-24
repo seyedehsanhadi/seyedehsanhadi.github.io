@@ -31,7 +31,7 @@ body {
   line-height: 1.6;
 }
 
-/* Top Navigation Bar */
+/* Enhanced Top Navigation Styles */
 .top-nav {
   background-color: var(--header-bg);
   padding: 1rem 2rem;
@@ -40,6 +40,7 @@ body {
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 4px var(--card-shadow);
+  transition: background-color 0.3s ease;
 }
 
 .top-nav-container {
@@ -55,6 +56,15 @@ body {
   font-size: 1.8rem;
   font-family: var(--font-secondary);
   font-weight: 700;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .top-nav-links {
@@ -93,7 +103,6 @@ body {
   color: var(--nav-link-hover);
 }
 
-/* Updated for CV Link */
 .top-nav-links li a[data-link="cv"] {
   font-weight: 700;
   font-size: 1.1rem;
@@ -107,6 +116,36 @@ body {
 .top-nav-links li a[data-link="cv"]:hover {
   background: var(--nav-link-hover);
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .top-nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--header-bg);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  .top-nav-links.active {
+    display: flex;
+  }
+}
+
+.menu-toggle.active + .top-nav-links {
+  display: flex;
+}
+
+.top-nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Portfolio Content */
