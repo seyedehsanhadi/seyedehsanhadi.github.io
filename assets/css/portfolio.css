@@ -3,14 +3,24 @@
 /* CSS Variables */
 :root {
   /* Color Palette */
-  --color-primary: #2c3e50;         /* Dark Blue - Trust, Professionalism */
-  --color-accent: #e74c3c;          /* Red - Attention, Action */
-  --color-secondary: #1abc9c;        /* Teal - Modernity, Freshness */
-  --color-background: #f8f9fa;       /* Light Gray - Neutral Background */
-  --color-text: #34495e;             /* Slate Gray - Readability */
-  --color-popup-bg: rgba(0, 0, 0, 0.8); /* Semi-transparent Black */
-  --color-close-btn: #e74c3c;        /* Red */
-  --color-close-btn-hover: #c0392b;  /* Darker Red */
+  --color-primary: #1a5f7a;         /* Deeper blue - More sophisticated */
+  --color-accent: #e67e22;          /* Warm orange - Better contrast & engagement */
+  --color-secondary: #2ecc71;       /* Fresh green - More vibrant & positive */
+  --color-background: #f5f7fa;      /* Softer background - Easier on eyes */
+  --color-text: #2c3e50;            /* Darker text - Better readability */
+  --color-popup-bg: rgba(15, 23, 42, 0.75); /* Softer overlay */
+  --color-close-btn: #e67e22;       /* Matching accent */
+  --color-close-btn-hover: #d35400; /* Darker orange */
+
+  /* Additional Colors for Depth */
+  --color-card-bg: #ffffff;
+  --color-shadow: rgba(15, 23, 42, 0.1);
+  --color-hover-shadow: rgba(15, 23, 42, 0.15);
+  --color-text-secondary: #64748b;
+}
+
+
+  
 
   /* Typography */
   --font-primary: 'Poppins', sans-serif; /* Clean, Modern Font */
