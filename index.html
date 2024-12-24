@@ -15,61 +15,51 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
-
-
-
-
-
-
   
-<!-- Left Sidebar -->
-<nav class="sidebar">
-  <!-- Sidebar Header with Profile Picture and Action Buttons -->
-  <div class="sidebar-header">
-    <img src="assets/images/photo.jpg" alt="Profile Picture" class="profile-pic">
-    
-    <!-- Action Buttons -->
-    <div class="sidebar-buttons">
-      <a href="assets/CV_Seyed_Ehsan_Hadi.pdf" class="download-btn" download>
-        <i class="fas fa-download"></i> Download CV
-      </a>
-      <a href="portfolio.html" class="portfolio-btn" target="_blank">
-        <i class="fas fa-briefcase"></i> Portfolio
-      </a>
+  <!-- Left Sidebar -->
+  <nav class="sidebar">
+    <!-- Sidebar Header with Profile Picture and Action Buttons -->
+    <div class="sidebar-header">
+      <img src="assets/images/photo.jpg" alt="Profile Picture" class="profile-pic">
+      
+      <!-- Action Buttons -->
+      <div class="sidebar-buttons">
+        <a href="assets/CV_Seyed_Ehsan_Hadi.pdf" class="download-btn" download aria-label="Download CV">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+        <a href="https://seyedehsanhadi.github.io/portfolio.html" class="portfolio-btn" target="_blank" aria-label="View Portfolio">
+          <i class="fas fa-briefcase"></i> Portfolio
+        </a>
+      </div>
     </div>
-  </div>
 
-  <!-- Contact Information -->
-  <div class="contact-info">
-    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:sy@example.com">sy@example.com</a></p>
-    <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +46 [Your Phone Number]</p>
-    <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Stockholm, Sweden</p>
-    <p><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/seyed-ehsan-hadi" target="_blank">/seyed-ehsan-hadi</a></p>
-    <p><i class="fas fa-graduation-cap"></i> <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?hl=en&user=aqsQc48AAAAJ" target="_blank">Profile</a></p>
-    <p><i class="fas fa-passport"></i> <strong>VISA STATUS:</strong> <span class="visa-status"><i class="fas fa-check-circle"></i> Swedish Resident</span></p>
-  </div>
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:sy@example.com">sy@example.com</a></p>
+      <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +46 [Your Phone Number]</p>
+      <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Stockholm, Sweden</p>
+      <p><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/seyed-ehsan-hadi" target="_blank">/seyed-ehsan-hadi</a></p>
+      <p><i class="fas fa-graduation-cap"></i> <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?hl=en&user=aqsQc48AAAAJ" target="_blank">Profile</a></p>
+      <p><i class="fas fa-passport"></i> <strong>VISA STATUS:</strong> <span class="visa-status"><i class="fas fa-check-circle"></i> Swedish Resident</span></p>
+    </div>
 
-  <!-- Navigation Links -->
-  <ul class="nav-links">
-    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-    <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-    <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-    <li><a href="#publications"><i class="fas fa-book"></i> Publications</a></li>
-    <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
-    <li><a href="#additional-info"><i class="fas fa-info-circle"></i> Additional Info</a></li>
-    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-  </ul>
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+      <li><a href="#publications"><i class="fas fa-book"></i> Publications</a></li>
+      <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+      <li><a href="#additional-info"><i class="fas fa-info-circle"></i> Additional Info</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
 
-  <!-- Footer in Sidebar -->
-  <footer class="sidebar-footer">
-    &copy; 2024 Seyed Ehsan Hadi, PhD. All rights reserved.
-  </footer>
-</nav>
+    <!-- Footer in Sidebar -->
+    <footer class="sidebar-footer">
+      &copy; 2024 Seyed Ehsan Hadi, PhD. All rights reserved.
+    </footer>
+  </nav>
 
-
-  
-  
   <!-- Main Content -->
   <div class="main-content">
     
@@ -244,7 +234,7 @@
         <!-- Languages -->
         <p><strong><i class="fas fa-language"></i> Languages:</strong></p>
         <p>English (Near-native), Persian (Native)</p>
-        <hr style="border: 0.3px solid var(--divider-color); margin: 1rem 0;">
+        <hr class="divider">
 
         <!-- Grants and Awards -->
         <p><strong><i class="fas fa-award"></i> Grants and Awards:</strong></p>
@@ -254,7 +244,7 @@
           <li class="clickable" onclick="showPopup('popup-grant-unam-bilkent')"><i class="fas fa-star" style="color: var(--accent-color);"></i> UNAM Fellowship and Bilkent University Scholarship (2017-2019)</li>
           <li class="clickable" onclick="showPopup('popup-grant-tubitak')"><i class="fas fa-star" style="color: var(--accent-color);"></i> TÜBİTAK Fellowship (2018-2019)</li>
         </ul>
-        <hr style="border: 0.3px solid var(--divider-color); margin: 1rem 0;">
+        <hr class="divider">
 
         <!-- References -->
         <p><strong><i class="fas fa-user"></i> References:</strong></p>
@@ -630,18 +620,6 @@
         <li>Document preparation system used for typesetting scientific documents with high-quality formatting.</li>
         <li>Essential for creating research papers, theses, and presentations with complex mathematical and structural elements.</li>
         <li>Ensures professional and consistent formatting across all documents.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-highscore-plus" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-highscore-plus')">&times;</button>
-      <h3>HighScore Plus</h3>
-      <ul>
-        <li>Software for analyzing X-ray diffraction (XRD) data, enabling phase identification and crystallographic analysis.</li>
-        <li>Used for interpreting complex diffraction patterns and quantifying crystalline phases in materials.</li>
-        <li>Assists in understanding the structural properties of synthesized nanocomposites.</li>
       </ul>
     </div>
   </div>
