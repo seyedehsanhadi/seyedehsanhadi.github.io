@@ -15,17 +15,14 @@
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-p1Cmj+T6q3gIQJYqz0OqKfjVXWk+I0D9HvFhMVdNTj3V6eT+EW5lNjqIEb0rTfz2fYr3n3s5YlN7HgJ1A6N2Lw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
   />
 
   <!-- External CSS -->
   <link rel="stylesheet" href="assets/css/portfolio.css" />
 </head>
 <body>
-  <!-- Minimal Top Navigation Bar -->
-  <nav class="top-nav">
+  <!-- Minimal Top Nav Bar -->
+  <nav class="minimal-nav">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">Seyed Ehsan Hadi, PhD</a>
       <div class="nav-buttons">
@@ -50,7 +47,7 @@
 
     <!-- Projects Grid -->
     <section class="projects-grid">
-      <!-- Project Card 1 -->
+      <!-- Card 1 -->
       <article
         class="project-card clickable"
         onclick="showProjectPopup('popup-project1')"
@@ -65,7 +62,7 @@
         <button class="project-button">View Project</button>
       </article>
 
-      <!-- Project Card 2 -->
+      <!-- Card 2 -->
       <article
         class="project-card clickable"
         onclick="showProjectPopup('popup-project2')"
@@ -80,7 +77,7 @@
         <button class="project-button">View Project</button>
       </article>
 
-      <!-- Project Card 3 -->
+      <!-- Card 3 -->
       <article
         class="project-card clickable"
         onclick="showProjectPopup('popup-project3')"
@@ -95,7 +92,7 @@
         <button class="project-button">View Project</button>
       </article>
 
-      <!-- Project Card 4 -->
+      <!-- Card 4 -->
       <article
         class="project-card clickable"
         onclick="showProjectPopup('popup-project4')"
@@ -112,15 +109,14 @@
     </section>
   </main>
 
-  <!-- Popup Modals -->
-
+  <!-- Popups -->
   <!-- Project 1 Popup -->
   <div id="popup-project1" class="project-popup">
     <div class="popup-content">
       <button class="close-popup" onclick="closeProjectPopup('popup-project1')">
         &times;
       </button>
-      <h2>Nanocellulose-Reinforced Polymer Composites</h2>
+      <h2>Nanocellulose-Reinforced Composites</h2>
       <img src="assets/images/composite1_large.jpg" alt="Project 1 Detail" />
       <p>
         Integrating nanocellulose fibers into polymer matrices for improved
@@ -131,8 +127,8 @@
       <ul>
         <li>30% boost in tensile strength vs. conventional composites.</li>
         <li>
-          Notable density reduction for <em>lightweight</em> components ideal
-          for automotive applications.
+          Notable density reduction for <em>lightweight</em> components
+          ideal for automotive applications.
         </li>
         <li>
           Findings published in <strong>Composites Science & Technology</strong>.
@@ -158,12 +154,12 @@
       <h4>Key Highlights</h4>
       <ul>
         <li>
-          25% enhanced thermal insulation compared to conventional polyurethane
-          foams.
+          25% enhanced thermal insulation compared to conventional
+          polyurethane foams.
         </li>
         <li>
-          Potential for remote manipulation and shape correction under external
-          magnetic fields.
+          Potential for remote manipulation and shape correction under
+          external magnetic fields.
         </li>
         <li>
           Collaboration with industry partners to scale up production.
@@ -182,19 +178,22 @@
       <h2>Sustainable Fiber Packaging</h2>
       <img src="assets/images/composite3_large.jpg" alt="Project 3 Detail" />
       <p>
-        Biodegradable packaging materials constructed from natural fibers like
-        hemp and jute. Aiming to reduce petrochemical plastic usage and advance
-        <strong>eco-friendly</strong> consumer solutions.
+        Biodegradable packaging materials constructed from natural fibers
+        like hemp and jute. Aiming to reduce petrochemical plastic usage and
+        advance <strong>eco-friendly</strong> consumer solutions.
       </p>
       <h4>Key Highlights</h4>
       <ul>
-        <li>Created packaging prototypes with complete biodegradability.</li>
         <li>
-          Achieved comparable strength and flexibility to traditional plastic
-          packaging.
+          Achieved fully compostable prototypes with minimal performance
+          trade-offs.
         </li>
         <li>
-          Received a grant from the Environmental Sustainability Council.
+          Received a sustainability grant from the <em>Eco-Innovators Fund</em>.
+        </li>
+        <li>
+          Demonstrated comparable durability to thin-layer PET in packaging
+          tests.
         </li>
       </ul>
       <a href="#" class="popup-link">Full Publication &raquo;</a>
@@ -207,29 +206,30 @@
       <button class="close-popup" onclick="closeProjectPopup('popup-project4')">
         &times;
       </button>
-      <h2>High-Performance Carbon Nanotube Composites</h2>
+      <h2>High-Performance CNT Composites</h2>
       <img src="assets/images/composite4_large.jpg" alt="Project 4 Detail" />
       <p>
-        Investigating the incorporation of carbon nanotubes (CNTs) into polymer
-        matrices to significantly improve electrical conductivity and mechanical
-        strength. This project opens avenues for advanced applications in
-        electronics and aerospace industries.
+        Incorporating carbon nanotubes (CNTs) for breakthroughs in electrical
+        conductivity and structural rigidity. Opening avenues in aerospace,
+        electronics, and advanced manufacturing.
       </p>
       <h4>Key Highlights</h4>
       <ul>
-        <li>Enhanced electrical conductivity by 50% with minimal CNT addition.</li>
         <li>
-          Improved mechanical properties, achieving a 40% increase in modulus.
+          Achieved up to 50% higher conductivity with minimal CNT loadings.
         </li>
         <li>
-          Presented findings at the International Conference on Nanotechnology.
+          Superior mechanical stiffness suitable for space-grade materials.
+        </li>
+        <li>
+          Presented at the <strong>International Nanotechnology Symposium</strong>.
         </li>
       </ul>
       <a href="#" class="popup-link">Full Publication &raquo;</a>
     </div>
   </div>
 
-  <!-- External JavaScript -->
+  <!-- Portfolio JS -->
   <script src="assets/js/portfolio.js"></script>
 </body>
 </html>
