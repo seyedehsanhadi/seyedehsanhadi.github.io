@@ -41,7 +41,7 @@ body {
 /* -----------------------------------
    MINIMAL TOP NAVIGATION BAR
 ----------------------------------- */
-.top-nav {
+.minimal-nav {
   background: var(--nav-bg);
   box-shadow: 0 2px 6px var(--card-shadow);
   position: fixed;
@@ -102,7 +102,7 @@ body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: var(--radius);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
@@ -157,8 +157,9 @@ body {
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Changed from 'cover' to 'contain' */
   transition: transform var(--transition-speed);
+  background-color: #f0f0f0; /* Optional: Add a background color to handle padding */
 }
 
 .project-card:hover img {
@@ -202,6 +203,47 @@ body {
   background: var(--secondary-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Publications Section */
+.publications-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.publications-section h2 {
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.publications-list {
+  list-style-type: none;
+}
+
+.publications-list li {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid var(--primary-color);
+  transition: background-color var(--transition-speed);
+}
+
+.publications-list li:hover {
+  background-color: #f1f1f1;
+}
+
+.publications-list a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.publications-list a:hover {
+  text-decoration: underline;
 }
 
 /* Project Popups */
@@ -292,6 +334,35 @@ body {
 
 .close-popup:hover {
   background: var(--close-btn-hover);
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-section p {
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: color var(--transition-speed);
+}
+
+.social-links a:hover {
+  color: #ddd;
 }
 
 /* Animations */
