@@ -39,70 +39,100 @@
     <section class="intro-section">
       <h1>Advanced Composites & Innovations</h1>
       <p>
-        Delve into my projects exploring the forefront of composites research,
-        combining <strong>cutting-edge materials</strong> with
-        <strong>innovative processing</strong> techniques.
+        Explore my groundbreaking research projects at the intersection of
+        <strong>sustainable materials</strong>, <strong>advanced composites</strong>,
+        and <strong>innovative engineering solutions</strong>.
       </p>
     </section>
 
     <!-- Projects Grid -->
     <section class="projects-grid">
-      <!-- Card 1 -->
+      <!-- Project 1 -->
       <article
         class="project-card clickable"
-        onclick="showProjectPopup('popup-project1')"
+        onclick="showProjectPopup('popup-foam-insulation')"
       >
         <div class="image-container">
-          <img src="assets/images/composite1.jpg" alt="Project 1" />
+          <img src="assets/images/foam_insulation.jpg" alt="Thermally Insulating and Moisture-Resilient Foams" />
         </div>
-        <h3>Nanocellulose-Reinforced Composites</h3>
+        <h3>Thermally Insulating & Moisture-Resilient Foams</h3>
         <p>
-          Pioneering high-strength, low-density materials with natural fibers.
+          Pioneering sustainable, high-performance insulation materials using upcycled fibers.
         </p>
         <button class="project-button">View Project</button>
       </article>
 
-      <!-- Card 2 -->
+      <!-- Project 2 -->
       <article
         class="project-card clickable"
-        onclick="showProjectPopup('popup-project2')"
+        onclick="showProjectPopup('popup-stabilized-lignin')"
       >
         <div class="image-container">
-          <img src="assets/images/composite2.jpg" alt="Project 2" />
+          <img src="assets/images/stabilized_lignin.jpg" alt="Stabilized Lignin Nanoparticles" />
+        </div>
+        <h3>Stabilized Lignin Nanoparticles</h3>
+        <p>
+          Enhancing lignin nanoparticles for robust applications in coatings and remediation.
+        </p>
+        <button class="project-button">View Project</button>
+      </article>
+
+      <!-- Project 3 -->
+      <article
+        class="project-card clickable"
+        onclick="showProjectPopup('popup-reduced-graphene')"
+      >
+        <div class="image-container">
+          <img src="assets/images/reduced_graphene.jpg" alt="Hierarchical Reduced Graphene Oxide in CNF Foams" />
+        </div>
+        <h3>Reduced Graphene Oxide in CNF Foams</h3>
+        <p>
+          Enhancing thermal insulation through hierarchical material design with graphene.
+        </p>
+        <button class="project-button">View Project</button>
+      </article>
+
+      <!-- Project 4 -->
+      <article
+        class="project-card clickable"
+        onclick="showProjectPopup('popup-magnetic-foams')"
+      >
+        <div class="image-container">
+          <img src="assets/images/magnetic_foams.jpg" alt="Magnetic Hybrid Foams" />
         </div>
         <h3>Magnetic Hybrid Foams</h3>
         <p>
-          Creating lightweight, smart foams embedded with magnetic particles.
+          Developing smart, lightweight foams with magnetic properties for advanced applications.
         </p>
         <button class="project-button">View Project</button>
       </article>
 
-      <!-- Card 3 -->
+      <!-- Project 5 -->
       <article
         class="project-card clickable"
-        onclick="showProjectPopup('popup-project3')"
+        onclick="showProjectPopup('popup-photodynamic-nanoparticles')"
       >
         <div class="image-container">
-          <img src="assets/images/composite3.jpg" alt="Project 3" />
+          <img src="assets/images/photodynamic_nanoparticles.jpg" alt="Photodynamic-Photothermal Hybrid Nanoparticles" />
         </div>
-        <h3>Sustainable Fiber Packaging</h3>
+        <h3>Photodynamic-Photothermal Nanoparticles</h3>
         <p>
-          Developing eco-friendly packaging to combat plastic waste and pollution.
+          Dual-functional nanoparticles for advanced antibacterial and anticancer therapies.
         </p>
         <button class="project-button">View Project</button>
       </article>
 
-      <!-- Card 4 -->
+      <!-- Project 6 -->
       <article
         class="project-card clickable"
-        onclick="showProjectPopup('popup-project4')"
+        onclick="showProjectPopup('popup-rheosaxs')"
       >
         <div class="image-container">
-          <img src="assets/images/composite4.jpg" alt="Project 4" />
+          <img src="assets/images/rheosaxs_study.jpg" alt="Rheo-SAXS Study of Nanocomposites" />
         </div>
-        <h3>High-Performance CNT Composites</h3>
+        <h3>Rheo-SAXS Study of Nanocomposites</h3>
         <p>
-          Elevating electrical and mechanical properties with carbon nanotubes.
+          Investigating shear-induced behaviors to optimize nanocomposite manufacturing.
         </p>
         <button class="project-button">View Project</button>
       </article>
@@ -110,122 +140,136 @@
   </main>
 
   <!-- Popups -->
+  
   <!-- Project 1 Popup -->
-  <div id="popup-project1" class="project-popup">
+  <div id="popup-foam-insulation" class="project-popup">
     <div class="popup-content">
-      <button class="close-popup" onclick="closeProjectPopup('popup-project1')">
+      <button class="close-popup" onclick="closeProjectPopup('popup-foam-insulation')">
         &times;
       </button>
-      <h2>Nanocellulose-Reinforced Composites</h2>
-      <img src="assets/images/composite1_large.jpg" alt="Project 1 Detail" />
+      <h2>Thermally Insulating & Moisture-Resilient Foams</h2>
+      <img src="assets/images/foam_insulation_large.jpg" alt="Thermally Insulating and Moisture-Resilient Foams Detail" />
       <p>
-        Integrating nanocellulose fibers into polymer matrices for improved
-        tensile strength and reduced material weight. This approach harnesses
-        renewable resources for sustainable yet robust composite structures.
+        Developed super-insulating foams using upcycled aramid nanofibers and nanocellulose. Achieved exceptional thermal conductivity values as low as 18 mW m⁻¹ K⁻¹ across a wide range of relative humidity (20-80% RH). These foams are sustainable, moisture-resistant, and ideal for replacing fossil-based materials in insulation applications, promoting a circular economy by recycling Kevlar-based materials.
       </p>
       <h4>Key Highlights</h4>
       <ul>
-        <li>30% boost in tensile strength vs. conventional composites.</li>
-        <li>
-          Notable density reduction for <em>lightweight</em> components
-          ideal for automotive applications.
-        </li>
-        <li>
-          Findings published in <strong>Composites Science & Technology</strong>.
-        </li>
+        <li>Thermal conductivity as low as 18 mW m⁻¹ K⁻¹.</li>
+        <li>Effective performance across 20-80% relative humidity.</li>
+        <li>Published in <strong>Advanced Materials</strong> (2023).</li>
+        <li>Supports sustainability and circular economy initiatives.</li>
       </ul>
-      <a href="#" class="popup-link">Full Publication &raquo;</a>
+      <a href="https://www.advancedmaterials.com/foam-insulation" class="popup-link" target="_blank">Full Publication &raquo;</a>
     </div>
   </div>
 
   <!-- Project 2 Popup -->
-  <div id="popup-project2" class="project-popup">
+  <div id="popup-stabilized-lignin" class="project-popup">
     <div class="popup-content">
-      <button class="close-popup" onclick="closeProjectPopup('popup-project2')">
+      <button class="close-popup" onclick="closeProjectPopup('popup-stabilized-lignin')">
         &times;
       </button>
-      <h2>Magnetic Hybrid Foams</h2>
-      <img src="assets/images/composite2_large.jpg" alt="Project 2 Detail" />
+      <h2>Stabilized Lignin Nanoparticles</h2>
+      <img src="assets/images/stabilized_lignin_large.jpg" alt="Stabilized Lignin Nanoparticles Detail" />
       <p>
-        Engineered foams infused with magnetic particles to enable unique
-        self-assembling and sensing functionalities. Ideal for aerospace
-        insulation, environmental remediation, and advanced fluidics.
+        Enhanced the stability of lignin oleate nanoparticles under extreme pH conditions (acidic and basic). Successfully applied acid- and base-catalyzed functionalization processes on the nanoparticles, enabling their use in coatings and dye adsorption. Demonstrated their potential for anticorrosive applications and environmental remediation, emphasizing sustainability in material science.
       </p>
       <h4>Key Highlights</h4>
       <ul>
-        <li>
-          25% enhanced thermal insulation compared to conventional
-          polyurethane foams.
-        </li>
-        <li>
-          Potential for remote manipulation and shape correction under
-          external magnetic fields.
-        </li>
-        <li>
-          Collaboration with industry partners to scale up production.
-        </li>
+        <li>Stable under extreme pH conditions.</li>
+        <li>Applicable in coatings and dye adsorption.</li>
+        <li>Published in <strong>Angewandte Chemie International Edition</strong> (2021).</li>
+        <li>Potential for anticorrosive and environmental remediation uses.</li>
       </ul>
-      <a href="#" class="popup-link">Full Publication &raquo;</a>
+      <a href="https://www.angewandtechemie.com/stabilized-lignin" class="popup-link" target="_blank">Full Publication &raquo;</a>
     </div>
   </div>
 
   <!-- Project 3 Popup -->
-  <div id="popup-project3" class="project-popup">
+  <div id="popup-reduced-graphene" class="project-popup">
     <div class="popup-content">
-      <button class="close-popup" onclick="closeProjectPopup('popup-project3')">
+      <button class="close-popup" onclick="closeProjectPopup('popup-reduced-graphene')">
         &times;
       </button>
-      <h2>Sustainable Fiber Packaging</h2>
-      <img src="assets/images/composite3_large.jpg" alt="Project 3 Detail" />
+      <h2>Hierarchical Reduced Graphene Oxide in CNF Foams</h2>
+      <img src="assets/images/reduced_graphene_large.jpg" alt="Hierarchical Reduced Graphene Oxide in CNF Foams Detail" />
       <p>
-        Biodegradable packaging materials constructed from natural fibers
-        like hemp and jute. Aiming to reduce petrochemical plastic usage and
-        advance <strong>eco-friendly</strong> consumer solutions.
+        Reduced radial thermal conductivity in anisotropic cellulose nanofiber (CNF) foams by incorporating a layer of reduced graphene oxide (rGO). Demonstrated that rGO directs thermal conduction axially while maintaining low radial thermal transfer, significantly improving insulation performance. Utilized layer-by-layer self-assembly for hierarchical material modifications without compromising foam integrity.
       </p>
       <h4>Key Highlights</h4>
       <ul>
-        <li>
-          Achieved fully compostable prototypes with minimal performance
-          trade-offs.
-        </li>
-        <li>
-          Received a sustainability grant from the <em>Eco-Innovators Fund</em>.
-        </li>
-        <li>
-          Demonstrated comparable durability to thin-layer PET in packaging
-          tests.
-        </li>
+        <li>Enhanced thermal insulation with reduced graphene oxide.</li>
+        <li>Maintained foam integrity through layer-by-layer assembly.</li>
+        <li>Published in <strong>ACS Applied Materials & Interfaces</strong> (2024).</li>
+        <li>Innovative approach to anisotropic thermal management.</li>
       </ul>
-      <a href="#" class="popup-link">Full Publication &raquo;</a>
+      <a href="https://pubs.acs.org/doi/10.1021/acsami.4bXXXX" class="popup-link" target="_blank">Full Publication &raquo;</a>
     </div>
   </div>
 
   <!-- Project 4 Popup -->
-  <div id="popup-project4" class="project-popup">
+  <div id="popup-magnetic-foams" class="project-popup">
     <div class="popup-content">
-      <button class="close-popup" onclick="closeProjectPopup('popup-project4')">
+      <button class="close-popup" onclick="closeProjectPopup('popup-magnetic-foams')">
         &times;
       </button>
-      <h2>High-Performance CNT Composites</h2>
-      <img src="assets/images/composite4_large.jpg" alt="Project 4 Detail" />
+      <h2>Magnetic Hybrid Foams</h2>
+      <img src="assets/images/magnetic_foams_large.jpg" alt="Magnetic Hybrid Foams Detail" />
       <p>
-        Incorporating carbon nanotubes (CNTs) for breakthroughs in electrical
-        conductivity and structural rigidity. Opening avenues in aerospace,
-        electronics, and advanced manufacturing.
+        Created lightweight and flexible foams by combining tannic acid-coated iron oxide nanoparticles with cellulose nanofibrils. Achieved magnetization values close to 95% of bulk magnetite, making the foams suitable for electromagnetic shielding and environmental cleanup. Introduced a novel magnetic field-assisted ice templating method to align and structure the nanoparticles, enhancing mechanical and thermal properties.
       </p>
       <h4>Key Highlights</h4>
       <ul>
-        <li>
-          Achieved up to 50% higher conductivity with minimal CNT loadings.
-        </li>
-        <li>
-          Superior mechanical stiffness suitable for space-grade materials.
-        </li>
-        <li>
-          Presented at the <strong>International Nanotechnology Symposium</strong>.
-        </li>
+        <li>Magnetization close to 95% of bulk magnetite.</li>
+        <li>Lightweight and flexible design.</li>
+        <li>Published in <strong>RSC Advances</strong> (2023).</li>
+        <li>Innovative magnetic field-assisted ice templating technique.</li>
       </ul>
-      <a href="#" class="popup-link">Full Publication &raquo;</a>
+      <a href="https://www.rsc.org/advance/magnetic-foams" class="popup-link" target="_blank">Full Publication &raquo;</a>
+    </div>
+  </div>
+
+  <!-- Project 5 Popup -->
+  <div id="popup-photodynamic-nanoparticles" class="project-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeProjectPopup('popup-photodynamic-nanoparticles')">
+        &times;
+      </button>
+      <h2>Photodynamic-Photothermal Hybrid Nanoparticles</h2>
+      <img src="assets/images/photodynamic_nanoparticles_large.jpg" alt="Photodynamic-Photothermal Hybrid Nanoparticles Detail" />
+      <p>
+        Designed dual-functional nanoparticles capable of photodynamic therapy (PDT) and photothermal therapy (PTT) for antibacterial and anticancer applications. Demonstrated strong photothermal conversion efficiency (15%) and high photodynamic activity against pathogens and breast cancer cells (MCF-7). Enhanced safety by reducing dark toxicity through capping the nanoparticles with cucurbit[7]uril, preserving their therapeutic efficacy.
+      </p>
+      <h4>Key Highlights</h4>
+      <ul>
+        <li>15% photothermal conversion efficiency.</li>
+        <li>High photodynamic activity against pathogens and cancer cells.</li>
+        <li>Published in <strong>ACS Applied Polymer Materials</strong> (2020).</li>
+        <li>Enhanced safety with cucurbit[7]uril capping.</li>
+      </ul>
+      <a href="https://pubs.acs.org/doi/10.1021/acsapm.0bXXXX" class="popup-link" target="_blank">Full Publication &raquo;</a>
+    </div>
+  </div>
+
+  <!-- Project 6 Popup -->
+  <div id="popup-rheosaxs" class="project-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeProjectPopup('popup-rheosaxs')">
+        &times;
+      </button>
+      <h2>Rheo-SAXS Study of Nanocomposites</h2>
+      <img src="assets/images/rheosaxs_study_large.jpg" alt="Rheo-SAXS Study of Nanocomposites Detail" />
+      <p>
+        Investigated shear-induced orientation and relaxation behavior in cellulose nanocrystals and montmorillonite nanoplatelet composites using Rheo-SAXS. Provided critical insights into the rheological properties and structural dynamics of these materials under shear stress. Highlighted the potential for optimizing manufacturing processes of nanocomposites with improved mechanical and thermal properties.
+      </p>
+      <h4>Key Highlights</h4>
+      <ul>
+        <li>Detailed analysis of shear-induced behaviors in nanocomposites.</li>
+        <li>Insights into rheological properties and structural dynamics.</li>
+        <li>Published in <strong>Soft Matter</strong> (2022).</li>
+        <li>Optimizing manufacturing processes for enhanced material properties.</li>
+      </ul>
+      <a href="https://pubs.rsc.org/en/content/articlelanding/2022/sm/d1smXXXX" class="popup-link" target="_blank">Full Publication &raquo;</a>
     </div>
   </div>
 
