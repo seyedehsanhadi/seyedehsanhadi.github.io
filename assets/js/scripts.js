@@ -1,4 +1,11 @@
-/* assets/js/scripts.js */
+// assets/js/scripts.js
+
+/* 
+  This script handles the popup functionality for each clickable element,
+  manages the accordion behavior, and toggles the sidebar on smaller screens.
+*/
+
+/* Popup Management */
 
 // Function to show popup
 function showPopup(popupId) {
@@ -37,17 +44,17 @@ window.addEventListener('keydown', function(event) {
   }
 });
 
-// Accordion Functionality
+/* Accordion Functionality */
 document.querySelectorAll('.accordion').forEach(function(acc) {
   acc.addEventListener('click', function() {
     // Close all other accordion panels
     document.querySelectorAll('.accordion').forEach(function(otherAcc) {
       if (otherAcc !== acc) {
         otherAcc.classList.remove('active');
-                const otherPanel = otherAcc.nextElementSibling;
-                if (otherPanel) {
-                  otherPanel.style.maxHeight = null;
-                }
+        const otherPanel = otherAcc.nextElementSibling;
+        if (otherPanel) {
+          otherPanel.style.maxHeight = null;
+        }
       }
     });
 
@@ -64,7 +71,16 @@ document.querySelectorAll('.accordion').forEach(function(acc) {
   });
 });
 
-// Popup Functionality using Event Delegation
+/* Hamburger Menu Functionality */
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const sidebar = document.querySelector('.sidebar');
+
+hamburgerMenu.addEventListener('click', function() {
+  sidebar.classList.toggle('active');
+  hamburgerMenu.classList.toggle('active');
+});
+
+/* Popup Functionality using Event Delegation */
 document.addEventListener('click', function(event) {
   // Check if the clicked element or its parent has the 'clickable' class
   const clickableElement = event.target.closest('.clickable');
