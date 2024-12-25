@@ -11,8 +11,8 @@
   --contact-sidebar-bg: #2c3e50;    /* Dark Blue (Contact Sidebar) */
   --card-bg: #ffffff;               /* White Cards */
   --hover-bg: #1abc9c;              /* Hover Color */
-  --link-color: #2980b9;            /* Link Color */
-  --popup-bg: rgba(0, 0, 0, 0.5);   /* Popup Overlay Background */
+  --link-color: #1abc9c;            /* Updated Link Color to Teal for better contrast */
+  --popup-bg: rgba(0, 0, 0, 0.8);   /* Darker Popup Overlay Background for better readability */
   --close-btn-bg: var(--accent-color);  
   --close-btn-hover-bg: #149174;    /* Close Button Hover Background */
   --radius: 8px;                    /* Border Radius */
@@ -41,13 +41,37 @@ body {
 }
 
 /* -----------------------------------
+   HAMBURGER MENU
+----------------------------------- */
+.hamburger-menu {
+  display: none; /* Hidden by default, shown on smaller screens */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  z-index: 1100; /* Above the sidebar */
+  cursor: pointer;
+}
+
+.hamburger-menu.active .fa-bars {
+  display: none;
+}
+
+.hamburger-menu.active::before {
+  content: '\00d7'; /* Close icon */
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+/* -----------------------------------
    LEFT SIDEBAR
 ----------------------------------- */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 300px;                         /* Sidebar width (increased) */
+  width: 300px;                         /* Increased sidebar width */
   height: 100vh;
   background-color: var(--sidebar-bg);
   color: #ffffff;
@@ -57,6 +81,12 @@ body {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  transition: transform var(--transition-speed);
+  z-index: 1000;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
 }
 
 /* Sidebar Header */
@@ -204,9 +234,10 @@ body {
    MAIN CONTENT
 ----------------------------------- */
 .main-content {
-  margin-left: 320px; /* Matches sidebar width + margin */
+  margin-left: 300px; /* Matches sidebar width */
   padding: 2.5rem;
-  width: calc(100% - 320px);
+  width: calc(100% - 300px);
+  transition: margin-left var(--transition-speed), width var(--transition-speed);
 }
 
 /* Header Section */
@@ -431,7 +462,7 @@ footer {
 .popup {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 2000;
   left: 0;
   top: 0;
   width: 100%;
@@ -501,164 +532,44 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .sidebar {
-    width: 280px; 
-  }
 
-  .main-content {
-    margin-left: 300px; 
-    width: calc(100% - 300px);
-  }
-
-  .profile-pic {
-    width: 130px;
-    height: 130px;
-  }
-
-  .download-btn,
-  .portfolio-btn {
-    padding: 0.7rem 1.1rem;
-    font-size: 0.95rem;
-  }
-
-  .nav-links li a {
-    font-size: 1.05rem;
-  }
-
-  .sidebar-buttons {
-    gap: 0.8rem;
-  }
-
-  .contact-info p {
-    font-size: 0.97rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .sidebar {
-    width: 260px;
-    padding: 1.8rem 1rem;
-  }
-
-  .main-content {
-    margin-left: 280px;
-    width: calc(100% - 280px);
-  }
-
-  .profile-pic {
-    width: 120px;
-    height: 120px;
-  }
-
-  .header-details {
-    margin-left: 2.5rem;
-  }
-
-  .header-details h1 {
-    font-size: 2.8rem;
-  }
-
-  .header-details h2 {
-    font-size: 1.6rem;
-  }
-
-  .header-details p {
-    font-size: 1.05rem;
-  }
-}
-
+/* Hamburger Menu Visible on Smaller Screens */
 @media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
   .sidebar {
-    width: 240px;
-    padding: 1.5rem 0.75rem;
+    transform: translateX(-100%);
   }
 
-  .main-content {
-    margin-left: 260px;
-    width: calc(100% - 260px);
-  }
-
-  .profile-pic {
-    width: 110px;
-    height: 110px;
-  }
-
-  .download-btn,
-  .portfolio-btn {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .nav-links li a {
-    font-size: 1rem;
-  }
-
-  .contact-info p {
-    font-size: 0.95rem;
-  }
-
-  .header-details {
-    margin-left: 2rem;
-  }
-
-  .header-details h1 {
-    font-size: 2.5rem;
-  }
-
-  .header-details h2 {
-    font-size: 1.4rem;
-  }
-
-  .header-details p {
-    font-size: 1rem;
-  }
-
-  .skills ul li {
-    font-size: 0.95rem;
-  }
-
-  .skill-category {
-    flex: 1 1 300px;
-  }
-
-  .publications-list li {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .sidebar {
-    display: none;
+  .sidebar.active {
+    transform: translateX(0);
   }
 
   .main-content {
     margin-left: 0;
     width: 100%;
-    padding: 1.5rem;
-  }
-
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 2rem 1rem;
   }
 
   .header-details {
     margin-left: 0;
-    margin-top: 1.5rem;
   }
 
   .header-details h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    text-align: center;
   }
 
   .header-details h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    text-align: center;
   }
 
   .header-details p {
     font-size: 1rem;
+    text-align: center;
   }
 
   .skills {
@@ -669,7 +580,61 @@ footer {
     flex: 1 1 100%;
   }
 
+  .nav-links {
+    text-align: center;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 576px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .download-btn,
+  .portfolio-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .header-details h1 {
+    font-size: 2rem;
+  }
+
+  .header-details h2 {
+    font-size: 1.3rem;
+  }
+
+  .header-details p {
+    font-size: 0.95rem;
+  }
+
+  .skills ul li {
+    font-size: 0.95rem;
+  }
+
   .publications-list li {
     font-size: 0.95rem;
+  }
+
+  .accordion {
+    font-size: 1rem;
+  }
+
+  .popup-content {
+    padding: 1.5rem;
+  }
+
+  .popup-content h3 {
+    font-size: 1.5rem;
   }
 }
