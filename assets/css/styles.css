@@ -11,14 +11,14 @@
   --contact-sidebar-bg: #2c3e50;    /* Dark Blue (Contact Sidebar) */
   --card-bg: #ffffff;               /* White Cards */
   --hover-bg: #1abc9c;              /* Hover Color */
-  --link-color: #1abc9c;            /* Updated Link Color to Teal for better contrast */
-  --popup-bg: rgba(0, 0, 0, 0.8);   /* Darker Popup Overlay Background for better readability */
-  --close-btn-bg: var(--accent-color);  
-  --close-btn-hover-bg: #149174;    /* Close Button Hover Background */
+  --link-color: #1abc9c;            /* Teal Link Color for contrast */
+  --popup-bg: rgba(0, 0, 0, 0.8);   /* Darker Popup Overlay Background */
+  --close-btn-bg: var(--accent-color);
+  --close-btn-hover-bg: #149174;
   --radius: 8px;                    /* Border Radius */
   --divider-color: #bdc3c7;         /* Divider Color */
   --button-text-color: #ffffff;     /* Button Text Color */
-
+  
   --font-primary: 'Roboto', sans-serif;
   --font-secondary: 'Roboto Slab', serif;
   --transition-speed: 0.3s;         /* Global transition speed */
@@ -310,78 +310,110 @@ section h2 {
   cursor: pointer;
 }
 
-/* Accordion Styles */
-.accordion {
+/* Education and Experience Degrees */
+.education-degree,
+.experience-degree {
   background-color: var(--card-bg);
-  color: var(--text-color);
-  cursor: pointer;
-  padding: 1.2rem;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 1.2rem;
-  transition: background-color var(--transition-speed);
+  padding: 1.5rem;
   border-radius: var(--radius);
-  margin-bottom: 0.7rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-.accordion:hover {
-  background-color: var(--hover-bg);
+.education-degree:hover,
+.experience-degree:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.accordion.active,
-.accordion:focus {
-  background-color: var(--hover-bg);
-}
-
-.accordion:after {
-  content: '\002B';
-  font-size: 1.8rem;
+/* Degree Title */
+.education-degree h3,
+.experience-degree h3 {
+  font-size: 1.2rem;
   color: var(--primary-color);
-  transition: transform var(--transition-speed);
+  margin-bottom: 0.5rem;
 }
 
-.accordion.active:after {
-  transform: rotate(45deg);
+/* Institution and Duration */
+.education-degree p,
+.experience-degree p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
 }
 
-.panel {
-  padding: 0 1.5rem;
-  background-color: #ffffff;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out;
-  border-left: 3px solid var(--accent-color);
-  margin-bottom: 1.2rem;
-}
-
-/* Publications List */
-.publications-list {
-  list-style-type: decimal;
-  padding-left: 1.8rem;
-}
-
-.publications-list li {
-  margin-bottom: 1rem;
+/* Education and Experience Buttons */
+.education-button,
+.experience-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: var(--radius);
   cursor: pointer;
-  transition: color var(--transition-speed);
-  font-size: 1rem;
+  transition: background-color var(--transition-speed);
+  font-size: 0.95rem;
 }
 
-.publications-list li:hover {
+.education-button:hover,
+.experience-button:hover {
+  background-color: #149174;
+}
+
+/* Publications Section */
+.publications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.publication-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  cursor: pointer;
+}
+
+.publication-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.publication-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.publication-card p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.publication-card .cover-text {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  margin-bottom: 0.8rem;
+}
+
+.publication-card .read-more {
+  font-size: 0.95rem;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-speed);
+}
+
+.publication-card .read-more:hover {
   color: var(--accent-color);
   text-decoration: underline;
 }
 
-.publications-list li strong {
-  color: var(--primary-color);
-}
-
-/* Skills */
+/* Skills Section */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -472,6 +504,12 @@ footer {
   align-items: center;
   padding: 1.5rem;
   box-sizing: border-box;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .popup-content {
@@ -484,9 +522,16 @@ footer {
   position: relative;
   overflow-y: auto;
   max-height: 95vh;
+  animation: slideIn 0.3s ease-in-out;
 }
 
-.popup-content h3 {
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.popup-content h3,
+.popup-content h2 {
   color: var(--primary-color);
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -510,6 +555,24 @@ footer {
 
 .popup-content li strong {
   color: var(--primary-color);
+}
+
+.popup-content .popup-link {
+  font-size: 0.95rem;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-speed);
+}
+
+.popup-content .popup-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.popup-content .cover-text {
+  font-size: 0.9rem;
+  color: var(--accent-color);
 }
 
 .close-popup {
@@ -622,19 +685,39 @@ footer {
     font-size: 0.95rem;
   }
 
-  .publications-list li {
-    font-size: 0.95rem;
+  .publication-card h3 {
+    font-size: 1.1rem;
   }
 
-  .accordion {
-    font-size: 1rem;
+  .publication-card p {
+    font-size: 0.9rem;
+  }
+
+  .publication-card .read-more {
+    font-size: 0.9rem;
+  }
+
+  .education-degree h3,
+  .experience-degree h3 {
+    font-size: 1.1rem;
+  }
+
+  .education-degree p,
+  .experience-degree p {
+    font-size: 0.9rem;
+  }
+
+  .education-button,
+  .experience-button {
+    font-size: 0.9rem;
   }
 
   .popup-content {
     padding: 1.5rem;
   }
 
-  .popup-content h3 {
+  .popup-content h3,
+  .popup-content h2 {
     font-size: 1.5rem;
   }
 }
