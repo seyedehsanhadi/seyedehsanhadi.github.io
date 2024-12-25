@@ -17,7 +17,7 @@
 <body>
   
   <!-- Hamburger Menu for Mobile -->
-  <div class="hamburger-menu">
+  <div class="hamburger-menu" onclick="toggleSidebar()">
     <i class="fas fa-bars"></i>
   </div>
 
@@ -40,8 +40,7 @@
 
     <!-- Contact Information -->
     <div class="contact-info">
-      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:sy@example.com">sy@example.com</a></p>
-      <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +46 [Your Phone Number]</p>
+      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:eshadi@kth.se">eshadi@kth.se</a></p>
       <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Stockholm, Sweden</p>
       <p><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/seyed-ehsan-hadi" target="_blank">/seyed-ehsan-hadi</a></p>
       <p><i class="fas fa-graduation-cap"></i> <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?hl=en&user=aqsQc48AAAAJ" target="_blank">Profile</a></p>
@@ -92,37 +91,29 @@
     <!-- Education Section -->
     <section id="education">
       <h2>Education</h2>
-      <button class="accordion clickable"><i class="fas fa-graduation-cap"></i> PhD in Materials Chemistry</button>
-      <div class="panel">
-        <div class="card">
-          <p><strong>Stockholm University, Sweden</strong> (2019-2024)</p>
-          <p><em>Thesis:</em> Colloidal Processing and Alignment of Wood-Based Dispersions and Hybrid Functional Foams</p>
-          <p><em>Supervisors:</em> Prof. Lennart Bergström, Prof. Aji Mathew</p>
-          <button class="clickable" onclick="showPopup('popup-phd')"><i class="fas fa-info-circle"></i> More Details</button>
-        </div>
+      
+      <!-- PhD Degree -->
+      <div class="education-degree">
+        <h3>Ph.D. in Materials Chemistry</h3>
+        <p><strong>Stockholm University, Sweden</strong> (2019-2024)</p>
+        <p>Focused on colloidal processing and alignment of wood-based dispersions and hybrid functional foams.</p>
+        <button class="education-button clickable" onclick="showPopup('popup-phd')">More Details</button>
       </div>
 
-      <button class="accordion clickable"><i class="fas fa-graduation-cap"></i> M.Sc. in Materials Science and Nanotechnology</button>
-      <div class="panel">
-        <div class="card">
-          <p><strong>Bilkent University, Turkey</strong> (2017-2019)</p>
-          <p><em>Thesis:</em> One-Pot Synthesis of Hybrid Core-Shell Nanoparticles for Antibacterial Photodynamic Therapy</p>
-          <p><em>Supervisor:</em> Prof. Dönüş Tuncel</p>
-          <button class="clickable" onclick="showPopup('popup-msc')"><i class="fas fa-info-circle"></i> More Details</button>
-        </div>
+      <!-- MSc Degree -->
+      <div class="education-degree">
+        <h3>M.Sc. in Materials Science and Nanotechnology</h3>
+        <p><strong>Bilkent University, Turkey</strong> (2017-2019)</p>
+        <p>Specialized in the synthesis of hybrid core-shell nanoparticles for antibacterial photodynamic therapy.</p>
+        <button class="education-button clickable" onclick="showPopup('popup-msc')">More Details</button>
       </div>
 
-      <button class="accordion clickable"><i class="fas fa-graduation-cap"></i> B.Sc. in Chemical Engineering</button>
-      <div class="panel">
-        <div class="card">
-          <p><strong>University of Tehran, Iran</strong> (2012-2017)</p>
-          <p>Gained foundational expertise in chemical engineering principles and applications.</p>
-          <ul>
-            <li class="clickable" onclick="showPopup('popup-bsc-projects')"><i class="fas fa-check-circle"></i> <strong>Projects:</strong> Process optimization in petrochemical industries.</li>
-            <li class="clickable" onclick="showPopup('popup-bsc-subjects')"><i class="fas fa-check-circle"></i> <strong>Key Subjects:</strong> Thermodynamics, Fluid Mechanics, and Process Design.</li>
-            <li class="clickable" onclick="showPopup('popup-bsc-internship')"><i class="fas fa-check-circle"></i> <strong>Internship:</strong> Worked at a leading oil refinery.</li>
-          </ul>
-        </div>
+      <!-- Bachelor's Degree -->
+      <div class="education-degree">
+        <h3>B.Sc. in Chemical Engineering</h3>
+        <p><strong>University of Tehran, Iran</strong> (2012-2017)</p>
+        <p>Successfully completed a comprehensive program covering foundational chemical engineering principles, including Thermodynamics, Fluid Mechanics, Process Design, and Fundamentals of Engineering and Design. Graduated in the top 15% of the class, demonstrating academic excellence and a strong commitment to engineering innovation.</p>
+        <button class="education-button clickable" onclick="showPopup('popup-bsc')">More Details</button>
       </div>
     </section>
 
@@ -130,55 +121,86 @@
     <section id="experience">
       <h2>Professional Experience</h2>
 
-      <button class="accordion clickable"><i class="fas fa-briefcase"></i> Postdoctoral Research Associate</button>
-      <div class="panel">
-        <div class="card">
-          <p><strong>KTH Royal Institute of Technology, Sweden</strong> (2024–Present)</p>
-          <ul>
-            <li class="clickable" onclick="showPopup('popup-postdoc-lead-research')"><i class="fas fa-check-circle"></i> Lead research on advanced fiber-based materials for sheet paper and foam applications.</li>
-            <li class="clickable" onclick="showPopup('popup-postdoc-develop-methods')"><i class="fas fa-check-circle"></i> Develop methodologies to optimize fiber processing and enhance material properties.</li>
-            <li class="clickable" onclick="showPopup('popup-postdoc-collaborate')"><i class="fas fa-check-circle"></i> Collaborate with cross-functional teams to implement projects aligning with industry standards.</li>
-          </ul>
-        </div>
+      <!-- Postdoctoral Research Associate -->
+      <div class="experience-degree">
+        <h3>Postdoctoral Research Associate</h3>
+        <p><strong>KTH Royal Institute of Technology, Sweden</strong> (2024–Present)</p>
+        <ul>
+          <li class="clickable" onclick="showPopup('popup-postdoc-lead-research')"><i class="fas fa-check-circle"></i> Lead research on advanced fiber-based materials for sheet paper and foam applications.</li>
+          <li class="clickable" onclick="showPopup('popup-postdoc-develop-methods')"><i class="fas fa-check-circle"></i> Develop methodologies to optimize fiber processing and enhance material properties.</li>
+          <li class="clickable" onclick="showPopup('popup-postdoc-collaborate')"><i class="fas fa-check-circle"></i> Collaborate with cross-functional teams to implement projects aligning with industry standards.</li>
+        </ul>
       </div>
 
-      <button class="accordion clickable"><i class="fas fa-briefcase"></i> Senior Graduate Research Assistant</button>
-      <div class="panel">
-        <div class="card">
-          <p><strong>Stockholm University, Sweden</strong> (2019–2024)</p>
-          <ul>
-            <li class="clickable" onclick="showPopup('popup-senior-assistant-projects')"><i class="fas fa-check-circle"></i> Managed 6+ projects in experimental design, resulting in multiple publications.</li>
-            <li class="clickable" onclick="showPopup('popup-senior-assistant-mentoring')"><i class="fas fa-check-circle"></i> Mentored graduate students, fostering development and research skills.</li>
-            <li class="clickable" onclick="showPopup('popup-senior-assistant-nanocomposites')"><i class="fas fa-check-circle"></i> Developed high-performance nanocomposites, achieving 95% bulk magnetite performance.</li>
-            <li class="clickable" onclick="showPopup('popup-senior-assistant-optimization')"><i class="fas fa-check-circle"></i> Optimized processes to enhance efficiency and material quality.</li>
-          </ul>
-        </div>
+      <!-- Senior Graduate Research Assistant -->
+      <div class="experience-degree">
+        <h3>Senior Graduate Research Assistant</h3>
+        <p><strong>Stockholm University, Sweden</strong> (2019–2024)</p>
+        <ul>
+          <li class="clickable" onclick="showPopup('popup-senior-assistant-projects')"><i class="fas fa-check-circle"></i> Managed 6+ projects in experimental design, resulting in multiple publications.</li>
+          <li class="clickable" onclick="showPopup('popup-senior-assistant-mentoring')"><i class="fas fa-check-circle"></i> Mentored graduate students, fostering development and research skills.</li>
+          <li class="clickable" onclick="showPopup('popup-senior-assistant-nanocomposites')"><i class="fas fa-check-circle"></i> Developed high-performance nanocomposites, achieving 95% bulk magnetite performance.</li>
+          <li class="clickable" onclick="showPopup('popup-senior-assistant-optimization')"><i class="fas fa-check-circle"></i> Optimized processes to enhance efficiency and material quality.</li>
+        </ul>
       </div>
 
-      <button class="accordion clickable"><i class="fas fa-briefcase"></i> Junior Graduate Research Assistant</button>
-      <div class="panel">
-        <div class="card">
-          <p><strong>Bilkent University, Turkey</strong> (2017–2019)</p>
-          <ul>
-            <li class="clickable" onclick="showPopup('popup-junior-assistant-experiments')"><i class="fas fa-check-circle"></i> Conducted laboratory experiments and data analysis contributing to publications.</li>
-            <li class="clickable" onclick="showPopup('popup-junior-assistant-protocols')"><i class="fas fa-check-circle"></i> Assisted in developing experimental protocols to improve research accuracy.</li>
-          </ul>
-        </div>
+      <!-- Junior Graduate Research Assistant -->
+      <div class="experience-degree">
+        <h3>Junior Graduate Research Assistant</h3>
+        <p><strong>Bilkent University, Turkey</strong> (2017–2019)</p>
+        <ul>
+          <li class="clickable" onclick="showPopup('popup-junior-assistant-experiments')"><i class="fas fa-check-circle"></i> Conducted laboratory experiments and data analysis contributing to publications.</li>
+          <li class="clickable" onclick="showPopup('popup-junior-assistant-protocols')"><i class="fas fa-check-circle"></i> Assisted in developing experimental protocols to improve research accuracy.</li>
+        </ul>
       </div>
     </section>
 
     <!-- Publications Section -->
     <section id="publications">
-      <h2>Selected Publications</h2>
-      <div class="card">
-        <ol class="publications-list">
-          <li class="clickable" onclick="showPopup('popup-pub1')"><strong>Hadi, S. E.</strong>, Möller, E., et al. (2024). Hierarchical Incorporation of rGO into Anisotropic CNF Foams. <em>ACS Appl. Mater. Interfaces</em>, <strong>16</strong>, 45337.</li>
-          <li class="clickable" onclick="showPopup('popup-pub2')">Di, A., Schiele, C., <strong>Hadi, S. E.</strong>, et al. (2023). Moisture-Resilient Aramid/Cellulose Nanofiber Foams. <em>Adv. Mater.</em>, <strong>35</strong>, 2305195.</li>
-          <li class="clickable" onclick="showPopup('popup-pub3')"><strong>Hadi, S. E.</strong>, Yeprem, H. A., et al. (2023). Magnetic hybrid foams from Fe3O4@TA and TOCN. <em>RSC Adv.</em>, <strong>13</strong>, 13919.</li>
-          <li class="clickable" onclick="showPopup('popup-pub4')">Moreno, A., Liu, J., <strong>Hadi, S. E.</strong>, et al. (2021). Unravelling the hydration barrier of lignin oleate nanoparticles. <em>Angew. Chem. Int. Ed.</em>, <strong>60</strong>, 20897.</li>
-          <li class="clickable" onclick="showPopup('popup-pub5')">Özkan, M., <strong>Hadi, S. E.</strong>, et al. (2020). CB[7]-capped hybrid AuNPs for PDT/PTT therapy. <em>ACS Applied Polymer Materials</em>, <strong>2</strong>, 3840.</li>
-          <li class="clickable" onclick="showPopup('popup-pub6')">Kumar, Y., <strong>Hadi, S. E.</strong>, et al. (2019). CB[7]-Porphyrin Photocatalyst for H2 Generation. <em>ChemCatChem</em>, <strong>11</strong>, 2994.</li>
-        </ol>
+      <h2>Publications</h2>
+      <div class="publications-container">
+        <!-- Publication 1 -->
+        <article class="publication-card clickable" onclick="showPopup('popup-pub1')">
+          <h3>Rheo-SAXS Study of Shear-Induced Orientation and Relaxation of Cellulose Nanocrystal and Montmorillonite Nanoplatelet Dispersions</h3>
+          <p><strong>Journal:</strong> Soft Matter, 2022</p>
+          <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" target="_blank" class="read-more">Read More &raquo;</a>
+        </article>
+
+        <!-- Publication 2 -->
+        <article class="publication-card clickable" onclick="showPopup('popup-pub2')">
+          <h3>Cucurbit[7]uril-Capped Hybrid Conjugated Oligomer-Gold Nanoparticles for Combined Photodynamic-Photothermal Therapy and Cellular Imaging</h3>
+          <p><strong>Journal:</strong> ACS Applied Polymer Materials, 2020</p>
+          <p class="cover-text">Featured as a <em>Cover Article</em></p>
+          <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" target="_blank" class="read-more">Read More &raquo;</a>
+        </article>
+
+        <!-- Publication 3 -->
+        <article class="publication-card clickable" onclick="showPopup('popup-pub3')">
+          <h3>Thermally Insulating and Moisture-Resilient Foams Based on Upcycled Aramid Nanofibers and Nanocellulose</h3>
+          <p><strong>Journal:</strong> Advanced Materials, 2023</p>
+          <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" target="_blank" class="read-more">Read More &raquo;</a>
+        </article>
+
+        <!-- Publication 4 -->
+        <article class="publication-card clickable" onclick="showPopup('popup-pub4')">
+          <h3>Hierarchical Incorporation of Reduced Graphene Oxide into Anisotropic Cellulose Nanofiber Foams Improves Their Thermal Insulation</h3>
+          <p><strong>Journal:</strong> ACS Applied Materials & Interfaces, 2024</p>
+          <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" target="_blank" class="read-more">Read More &raquo;</a>
+        </article>
+
+        <!-- Publication 5 -->
+        <article class="publication-card clickable" onclick="showPopup('popup-pub5')">
+          <h3>Highly Magnetic Hybrid Foams Based on Aligned Tannic Acid-Coated Iron Oxide Nanoparticles and TEMPO-Oxidized Cellulose Nanofibers</h3>
+          <p><strong>Journal:</strong> RSC Advances, 2023</p>
+          <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" target="_blank" class="read-more">Read More &raquo;</a>
+        </article>
+
+        <!-- Publication 6 -->
+        <article class="publication-card clickable" onclick="showPopup('popup-pub6')">
+          <h3>Unravelling the Hydration Barrier of Lignin Oleate Nanoparticles for Acid- and Base-Catalyzed Functionalization in Dispersion State</h3>
+          <p><strong>Journal:</strong> Angewandte Chemie International Edition, 2021</p>
+          <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" target="_blank" class="read-more">Read More &raquo;</a>
+        </article>
       </div>
     </section>
 
@@ -267,7 +289,7 @@
   </div>
 
   <!-- Popup Modals -->
-  
+
   <!-- About Me Popups -->
   <div id="popup-about-achievements" class="popup">
     <div class="popup-content">
@@ -303,7 +325,7 @@
   <div id="popup-phd" class="popup">
     <div class="popup-content">
       <button class="close-popup" onclick="closePopup('popup-phd')">&times;</button>
-      <h3>PhD in Materials Chemistry</h3>
+      <h3>Ph.D. in Materials Chemistry</h3>
       <p><strong>Stockholm University, Sweden</strong> (2019-2024)</p>
       <p>Focused on colloidal processing and alignment of wood-based dispersions and hybrid functional foams.</p>
       <ul>
@@ -328,34 +350,20 @@
     </div>
   </div>
 
-  <div id="popup-bsc-projects" class="popup">
+  <div id="popup-bsc" class="popup">
     <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-bsc-projects')">&times;</button>
-      <h3>B.Sc. Projects</h3>
-      <ul>
-        <li>Process optimization in petrochemical industries, focusing on increasing efficiency and reducing waste.</li>
-        <li>Designed experimental setups for various chemical engineering processes, enhancing operational accuracy.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-bsc-subjects" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-bsc-subjects')">&times;</button>
-      <h3>Key Subjects</h3>
+      <button class="close-popup" onclick="closePopup('popup-bsc')">&times;</button>
+      <h3>B.Sc. in Chemical Engineering</h3>
+      <p><strong>University of Tehran, Iran</strong> (2012-2017)</p>
+      <p>Gained a solid foundation in chemical engineering through comprehensive coursework and practical design projects. Key courses included:</p>
       <ul>
         <li>Thermodynamics</li>
         <li>Fluid Mechanics</li>
         <li>Process Design</li>
+        <li>Fundamentals of Engineering</li>
+        <li>Engineering Design</li>
       </ul>
-    </div>
-  </div>
-
-  <div id="popup-bsc-internship" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-bsc-internship')">&times;</button>
-      <h3>Internship Experience</h3>
-      <p>Worked at a leading oil refinery, where I assisted in process optimization projects, monitored production parameters, and contributed to safety and efficiency improvements.</p>
+      <p>Graduated in the top 15% of the class, showcasing strong academic performance and dedication to the field.</p>
     </div>
   </div>
 
@@ -436,60 +444,60 @@
   <div id="popup-pub1" class="popup">
     <div class="popup-content">
       <button class="close-popup" onclick="closePopup('popup-pub1')">&times;</button>
-      <h3>Hierarchical Incorporation of rGO into Anisotropic CNF Foams</h3>
-      <p><strong>Journal:</strong> ACS Applied Materials & Interfaces, 2024, 16, 45337.</p>
-      <p><strong>Abstract:</strong> This study explores the hierarchical integration of reduced graphene oxide (rGO) into cellulose nanofiber (CNF) foams to enhance their mechanical and electrical properties. The research demonstrates significant improvements in foam strength and conductivity, making them suitable for advanced applications in electronics and energy storage.</p>
-      <p><strong>Link:</strong> <a href="#" target="_blank">Read More</a></p>
+      <h3>Rheo-SAXS Study of Shear-Induced Orientation and Relaxation of Cellulose Nanocrystal and Montmorillonite Nanoplatelet Dispersions</h3>
+      <p><strong>Journal:</strong> Soft Matter, 2022</p>
+      <p><strong>Abstract:</strong> This study investigates the shear-induced orientation and relaxation behaviors of cellulose nanocrystal (CNC) and montmorillonite nanoplatelet (MMT) dispersions using Rheo-SAXS. The research provides critical insights into the rheological properties and structural dynamics of these nanocomposites under shear stress, informing optimized manufacturing processes for enhanced mechanical and thermal properties.</p>
+      <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" target="_blank" class="popup-link">Full Publication &raquo;</a>
     </div>
   </div>
 
   <div id="popup-pub2" class="popup">
     <div class="popup-content">
       <button class="close-popup" onclick="closePopup('popup-pub2')">&times;</button>
-      <h3>Moisture-Resilient Aramid/Cellulose Nanofiber Foams</h3>
-      <p><strong>Journal:</strong> Advanced Materials, 2023, 35, 2305195.</p>
-      <p><strong>Abstract:</strong> This paper presents the development of aramid/cellulose nanofiber foams with enhanced moisture resilience. The foams exhibit superior stability and performance in humid environments, making them ideal for applications in aerospace and construction industries.</p>
-      <p><strong>Link:</strong> <a href="#" target="_blank">Read More</a></p>
+      <h3>Cucurbit[7]uril-Capped Hybrid Conjugated Oligomer-Gold Nanoparticles for Combined Photodynamic-Photothermal Therapy and Cellular Imaging</h3>
+      <p><strong>Journal:</strong> ACS Applied Polymer Materials, 2020</p>
+      <p><strong>Abstract:</strong> This paper presents the synthesis of cucurbit[7]uril (CB[7])-capped hybrid conjugated oligomer-gold nanoparticles (AuNPs) designed for photodynamic therapy (PDT) and photothermal therapy (PTT). The nanoparticles exhibit enhanced therapeutic efficacy and biocompatibility, making them promising agents for combined cancer treatment and cellular imaging. The study was featured as a cover article, highlighting its innovative approach and potential impact.</p>
+      <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" target="_blank" class="popup-link">Full Publication &raquo;</a>
     </div>
   </div>
 
   <div id="popup-pub3" class="popup">
     <div class="popup-content">
       <button class="close-popup" onclick="closePopup('popup-pub3')">&times;</button>
-      <h3>Magnetic Hybrid Foams from Fe3O4@TA and TOCN</h3>
-      <p><strong>Journal:</strong> RSC Advances, 2023, 13, 13919.</p>
-      <p><strong>Abstract:</strong> This research introduces magnetic hybrid foams synthesized using Fe3O4@TA and TEMPO-oxidized cellulose nanofibers (TOCN). The resulting foams demonstrate excellent magnetic responsiveness and mechanical strength, suitable for applications in environmental remediation and smart materials.</p>
-      <p><strong>Link:</strong> <a href="#" target="_blank">Read More</a></p>
+      <h3>Thermally Insulating and Moisture-Resilient Foams Based on Upcycled Aramid Nanofibers and Nanocellulose</h3>
+      <p><strong>Journal:</strong> Advanced Materials, 2023</p>
+      <p><strong>Abstract:</strong> This research focuses on the development of thermally insulating and moisture-resilient foams using upcycled aramid nanofibers and nanocellulose. The study demonstrates exceptional thermal conductivity values as low as 18 mW m⁻¹ K⁻¹ across a wide range of relative humidity (20-80% RH), showcasing the potential for sustainable and high-performance insulation materials.</p>
+      <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" target="_blank" class="popup-link">Full Publication &raquo;</a>
     </div>
   </div>
 
   <div id="popup-pub4" class="popup">
     <div class="popup-content">
       <button class="close-popup" onclick="closePopup('popup-pub4')">&times;</button>
-      <h3>Unravelling the Hydration Barrier of Lignin Oleate Nanoparticles</h3>
-      <p><strong>Journal:</strong> Angewandte Chemie International Edition, 2021, 60, 20897.</p>
-      <p><strong>Abstract:</strong> This study investigates the hydration barrier properties of lignin oleate nanoparticles. Advanced characterization techniques reveal the mechanisms by which these nanoparticles resist moisture penetration, highlighting their potential in sustainable packaging and protective coatings.</p>
-      <p><strong>Link:</strong> <a href="#" target="_blank">Read More</a></p>
+      <h3>Hierarchical Incorporation of Reduced Graphene Oxide into Anisotropic Cellulose Nanofiber Foams Improves Their Thermal Insulation</h3>
+      <p><strong>Journal:</strong> ACS Applied Materials & Interfaces, 2024</p>
+      <p><strong>Abstract:</strong> This study explores the hierarchical integration of reduced graphene oxide (rGO) into cellulose nanofiber (CNF) foams to enhance their mechanical and thermal properties. The research demonstrates significant improvements in foam strength and conductivity, making them suitable for advanced applications in electronics and energy storage. Layer-by-layer self-assembly was utilized for hierarchical material modifications without compromising foam integrity.</p>
+      <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" target="_blank" class="popup-link">Full Publication &raquo;</a>
     </div>
   </div>
 
   <div id="popup-pub5" class="popup">
     <div class="popup-content">
       <button class="close-popup" onclick="closePopup('popup-pub5')">&times;</button>
-      <h3>CB[7]-capped Hybrid AuNPs for PDT/PTT Therapy</h3>
-      <p><strong>Journal:</strong> ACS Applied Polymer Materials, 2020, 2, 3840.</p>
-      <p><strong>Abstract:</strong> This paper presents the synthesis of cucurbit[7]uril (CB[7])-capped hybrid gold nanoparticles (AuNPs) designed for photodynamic and photothermal therapy (PDT/PTT). The nanoparticles exhibit enhanced therapeutic efficacy and biocompatibility, offering a promising approach for cancer treatment.</p>
-      <p><strong>Link:</strong> <a href="#" target="_blank">Read More</a></p>
+      <h3>Highly Magnetic Hybrid Foams Based on Aligned Tannic Acid-Coated Iron Oxide Nanoparticles and TEMPO-Oxidized Cellulose Nanofibers</h3>
+      <p><strong>Journal:</strong> RSC Advances, 2023</p>
+      <p><strong>Abstract:</strong> This research introduces highly magnetic hybrid foams synthesized using aligned tannic acid-coated iron oxide nanoparticles and TEMPO-oxidized cellulose nanofibers (TOCN). The resulting foams demonstrate excellent magnetic responsiveness and mechanical strength, achieving magnetization values close to 95% of bulk magnetite performance. The innovative magnetic field-assisted ice templating method enhanced both mechanical and thermal properties, making these foams suitable for applications in electromagnetic shielding and environmental remediation.</p>
+      <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" target="_blank" class="popup-link">Full Publication &raquo;</a>
     </div>
   </div>
 
   <div id="popup-pub6" class="popup">
     <div class="popup-content">
       <button class="close-popup" onclick="closePopup('popup-pub6')">&times;</button>
-      <h3>CB[7]-Porphyrin Photocatalyst for H2 Generation</h3>
-      <p><strong>Journal:</strong> ChemCatChem, 2019, 11, 2994.</p>
-      <p><strong>Abstract:</strong> This research explores the use of cucurbit[7]uril (CB[7])-porphyrin conjugates as efficient photocatalysts for hydrogen generation. The study demonstrates high catalytic activity under visible light, providing a sustainable method for hydrogen production.</p>
-      <p><strong>Link:</strong> <a href="#" target="_blank">Read More</a></p>
+      <h3>Unravelling the Hydration Barrier of Lignin Oleate Nanoparticles for Acid- and Base-Catalyzed Functionalization in Dispersion State</h3>
+      <p><strong>Journal:</strong> Angewandte Chemie International Edition, 2021</p>
+      <p><strong>Abstract:</strong> This study investigates the hydration barrier properties of lignin oleate nanoparticles. Advanced characterization techniques reveal the mechanisms by which these nanoparticles resist moisture penetration, highlighting their potential in sustainable packaging and protective coatings. The research provides insights into acid- and base-catalyzed functionalization processes, enhancing the applicability of lignin-based materials in various industrial applications.</p>
+      <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" target="_blank" class="popup-link">Full Publication &raquo;</a>
     </div>
   </div>
 
@@ -732,31 +740,6 @@
       <p><strong>Position:</strong> Professor of Nanotechnology</p>
       <p><strong>Institution:</strong> KTH Royal Institute of Technology, Sweden</p>
       <p><strong>Contact:</strong> <a href="mailto:blund@kth.se">blund@kth.se</a></p>
-    </div>
-  </div>
-
-  <!-- Skills Popups Continued -->
-  <div id="popup-skill-universal-testing-machine" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-universal-testing-machine')">&times;</button>
-      <h3>Universal Testing Machine</h3>
-      <ul>
-        <li>Mechanical testing for evaluating material strength and elasticity.</li>
-        <li>Used to determine tensile, compressive, and flexural properties of nanocomposites.</li>
-        <li>Critical for ensuring materials meet specified mechanical requirements for applications.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-leica-ultramicrotome" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-leica-ultramicrotome')">&times;</button>
-      <h3>Leica Ultramicrotome</h3>
-      <ul>
-        <li>Ultra-thin sectioning for SEM/TEM sample preparation.</li>
-        <li>Used to prepare samples for electron microscopy, ensuring high-resolution imaging.</li>
-        <li>Essential for visualizing the internal structure of nanocomposites.</li>
-      </ul>
     </div>
   </div>
 
