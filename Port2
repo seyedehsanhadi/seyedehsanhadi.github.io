@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Seyed Ehsan Hadi, PhD</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- Embedded CSS -->
+  <style>
+    :root {
+      --bg-gradient-start: #38ada9; /* Light Teal */
+      --bg-gradient-end: #2c3e50;   /* Dark Blue */
+      --accent-color: #1abc9c;      /* Teal */
+      --primary-color: #2c3e50;     /* Dark Blue */
+      --secondary-color: #3498db;   /* Blue */
+      --text-color: #34495e;        /* Slate Gray */
+      --nav-bg: #ffffff;            /* White */
+      --card-bg: #ffffff;           /* White */
+      --card-shadow: rgba(0, 0, 0, 0.1);
+      --popup-bg: rgba(0, 0, 0, 0.7); /* Popup Overlay */
+      --close-btn-bg: #e74c3c;      /* Red */
+      --close-btn-hover: #c0392b;   /* Darker Red */
+      --radius: 8px;                /* Border Radius */
+      --transition-speed: 0.3s;     /* Transition Speed */
+      --font-primary: 'Poppins', sans-serif;
+      --font-secondary: 'Roboto', sans-serif;
+      /* Updated Colors for Characterization Section */
+      --category-bg: #ecf0f1;        /* Light Gray */
+      --technique-bg: #2980b9;       /* Blue */
+      --technique-hover-bg: #1abc9c; /* Teal */
+      --gauge-bg: #bdc3c7;           /* Light Gray */
+      --gauge-familiar: #e67e22;     /* Orange */
+      --gauge-intermediate: #2ecc71; /* Green */
+      --gauge-expert: #3498db;       /* Blue */
+    }
+
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(
+        135deg,
+        var(--bg-gradient-start),
+        var(--bg-gradient-end)
+      );
+      font-family: var(--font-primary);
+      color: var(--text-color);
+      min-height: 100vh;
+    }
+
+    /* Navigation Bar */
+    .minimal-nav {
+      background: var(--nav-bg);
+      box-shadow: 0 2px 6px var(--card-shadow);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .back-btn {
+      text-decoration: none;
+      color: #fff;
+      background: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      display: inline-flex;
+      align-items: center;
+      transition: background var(--transition-speed),
+                  transform var(--transition-speed),
+                  box-shadow var(--transition-speed);
+    }
+
+    .back-btn i {
+      margin-right: 0.5rem;
+    }
+
+    .back-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Main Wrapper */
+    .portfolio-wrapper {
+      margin-top: 80px; /* Space below nav */
+      padding: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: var(--radius);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Intro Section */
+    .intro-section {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .intro-section h1 {
+      font-size: 2.5rem;
+      font-family: var(--font-secondary);
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .intro-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Project Cards */
+    .project-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px var(--card-shadow);
+      overflow: hidden;
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .image-container {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform var(--transition-speed);
+      background-color: #f0f0f0;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px var(--card-shadow);
+    }
+
+    .project-card h3 {
+      font-size: 1.4rem;
+      color: var(--accent-color);
+      margin: 1rem;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      margin: 0 1rem 1rem;
+      line-height: 1.4;
+    }
+
+    .project-button {
+      margin: 0 1rem 1rem;
+      background: var(--accent-color);
+      border: none;
+      padding: 0.4rem 1rem;
+      color: #fff;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background var(--transition-speed),
+                  transform var(--transition-speed),
+                  box-shadow var(--transition-speed);
+    }
+
+    .project-button:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Characterization Section */
+    .characterization-section {
+      margin-bottom: 3rem;
+    }
+
+    .characterization-section h2 {
+      font-family: var(--font-secondary);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: var(--primary-color);
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .category {
+      background: var(--category-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px var(--card-shadow);
+      padding: 1rem;
+    }
+
+    .category h3 {
+      font-size: 1.3rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .techniques-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+
+    .technique-card {
+      background: var(--technique-bg);
+      border-radius: var(--radius);
+      padding: 0.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: transform var(--transition-speed), background var(--transition-speed);
+      color: #fff;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 4px var(--card-shadow);
+    }
+
+    .technique-card:hover {
+      background: var(--technique-hover-bg);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px var(--card-shadow);
+    }
+
+    /* Popups */
+    .project-popup, .technique-popup {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--popup-bg);
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .popup-content {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 800px;
+      position: relative;
+      overflow-y: auto;
+      max-height: 90vh;
+      animation: fadeIn var(--transition-speed) ease-out forwards;
+    }
+
+    .popup-content img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+    }
+
+    .popup-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+      font-family: var(--font-secondary);
+      text-align: center;
+    }
+
+    .popup-content h3 {
+      font-size: 1.4rem;
+      color: var(--accent-color);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .popup-content p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--text-color);
+    }
+
+    .popup-content h4 {
+      margin-top: 1rem;
+      color: var(--accent-color);
+      font-size: 1.1rem;
+    }
+
+    .popup-content ul {
+      list-style: disc;
+      margin-left: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .popup-link {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color var(--transition-speed);
+    }
+
+    .popup-link:hover {
+      color: var(--secondary-color);
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--close-btn-bg);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background var(--transition-speed);
+    }
+
+    .close-popup:hover {
+      background: var(--close-btn-hover);
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Classic Gauge Styles */
+    .gauge-container {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .gauge-label {
+      font-weight: bold;
+      min-width: 100px;
+      text-align: right;
+    }
+
+    .gauge {
+      position: relative;
+      width: 150px;
+      height: 75px;
+      overflow: hidden;
+      transform: rotate(-90deg);
+    }
+
+    .gauge::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 4px;
+      height: 35px;
+      background: #333;
+      transform-origin: bottom center;
+      transform: rotate(var(--gauge-rotation, 0deg));
+      transition: transform 1s ease-out;
+    }
+
+    .gauge-background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-bottom-left-radius: 150px;
+      border-bottom-right-radius: 150px;
+      background: linear-gradient(to right, #e0e0e0 0%, #e0e0e0 100%);
+    }
+
+    .gauge-progress {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-bottom-left-radius: 150px;
+      border-bottom-right-radius: 150px;
+      background: linear-gradient(to right, var(--gauge-color) 0%, var(--gauge-color) 100%);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      transform: rotate(calc(var(--gauge-percentage) * 1.8deg));
+      transform-origin: bottom center;
+      transition: transform 1s ease-out;
+    }
+
+    /* Footer */
+    .footer-section {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+
+    .footer-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .footer-section p {
+      margin-bottom: 1rem;
+    }
+
+    .social-links a {
+      color: #fff;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+      transition: color var(--transition-speed);
+    }
+
+    .social-links a:hover {
+      color: #ddd;
+    }
+
+    /* Responsive Tweaks */
+    @media (max-width: 992px) {
+      .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .characterization-section h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+      }
+      .back-btn {
+        margin-top: 0.5rem;
+      }
+      .intro-section h1 {
+        font-size: 2rem;
+      }
+      .intro-section p {
+        font-size: 1rem;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .project-card h3 {
+        font-size: 1.2rem;
+      }
+      .project-card p {
+        font-size: 0.9rem;
+      }
+      .characterization-section h2 {
+        font-size: 1.6rem;
+      }
+      .category h3 {
+        font-size: 1.1rem;
+      }
+      .technique-card {
+        font-size: 0.85rem;
+        padding: 0.4rem;
+      }
+      .gauge-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .gauge-label {
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+      .gauge {
+        width: 120px;
+        height: 60px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .intro-section h1 {
+        font-size: 1.8rem;
+      }
+      .project-button {
+        font-size: 0.9rem;
+      }
+      .popup-content {
+        padding: 1.5rem;
+      }
+      .popup-content h2 {
+        font-size: 1.5rem;
+      }
+      .characterization-section h2 {
+        font-size: 1.4rem;
+      }
+      .category h3 {
+        font-size: 1rem;
+      }
+      .technique-card {
+        font-size: 0.75rem;
+        padding: 0.25rem;
+      }
+      .gauge-container {
+        width: 100%;
+      }
+      .gauge-label {
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+      .gauge {
+        width: 100px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Minimal Top Nav Bar -->
+  <nav class="minimal-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Seyed Ehsan Hadi, PhD</a>
+      <div class="nav-buttons">
+        <a href="https://seyedehsanhadi.github.io/index.html" class="back-btn">
+          <i class="fas fa-file-alt"></i> View CV
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Portfolio Content Wrapper -->
+  <main class="portfolio-wrapper">
+    <!-- Intro Section -->
+    <section class="intro-section">
+      <h1>Advanced Composites & Innovations</h1>
+      <p>
+        Welcome to my portfolio! As a multidisciplinary leader with over 7 years in materials science, my research focuses on
+        <strong>sustainable materials</strong>, <strong>advanced composites</strong>, and
+        <strong>innovative engineering solutions</strong>. Each project demonstrates my commitment to driving R&D and optimizing processes for impactful and sustainable material advancements.
+      </p>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid">
+      <!-- Project 1 -->
+      <article class="project-card clickable" onclick="showProjectPopup('popup-foam-insulation')">
+        <div class="image-container">
+          <img src="assets/images/foam_insulation.jpg" alt="Thermally Insulating and Moisture-Resilient Foams" />
+        </div>
+        <h3>Thermally Insulating & Moisture-Resilient Foams</h3>
+        <p>
+          Developing sustainable, high-performance insulation materials using upcycled fibers.
+        </p>
+        <button class="project-button">View Project</button>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card clickable" onclick="showProjectPopup('popup-stabilized-lignin')">
+        <div class="image-container">
+          <img src="assets/images/stabilized_lignin.jpg" alt="Stabilized Lignin Nanoparticles" />
+        </div>
+        <h3>Stabilized Lignin Nanoparticles</h3>
+        <p>
+          Enhancing lignin nanoparticles for robust applications in coatings and remediation.
+        </p>
+        <button class="project-button">View Project</button>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card clickable" onclick="showProjectPopup('popup-reduced-graphene')">
+        <div class="image-container">
+          <img src="assets/images/reduced_graphene.jpg" alt="Hierarchical Reduced Graphene Oxide in CNF Foams" />
+        </div>
+        <h3>Reduced Graphene Oxide in CNF Foams</h3>
+        <p>
+          Enhancing thermal insulation through hierarchical material design with graphene.
+        </p>
+        <button class="project-button">View Project</button>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card clickable" onclick="showProjectPopup('popup-magnetic-foams')">
+        <div class="image-container">
+          <img src="assets/images/magnetic_foams.jpg" alt="Magnetic Hybrid Foams" />
+        </div>
+        <h3>Magnetic Hybrid Foams</h3>
+        <p>
+          Developing smart, lightweight foams embedded with magnetic particles for advanced applications.
+        </p>
+        <button class="project-button">View Project</button>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="project-card clickable" onclick="showProjectPopup('popup-photodynamic-nanoparticles')">
+        <div class="image-container">
+          <img src="assets/images/photodynamic_nanoparticles.jpg" alt="Photodynamic-Photothermal Hybrid Nanoparticles" />
+        </div>
+        <h3>Photodynamic-Photothermal Nanoparticles</h3>
+        <p>
+          Dual-functional nanoparticles for advanced antibacterial and anticancer therapies.
+        </p>
+        <button class="project-button">View Project</button>
+      </article>
+
+      <!-- Project 6 -->
+      <article class="project-card clickable" onclick="showProjectPopup('popup-rheosaxs')">
+        <div class="image-container">
+          <img src="assets/images/rheosaxs_study.jpg" alt="Rheo-SAXS Study of Nanocomposites" />
+        </div>
+        <h3>Rheo-SAXS Study of Nanocomposites</h3>
+        <p>
+          Investigating shear-induced behaviors to optimize nanocomposite manufacturing.
+        </p>
+        <button class="project-button">View Project</button>
+      </article>
+    </section>
+
+    <!-- Characterization Section -->
+    <section class="characterization-section">
+      <h2>Characterization</h2>
+      <div class="categories-grid">
+        <!-- Microscopy and Imaging Category -->
+        <div class="category">
+          <h3>Microscopy & Imaging</h3>
+          <div class="techniques-grid">
+            <!-- Transmission Electron Microscopy Card -->
+            <div class="technique-card" onclick="showTechniquePopup('popup-tem')">Transmission Electron Microscopy</div>
+            <!-- Scanning Electron Microscopy Card -->
+            <div class="technique-card" onclick="showTechniquePopup('popup-sem')">Scanning Electron Microscopy</div>
+            <!-- Optical Microscopes Card -->
+            <div class="technique-card" onclick="showTechniquePopup('popup-optical-microscopes')">Optical Microscopes</div>
+          </div>
+        </div>
+
+        <!-- Surface, Structure, and Morphology Category -->
+        <div class="category">
+          <h3>Surface, Structure & Morphology</h3>
+          <div class="techniques-grid">
+            <div class="technique-card" onclick="showTechniquePopup('popup-dls')">Dynamic Light Scattering (DLS)</div>
+            <div class="technique-card" onclick="showTechniquePopup('popup-saxs')">SAXS</div>
+            <div class="technique-card" onclick="showTechniquePopup('popup-waxs')">WAXS</div>
+          </div>
+        </div>
+
+        <!-- Surface and Structural Analysis Category -->
+        <div class="category">
+          <h3>Surface & Structural</h3>
+          <div class="techniques-grid">
+            <div class="technique-card" onclick="showTechniquePopup('popup-xps')">XPS</div>
+            <div class="technique-card" onclick="showTechniquePopup('popup-ft-ir')">FT-IR</div>
+            <div class="technique-card" onclick="showTechniquePopup('popup-pxrd')">PXRD</div>
+          </div>
+        </div>
+
+        <!-- Thermal Analysis Category -->
+        <div class="category">
+          <h3>Thermal Analysis</h3>
+          <div class="techniques-grid">
+            <div class="technique-card" onclick="showTechniquePopup('popup-thermal-analysis')">Thermogravimetric Analysis (TGA) & DSC</div>
+          </div>
+        </div>
+
+        <!-- Rheology Category -->
+        <div class="category">
+          <h3>Rheology</h3>
+          <div class="techniques-grid">
+            <div class="technique-card" onclick="showTechniquePopup('popup-rheology')">Rheology</div>
+          </div>
+        </div>
+
+        <!-- Mechanical Testing Category -->
+        <div class="category">
+          <h3>Mechanical Testing</h3>
+          <div class="techniques-grid">
+            <div class="technique-card" onclick="showTechniquePopup('popup-mechanical-testing')">Mechanical Testing</div>
+          </div>
+        </div>
+
+        <!-- Advanced Sample Preparation Category -->
+        <div class="category">
+          <h3>Advanced Sample Preparation</h3>
+          <div class="techniques-grid">
+            <div class="technique-card" onclick="showTechniquePopup('popup-sample-prep')">Sample Preparation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Popups -->
+
+  <!-- Project 1 Popup -->
+  <div id="popup-foam-insulation" class="project-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeProjectPopup('popup-foam-insulation')">&times;</button>
+      <h2>Thermally Insulating & Moisture-Resilient Foams</h2>
+      <img src="assets/images/foam_insulation_large.jpg" alt="Thermally Insulating and Moisture-Resilient Foams Detail" />
+      <p>
+        Developed super-insulating foams using upcycled aramid nanofibers and nanocellulose. Achieved exceptional thermal conductivity values as low as 18 mW m⁻¹ K⁻¹ across a wide range of relative humidity (20-80% RH). These foams are sustainable, moisture-resistant, and ideal for replacing fossil-based materials in insulation applications, promoting a circular economy by recycling Kevlar-based materials.
+      </p>
+      <h4>Key Highlights</h4>
+      <ul>
+        <li>Thermal conductivity as low as 18 mW m⁻¹ K⁻¹.</li>
+        <li>Effective performance across 20-80% relative humidity.</li>
+        <li>Published in <strong>Advanced Materials</strong> (2023).</li>
+        <li>Supports sustainability and circular economy initiatives.</li>
+      </ul>
+      <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" class="popup-link" target="_blank">Full Publication &raquo;</a>
+    </div>
+  </div>
+
+  <!-- Project 2 Popup -->
+  <div id="popup-stabilized-lignin" class="project-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeProjectPopup('popup-stabilized-lignin')">&times;</button>
+      <h2>Stabilized Lignin Nanoparticles</h2>
+      <img src="assets/images/stabilized_lignin_large.jpg" alt="Stabilized Lignin Nanoparticles Detail" />
+      <p>
+        Enhanced the stability of lignin oleate nanoparticles under extreme pH conditions (acidic and basic). Successfully applied acid- and base-catalyzed functionalization processes on the nanoparticles, enabling their use in coatings and dye adsorption. Demonstrated their potential for anticorrosive applications and environmental remediation, emphasizing sustainability in material science.
+      </p>
+      <h4>Key Highlights</h4>
+      <ul>
+        <li>Stable under extreme pH conditions.</li>
+        <li>Applicable in coatings and dye adsorption.</li>
+        <li>Published in <strong>Angewandte Chemie International Edition</strong> (2021).</li>
+        <li>Potential for anticorrosive and environmental remediation uses.</li>
+      </ul>
+      <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" class="popup-link" target="_blank">Full Publication &raquo;</a>
+    </div>
+  </div>
+
+  <!-- Project 3 Popup -->
+  <div id="popup-reduced-graphene" class="project-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeProjectPopup('popup-reduced-graphene')">&times;</button>
+      <h2>Hierarchical Reduced Graphene Oxide in CNF Foams</h2>
+      <img src="assets/images/reduced_graphene_large.jpeg" alt="Hierarchical Reduced Graphene Oxide in CNF Foams Detail" />
+      <p>
+        Reduced radial thermal conductivity in anisotropic cellulose nanofiber (CNF) foams by incorporating a layer of reduced graphene oxide (rGO). Demonstrated that rGO directs thermal conduction axially while maintaining low radial thermal transfer, significantly improving insulation performance. Utilized layer-by-layer self-assembly for hierarchical material modifications without compromising foam integrity.
+      </p>
+      <h4>Key Highlights</h4>
+      <ul>
+        <li>Enhanced thermal insulation with reduced graphene oxide.</li>
+        <li>Maintained foam integrity through layer-by-layer assembly.</li>
+        <li>Published in <strong>ACS Applied Materials & Interfaces</strong> (2024).</li>
+        <li>Innovative approach to anisotropic thermal management.</li>
+      </ul>
+      <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" class="popup-link" target="_blank">Full Publication &raquo;</a>
+    </div>
+  </div>
+
+  <!-- Project 4 Popup -->
+  <div id="popup-magnetic-foams" class="project-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeProjectPopup('popup-magnetic-foams')">&times;</button>
+      <h2>Magnetic Hybrid Foams</h2>
+      <img src="assets/images/magnetic_foams_large.jpg" alt="Magnetic Hybrid Foams Detail" />
+      <p>
+        Created lightweight and flexible foams by combining tannic acid-coated iron oxide nanoparticles with TEMPO-oxidized cellulose nanofibers. Achieved magnetization values close to 95% of bulk magnetite, making the foams suitable for electromagnetic shielding and environmental cleanup. Introduced a novel magnetic field-assisted ice templating method to align and structure the nanoparticles, enhancing mechanical and thermal properties.
+      </p>
+      <h4>Key Highlights</h4>
+      <ul>
+        <li>Magnetization close to 95% of bulk magnetite.</li>
+        <li>Lightweight and flexible design.</li>
+        <li>Published in <strong>RSC Advances</strong> (2023).</li>
+        <li>Innovative magnetic field-assisted ice templating technique.</li>
+      </ul>
+      <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" class="popup-link" target="_blank">Full Publication &raquo;</a>
+    </div>
+  </div>
+
+  <!-- Project 5 Popup -->
+  <div id="popup-photodynamic-nanoparticles" class="project-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeProjectPopup('popup-photodynamic-nanoparticles')">&times;</button>
+      <h2>Photodynamic-Photothermal Hybrid Nanoparticles</h2>
+      <img src="assets/images/photodynamic_nanoparticles_large.jpeg" alt="Photodynamic-Photothermal Hybrid Nanoparticles Detail" />
+      <p>
+        Designed dual-functional nanoparticles capable of photodynamic therapy (PDT) and photothermal therapy (PTT) for antibacterial and anticancer applications. Demonstrated strong photothermal conversion efficiency (15%) and high photodynamic activity against pathogens and breast cancer cells (MCF-7). Enhanced safety by reducing dark toxicity through capping the nanoparticles with cucurbit[7]uril, preserving their therapeutic efficacy. Featured as a cover article for increased visibility.
+      </p>
+      <h4>Key Highlights</h4>
+      <ul>
+        <li>15% photothermal conversion efficiency.</li>
+        <li>High photodynamic activity against pathogens and cancer cells.</li>
+        <li>Published in <strong>ACS Applied Polymer Materials</strong> (2020).</li>
+        <li>Featured as a <em>Cover Article</em> for enhanced recognition.</li>
+      </ul>
+      <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" class="popup-link" target="_blank">Full Publication &raquo;</a>
+    </div>
+  </div>
+
+  <!-- Project 6 Popup -->
+  <div id="popup-rheosaxs" class="project-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeProjectPopup('popup-rheosaxs')">&times;</button>
+      <h2>Rheo-SAXS Study of Nanocomposites</h2>
+      <img src="assets/images/rheosaxs_study_large.jpg" alt="Rheo-SAXS Study of Nanocomposites Detail" />
+      <p>
+        Investigated shear-induced orientation and relaxation behavior in cellulose nanocrystals and montmorillonite nanoplatelet composites using Rheo-SAXS. Provided critical insights into the rheological properties and structural dynamics of these materials under shear stress. Highlighted the potential for optimizing manufacturing processes of nanocomposites with improved mechanical and thermal properties.
+      </p>
+      <h4>Key Highlights</h4>
+      <ul>
+        <li>Detailed analysis of shear-induced behaviors in nanocomposites.</li>
+        <li>Insights into rheological properties and structural dynamics.</li>
+        <li>Published in <strong>Soft Matter</strong> (2022).</li>
+        <li>Optimizing manufacturing processes for enhanced material properties.</li>
+      </ul>
+      <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" class="popup-link" target="_blank">Full Publication &raquo;</a>
+    </div>
+  </div>
+
+  <!-- Technique Popups -->
+
+  <!-- Transmission Electron Microscopy Popup (FEI Themis Z & JEOL JEM-2100F) -->
+  <div id="popup-tem" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-tem')">&times;</button>
+      <h2>Transmission Electron Microscopy</h2>
+
+      <!-- FEI Themis Z Section -->
+      <section>
+        <h3>FEI Themis Z</h3>
+        <img src="assets/images/TEM1.jpg" alt="FEI Themis Z High-resolution TEM/STEM" />
+        <p>
+          The FEI Themis Z is a high-resolution Transmission Electron Microscope/Scanning Transmission Electron Microscope (TEM/STEM) designed for advanced material imaging. It offers exceptional spatial resolution and analytical capabilities, enabling detailed characterization of nanostructures and complex materials.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: FEI Themis Z</li>
+          <li>Capabilities: High-resolution TEM/STEM, Advanced Material Imaging</li>
+          <li>Expertise: Nanostructure Characterization, Material Defect Analysis</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Characterization of Reduced Graphene Oxide in CNF Foams</li>
+          <li>Rheo-SAXS Study of Nanocomposites</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill intermediate" style="--gauge-percentage: 80deg;"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- JEOL JEM-2100F Section -->
+      <section>
+        <h3>JEOL JEM-2100F</h3>
+        <img src="assets/images/TEM2.jpg" alt="JEOL JEM-2100F TEM/STEM" />
+        <p>
+          The JEOL JEM-2100F is a versatile Transmission Electron Microscope/Scanning Transmission Electron Microscope (TEM/STEM) with Cryo-TEM capabilities. It is ideal for a wide range of applications, including biological sample analysis and materials science research.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: JEOL JEM-2100F</li>
+          <li>Capabilities: TEM/STEM, Cryo-TEM</li>
+          <li>Expertise: Biological Sample Analysis, Nanomaterial Characterization</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Photodynamic-Photothermal Hybrid Nanoparticles Study</li>
+          <li>Stabilized Lignin Nanoparticles Research</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill expert" style="--gauge-percentage: 90deg;"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Scanning Electron Microscopy Popup (Hitachi S-4800 & FEI Quanta 200) -->
+  <div id="popup-sem" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-sem')">&times;</button>
+      <h2>Scanning Electron Microscopy</h2>
+
+      <!-- Hitachi S-4800 Section -->
+      <section>
+        <h3>Hitachi S-4800</h3>
+        <img src="assets/images/SEM1.jpg" alt="Hitachi S-4800 SEM" />
+        <p>
+          The Hitachi S-4800 is a high-resolution Scanning Electron Microscope (SEM) designed for low-voltage imaging of biological and polymeric samples. Its advanced imaging capabilities allow for detailed surface analysis and topographical studies.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: Hitachi S-4800</li>
+          <li>Capabilities: High-Resolution SEM, Low-Voltage Imaging</li>
+          <li>Expertise: Biological Sample Imaging, Polymeric Material Analysis</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Stabilized Lignin Nanoparticles Characterization</li>
+          <li>Photodynamic-Photothermal Hybrid Nanoparticles Study</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill familiar" style="--gauge-percentage: 70deg;"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- FEI Quanta 200 Section -->
+      <section>
+        <h3>FEI Quanta 200</h3>
+        <img src="assets/images/SEM2.jpg" alt="FEI Quanta 200 ESEM" />
+        <p>
+          The FEI Quanta 200 Environmental Scanning Electron Microscope (ESEM) is suitable for wet and non-conductive sample imaging. It allows for the observation of samples in a natural state without extensive preparation, making it ideal for environmental and biological studies.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: FEI Quanta 200</li>
+          <li>Capabilities: ESEM, Wet and Non-Conductive Sample Imaging</li>
+          <li>Expertise: Environmental Sample Analysis, Biological Material Imaging</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Magnetic Hybrid Foams Environmental Cleanup</li>
+          <li>Photodynamic-Photothermal Hybrid Nanoparticles Applications</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill intermediate" style="--gauge-percentage: 75deg;"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Optical Microscopes Popup -->
+  <div id="popup-optical-microscopes" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-optical-microscopes')">&times;</button>
+      <h2>Optical Microscopes</h2>
+      <img src="assets/images/Optical1.jpg" alt="Optical Microscopes" />
+      <p>
+        Optical Microscopes (Leica DMIL & Leitz Ortholux II-Pol BK) are used for general optical imaging and polarized light microscopy. They are essential for analyzing the microstructure and composition of various materials.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Models: Leica DMIL, Leitz Ortholux II-Pol BK</li>
+        <li>Capabilities: General Optical Imaging, Polarized Light Microscopy</li>
+        <li>Expertise: Microstructure Analysis, Material Composition Studies</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Thermally Insulating & Moisture-Resilient Foams Analysis</li>
+        <li>Mechanical Testing of Nanocomposites</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill expert" style="--gauge-percentage: 85deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Surface, Structure & Morphology Popups -->
+
+  <!-- Dynamic Light Scattering (DLS) Popup -->
+  <div id="popup-dls" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-dls')">&times;</button>
+      <h2>Dynamic Light Scattering (DLS)</h2>
+      <img src="assets/images/DLS1.jpg" alt="Dynamic Light Scattering (DLS)" />
+      <p>
+        The Dynamic Light Scattering (DLS) system is essential for analyzing viscoelastic properties of materials. It measures the size distribution and stability of nanoparticles in various formulations, providing critical insights into their behavior under different conditions.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: Malvern Zetasizer DLS</li>
+        <li>Capabilities: Dynamic Light Scattering, Zeta Potential Measurements</li>
+        <li>Expertise: Viscoelastic Property Analysis, Nanoparticle Size Distribution</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Stabilized Lignin Nanoparticles Particle Characterization</li>
+        <li>Photodynamic-Photothermal Hybrid Nanoparticles Stability Studies</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill intermediate" style="--gauge-percentage: 80deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAXS Popup -->
+  <div id="popup-saxs" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-saxs')">&times;</button>
+      <h2>SAXS (Small-Angle X-ray Scattering)</h2>
+      <img src="assets/images/SAXS1.jpg" alt="Small-Angle X-ray Scattering (SAXS)" />
+      <p>
+        Small-Angle X-ray Scattering (SAXS) is a technique used to investigate the structural properties of materials at the nanoscale. It provides detailed information on size, shape, and distribution of nanostructures within the material.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: [Your SAXS Instrument Model]</li>
+        <li>Capabilities: Small-Angle X-ray Scattering, Nanostructure Analysis</li>
+        <li>Expertise: Structural Characterization, Nanoparticle Distribution Studies</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Rheo-SAXS Study of Nanocomposites Structural Analysis</li>
+        <li>Reduced Graphene Oxide in CNF Foams Crystallography</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill intermediate" style="--gauge-percentage: 75deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAXS Popup -->
+  <div id="popup-waxs" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-waxs')">&times;</button>
+      <h2>WAXS (Wide-Angle X-ray Scattering)</h2>
+      <img src="assets/images/WAXS1.jpg" alt="Wide-Angle X-ray Scattering (WAXS)" />
+      <p>
+        Wide-Angle X-ray Scattering (WAXS) complements SAXS by providing information on the crystalline structure and molecular arrangements within materials. It is crucial for understanding material properties at both the nano and molecular levels.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: [Your WAXS Instrument Model]</li>
+        <li>Capabilities: Wide-Angle X-ray Scattering, Crystalline Structure Analysis</li>
+        <li>Expertise: Molecular Arrangement Studies, Crystallography</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Rheo-SAXS Study of Nanocomposites Structural Analysis</li>
+        <li>Reduced Graphene Oxide in CNF Foams Crystallography</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill intermediate" style="--gauge-percentage: 70deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- XPS Popup (Thermo K-Alpha XPS) -->
+  <div id="popup-xps" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-xps')">&times;</button>
+      <h2>XPS (X-ray Photoelectron Spectroscopy)</h2>
+      <img src="assets/images/XPS1.jpg" alt="Thermo Scientific K-Alpha XPS" />
+      <p>
+        The Thermo Scientific K-Alpha X-ray Photoelectron Spectroscopy (XPS) system provides high-resolution surface chemical analysis. It is crucial for determining the elemental composition and chemical states of materials.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: Thermo Scientific K-Alpha XPS</li>
+        <li>Capabilities: High-Resolution Surface Chemical Analysis</li>
+        <li>Expertise: Elemental Composition, Chemical State Identification</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Stabilized Lignin Nanoparticles Chemical Analysis</li>
+        <li>Photodynamic-Photothermal Nanoparticles Surface Characterization</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill intermediate" style="--gauge-percentage: 70deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FT-IR Popup (Bruker Alpha-II FT-IR) -->
+  <div id="popup-ft-ir" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-ft-ir')">&times;</button>
+      <h2>FT-IR (Fourier Transform Infrared Spectroscopy)</h2>
+      <img src="assets/images/FTIR1.jpg" alt="Bruker Alpha-II FT-IR" />
+      <p>
+        The Bruker Alpha-II Fourier Transform Infrared Spectroscopy (FT-IR) system allows for precise molecular identification and characterization. It is essential for analyzing chemical bonds and molecular structures.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: Bruker Alpha-II FT-IR</li>
+        <li>Capabilities: Precise Molecular Identification, Chemical Bond Analysis</li>
+        <li>Expertise: Molecular Structure Characterization, Chemical Composition Analysis</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Stabilized Lignin Nanoparticles Molecular Analysis</li>
+        <li>Photodynamic-Photothermal Nanoparticles Chemical Characterization</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill expert" style="--gauge-percentage: 80deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PXRD Popup (Panalytical X'Pert Pro PXRD) -->
+  <div id="popup-pxrd" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-pxrd')">&times;</button>
+      <h2>PXRD (Powder X-ray Diffraction)</h2>
+      <img src="assets/images/PXRD1.jpg" alt="Panalytical X'Pert Pro PXRD" />
+      <p>
+        The Panalytical X'Pert Pro Powder X-ray Diffraction (PXRD) system is used for advanced crystallography and phase identification. It provides detailed information on the crystalline structure of materials.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: Panalytical X'Pert Pro PXRD</li>
+        <li>Capabilities: Advanced Crystallography, Phase Identification</li>
+        <li>Expertise: Crystalline Structure Analysis, Phase Composition Studies</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Rheo-SAXS Study of Nanocomposites Structural Analysis</li>
+        <li>Reduced Graphene Oxide in CNF Foams Crystallography</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill intermediate" style="--gauge-percentage: 75deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thermal Analysis Popup (TGA & DSC) -->
+  <div id="popup-thermal-analysis" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-thermal-analysis')">&times;</button>
+      <h2>Thermogravimetric Analysis (TGA) & DSC</h2>
+      <img src="assets/images/Thermal1.jpg" alt="TA Instruments TGA/DSC" />
+      <p>
+        The TA Instruments TGA/DSC system offers comprehensive thermal analysis for material stability. It measures weight changes and heat flows associated with thermal transitions in materials, providing insights into decomposition, oxidation, and other thermal behaviors.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: TA Instruments TGA/DSC</li>
+        <li>Capabilities: Thermogravimetric Analysis (TGA), Differential Scanning Calorimetry (DSC)</li>
+        <li>Expertise: Thermal Stability Testing, Material Decomposition Analysis</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Thermally Insulating & Moisture-Resilient Foams Thermal Analysis</li>
+        <li>Reduced Graphene Oxide in CNF Foams Thermal Properties</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill expert" style="--gauge-percentage: 85deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rheology Popup (Malvern Zetasizer DLS, Varian Cary 300/Agilent Cary 5000, Anton Paar Rheometer) -->
+  <div id="popup-rheology" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-rheology')">&times;</button>
+      <h2>Rheology</h2>
+
+      <!-- Malvern Zetasizer DLS Section -->
+      <section>
+        <h3>Malvern Zetasizer DLS</h3>
+        <img src="assets/images/Rheology1.jpg" alt="Malvern Zetasizer DLS" />
+        <p>
+          The Malvern Zetasizer Dynamic Light Scattering (DLS) system provides accurate particle sizing and zeta potential measurements. It is essential for characterizing nanoparticle size distribution and stability in various formulations.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: Malvern Zetasizer DLS</li>
+          <li>Capabilities: Dynamic Light Scattering, Zeta Potential Measurements</li>
+          <li>Expertise: Nanoparticle Size Distribution, Stability Analysis</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Stabilized Lignin Nanoparticles Particle Characterization</li>
+          <li>Photodynamic-Photothermal Hybrid Nanoparticles Stability Studies</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill intermediate" style="--gauge-percentage: 80deg;"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Varian Cary 300/Agilent Cary 5000 Section -->
+      <section>
+        <h3>Varian Cary 300/Agilent Cary 5000</h3>
+        <img src="assets/images/Rheology2.jpg" alt="Varian Cary 300/Agilent Cary 5000 UV-Vis Spectrophotometer" />
+        <p>
+          The Varian Cary 300 and Agilent Cary 5000 are high-performance UV-Vis spectrophotometers used for precise optical measurements. They are crucial for analyzing the absorbance and transmittance properties of materials.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Models: Varian Cary 300, Agilent Cary 5000</li>
+          <li>Capabilities: UV-Vis Spectrophotometry, Optical Property Analysis</li>
+          <li>Expertise: Absorbance Measurement, Material Optical Characterization</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Photodynamic-Photothermal Hybrid Nanoparticles Optical Analysis</li>
+          <li>Thermally Insulating & Moisture-Resilient Foams Optical Properties</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill familiar" style="--gauge-percentage: 75deg;"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Anton Paar Rheometer Section -->
+      <section>
+        <h3>Anton Paar Rheometer</h3>
+        <img src="assets/images/Rheology3.jpg" alt="Anton Paar Rheometer" />
+        <p>
+          The Anton Paar Rheometer is used for accurate viscosity and flow measurements in rheological analysis. It provides essential data on the flow behavior and viscoelastic properties of materials under various conditions.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: Anton Paar Rheometer</li>
+          <li>Capabilities: Viscosity Measurement, Flow Behavior Analysis</li>
+          <li>Expertise: Rheological Analysis, Viscoelastic Property Evaluation</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Thermally Insulating & Moisture-Resilient Foams Rheological Studies</li>
+          <li>Stabilized Lignin Nanoparticles Flow Behavior Analysis</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill expert" style="--gauge-percentage: 90deg;"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Mechanical Testing Popup (Universal Tester) -->
+  <div id="popup-mechanical-testing" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-mechanical-testing')">&times;</button>
+      <h2>Mechanical Testing</h2>
+      <img src="assets/images/Mechanical1.jpg" alt="Universal Testing Machine" />
+      <p>
+        The Universal Testing Machine is used for comprehensive mechanical testing of materials. It measures properties such as tensile strength, compression strength, and elasticity, providing essential data for material performance evaluation.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: Universal Testing Machine</li>
+        <li>Capabilities: Tensile Testing, Compression Testing, Elasticity Measurement</li>
+        <li>Expertise: Mechanical Property Evaluation, Material Performance Analysis</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Thermally Insulating & Moisture-Resilient Foams Mechanical Testing</li>
+        <li>Magnetic Hybrid Foams Mechanical Property Analysis</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill intermediate" style="--gauge-percentage: 85deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advanced Sample Preparation Popup (Leica Ultramicrotome, FIB Nova600, Ion Beam Polisher) -->
+  <div id="popup-sample-prep" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-sample-prep')">&times;</button>
+      <h2>Advanced Sample Preparation</h2>
+
+      <!-- Leica Ultramicrotome Section -->
+      <section>
+        <h3>Leica Ultramicrotome</h3>
+        <img src="assets/images/SamplePrep1.jpg" alt="Leica Ultramicrotome" />
+        <p>
+          The Leica Ultramicrotome is used for ultra-thin sectioning of samples for SEM/TEM analysis. It ensures precise and consistent sample preparation, essential for high-resolution imaging and accurate characterization.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: Leica Ultramicrotome</li>
+          <li>Capabilities: Ultra-Thin Sectioning, SEM/TEM Sample Preparation</li>
+          <li>Expertise: Sample Preparation, High-Resolution Imaging</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Rheo-SAXS Study of Nanocomposites Sample Preparation</li>
+          <li>Thermally Insulating & Moisture-Resilient Foams SEM Analysis</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill intermediate" style="--gauge-percentage: 80deg;"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- FIB Nova600 Section -->
+      <section>
+        <h3>FIB Nova600</h3>
+        <img src="assets/images/SamplePrep2.jpg" alt="FIB Nova600 Focused Ion Beam" />
+        <p>
+          The FIB Nova600 is a Focused Ion Beam system used for micro- and nanostructure preparation. It allows for precise milling, deposition, and imaging at the nanoscale, enabling detailed analysis of material structures.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: FIB Nova600</li>
+          <li>Capabilities: Focused Ion Beam Milling, Nanostructure Preparation</li>
+          <li>Expertise: Nanofabrication, Sample Structuring</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Rheo-SAXS Study of Nanocomposites Nanostructure Preparation</li>
+          <li>Photodynamic-Photothermal Nanoparticles Detailed Structuring</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill intermediate" style="--gauge-percentage: 75deg;"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Ion Beam Polisher Section -->
+      <section>
+        <h3>Ion Beam Polisher</h3>
+        <img src="assets/images/SamplePrep3.jpg" alt="Ion Beam Polisher" />
+        <p>
+          The Ion Beam Polisher (BIB) is used for broad ion beam polishing, providing high-quality surface preparation. It ensures smooth and defect-free surfaces for precise imaging and analysis.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: Ion Beam Polisher (BIB)</li>
+          <li>Capabilities: Broad Ion Beam Polishing, Surface Preparation</li>
+          <li>Expertise: Surface Smoothing, Defect-Free Sample Preparation</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Thermally Insulating & Moisture-Resilient Foams Surface Preparation</li>
+          <li>Magnetic Hybrid Foams High-Quality Imaging</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill familiar" style="--gauge-percentage: 70deg;"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- SAXS Popup -->
+  <div id="popup-saxs" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-saxs')">&times;</button>
+      <h2>SAXS (Small-Angle X-ray Scattering)</h2>
+      <img src="assets/images/SAXS1.jpg" alt="Small-Angle X-ray Scattering (SAXS)" />
+      <p>
+        Small-Angle X-ray Scattering (SAXS) is a technique used to investigate the structural properties of materials at the nanoscale. It provides detailed information on size, shape, and distribution of nanostructures within the material.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: [Your SAXS Instrument Model]</li>
+        <li>Capabilities: Small-Angle X-ray Scattering, Nanostructure Analysis</li>
+        <li>Expertise: Structural Characterization, Nanoparticle Distribution Studies</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Rheo-SAXS Study of Nanocomposites Structural Analysis</li>
+        <li>Reduced Graphene Oxide in CNF Foams Crystallography</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill intermediate" style="--gauge-percentage: 75deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAXS Popup -->
+  <div id="popup-waxs" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-waxs')">&times;</button>
+      <h2>WAXS (Wide-Angle X-ray Scattering)</h2>
+      <img src="assets/images/WAXS1.jpg" alt="Wide-Angle X-ray Scattering (WAXS)" />
+      <p>
+        Wide-Angle X-ray Scattering (WAXS) complements SAXS by providing information on the crystalline structure and molecular arrangements within materials. It is crucial for understanding material properties at both the nano and molecular levels.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: [Your WAXS Instrument Model]</li>
+        <li>Capabilities: Wide-Angle X-ray Scattering, Crystalline Structure Analysis</li>
+        <li>Expertise: Molecular Arrangement Studies, Crystallography</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Rheo-SAXS Study of Nanocomposites Structural Analysis</li>
+        <li>Reduced Graphene Oxide in CNF Foams Crystallography</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill intermediate" style="--gauge-percentage: 70deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- XPS Popup (Thermo K-Alpha XPS) -->
+  <div id="popup-xps" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-xps')">&times;</button>
+      <h2>XPS (X-ray Photoelectron Spectroscopy)</h2>
+      <img src="assets/images/XPS1.jpg" alt="Thermo Scientific K-Alpha XPS" />
+      <p>
+        The Thermo Scientific K-Alpha X-ray Photoelectron Spectroscopy (XPS) system provides high-resolution surface chemical analysis. It is crucial for determining the elemental composition and chemical states of materials.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: Thermo Scientific K-Alpha XPS</li>
+        <li>Capabilities: High-Resolution Surface Chemical Analysis</li>
+        <li>Expertise: Elemental Composition, Chemical State Identification</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Stabilized Lignin Nanoparticles Chemical Analysis</li>
+        <li>Photodynamic-Photothermal Nanoparticles Surface Characterization</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill intermediate" style="--gauge-percentage: 70deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FT-IR Popup (Bruker Alpha-II FT-IR) -->
+  <div id="popup-ft-ir" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-ft-ir')">&times;</button>
+      <h2>FT-IR (Fourier Transform Infrared Spectroscopy)</h2>
+      <img src="assets/images/FTIR1.jpg" alt="Bruker Alpha-II FT-IR" />
+      <p>
+        The Bruker Alpha-II Fourier Transform Infrared Spectroscopy (FT-IR) system allows for precise molecular identification and characterization. It is essential for analyzing chemical bonds and molecular structures.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: Bruker Alpha-II FT-IR</li>
+        <li>Capabilities: Precise Molecular Identification, Chemical Bond Analysis</li>
+        <li>Expertise: Molecular Structure Characterization, Chemical Composition Analysis</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Stabilized Lignin Nanoparticles Molecular Analysis</li>
+        <li>Photodynamic-Photothermal Nanoparticles Chemical Characterization</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill expert" style="--gauge-percentage: 80deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PXRD Popup (Panalytical X'Pert Pro PXRD) -->
+  <div id="popup-pxrd" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-pxrd')">&times;</button>
+      <h2>PXRD (Powder X-ray Diffraction)</h2>
+      <img src="assets/images/PXRD1.jpg" alt="Panalytical X'Pert Pro PXRD" />
+      <p>
+        The Panalytical X'Pert Pro Powder X-ray Diffraction (PXRD) system is used for advanced crystallography and phase identification. It provides detailed information on the crystalline structure of materials.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: Panalytical X'Pert Pro PXRD</li>
+        <li>Capabilities: Advanced Crystallography, Phase Identification</li>
+        <li>Expertise: Crystalline Structure Analysis, Phase Composition Studies</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Rheo-SAXS Study of Nanocomposites Structural Analysis</li>
+        <li>Reduced Graphene Oxide in CNF Foams Crystallography</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill intermediate" style="--gauge-percentage: 75deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thermal Analysis Popup (TGA & DSC) -->
+  <div id="popup-thermal-analysis" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-thermal-analysis')">&times;</button>
+      <h2>Thermogravimetric Analysis (TGA) & DSC</h2>
+      <img src="assets/images/Thermal1.jpg" alt="TA Instruments TGA/DSC" />
+      <p>
+        The TA Instruments TGA/DSC system offers comprehensive thermal analysis for material stability. It measures weight changes and heat flows associated with thermal transitions in materials, providing insights into decomposition, oxidation, and other thermal behaviors.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: TA Instruments TGA/DSC</li>
+        <li>Capabilities: Thermogravimetric Analysis (TGA), Differential Scanning Calorimetry (DSC)</li>
+        <li>Expertise: Thermal Stability Testing, Material Decomposition Analysis</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Thermally Insulating & Moisture-Resilient Foams Thermal Analysis</li>
+        <li>Reduced Graphene Oxide in CNF Foams Thermal Properties</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill expert" style="--gauge-percentage: 85deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rheology Popup (Malvern Zetasizer DLS, Varian Cary 300/Agilent Cary 5000, Anton Paar Rheometer) -->
+  <div id="popup-rheology" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-rheology')">&times;</button>
+      <h2>Rheology</h2>
+
+      <!-- Malvern Zetasizer DLS Section -->
+      <section>
+        <h3>Malvern Zetasizer DLS</h3>
+        <img src="assets/images/Rheology1.jpg" alt="Malvern Zetasizer DLS" />
+        <p>
+          The Malvern Zetasizer Dynamic Light Scattering (DLS) system provides accurate particle sizing and zeta potential measurements. It is essential for characterizing nanoparticle size distribution and stability in various formulations.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: Malvern Zetasizer DLS</li>
+          <li>Capabilities: Dynamic Light Scattering, Zeta Potential Measurements</li>
+          <li>Expertise: Nanoparticle Size Distribution, Stability Analysis</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Stabilized Lignin Nanoparticles Particle Characterization</li>
+          <li>Photodynamic-Photothermal Hybrid Nanoparticles Stability Studies</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill intermediate" style="--gauge-percentage: 80deg;"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Varian Cary 300/Agilent Cary 5000 Section -->
+      <section>
+        <h3>Varian Cary 300/Agilent Cary 5000</h3>
+        <img src="assets/images/Rheology2.jpg" alt="Varian Cary 300/Agilent Cary 5000 UV-Vis Spectrophotometer" />
+        <p>
+          The Varian Cary 300 and Agilent Cary 5000 are high-performance UV-Vis spectrophotometers used for precise optical measurements. They are crucial for analyzing the absorbance and transmittance properties of materials.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Models: Varian Cary 300, Agilent Cary 5000</li>
+          <li>Capabilities: UV-Vis Spectrophotometry, Optical Property Analysis</li>
+          <li>Expertise: Absorbance Measurement, Material Optical Characterization</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Photodynamic-Photothermal Hybrid Nanoparticles Optical Analysis</li>
+          <li>Thermally Insulating & Moisture-Resilient Foams Optical Properties</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill familiar" style="--gauge-percentage: 75deg;"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Anton Paar Rheometer Section -->
+      <section>
+        <h3>Anton Paar Rheometer</h3>
+        <img src="assets/images/Rheology3.jpg" alt="Anton Paar Rheometer" />
+        <p>
+          The Anton Paar Rheometer is used for accurate viscosity and flow measurements in rheological analysis. It provides essential data on the flow behavior and viscoelastic properties of materials under various conditions.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: Anton Paar Rheometer</li>
+          <li>Capabilities: Viscosity Measurement, Flow Behavior Analysis</li>
+          <li>Expertise: Rheological Analysis, Viscoelastic Property Evaluation</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Thermally Insulating & Moisture-Resilient Foams Rheological Studies</li>
+          <li>Stabilized Lignin Nanoparticles Flow Behavior Analysis</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill expert" style="--gauge-percentage: 90deg;"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Mechanical Testing Popup (Universal Tester) -->
+  <div id="popup-mechanical-testing" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-mechanical-testing')">&times;</button>
+      <h2>Mechanical Testing</h2>
+      <img src="assets/images/Mechanical1.jpg" alt="Universal Testing Machine" />
+      <p>
+        The Universal Testing Machine is used for comprehensive mechanical testing of materials. It measures properties such as tensile strength, compression strength, and elasticity, providing essential data for material performance evaluation.
+      </p>
+      <h4>Instrument Details</h4>
+      <ul>
+        <li>Model: Universal Testing Machine</li>
+        <li>Capabilities: Tensile Testing, Compression Testing, Elasticity Measurement</li>
+        <li>Expertise: Mechanical Property Evaluation, Material Performance Analysis</li>
+      </ul>
+      <h4>Projects Involved</h4>
+      <ul>
+        <li>Thermally Insulating & Moisture-Resilient Foams Mechanical Testing</li>
+        <li>Magnetic Hybrid Foams Mechanical Property Analysis</li>
+      </ul>
+      <!-- Gauge -->
+      <div class="gauge-container">
+        <span class="gauge-label">Proficiency:</span>
+        <div class="gauge">
+          <div class="gauge-fill intermediate" style="--gauge-percentage: 85deg;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advanced Sample Preparation Popup (Leica Ultramicrotome, FIB Nova600, Ion Beam Polisher) -->
+  <div id="popup-sample-prep" class="technique-popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="closeTechniquePopup('popup-sample-prep')">&times;</button>
+      <h2>Advanced Sample Preparation</h2>
+
+      <!-- Leica Ultramicrotome Section -->
+      <section>
+        <h3>Leica Ultramicrotome</h3>
+        <img src="assets/images/SamplePrep1.jpg" alt="Leica Ultramicrotome" />
+        <p>
+          The Leica Ultramicrotome is used for ultra-thin sectioning of samples for SEM/TEM analysis. It ensures precise and consistent sample preparation, essential for high-resolution imaging and accurate characterization.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: Leica Ultramicrotome</li>
+          <li>Capabilities: Ultra-Thin Sectioning, SEM/TEM Sample Preparation</li>
+          <li>Expertise: Sample Preparation, High-Resolution Imaging</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Rheo-SAXS Study of Nanocomposites Sample Preparation</li>
+          <li>Thermally Insulating & Moisture-Resilient Foams SEM Analysis</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill intermediate" style="--gauge-percentage: 80deg;"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- FIB Nova600 Section -->
+      <section>
+        <h3>FIB Nova600</h3>
+        <img src="assets/images/SamplePrep2.jpg" alt="FIB Nova600 Focused Ion Beam" />
+        <p>
+          The FIB Nova600 is a Focused Ion Beam system used for micro- and nanostructure preparation. It allows for precise milling, deposition, and imaging at the nanoscale, enabling detailed analysis of material structures.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: FIB Nova600</li>
+          <li>Capabilities: Focused Ion Beam Milling, Nanostructure Preparation</li>
+          <li>Expertise: Nanofabrication, Sample Structuring</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Rheo-SAXS Study of Nanocomposites Nanostructure Preparation</li>
+          <li>Photodynamic-Photothermal Nanoparticles Detailed Structuring</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill intermediate" style="--gauge-percentage: 75deg;"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Ion Beam Polisher Section -->
+      <section>
+        <h3>Ion Beam Polisher</h3>
+        <img src="assets/images/SamplePrep3.jpg" alt="Ion Beam Polisher" />
+        <p>
+          The Ion Beam Polisher (BIB) is used for broad ion beam polishing, providing high-quality surface preparation. It ensures smooth and defect-free surfaces for precise imaging and analysis.
+        </p>
+        <h4>Instrument Details</h4>
+        <ul>
+          <li>Model: Ion Beam Polisher (BIB)</li>
+          <li>Capabilities: Broad Ion Beam Polishing, Surface Preparation</li>
+          <li>Expertise: Surface Smoothing, Defect-Free Sample Preparation</li>
+        </ul>
+        <h4>Projects Involved</h4>
+        <ul>
+          <li>Thermally Insulating & Moisture-Resilient Foams Surface Preparation</li>
+          <li>Magnetic Hybrid Foams High-Quality Imaging</li>
+        </ul>
+        <!-- Gauge -->
+        <div class="gauge-container">
+          <span class="gauge-label">Proficiency:</span>
+          <div class="gauge">
+            <div class="gauge-fill familiar" style="--gauge-percentage: 70deg;"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <p>&copy; 2024 Seyed Ehsan Hadi, PhD. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/seyed-ehsan-hadi" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:eshadi@kth.se"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Embedded JavaScript -->
+  <script>
+    /* 
+      This script handles the popup functionality for each project and technique card 
+      and prevents background scrolling when a popup is displayed.
+    */
+
+    // Utility Functions
+    function lockScroll() {
+      document.body.style.overflow = 'hidden';
+    }
+
+    function unlockScroll() {
+      document.body.style.overflow = 'auto';
+    }
+
+    // Show a specific project's popup
+    function showProjectPopup(popupId) {
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        popup.style.display = 'flex';
+        lockScroll();
+      }
+    }
+
+    // Close a specific project's popup
+    function closeProjectPopup(popupId) {
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        popup.style.display = 'none';
+        unlockScroll();
+      }
+    }
+
+    // Show a specific technique's popup
+    function showTechniquePopup(popupId) {
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        popup.style.display = 'flex';
+        lockScroll();
+      }
+    }
+
+    // Close a specific technique's popup
+    function closeTechniquePopup(popupId) {
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        popup.style.display = 'none';
+        unlockScroll();
+      }
+    }
+
+    // Close popup if clicking outside the popup content
+    window.addEventListener('click', (e) => {
+      if (e.target.classList.contains('project-popup') || e.target.classList.contains('technique-popup')) {
+        e.target.style.display = 'none';
+        unlockScroll();
+      }
+    });
+
+    // Close popup with Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const popups = document.querySelectorAll('.project-popup, .technique-popup');
+        popups.forEach((popup) => {
+          popup.style.display = 'none';
+        });
+        unlockScroll();
+      }
+    });
+  </script>
+</body>
+</html>
