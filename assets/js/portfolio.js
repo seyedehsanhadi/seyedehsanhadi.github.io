@@ -1,4 +1,5 @@
-/* assets/js/portfolio.js */
+// assets/js/portfolio.js
+
 /* 
   This script handles the popup functionality for each project card 
   and prevents background scrolling when a popup is displayed.
