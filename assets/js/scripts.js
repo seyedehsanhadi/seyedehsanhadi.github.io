@@ -2,7 +2,7 @@
 
 /* 
   This script handles the popup functionality for each clickable element,
-  manages the accordion behavior, and toggles the sidebar on smaller screens.
+  manages the sidebar toggle on smaller screens, and ensures accessibility.
 */
 
 /* Popup Management */
@@ -44,52 +44,33 @@ window.addEventListener('keydown', function(event) {
   }
 });
 
-/* Accordion Functionality */
-document.querySelectorAll('.accordion').forEach(function(acc) {
-  acc.addEventListener('click', function() {
-    // Close all other accordion panels
-    document.querySelectorAll('.accordion').forEach(function(otherAcc) {
-      if (otherAcc !== acc) {
-        otherAcc.classList.remove('active');
-        const otherPanel = otherAcc.nextElementSibling;
-        if (otherPanel) {
-          otherPanel.style.maxHeight = null;
-        }
-      }
-    });
+/* Sidebar Toggle Functionality */
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  sidebar.classList.toggle('active');
+  hamburgerMenu.classList.toggle('active');
+}
 
-    // Toggle current accordion
-    acc.classList.toggle('active');
-    const panel = acc.nextElementSibling;
-    if (panel) {
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
+/* Accessibility: Focus Trap for Popups */
+document.querySelectorAll('.popup').forEach(popup => {
+  popup.addEventListener('keydown', function(event) {
+    if (event.key === 'Tab') {
+      const focusableElements = popup.querySelectorAll('a, button');
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (event.shiftKey) { // Shift + Tab
+        if (document.activeElement === firstElement) {
+          event.preventDefault();
+          lastElement.focus();
+        }
+      } else { // Tab
+        if (document.activeElement === lastElement) {
+          event.preventDefault();
+          firstElement.focus();
+        }
       }
     }
   });
-});
-
-/* Hamburger Menu Functionality */
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const sidebar = document.querySelector('.sidebar');
-
-hamburgerMenu.addEventListener('click', function() {
-  sidebar.classList.toggle('active');
-  hamburgerMenu.classList.toggle('active');
-});
-
-/* Popup Functionality using Event Delegation */
-document.addEventListener('click', function(event) {
-  // Check if the clicked element or its parent has the 'clickable' class
-  const clickableElement = event.target.closest('.clickable');
-  if (clickableElement) {
-    const onclickAttr = clickableElement.getAttribute('onclick');
-    const popupIdMatch = onclickAttr ? onclickAttr.match(/'([^']+)'/) : null;
-    if (popupIdMatch && popupIdMatch[1]) {
-      const popupId = popupIdMatch[1];
-      showPopup(popupId);
-    }
-  }
 });
