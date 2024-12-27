@@ -199,9 +199,9 @@ body {
   font-size: 1.05rem;
   display: flex;
   align-items: center;
-  transition: color var(--transition-speed), 
-              padding-left var(--transition-speed);
-  padding-left: 0.6rem;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+  padding: 0.5rem 0;
+  border-radius: var(--radius);
 }
 
 .nav-links li a i {
@@ -211,8 +211,8 @@ body {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: var(--accent-color);
-  padding-left: 1.1rem;
+  color: var(--background-color);
+  background-color: var(--accent-color);
 }
 
 /* Sidebar Footer */
@@ -237,6 +237,9 @@ body {
   margin-left: 300px; /* Matches sidebar width */
   padding: 2.5rem;
   width: calc(100% - 300px);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   transition: margin-left var(--transition-speed), width var(--transition-speed);
 }
 
@@ -248,23 +251,71 @@ body {
   flex-wrap: wrap;
 }
 
-.header-details {
-  flex: 1;
-  margin-left: 3rem;
+.header-banner {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  padding: 4rem 2rem;
+  border-radius: var(--radius);
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .header-details h1 {
   font-family: var(--font-secondary);
-  font-size: 3rem;
-  color: var(--primary-color);
+  font-size: 3.5rem;
   margin-bottom: 0.5rem;
 }
 
 .header-details h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-points li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+.highlight-points li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.highlight-points li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.highlight-points li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.highlight-points li:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.highlight-points li i {
   color: var(--accent-color);
-  margin-bottom: 1.2rem;
-  font-weight: 400;
+  margin-right: 0.6rem;
+  min-width: 24px; /* Ensures uniform spacing */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .header-details p {
@@ -276,7 +327,17 @@ body {
 
 /* Section Styles */
 section {
-  margin-bottom: 2.5rem;
+  padding: 2rem 0;
+}
+
+section:nth-of-type(even) {
+  background-color: #f0f4f8; /* Light background for alternating sections */
+  border-radius: var(--radius);
+}
+
+section:nth-of-type(odd) {
+  background-color: #ffffff; /* White background */
+  border-radius: var(--radius);
 }
 
 section h2 {
@@ -284,9 +345,24 @@ section h2 {
   font-size: 2.5rem;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
-  border-bottom: 3px solid var(--accent-color);
-  display: inline-block;
-  padding-bottom: 0.4rem;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: var(--accent-color);
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+section h2 i {
+  margin-right: 0.5rem;
+  color: var(--accent-color);
 }
 
 /* Cards */
@@ -394,12 +470,6 @@ section h2 {
   margin-bottom: 0.5rem;
 }
 
-.publication-card .cover-text {
-  font-size: 0.9rem;
-  color: var(--accent-color);
-  margin-bottom: 0.8rem;
-}
-
 .publication-card .read-more {
   font-size: 0.95rem;
   color: var(--link-color);
@@ -436,27 +506,27 @@ section h2 {
   margin-right: 0.6rem;
 }
 
-.skills ul {
-  list-style: none;
-  padding-left: 0;
+.skills .skill {
+  margin-bottom: 1.5rem;
 }
 
-.skills ul li {
-  margin-bottom: 0.7rem;
-  display: flex;
-  align-items: center;
-  color: var(--text-color);
-  transition: color var(--transition-speed);
+.skills .skill span {
   font-size: 1rem;
+  color: var(--text-color);
 }
 
-.skills ul li:hover {
-  color: var(--accent-color);
+.progress-bar {
+  background-color: #ddd;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 10px;
+  margin-top: 0.5rem;
 }
 
-.skills ul li i {
-  color: var(--accent-color);
-  margin-right: 0.6rem;
+.progress {
+  background-color: var(--accent-color);
+  height: 100%;
+  transition: width var(--transition-speed);
 }
 
 /* References */
@@ -614,6 +684,7 @@ footer {
     margin-left: 0;
     width: 100%;
     padding: 2rem 1rem;
+    display: block;
   }
 
   .header-details {
@@ -633,6 +704,11 @@ footer {
   .header-details p {
     font-size: 1rem;
     text-align: center;
+  }
+
+  .highlight-points {
+    align-items: center;
+    justify-content: center;
   }
 
   .skills {
@@ -681,7 +757,7 @@ footer {
     font-size: 0.95rem;
   }
 
-  .skills ul li {
+  .highlight-points li {
     font-size: 0.95rem;
   }
 
