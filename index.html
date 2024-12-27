@@ -11,6 +11,9 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
+  <!-- AOS Library (Optional for Animations) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
   <!-- External CSS -->
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -52,7 +55,7 @@
       <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
       <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
       <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-      <li><a href="#publications"><i class="fas fa-book"></i> Publications</a></li>
+      <li><a href="#publications"><i class="fas fa-book-open"></i> Publications</a></li>
       <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
       <li><a href="#additional-info"><i class="fas fa-info-circle"></i> Additional Info</a></li>
     </ul>
@@ -67,38 +70,40 @@
   <div class="main-content">
     
     <!-- Header Section -->
-    <header class="header">
-      <div class="header-details">
-        <h1>Seyed Ehsan Hadi, PhD</h1>
-        <h2>Materials Scientist | Characterization Expert | Project Manager</h2>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Over 7 years of multidisciplinary expertise in advanced materials characterization</li>
-          <li><i class="fas fa-check-circle"></i> Process optimization and research innovation</li>
-          <li><i class="fas fa-check-circle"></i> Proven success in leading R&D projects and delivering scalable nanocomposite solutions</li>
-          <li><i class="fas fa-check-circle"></i> Driving impactful publications</li>
-        </ul>
-        <p>Currently pursuing a Postdoctoral Research Associate position at KTH Royal Institute of Technology, focusing on fiber-based materials for industrial applications. Seeking opportunities to leverage expertise in materials processing, characterization, and application development within academia and industry.</p>
+    <header class="header" data-aos="fade-down">
+      <div class="header-banner">
+        <div class="header-details">
+          <h1>Seyed Ehsan Hadi, PhD</h1>
+          <h2>Materials Scientist | Characterization Expert | Project Manager</h2>
+          <ul class="highlight-points">
+            <li><i class="fas fa-check-circle"></i> Over 7 years of multidisciplinary expertise in advanced materials characterization</li>
+            <li><i class="fas fa-lightbulb"></i> Process optimization and research innovation</li>
+            <li><i class="fas fa-project-diagram"></i> Proven success in leading R&D projects and delivering scalable nanocomposite solutions</li>
+            <li><i class="fas fa-poll"></i> Driving impactful publications</li>
+          </ul>
+          <p>Currently pursuing a Postdoctoral Research Associate position at KTH Royal Institute of Technology, focusing on fiber-based materials for industrial applications. Seeking opportunities to leverage expertise in materials processing, characterization, and application development within academia and industry.</p>
+        </div>
       </div>
     </header>
 
     <!-- About Me Section -->
-    <section id="about">
-      <h2>About Me</h2>
+    <section id="about" data-aos="fade-up">
+      <h2><i class="fas fa-user"></i> About Me</h2>
       <div class="card">
         <p>As a dedicated materials chemist with extensive experience in the characterization of nanomaterials and the development of advanced composites, I have consistently driven research and development initiatives that bridge the gap between scientific innovation and practical applications. My tenure at esteemed institutions like Stockholm University and KTH Royal Institute of Technology has honed my skills in experimental design, data analysis, and interdisciplinary collaboration.</p>
-        <ul>
-          <li class="clickable" onclick="showPopup('popup-about-impact1')"><i class="fas fa-check-circle"></i> Advanced Materials Characterization</li>
-          <li class="clickable" onclick="showPopup('popup-about-impact2')"><i class="fas fa-check-circle"></i> High-Impact Research Publications</li>
-          <li class="clickable" onclick="showPopup('popup-about-impact3')"><i class="fas fa-check-circle"></i> Development of High-Performance Nanocomposites</li>
-          <li class="clickable" onclick="showPopup('popup-about-impact4')"><i class="fas fa-check-circle"></i> Mentorship and Leadership</li>
-          <li class="clickable" onclick="showPopup('popup-about-impact5')"><i class="fas fa-check-circle"></i> Grant and Fellowship Acquisition</li>
+        <ul class="highlight-points">
+          <li><i class="fas fa-check-circle"></i> Advanced Materials Characterization</li>
+          <li><i class="fas fa-check-circle"></i> High-Impact Research Publications</li>
+          <li><i class="fas fa-check-circle"></i> Development of High-Performance Nanocomposites</li>
+          <li><i class="fas fa-check-circle"></i> Mentorship and Leadership</li>
+          <li><i class="fas fa-check-circle"></i> Grant and Fellowship Acquisition</li>
         </ul>
       </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education">
-      <h2>Education</h2>
+    <section id="education" data-aos="fade-up">
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
       
       <!-- PhD Degree -->
       <div class="education-degree">
@@ -126,8 +131,8 @@
     </section>
 
     <!-- Professional Experience Section -->
-    <section id="experience">
-      <h2>Professional Experience</h2>
+    <section id="experience" data-aos="fade-up">
+      <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
 
       <!-- Postdoctoral Research Associate -->
       <div class="experience-degree">
@@ -164,8 +169,8 @@
     </section>
 
     <!-- Publications Section -->
-    <section id="publications">
-      <h2>Publications</h2>
+    <section id="publications" data-aos="fade-up">
+      <h2><i class="fas fa-book-open"></i> Publications</h2>
       <div class="publications-container">
         <!-- Publication 1 -->
         <article class="publication-card clickable" onclick="showPopup('popup-pub1')">
@@ -212,70 +217,239 @@
     </section>
 
     <!-- Technical Skills Section -->
-    <section id="skills">
-      <h2>Technical Skills</h2>
+    <section id="skills" data-aos="fade-up">
+      <h2><i class="fas fa-tools"></i> Technical Skills</h2>
       <div class="skills">
         <!-- Characterization and Sample Preparation Tools -->
         <div class="skill-category">
           <h3><i class="fas fa-microscope"></i> Characterization and Sample Preparation Tools</h3>
-          <ul>
-            <li class="clickable" onclick="showPopup('popup-skill-cryo-ultramicrotome')"><i class="fas fa-check-circle"></i> Cryo Ultramicrotome: Leica Artos 3D</li>
-            <li class="clickable" onclick="showPopup('popup-skill-cross-section-polisher')"><i class="fas fa-check-circle"></i> Cross-section Polisher: JEOL IB-19520CCP</li>
-            <li class="clickable" onclick="showPopup('popup-skill-fib-sem')"><i class="fas fa-check-circle"></i> FIB-SEM: FEI Nova 600</li>
-            <li class="clickable" onclick="showPopup('popup-skill-ac-tem-stem')"><i class="fas fa-check-circle"></i> AC-TEM/STEM: FEI Themis Z</li>
-            <li class="clickable" onclick="showPopup('popup-skill-cryo-tem-stem')"><i class="fas fa-check-circle"></i> Cryo TEM/STEM: JEOL JEM-2100F</li>
-            <li class="clickable" onclick="showPopup('popup-skill-cryo-sem')"><i class="fas fa-check-circle"></i> Cryo-SEM: JEOL IT800</li>
-            <li class="clickable" onclick="showPopup('popup-skill-sem-eds-wds')"><i class="fas fa-check-circle"></i> SEM/EDS/WDS: Hitachi S-4800</li>
-            <li class="clickable" onclick="showPopup('popup-skill-esem-eds-wds')"><i class="fas fa-check-circle"></i> ESEM/EDS/WDS: FEI Quanta 200</li>
-            <li class="clickable" onclick="showPopup('popup-skill-tabletop-sems')"><i class="fas fa-check-circle"></i> Tabletop SEMs: Hitachi TM-1000 & TM-3000</li>
-            <li class="clickable" onclick="showPopup('popup-skill-advanced-optical-microscopy')"><i class="fas fa-check-circle"></i> Advanced Optical Microscopy: Olympus BX53M</li>
-            <li class="clickable" onclick="showPopup('popup-skill-inverted-optical-microscope')"><i class="fas fa-check-circle"></i> Inverted Optical Microscope: Leica DMIL</li>
-            <li class="clickable" onclick="showPopup('popup-skill-xps')"><i class="fas fa-check-circle"></i> XPS: Thermo K-Alpha</li>
-            <li class="clickable" onclick="showPopup('popup-skill-ft-ir')"><i class="fas fa-check-circle"></i> FT-IR: Bruker Alpha-II</li>
-            <li class="clickable" onclick="showPopup('popup-skill-uv-vis')"><i class="fas fa-check-circle"></i> UV-Vis: Varian Cary</li>
-            <li class="clickable" onclick="showPopup('popup-skill-pxrd')"><i class="fas fa-check-circle"></i> PXRD: Panalytical</li>
-            <li class="clickable" onclick="showPopup('popup-skill-saxs-waxs')"><i class="fas fa-check-circle"></i> SAXS/WAXS: MAX IV Laboratory & ESRF</li>
-            <li class="clickable" onclick="showPopup('popup-skill-dls')"><i class="fas fa-check-circle"></i> DLS: Malvern Zetasizer</li>
-            <li class="clickable" onclick="showPopup('popup-skill-rheometer')"><i class="fas fa-check-circle"></i> Rheometer: Anton Paar MCR 301/702e</li>
-            <li class="clickable" onclick="showPopup('popup-skill-tga')"><i class="fas fa-check-circle"></i> TGA: TA Discovery</li>
-            <li class="clickable" onclick="showPopup('popup-skill-dsc')"><i class="fas fa-check-circle"></i> DSC: TA DSC250</li>
-            <li class="clickable" onclick="showPopup('popup-skill-instron')"><i class="fas fa-check-circle"></i> Instron 6800 Series</li>
-          </ul>
+          <div class="skill">
+            <span>Cryo Ultramicrotome: Leica Artos 3D</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Cross-section Polisher: JEOL IB-19520CCP</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>FIB-SEM: FEI Nova 600</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>AC-TEM/STEM: FEI Themis Z</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Cryo TEM/STEM: JEOL JEM-2100F</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Cryo-SEM: JEOL IT800</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>SEM/EDS/WDS: Hitachi S-4800</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>ESEM/EDS/WDS: FEI Quanta 200</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Tabletop SEMs: Hitachi TM-1000 & TM-3000</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Advanced Optical Microscopy: Olympus BX53M</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Inverted Optical Microscope: Leica DMIL</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>XPS: Thermo K-Alpha</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>FT-IR: Bruker Alpha-II</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>UV-Vis: Varian Cary</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>PXRD: Panalytical</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>SAXS/WAXS: MAX IV Laboratory & ESRF</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>DLS: Malvern Zetasizer</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Rheometer: Anton Paar MCR 301/702e</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>TGA: TA Discovery</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>DSC: TA DSC250</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Instron 6800 Series</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
         </div>
 
         <!-- Software Proficiency -->
         <div class="skill-category">
           <h3><i class="fas fa-laptop-code"></i> Software Proficiency</h3>
-          <ul>
-            <li class="clickable" onclick="showPopup('popup-skill-originlab')"><i class="fas fa-check-circle"></i> OriginLab – Data analysis and visualization</li>
-            <li class="clickable" onclick="showPopup('popup-skill-ms-office')"><i class="fas fa-check-circle"></i> MS Office – Word, Excel, PowerPoint, Outlook</li>
-            <li class="clickable" onclick="showPopup('popup-skill-chemdraw')"><i class="fas fa-check-circle"></i> ChemDraw – Chemical structure drawing</li>
-            <li class="clickable" onclick="showPopup('popup-skill-highscore-plus')"><i class="fas fa-check-circle"></i> HighScore Plus – X-ray diffraction analysis</li>
-            <li class="clickable" onclick="showPopup('popup-skill-latex')"><i class="fas fa-check-circle"></i> LaTeX – Document preparation system</li>
-            <li class="clickable" onclick="showPopup('popup-skill-python')"><i class="fas fa-check-circle"></i> Python – Programming for data analysis</li>
-            <li class="clickable" onclick="showPopup('popup-skill-matlab')"><i class="fas fa-check-circle"></i> MATLAB – Numerical computing and simulations</li>
-            <li class="clickable" onclick="showPopup('popup-skill-cpp')"><i class="fas fa-check-circle"></i> C++ – Software development</li>
-            <li class="clickable" onclick="showPopup('popup-skill-html-css-js')"><i class="fas fa-check-circle"></i> HTML, CSS, JavaScript – Web Development</li>
-          </ul>
+          <div class="skill">
+            <span>OriginLab – Data analysis and visualization</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>MS Office – Word, Excel, PowerPoint, Outlook</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>ChemDraw – Chemical structure drawing</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>HighScore Plus – X-ray diffraction analysis</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>LaTeX – Document preparation system</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Python – Programming for data analysis</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>MATLAB – Numerical computing and simulations</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>C++ – Software development</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>HTML, CSS, JavaScript – Web Development</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
         </div>
 
         <!-- Soft Skills -->
         <div class="skill-category">
           <h3><i class="fas fa-users"></i> Soft Skills</h3>
-          <ul>
-            <li class="clickable" onclick="showPopup('popup-skill-leadership')"><i class="fas fa-check-circle"></i> Leadership – Team management and direction</li>
-            <li class="clickable" onclick="showPopup('popup-skill-strategic-planning')"><i class="fas fa-check-circle"></i> Strategic Planning – Long-term goal setting</li>
-            <li class="clickable" onclick="showPopup('popup-skill-resource-allocation')"><i class="fas fa-check-circle"></i> Resource Allocation – Efficient use of resources</li>
-            <li class="clickable" onclick="showPopup('popup-skill-collaboration')"><i class="fas fa-check-circle"></i> Collaboration – Interdisciplinary teamwork</li>
-            <li class="clickable" onclick="showPopup('popup-skill-mentorship')"><i class="fas fa-check-circle"></i> Mentorship – Guiding and supporting researchers</li>
-          </ul>
+          <div class="skill">
+            <span>Leadership – Team management and direction</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Strategic Planning – Long-term goal setting</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Resource Allocation – Efficient use of resources</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Collaboration – Interdisciplinary teamwork</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Mentorship – Guiding and supporting researchers</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Additional Information Section -->
-    <section id="additional-info">
-      <h2>Languages, Grants, Awards, Certifications, and References</h2>
+    <section id="additional-info" data-aos="fade-up">
+      <h2><i class="fas fa-info-circle"></i> Languages, Grants, Awards, Certifications, and References</h2>
       <div class="card">
         <!-- Languages -->
         <p><strong><i class="fas fa-language"></i> Languages:</strong></p>
@@ -891,6 +1065,16 @@
 
   <!-- Popup Modals End -->
   
+  <!-- AOS Library Initialization (Optional) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>
+
   <!-- External JavaScript -->
   <script src="assets/js/scripts.js"></script>
 </body>
