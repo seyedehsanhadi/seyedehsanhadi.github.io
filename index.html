@@ -1,1051 +1,704 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Seyed Ehsan Hadi, PhD - Online CV</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- External CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seyed Ehsan Hadi, PhD - Academic CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: 
+            #0a2e6b;
+            --primary-dark: #1d4ed8;
+            --secondary: #1e40af;
+            --accent: #14b8a6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --highlight: #dbeafe;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .cv-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .sidebar {
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        
+        .section-title {
+            font-weight: 600;
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-icon {
+            margin-right: 0.75rem;
+            width: 20px;
+            text-align: center;
+            color: var(--light-gray);
+        }
+        
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .status-badge.green {
+            background-color: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+        }
+        
+        .status-badge.red {
+            background-color: rgba(248, 113, 113, 0.2);
+            color: #f87171;
+        }
+        
+        .portfolio-btn {
+            display: block;
+            background-color: var(--accent);
+            color: white;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            transition: all 0.2s;
+        }
+        
+        .portfolio-btn:hover {
+            background-color: #0d9488;
+            transform: translateY(-2px);
+        }
+        
+        .main-content {
+            padding: 2.5rem;
+        }
+        
+        .header {
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .title {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .summary {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-item {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.75rem;
+        }
+        
+        .highlight-item:before {
+            content: "•";
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .content-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .content-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .content-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed var(--light-gray);
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+        
+        .timeline-meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .timeline-subtitle {
+            color: var(--gray);
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+        
+        .timeline-details {
+            padding-left: 1rem;
+        }
+        
+        .timeline-details li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .timeline-details li:before {
+            content: "•";
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .publication-item {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .publication-item:before {
+            content: counter(pub-counter) ".";
+            counter-increment: pub-counter;
+            position: absolute;
+            left: 0;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .skill-category {
+            background-color: var(--highlight);
+            padding: 1.25rem;
+            border-left: 4px solid var(--primary);
+            border-radius: 0.375rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-category-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list {
+            columns: 2;
+            column-gap: 2rem;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.5rem;
+            break-inside: avoid;
+        }
+        
+        .additional-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .additional-item {
+            background-color: var(--highlight);
+            padding: 1.25rem;
+            border-radius: 0.375rem;
+        }
+        
+        .additional-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .keyword-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .keyword {
+            background-color: var(--light-gray);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+        
+        @media (max-width: 1024px) {
+            .cv-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+                height: auto;
+            }
+            
+            .skill-list {
+                columns: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 1.5rem;
+            }
+            
+            .name {
+                font-size: 1.75rem;
+            }
+            
+            .title {
+                font-size: 1.1rem;
+            }
+            
+            .content-title {
+                font-size: 1.3rem;
+            }
+            
+            .timeline-header {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+            
+            .additional-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation for section transitions */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-section {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        
+        /* Delay animations for each section */
+        .content-section:nth-child(1) { animation-delay: 0.1s; }
+        .content-section:nth-child(2) { animation-delay: 0.2s; }
+        .content-section:nth-child(3) { animation-delay: 0.3s; }
+        .content-section:nth-child(4) { animation-delay: 0.4s; }
+        .content-section:nth-child(5) { animation-delay: 0.5s; }
+        .content-section:nth-child(6) { animation-delay: 0.6s; }
+    </style>
 </head>
 <body>
-  
-  <!-- Hamburger Menu for Mobile -->
-  <div class="hamburger-menu" onclick="toggleSidebar()">
-    <i class="fas fa-bars"></i>
-  </div>
-
-  <!-- Left Sidebar -->
-  <nav class="sidebar">
-    <!-- Sidebar Header with Profile Picture and Action Buttons -->
-    <div class="sidebar-header">
-      <img src="assets/images/photo.jpg" alt="Profile Picture" class="profile-pic">
-      
-      <!-- Action Buttons -->
-      <div class="sidebar-buttons">
-        <a href="assets/CV_Seyed_Ehsan_Hadi.pdf" class="download-btn" download aria-label="Download CV">
-          <i class="fas fa-download"></i> Download CV
-        </a>
-        <a href="https://seyedehsanhadi.github.io/portfolio.html" class="portfolio-btn" target="_blank" aria-label="View Portfolio">
-          <i class="fas fa-briefcase"></i> Portfolio
-        </a>
-      </div>
-    </div>
-
-    <!-- Contact Information -->
-    <div class="contact-info">
-      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:eshadi@kth.se">eshadi@kth.se</a></p>
-      <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Stockholm, Sweden</p>
-      <p><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/seyed-ehsan-hadi" target="_blank">/seyed-ehsan-hadi</a></p>
-      <p><i class="fas fa-graduation-cap"></i> <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?hl=en&user=aqsQc48AAAAJ" target="_blank">Profile</a></p>
-      <p><i class="fas fa-passport"></i> <strong>VISA STATUS:</strong> <span class="visa-status"><i class="fas fa-check-circle"></i> Swedish Resident</span></p>
-    </div>
-
-    <!-- Navigation Links -->
-    <ul class="nav-links">
-      <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-      <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-      <li><a href="#publications"><i class="fas fa-book"></i> Publications</a></li>
-      <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
-      <li><a href="#additional-info"><i class="fas fa-info-circle"></i> Additional Info</a></li>
-    </ul>
-
-    <!-- Footer in Sidebar -->
-    <footer class="sidebar-footer">
-      &copy; 2024 Seyed Ehsan Hadi, PhD. All rights reserved.
-    </footer>
-  </nav>
-
-  <!-- Main Content -->
-  <div class="main-content">
-    
-    <!-- Header Section -->
-    <header class="header">
-      <div class="header-details">
-        <h1>Seyed Ehsan Hadi, PhD</h1>
-        <h2>Materials Scientist | Characterization Expert | Project Manager</h2>
-        <p>Highly driven materials chemist with over 7 years of multidisciplinary expertise in advanced materials characterization, process optimization, and research innovation. Proven success in leading R&D projects, delivering scalable nanocomposite solutions, and driving impactful publications. Currently pursuing a Postdoctoral Research Associate position at KTH Royal Institute of Technology, focusing on fiber-based materials for industrial applications. Seeking opportunities to leverage expertise in materials processing, characterization, and application development within academia and industry.</p>
-      </div>
-    </header>
-
-    <!-- About Me Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="card">
-        <p>As a dedicated materials chemist with extensive experience in the characterization of nanomaterials and the development of advanced composites, I have consistently driven research and development initiatives that bridge the gap between scientific innovation and practical applications. My tenure at esteemed institutions like Stockholm University and KTH Royal Institute of Technology has honed my skills in experimental design, data analysis, and interdisciplinary collaboration.</p>
-        <ul>
-          <li class="clickable" onclick="showPopup('popup-about-impact1')"><i class="fas fa-check-circle"></i> Advanced Materials Characterization</li>
-          <li class="clickable" onclick="showPopup('popup-about-impact2')"><i class="fas fa-check-circle"></i> High-Impact Research Publications</li>
-          <li class="clickable" onclick="showPopup('popup-about-impact3')"><i class="fas fa-check-circle"></i> Development of High-Performance Nanocomposites</li>
-          <li class="clickable" onclick="showPopup('popup-about-impact4')"><i class="fas fa-check-circle"></i> Mentorship and Leadership</li>
-          <li class="clickable" onclick="showPopup('popup-about-impact5')"><i class="fas fa-check-circle"></i> Grant and Fellowship Acquisition</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-      <h2>Education</h2>
-      
-      <!-- PhD Degree -->
-      <div class="education-degree">
-        <h3>Ph.D. in Materials Chemistry</h3>
-        <p><strong>Stockholm University, Sweden</strong> (2019-2024)</p>
-        <p>Focused on colloidal processing and alignment of wood-based dispersions and hybrid functional foams.</p>
-        <button class="education-button clickable" onclick="showPopup('popup-phd')">More Details</button>
-      </div>
-
-      <!-- MSc Degree -->
-      <div class="education-degree">
-        <h3>M.Sc. in Materials Science and Nanotechnology</h3>
-        <p><strong>Bilkent University, Turkey</strong> (2017-2019)</p>
-        <p>Specialized in the synthesis of hybrid core-shell nanoparticles for antibacterial photodynamic therapy.</p>
-        <button class="education-button clickable" onclick="showPopup('popup-msc')">More Details</button>
-      </div>
-
-      <!-- Bachelor's Degree -->
-      <div class="education-degree">
-        <h3>B.Sc. in Chemical Engineering</h3>
-        <p><strong>University of Tehran, Iran</strong> (2012-2017)</p>
-        <p>Gained a solid foundation in chemical engineering through comprehensive coursework and practical design projects. Graduated in the top 15% of the class, showcasing strong academic performance and dedication to the field.</p>
-        <button class="education-button clickable" onclick="showPopup('popup-bsc')">More Details</button>
-      </div>
-    </section>
-
-    <!-- Professional Experience Section -->
-    <section id="experience">
-      <h2>Professional Experience</h2>
-
-      <!-- Postdoctoral Research Associate -->
-      <div class="experience-degree">
-        <h3>Postdoctoral Research Associate</h3>
-        <p><strong>KTH Royal Institute of Technology, Sweden</strong> (2024–Present)</p>
-        <ul>
-          <li class="clickable" onclick="showPopup('popup-postdoc-lead-research')"><i class="fas fa-check-circle"></i> Leading research on advanced fiber-based materials for sheet paper and foam applications.</li>
-          <li class="clickable" onclick="showPopup('popup-postdoc-characterize')"><i class="fas fa-check-circle"></i> Characterizing materials and analyzing structure-process-property relationships to optimize nanocomposite processing.</li>
-          <li class="clickable" onclick="showPopup('popup-postdoc-collaborate')"><i class="fas fa-check-circle"></i> Collaborating with cross-functional teams to implement projects aligning with industry standards.</li>
-        </ul>
-      </div>
-
-      <!-- Senior Graduate Research Assistant -->
-      <div class="experience-degree">
-        <h3>Senior Graduate Research Assistant</h3>
-        <p><strong>Stockholm University, Sweden</strong> (2019–2024)</p>
-        <ul>
-          <li class="clickable" onclick="showPopup('popup-senior-assistant-projects')"><i class="fas fa-check-circle"></i> Managing multiple research projects in experimental design, resulting in several high-impact publications.</li>
-          <li class="clickable" onclick="showPopup('popup-senior-assistant-mentoring')"><i class="fas fa-check-circle"></i> Mentoring and guiding graduate students, fostering their research and professional development.</li>
-          <li class="clickable" onclick="showPopup('popup-senior-assistant-nanocomposites')"><i class="fas fa-check-circle"></i> Developing high-performance nanocomposites, achieving 95% bulk magnetite performance.</li>
-          <li class="clickable" onclick="showPopup('popup-senior-assistant-optimization')"><i class="fas fa-check-circle"></i> Optimizing processes to enhance efficiency and material quality, leading to cost savings and improved product performance.</li>
-        </ul>
-      </div>
-
-      <!-- Junior Graduate Research Assistant -->
-      <div class="experience-degree">
-        <h3>Junior Graduate Research Assistant</h3>
-        <p><strong>Bilkent University, Turkey</strong> (2017–2019)</p>
-        <ul>
-          <li class="clickable" onclick="showPopup('popup-junior-assistant-experiments')"><i class="fas fa-check-circle"></i> Conducting laboratory experiments and data analysis contributing to high-quality research publications.</li>
-          <li class="clickable" onclick="showPopup('popup-junior-assistant-protocols')"><i class="fas fa-check-circle"></i> Assisting in developing and refining experimental protocols to improve research accuracy and reproducibility.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications">
-      <h2>Publications</h2>
-      <div class="publications-container">
-        <!-- Publication 1 -->
-        <article class="publication-card clickable" onclick="showPopup('popup-pub1')">
-          <h3>Hierarchical Incorporation of rGO into Anisotropic CNF Foams</h3>
-          <p><strong>Journal:</strong> ACS Applied Materials & Interfaces, 2024</p>
-          <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" target="_blank" class="read-more">Read More &raquo;</a>
-        </article>
-
-        <!-- Publication 2 -->
-        <article class="publication-card clickable" onclick="showPopup('popup-pub2')">
-          <h3>Moisture-Resilient Aramid/Cellulose Nanofiber Foams</h3>
-          <p><strong>Journal:</strong> Advanced Materials, 2023</p>
-          <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" target="_blank" class="read-more">Read More &raquo;</a>
-        </article>
-
-        <!-- Publication 3 -->
-        <article class="publication-card clickable" onclick="showPopup('popup-pub3')">
-          <h3>Magnetic Hybrid Foams from Fe3O4@TA and TOCN</h3>
-          <p><strong>Journal:</strong> RSC Advances, 2023</p>
-          <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" target="_blank" class="read-more">Read More &raquo;</a>
-        </article>
-
-        <!-- Publication 4 -->
-        <article class="publication-card clickable" onclick="showPopup('popup-pub4')">
-          <h3>Unravelling the Hydration Barrier of Lignin Oleate Nanoparticles</h3>
-          <p><strong>Journal:</strong> Angewandte Chemie International Edition, 2021</p>
-          <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" target="_blank" class="read-more">Read More &raquo;</a>
-        </article>
-
-        <!-- Publication 5 -->
-        <article class="publication-card clickable" onclick="showPopup('popup-pub5')">
-          <h3>CB[7]-capped Hybrid AuNPs for PDT/PTT Therapy</h3>
-          <p><strong>Journal:</strong> ACS Applied Polymer Materials, 2020</p>
-          <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" target="_blank" class="read-more">Read More &raquo;</a>
-        </article>
-
-        <!-- Publication 6 -->
-        <article class="publication-card clickable" onclick="showPopup('popup-pub6')">
-          <h3>Shear-Induced Orientation and Relaxation of Cellulose Nanocrystal and Montmorillonite Nanoplatelet Dispersions</h3>
-          <p><strong>Journal:</strong> Soft Matter, 2022</p>
-          <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" target="_blank" class="read-more">Read More &raquo;</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- Technical Skills Section -->
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <div class="skills">
-        <!-- Characterization and Sample Preparation Tools -->
-        <div class="skill-category">
-          <h3><i class="fas fa-microscope"></i> Characterization and Sample Preparation Tools</h3>
-          <ul>
-            <li class="clickable" onclick="showPopup('popup-skill-cryo-ultramicrotome')"><i class="fas fa-check-circle"></i> Cryo Ultramicrotome: Leica Artos 3D</li>
-            <li class="clickable" onclick="showPopup('popup-skill-cross-section-polisher')"><i class="fas fa-check-circle"></i> Cross-section Polisher: JEOL IB-19520CCP</li>
-            <li class="clickable" onclick="showPopup('popup-skill-fib-sem')"><i class="fas fa-check-circle"></i> FIB-SEM: FEI Nova 600</li>
-            <li class="clickable" onclick="showPopup('popup-skill-ac-tem-stem')"><i class="fas fa-check-circle"></i> AC-TEM/STEM: FEI Themis Z</li>
-            <li class="clickable" onclick="showPopup('popup-skill-cryo-tem-stem')"><i class="fas fa-check-circle"></i> Cryo TEM/STEM: JEOL JEM-2100F</li>
-            <li class="clickable" onclick="showPopup('popup-skill-cryo-sem')"><i class="fas fa-check-circle"></i> Cryo-SEM: JEOL IT800</li>
-            <li class="clickable" onclick="showPopup('popup-skill-sem-eds-wds')"><i class="fas fa-check-circle"></i> SEM/EDS/WDS: Hitachi S-4800</li>
-            <li class="clickable" onclick="showPopup('popup-skill-esem-eds-wds')"><i class="fas fa-check-circle"></i> ESEM/EDS/WDS: FEI Quanta 200</li>
-            <li class="clickable" onclick="showPopup('popup-skill-tabletop-sems')"><i class="fas fa-check-circle"></i> Tabletop SEMs: Hitachi TM-1000 & TM-3000</li>
-            <li class="clickable" onclick="showPopup('popup-skill-advanced-optical-microscopy')"><i class="fas fa-check-circle"></i> Advanced Optical Microscopy: Olympus BX53M</li>
-            <li class="clickable" onclick="showPopup('popup-skill-inverted-optical-microscope')"><i class="fas fa-check-circle"></i> Inverted Optical Microscope: Leica DMIL</li>
-            <li class="clickable" onclick="showPopup('popup-skill-xps')"><i class="fas fa-check-circle"></i> XPS: Thermo K-Alpha</li>
-            <li class="clickable" onclick="showPopup('popup-skill-ft-ir')"><i class="fas fa-check-circle"></i> FT-IR: Bruker Alpha-II</li>
-            <li class="clickable" onclick="showPopup('popup-skill-uv-vis')"><i class="fas fa-check-circle"></i> UV-Vis: Varian Cary</li>
-            <li class="clickable" onclick="showPopup('popup-skill-pxrd')"><i class="fas fa-check-circle"></i> PXRD: Panalytical</li>
-            <li class="clickable" onclick="showPopup('popup-skill-saxs-waxs')"><i class="fas fa-check-circle"></i> SAXS/WAXS: MAX IV Laboratory & ESRF</li>
-            <li class="clickable" onclick="showPopup('popup-skill-dls')"><i class="fas fa-check-circle"></i> DLS: Malvern Zetasizer</li>
-            <li class="clickable" onclick="showPopup('popup-skill-rheometer')"><i class="fas fa-check-circle"></i> Rheometer: Anton Paar MCR 301/702e</li>
-            <li class="clickable" onclick="showPopup('popup-skill-tga')"><i class="fas fa-check-circle"></i> TGA: TA Discovery</li>
-            <li class="clickable" onclick="showPopup('popup-skill-dsc')"><i class="fas fa-check-circle"></i> DSC: TA DSC250</li>
-            <li class="clickable" onclick="showPopup('popup-skill-instron')"><i class="fas fa-check-circle"></i> Instron 6800 Series</li>
-          </ul>
-        </div>
-
-        <!-- Software Proficiency -->
-        <div class="skill-category">
-          <h3><i class="fas fa-laptop-code"></i> Software Proficiency</h3>
-          <ul>
-            <li class="clickable" onclick="showPopup('popup-skill-originlab')"><i class="fas fa-check-circle"></i> OriginLab – Data analysis and visualization</li>
-            <li class="clickable" onclick="showPopup('popup-skill-ms-office')"><i class="fas fa-check-circle"></i> MS Office – Word, Excel, PowerPoint, Outlook</li>
-            <li class="clickable" onclick="showPopup('popup-skill-chemdraw')"><i class="fas fa-check-circle"></i> ChemDraw – Chemical structure drawing</li>
-            <li class="clickable" onclick="showPopup('popup-skill-highscore-plus')"><i class="fas fa-check-circle"></i> HighScore Plus – X-ray diffraction analysis</li>
-            <li class="clickable" onclick="showPopup('popup-skill-latex')"><i class="fas fa-check-circle"></i> LaTeX – Document preparation system</li>
-            <li class="clickable" onclick="showPopup('popup-skill-python')"><i class="fas fa-check-circle"></i> Python – Programming for data analysis</li>
-            <li class="clickable" onclick="showPopup('popup-skill-matlab')"><i class="fas fa-check-circle"></i> MATLAB – Numerical computing and simulations</li>
-            <li class="clickable" onclick="showPopup('popup-skill-cpp')"><i class="fas fa-check-circle"></i> C++ – Software development</li>
-            <li class="clickable" onclick="showPopup('popup-skill-html-css-js')"><i class="fas fa-check-circle"></i> HTML, CSS, JavaScript – Web Development</li>
-          </ul>
-        </div>
-
-        <!-- Soft Skills -->
-        <div class="skill-category">
-          <h3><i class="fas fa-users"></i> Soft Skills</h3>
-          <ul>
-            <li class="clickable" onclick="showPopup('popup-skill-leadership')"><i class="fas fa-check-circle"></i> Leadership – Team management and direction</li>
-            <li class="clickable" onclick="showPopup('popup-skill-strategic-planning')"><i class="fas fa-check-circle"></i> Strategic Planning – Long-term goal setting</li>
-            <li class="clickable" onclick="showPopup('popup-skill-resource-allocation')"><i class="fas fa-check-circle"></i> Resource Allocation – Efficient use of resources</li>
-            <li class="clickable" onclick="showPopup('popup-skill-collaboration')"><i class="fas fa-check-circle"></i> Collaboration – Interdisciplinary teamwork</li>
-            <li class="clickable" onclick="showPopup('popup-skill-mentorship')"><i class="fas fa-check-circle"></i> Mentorship – Guiding and supporting researchers</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Additional Information Section -->
-    <section id="additional-info">
-      <h2>Languages, Grants, Awards, Certifications, and References</h2>
-      <div class="card">
-        <!-- Languages -->
-        <p><strong><i class="fas fa-language"></i> Languages:</strong></p>
-        <p>English (Near-native), Persian (Native)</p>
-        <hr class="divider">
-
-        <!-- Grants and Awards -->
-        <p><strong><i class="fas fa-award"></i> Grants and Awards:</strong></p>
-        <ul>
-          <li class="clickable" onclick="showPopup('popup-grant-wallenberg')"><i class="fas fa-star" style="color: var(--accent-color);"></i> Wallenberg Wood Science Center PhD Grant (2019-2023)</li>
-          <li class="clickable" onclick="showPopup('popup-grant-stockholm')"><i class="fas fa-star" style="color: var(--accent-color);"></i> Stockholm University PhD Grant (2019-2024)</li>
-          <li class="clickable" onclick="showPopup('popup-grant-unam-bilkent')"><i class="fas fa-star" style="color: var(--accent-color);"></i> UNAM Fellowship and Bilkent University Scholarship (2017-2019)</li>
-          <li class="clickable" onclick="showPopup('popup-grant-tubitak')"><i class="fas fa-star" style="color: var(--accent-color);"></i> TÜBİTAK Fellowship (2018-2019)</li>
-        </ul>
-        <hr class="divider">
-
-        <!-- Certifications -->
-        <p><strong><i class="fas fa-certificate"></i> Certifications:</strong></p>
-        <ul>
-          <li class="clickable" onclick="showPopup('popup-certification-sdi')"><i class="fas fa-certificate" style="color: var(--accent-color);"></i> SDI 2.0 Test Results: Red (Performance)</li>
-        </ul>
-        <hr class="divider">
-
-        <!-- References -->
-        <p><strong><i class="fas fa-user"></i> References:</strong></p>
-        <ul class="references">
-          <li class="clickable" onclick="showPopup('popup-ref1')">
-            <strong>Prof. Lennart Bergström</strong><br>
-            Email: <a href="mailto:lennart.bergstrom@mmk.su.se">lennart.bergstrom@mmk.su.se</a>
-          </li>
-          <li class="clickable" onclick="showPopup('popup-ref2')">
-            <strong>Prof. Lars Berglund</strong><br>
-            Email: <a href="mailto:blund@kth.se">blund@kth.se</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </div>
-
-  <!-- Popup Modals -->
-
-  <!-- About Me Popups -->
-  <div id="popup-about-impact1" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-about-impact1')">&times;</button>
-      <h3>Advanced Materials Characterization</h3>
-      <p>Utilized cutting-edge characterization techniques such as TEM, SEM/FIB, and SAXS/WAXS to provide detailed insights into material structures. This expertise allows me to innovate and optimize nanocomposite materials effectively, ensuring they meet desired mechanical and thermal properties for industrial applications.</p>
-    </div>
-  </div>
-
-  <div id="popup-about-impact2" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-about-impact2')">&times;</button>
-      <h3>High-Impact Research Publications</h3>
-      <p>Authored and co-authored over 12 articles in prestigious journals such as Advanced Materials and Angewandte Chemie. This demonstrates my ability to conduct significant research, communicate complex ideas effectively, and contribute valuable knowledge to the field of materials chemistry.</p>
-    </div>
-  </div>
-
-  <div id="popup-about-impact3" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-about-impact3')">&times;</button>
-      <h3>Development of High-Performance Nanocomposites</h3>
-      <p>Engineered sustainable hybrid foams and nanocomposites with enhanced mechanical and thermal properties. My work ensures that these materials are not only innovative but also scalable for industrial production, meeting both performance and sustainability goals.</p>
-    </div>
-  </div>
-
-  <div id="popup-about-impact4" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-about-impact4')">&times;</button>
-      <h3>Mentorship and Leadership</h3>
-      <p>Successfully mentored over 6 graduate students, fostering their research skills and professional growth. My leadership ensures collaborative and productive research environments, driving projects forward and achieving academic excellence.</p>
-    </div>
-  </div>
-
-  <div id="popup-about-impact5" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-about-impact5')">&times;</button>
-      <h3>Grant and Fellowship Acquisition</h3>
-      <p>Secured competitive grants and fellowships from esteemed institutions like the Wallenberg Wood Science Center and TÜBİTAK. This highlights my ability to identify funding opportunities, craft compelling proposals, and garner support for groundbreaking research initiatives.</p>
-    </div>
-  </div>
-
-  <!-- Education Popups -->
-  <div id="popup-phd" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-phd')">&times;</button>
-      <h3>Ph.D. in Materials Chemistry</h3>
-      <p><strong>Stockholm University, Sweden</strong> (2019-2024)</p>
-      <p>Specialized in colloidal processing and alignment of wood-based dispersions and hybrid functional foams. My doctoral research focused on developing innovative processing techniques that enhance the structural and functional properties of wood-based materials.</p>
-      <ul>
-        <li><strong>Thesis:</strong> Colloidal Processing and Alignment of Wood-Based Dispersions and Hybrid Functional Foams</li>
-        <li><strong>Supervisors:</strong> Prof. Lennart Bergström, Prof. Aji Mathew</li>
-        <li><strong>Key Achievements:</strong> Developed novel processing techniques, published multiple high-impact papers, and presented findings at international conferences.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-msc" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-msc')">&times;</button>
-      <h3>M.Sc. in Materials Science and Nanotechnology</h3>
-      <p><strong>Bilkent University, Turkey</strong> (2017-2019)</p>
-      <p>Focused on the synthesis of hybrid core-shell nanoparticles for antibacterial photodynamic therapy. This program equipped me with advanced knowledge in nanotechnology and its applications in medical therapies.</p>
-      <ul>
-        <li><strong>Thesis:</strong> One-Pot Synthesis of Hybrid Core-Shell Nanoparticles for Antibacterial Photodynamic Therapy</li>
-        <li><strong>Supervisor:</strong> Prof. Dönüş Tuncel</li>
-        <li><strong>Key Achievements:</strong> Designed and synthesized novel nanoparticles, contributed to multiple publications, and collaborated on interdisciplinary research projects.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-bsc" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-bsc')">&times;</button>
-      <h3>B.Sc. in Chemical Engineering</h3>
-      <p><strong>University of Tehran, Iran</strong> (2012-2017)</p>
-      <p>Established a strong foundation in chemical engineering through comprehensive coursework and practical design projects. Graduated in the top 15% of the class, demonstrating academic excellence and a commitment to the field.</p>
-      <ul>
-        <li>Thermodynamics</li>
-        <li>Fluid Mechanics</li>
-        <li>Process Design</li>
-        <li>Fundamentals of Engineering</li>
-        <li>Engineering Design</li>
-      </ul>
-      <p>Graduated in the top 15% of the class, showcasing strong academic performance and dedication to the field.</p>
-    </div>
-  </div>
-
-  <!-- Professional Experience Popups -->
-  <div id="popup-postdoc-lead-research" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-postdoc-lead-research')">&times;</button>
-      <h3>Leading Research on Fiber-Based Materials</h3>
-      <p>Overseeing projects focused on developing advanced fiber-based materials, ensuring they meet both industry needs and academic standards. This role leverages my expertise in materials chemistry to drive innovation and practical applications.</p>
-    </div>
-  </div>
-
-  <div id="popup-postdoc-characterize" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-postdoc-characterize')">&times;</button>
-      <h3>Characterizing Materials</h3>
-      <p>Analyzing structure-process-property relationships to optimize nanocomposite processing. Utilizing advanced characterization techniques to ensure materials meet desired specifications and performance criteria.</p>
-    </div>
-  </div>
-
-  <div id="popup-postdoc-collaborate" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-postdoc-collaborate')">&times;</button>
-      <h3>Collaborating with Cross-Functional Teams</h3>
-      <p>Working alongside industry partners and academic collaborators to implement projects that align with both research objectives and commercial goals. Facilitating effective communication and project management to achieve successful outcomes.</p>
-    </div>
-  </div>
-
-  <div id="popup-senior-assistant-projects" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-senior-assistant-projects')">&times;</button>
-      <h3>Managing Research Projects</h3>
-      <p>Led multiple research projects, overseeing experimental design, data collection, and analysis. This management ensured timely completion, high-quality results, and significant advancements in materials science.</p>
-    </div>
-  </div>
-
-  <div id="popup-senior-assistant-mentoring" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-senior-assistant-mentoring')">&times;</button>
-      <h3>Mentoring Graduate Students</h3>
-      <p>Guided and supported graduate students in their research endeavors, fostering a collaborative and productive learning environment. This mentorship has been instrumental in developing their research skills and professional growth.</p>
-    </div>
-  </div>
-
-  <div id="popup-senior-assistant-nanocomposites" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-senior-assistant-nanocomposites')">&times;</button>
-      <h3>Developing High-Performance Nanocomposites</h3>
-      <p>Engineered high-performance nanocomposites with exceptional magnetic properties, achieving 95% bulk magnetite performance through innovative synthesis techniques. These materials are suitable for advanced applications in various industries.</p>
-    </div>
-  </div>
-
-  <div id="popup-senior-assistant-optimization" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-senior-assistant-optimization')">&times;</button>
-      <h3>Optimizing Processes</h3>
-      <p>Implemented optimization strategies to enhance process efficiency and material quality. These improvements resulted in cost savings and better-performing materials, contributing to the overall success of research projects.</p>
-    </div>
-  </div>
-
-  <div id="popup-junior-assistant-experiments" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-junior-assistant-experiments')">&times;</button>
-      <h3>Conducting Laboratory Experiments</h3>
-      <p>Performed a variety of laboratory experiments, meticulously collecting and analyzing data to support research publications and project goals. This hands-on experience has strengthened my experimental and analytical skills.</p>
-    </div>
-  </div>
-
-  <div id="popup-junior-assistant-protocols" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-junior-assistant-protocols')">&times;</button>
-      <h3>Developing Experimental Protocols</h3>
-      <p>Assisted in creating and refining experimental protocols to ensure accuracy, reproducibility, and reliability of research results. This contribution has enhanced the overall quality and consistency of research outputs.</p>
-    </div>
-  </div>
-
-  <!-- Publications Popups -->
-  <div id="popup-pub1" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-pub1')">&times;</button>
-      <h3>Hierarchical Incorporation of rGO into Anisotropic CNF Foams</h3>
-      <p><strong>Journal:</strong> ACS Applied Materials & Interfaces, 2024</p>
-      <p><strong>Abstract:</strong> This study explores the hierarchical integration of reduced graphene oxide (rGO) into cellulose nanofiber (CNF) foams to enhance their mechanical and thermal properties. The research demonstrates significant improvements in foam strength and conductivity, making them suitable for advanced applications in electronics and energy storage. Layer-by-layer self-assembly was utilized for hierarchical material modifications without compromising foam integrity.</p>
-      <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" target="_blank" class="popup-link">Full Publication &raquo;</a>
-    </div>
-  </div>
-
-  <div id="popup-pub2" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-pub2')">&times;</button>
-      <h3>Moisture-Resilient Aramid/Cellulose Nanofiber Foams</h3>
-      <p><strong>Journal:</strong> Advanced Materials, 2023</p>
-      <p><strong>Abstract:</strong> This research focuses on the development of thermally insulating and moisture-resilient foams using upcycled aramid nanofibers and nanocellulose. The study demonstrates exceptional thermal conductivity values as low as 18 mW m⁻¹ K⁻¹ across a wide range of relative humidity (20-80% RH), showcasing the potential for sustainable and high-performance insulation materials.</p>
-      <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" target="_blank" class="popup-link">Full Publication &raquo;</a>
-    </div>
-  </div>
-
-  <div id="popup-pub3" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-pub3')">&times;</button>
-      <h3>Magnetic Hybrid Foams from Fe3O4@TA and TOCN</h3>
-      <p><strong>Journal:</strong> RSC Advances, 2023</p>
-      <p><strong>Abstract:</strong> This research introduces highly magnetic hybrid foams synthesized using aligned tannic acid-coated iron oxide nanoparticles and TEMPO-oxidized cellulose nanofibers (TOCN). The resulting foams demonstrate excellent magnetic responsiveness and mechanical strength, achieving magnetization values close to 95% of bulk magnetite performance. The innovative magnetic field-assisted ice templating method enhanced both mechanical and thermal properties, making these foams suitable for applications in electromagnetic shielding and environmental remediation.</p>
-      <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" target="_blank" class="popup-link">Full Publication &raquo;</a>
-    </div>
-  </div>
-
-  <div id="popup-pub4" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-pub4')">&times;</button>
-      <h3>Unravelling the Hydration Barrier of Lignin Oleate Nanoparticles</h3>
-      <p><strong>Journal:</strong> Angewandte Chemie International Edition, 2021</p>
-      <p><strong>Abstract:</strong> This study investigates the hydration barrier properties of lignin oleate nanoparticles. Advanced characterization techniques reveal the mechanisms by which these nanoparticles resist moisture penetration, highlighting their potential in sustainable packaging and protective coatings. The research provides insights into acid- and base-catalyzed functionalization processes, enhancing the applicability of lignin-based materials in various industrial applications.</p>
-      <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" target="_blank" class="popup-link">Full Publication &raquo;</a>
-    </div>
-  </div>
-
-  <div id="popup-pub5" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-pub5')">&times;</button>
-      <h3>CB[7]-capped Hybrid AuNPs for PDT/PTT Therapy</h3>
-      <p><strong>Journal:</strong> ACS Applied Polymer Materials, 2020</p>
-      <p><strong>Abstract:</strong> This paper presents the synthesis of cucurbit[7]uril (CB[7])-capped hybrid conjugated oligomer-gold nanoparticles (AuNPs) designed for photodynamic therapy (PDT) and photothermal therapy (PTT). The nanoparticles exhibit enhanced therapeutic efficacy and biocompatibility, making them promising agents for combined cancer treatment and cellular imaging. The study was featured as a cover article, highlighting its innovative approach and potential impact.</p>
-      <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" target="_blank" class="popup-link">Full Publication &raquo;</a>
-    </div>
-  </div>
-
-  <div id="popup-pub6" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-pub6')">&times;</button>
-      <h3>Shear-Induced Orientation and Relaxation of Cellulose Nanocrystal and Montmorillonite Nanoplatelet Dispersions</h3>
-      <p><strong>Journal:</strong> Soft Matter, 2022</p>
-      <p><strong>Abstract:</strong> This study investigates the shear-induced orientation and relaxation behaviors of cellulose nanocrystal (CNC) and montmorillonite nanoplatelet (MMT) dispersions using Rheo-SAXS. The research provides critical insights into the rheological properties and structural dynamics of these nanocomposites under shear stress, informing optimized manufacturing processes for enhanced mechanical and thermal properties.</p>
-      <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" target="_blank" class="popup-link">Full Publication &raquo;</a>
-    </div>
-  </div>
-
-  <!-- Skills Popups -->
-  <!-- Characterization and Sample Preparation Tools Popups -->
-  <div id="popup-skill-cryo-ultramicrotome" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-cryo-ultramicrotome')">&times;</button>
-      <h3>Cryo Ultramicrotome: Leica Artos 3D</h3>
-      <ul>
-        <li>Advanced sample preparation for cryogenic TEM imaging, ensuring preservation of native structures in hydrated samples.</li>
-        <li>Enables high-resolution imaging of biological and polymeric materials, facilitating detailed structural analysis.</li>
-        <li>Essential for preparing samples for subsequent high-precision characterization techniques.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-cross-section-polisher" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-cross-section-polisher')">&times;</button>
-      <h3>Cross-section Polisher: JEOL IB-19520CCP</h3>
-      <ul>
-        <li>Precision polishing of samples for cross-sectional analysis, achieving smooth surfaces essential for high-quality SEM imaging.</li>
-        <li>Facilitates detailed structural and compositional studies by preparing samples with optimal surface integrity.</li>
-        <li>Enhances the accuracy and reliability of material characterization results.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-fib-sem" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-fib-sem')">&times;</button>
-      <h3>FIB-SEM: FEI Nova 600</h3>
-      <ul>
-        <li>Focused Ion Beam Scanning Electron Microscopy for 3D imaging, providing detailed analysis of material microstructures.</li>
-        <li>Enables precise milling and imaging, essential for characterizing complex nanocomposites.</li>
-        <li>Supports in-depth structural analysis, contributing to the development of advanced material properties.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-ac-tem-stem" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-ac-tem-stem')">&times;</button>
-      <h3>AC-TEM/STEM: FEI Themis Z</h3>
-      <ul>
-        <li>High-resolution Transmission and Scanning Transmission Electron Microscopy for atomic-scale imaging and analysis.</li>
-        <li>Allows for the investigation of nanostructures and compositions, critical for understanding material properties.</li>
-        <li>Facilitates the characterization of hybrid nanomaterials, supporting the development of innovative composites.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-cryo-tem-stem" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-cryo-tem-stem')">&times;</button>
-      <h3>Cryo TEM/STEM: JEOL JEM-2100F</h3>
-      <ul>
-        <li>Cryogenic Transmission and Scanning Transmission Electron Microscopy for imaging hydrated and biological samples.</li>
-        <li>Essential for studying moisture-resilient materials, preserving their native states during analysis.</li>
-        <li>Supports detailed structural investigations, enhancing the understanding of material behaviors under various conditions.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-cryo-sem" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-cryo-sem')">&times;</button>
-      <h3>Cryo-SEM: JEOL IT800</h3>
-      <ul>
-        <li>Cryogenic Scanning Electron Microscopy for low-temperature sample analysis, preserving native hydrated states.</li>
-        <li>Enables visualization of samples without dehydration artifacts, critical for accurate structural characterization.</li>
-        <li>Used extensively for studying the structural properties of moisture-resilient materials.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-sem-eds-wds" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-sem-eds-wds')">&times;</button>
-      <h3>SEM/EDS/WDS: Hitachi S-4800</h3>
-      <ul>
-        <li>High-resolution Scanning Electron Microscopy combined with Energy-Dispersive and Wavelength-Dispersive Spectroscopy.</li>
-        <li>Provides detailed surface imaging and elemental analysis, essential for compositional studies of nanocomposites.</li>
-        <li>Enables comprehensive characterization of material morphology and composition.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-esem-eds-wds" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-esem-eds-wds')">&times;</button>
-      <h3>ESEM/EDS/WDS: FEI Quanta 200</h3>
-      <ul>
-        <li>Environmental Scanning Electron Microscopy with Energy-Dispersive and Wavelength-Dispersive Spectroscopy.</li>
-        <li>Suitable for imaging wet and non-conductive samples, providing versatile characterization capabilities.</li>
-        <li>Allows in-situ analysis of materials under various environmental conditions, enhancing research flexibility.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-tabletop-sems" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-tabletop-sems')">&times;</button>
-      <h3>Tabletop SEMs: Hitachi TM-1000 & TM-3000</h3>
-      <ul>
-        <li>Compact Scanning Electron Microscopes for detailed surface imaging, ideal for routine analysis.</li>
-        <li>Facilitates high-throughput imaging, supporting efficient research workflows.</li>
-        <li>Used extensively for morphological studies of nanocomposites, providing quick and reliable results.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-advanced-optical-microscopy" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-advanced-optical-microscopy')">&times;</button>
-      <h3>Advanced Optical Microscopy: Olympus BX53M</h3>
-      <ul>
-        <li>High-resolution optical microscopy for detailed material analysis, complementing electron microscopy studies.</li>
-        <li>Facilitates the study of optical properties and structural features, enhancing material characterization.</li>
-        <li>Essential for conducting comprehensive analyses alongside other high-precision techniques.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-inverted-optical-microscope" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-inverted-optical-microscope')">&times;</button>
-      <h3>Inverted Optical Microscope: Leica DMIL</h3>
-      <ul>
-        <li>Inverted configuration for observing samples from below, ideal for live cell imaging and dynamic studies.</li>
-        <li>Enables the analysis of material interactions in liquid environments, supporting versatile research applications.</li>
-        <li>Used for real-time monitoring of material behaviors under various conditions.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-xps" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-xps')">&times;</button>
-      <h3>XPS: Thermo K-Alpha</h3>
-      <ul>
-        <li>Surface chemical analysis using X-ray Photoelectron Spectroscopy, providing elemental composition and chemical state information.</li>
-        <li>Essential for characterizing surface modifications in nanocomposites, supporting material optimization.</li>
-        <li>Enables detailed understanding of surface chemistry, crucial for developing advanced materials.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-ft-ir" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-ft-ir')">&times;</button>
-      <h3>FT-IR: Bruker Alpha-II</h3>
-      <ul>
-        <li>Molecular identification using Fourier-Transform Infrared Spectroscopy, analyzing chemical bonds and functional groups.</li>
-        <li>Enables the confirmation of chemical structures in synthesized hybrid nanomaterials.</li>
-        <li>Supports comprehensive material characterization, enhancing research accuracy.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-uv-vis" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-uv-vis')">&times;</button>
-      <h3>UV-Vis: Varian Cary</h3>
-      <ul>
-        <li>UV-Visible Spectrophotometry for optical property analysis, measuring absorbance and transmittance of materials.</li>
-        <li>Essential for studying the optical behavior of nanocomposites, supporting material development.</li>
-        <li>Facilitates the evaluation of material interactions with light, crucial for various applications.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-pxrd" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-pxrd')">&times;</button>
-      <h3>PXRD: Panalytical</h3>
-      <ul>
-        <li>Powder X-Ray Diffraction for crystallographic analysis, identifying crystalline phases and structures in materials.</li>
-        <li>Used for determining the crystallinity of nanocomposites, supporting material optimization.</li>
-        <li>Enables comprehensive structural characterization, enhancing research outcomes.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-saxs-waxs" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-saxs-waxs')">&times;</button>
-      <h3>SAXS/WAXS: MAX IV Laboratory & ESRF</h3>
-      <ul>
-        <li>Small-Angle and Wide-Angle X-Ray Scattering for structural analysis, providing information on nanoscale structures and orientations.</li>
-        <li>Critical for understanding the hierarchical structure of nanocomposites, informing optimized manufacturing processes.</li>
-        <li>Enables detailed analysis of material structures under various conditions, supporting advanced research.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-dls" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-dls')">&times;</button>
-      <h3>DLS: Malvern Zetasizer</h3>
-      <ul>
-        <li>Dynamic Light Scattering for particle sizing, measuring the size distribution of nanoparticles in dispersion.</li>
-        <li>Essential for assessing the uniformity and stability of nanocomposites, supporting material quality control.</li>
-        <li>Provides critical data for optimizing nanoparticle synthesis and application development.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-rheometer" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-rheometer')">&times;</button>
-      <h3>Rheometer: Anton Paar MCR 301/702e</h3>
-      <ul>
-        <li>Accurate viscosity and flow measurements for rheological analysis, characterizing the flow behavior of polymer dispersions and nanocomposites.</li>
-        <li>Essential for optimizing processing parameters and ensuring consistent material properties.</li>
-        <li>Supports the development of materials with tailored mechanical and thermal characteristics.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-tga" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-tga')">&times;</button>
-      <h3>TGA: TA Discovery</h3>
-      <ul>
-        <li>Thermogravimetric Analysis for thermal stability studies, measuring weight changes in materials as a function of temperature.</li>
-        <li>Used to assess the thermal degradation and composition of nanocomposites, ensuring material reliability.</li>
-        <li>Supports the development of materials with enhanced thermal properties for various applications.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-dsc" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-dsc')">&times;</button>
-      <h3>DSC: TA DSC250</h3>
-      <ul>
-        <li>Differential Scanning Calorimetry for thermal analysis, measuring heat flow associated with material transitions.</li>
-        <li>Essential for studying the thermal properties and phase behavior of nanocomposites, informing material design.</li>
-        <li>Supports comprehensive thermal characterization, enhancing research precision and outcomes.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-instron" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-instron')">&times;</button>
-      <h3>Instron 6800 Series</h3>
-      <ul>
-        <li>Mechanical Testing for tensile, compression, and flexural analysis, assessing the mechanical properties and performance of materials.</li>
-        <li>Used to evaluate the strength and durability of nanocomposites, ensuring they meet required specifications.</li>
-        <li>Supports the development of materials with optimized mechanical characteristics for industrial applications.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Software Proficiency Popups -->
-  <div id="popup-skill-originlab" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-originlab')">&times;</button>
-      <h3>OriginLab</h3>
-      <ul>
-        <li>Data analysis and visualization software used for processing and interpreting experimental data.</li>
-        <li>Facilitates the creation of high-quality graphs and charts for research publications and presentations.</li>
-        <li>Enhances data-driven decision-making in research projects, supporting advanced material analysis.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-ms-office" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-ms-office')">&times;</button>
-      <h3>MS Office</h3>
-      <ul>
-        <li>Proficient in Word, Excel, PowerPoint, and Outlook for document creation, data management, and presentations.</li>
-        <li>Utilized Excel for data analysis and visualization, and PowerPoint for conveying research findings effectively.</li>
-        <li>Enhanced productivity through efficient use of office applications, supporting seamless project execution.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-chemdraw" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-chemdraw')">&times;</button>
-      <h3>ChemDraw</h3>
-      <ul>
-        <li>Professional chemical structure drawing tool used for illustrating molecular structures in research papers and presentations.</li>
-        <li>Facilitates clear and accurate representation of chemical compounds and reactions, enhancing research communication.</li>
-        <li>Essential for creating visually compelling and informative scientific documents.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-highscore-plus" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-highscore-plus')">&times;</button>
-      <h3>HighScore Plus</h3>
-      <ul>
-        <li>Software for analyzing X-ray diffraction (XRD) data, enabling phase identification and crystallographic analysis.</li>
-        <li>Used for interpreting complex diffraction patterns and quantifying crystalline phases in materials.</li>
-        <li>Assists in understanding the structural properties of synthesized nanocomposites, supporting material optimization.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-latex" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-latex')">&times;</button>
-      <h3>LaTeX</h3>
-      <ul>
-        <li>Document preparation system used for typesetting scientific documents with high-quality formatting.</li>
-        <li>Essential for creating research papers, theses, and presentations with complex mathematical and structural elements.</li>
-        <li>Ensures professional and consistent formatting across all documents, enhancing research presentation.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-python" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-python')">&times;</button>
-      <h3>Python</h3>
-      <ul>
-        <li>Programming language used for data analysis, automation, and scripting in research projects.</li>
-        <li>Utilized libraries such as NumPy, pandas, and matplotlib for efficient data processing and visualization.</li>
-        <li>Implemented custom scripts to streamline experimental data analysis and reporting, enhancing research efficiency.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-matlab" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-matlab')">&times;</button>
-      <h3>MATLAB</h3>
-      <ul>
-        <li>Numerical computing environment used for simulations, data analysis, and algorithm development.</li>
-        <li>Developed custom algorithms for material property analysis and optimization, supporting advanced research.</li>
-        <li>Facilitated the modeling and simulation of complex material behaviors, enhancing research accuracy.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-cpp" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-cpp')">&times;</button>
-      <h3>C++</h3>
-      <ul>
-        <li>Programming language used for developing high-performance computational tools.</li>
-        <li>Implemented algorithms for data processing and analysis in materials research, enhancing research capabilities.</li>
-        <li>Enhanced software performance for large-scale data handling and simulations, supporting complex research tasks.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-html-css-js" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-html-css-js')">&times;</button>
-      <h3>HTML, CSS, JavaScript</h3>
-      <ul>
-        <li>Web development skills used for creating and maintaining professional portfolios and research websites.</li>
-        <li>Designed responsive and interactive web pages to effectively showcase research projects and publications.</li>
-        <li>Implemented dynamic features and user-friendly interfaces to enhance website functionality and user experience.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Soft Skills Popups -->
-  <div id="popup-skill-leadership" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-leadership')">&times;</button>
-      <h3>Leadership</h3>
-      <ul>
-        <li>Successfully managed cross-functional research teams, fostering collaboration and achieving project goals.</li>
-        <li>Provided strategic direction and mentorship, enhancing team performance and professional development.</li>
-        <li>Implemented effective communication strategies to ensure team alignment and productivity.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-strategic-planning" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-strategic-planning')">&times;</button>
-      <h3>Strategic Planning</h3>
-      <ul>
-        <li>Developed long-term research objectives and goals, aligning them with institutional and industry standards.</li>
-        <li>Implemented strategic initiatives that enhanced research productivity and innovation.</li>
-        <li>Conducted SWOT analyses to inform decision-making and project prioritization.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-resource-allocation" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-resource-allocation')">&times;</button>
-      <h3>Resource Allocation</h3>
-      <ul>
-        <li>Optimized lab resources for project efficiency, ensuring timely completion of research milestones.</li>
-        <li>Efficiently managed budgets, equipment, and personnel to support ongoing and future projects.</li>
-        <li>Implemented inventory management systems to track and maintain laboratory supplies.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-collaboration" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-collaboration')">&times;</button>
-      <h3>Collaboration</h3>
-      <ul>
-        <li>Fostered interdisciplinary teamwork across various research projects, enhancing project outcomes.</li>
-        <li>Collaborated with industry partners to translate research findings into practical applications.</li>
-        <li>Enhanced project outcomes through effective communication and joint problem-solving.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-skill-mentorship" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-skill-mentorship')">&times;</button>
-      <h3>Mentorship</h3>
-      <ul>
-        <li>Guided and supported researchers and students in their academic and professional development.</li>
-        <li>Provided constructive feedback and resources to enhance research skills.</li>
-        <li>Encouraged a collaborative and inclusive research environment.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Grants and Awards Popups -->
-  <div id="popup-grant-wallenberg" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-grant-wallenberg')">&times;</button>
-      <h3>Wallenberg Wood Science Center PhD Grant</h3>
-      <ul>
-        <li>Awarded for outstanding research in wood science and materials chemistry.</li>
-        <li>Provided funding for research on advanced wood-based dispersions and functional foams.</li>
-        <li>Facilitated collaboration with industry partners to translate research findings into practical applications.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-grant-stockholm" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-grant-stockholm')">&times;</button>
-      <h3>Stockholm University PhD Grant</h3>
-      <ul>
-        <li>Granted to support doctoral studies in materials chemistry.</li>
-        <li>Enabled participation in international conferences and collaborative research projects.</li>
-        <li>Recognized for academic excellence and research potential.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-grant-unam-bilkent" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-grant-unam-bilkent')">&times;</button>
-      <h3>UNAM Fellowship and Bilkent University Scholarship</h3>
-      <ul>
-        <li>Received for excellence in master's studies and research contributions.</li>
-        <li>Facilitated advanced research in nanotechnology and materials science.</li>
-        <li>Supported international collaboration and academic exchange programs.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="popup-grant-tubitak" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-grant-tubitak')">&times;</button>
-      <h3>TÜBİTAK Fellowship</h3>
-      <ul>
-        <li>Awarded by the Scientific and Technological Research Council of Turkey.</li>
-        <li>Supported research in the synthesis and characterization of hybrid nanomaterials.</li>
-        <li>Enabled participation in national and international research collaborations.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Certifications Popups -->
-  <div id="popup-certification-sdi" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-certification-sdi')">&times;</button>
-      <h3>SDI 2.0 Test Results</h3>
-      <ul>
-        <li>Achieved Red (Performance) rating in the SDI 2.0 assessment.</li>
-        <li>Demonstrates high proficiency and excellence in specialized skills.</li>
-        <li>Recognized for outstanding performance and commitment to professional development.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- References Popups -->
-  <div id="popup-ref1" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-ref1')">&times;</button>
-      <h3>Prof. Lennart Bergström</h3>
-      <p><strong>Position:</strong> Professor of Materials Chemistry</p>
-      <p><strong>Institution:</strong> Stockholm University, Sweden</p>
-      <p><strong>Contact:</strong> <a href="mailto:lennart.bergstrom@mmk.su.se">lennart.bergstrom@mmk.su.se</a></p>
-      <p><strong>Relationship:</strong> PhD Supervisor</p>
-      <p>Prof. Bergström has been instrumental in guiding my doctoral research, providing invaluable insights and fostering a collaborative research environment.</p>
-    </div>
-  </div>
-
-  <div id="popup-ref2" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" onclick="closePopup('popup-ref2')">&times;</button>
-      <h3>Prof. Lars Berglund</h3>
-      <p><strong>Position:</strong> Professor of Nanotechnology</p>
-      <p><strong>Institution:</strong> KTH Royal Institute of Technology, Sweden</p>
-      <p><strong>Contact:</strong> <a href="mailto:blund@kth.se">blund@kth.se</a></p>
-      <p><strong>Relationship:</strong> Postdoctoral Research Mentor</p>
-      <p>Prof. Berglund has been a key mentor during my postdoctoral research, providing strategic guidance and fostering interdisciplinary collaborations.</p>
-    </div>
-  </div>
-
-  <!-- Popup Modals End -->
-  
-  <!-- External JavaScript -->
-  <script src="assets/js/scripts.js"></script>
+    <div class="cv-container grid grid-cols-1 lg:grid-cols-4">
+        <!-- Sidebar -->
+        <aside class="sidebar lg:col-span-1">
+            <img src="photo.png" alt="Seyed Ehsan Hadi" class="profile-img">
+            
+            <div class="text-center mb-6">
+                <h1 class="text-xl font-bold">Seyed Ehsan Hadi, PhD</h1>
+                <p class="text-sm opacity-80">Materials Scientist | Characterization Expert</p>
+            </div>
+            
+            <div class="mb-6">
+                <h2 class="section-title"><i class="fas fa-address-card mr-2"></i>Contact</h2>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:eshadi@kth.se" class="hover:underline">eshadi@kth.se</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                    <span>Stockholm, Sweden</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fab fa-linkedin"></i></span>
+                    <a href="https://linkedin.com/in/seyed-ehsan-hadi" target="_blank" class="hover:underline">/seyed-ehsan-hadi</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <a href="https://scholar.google.com/citations?hl=en&user=aqsQc48AAAAJ" target="_blank" class="hover:underline">Google Scholar</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fab fa-orcid"></i></span>
+                    <a href="https://orcid.org/0000-0002-5980-1641" target="_blank" class="hover:underline">ORCID</a>
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <h2 class="section-title"><i class="fas fa-info-circle mr-2"></i>Status</h2>
+                <div class="status-badge green">
+                    <i class="fas fa-check-circle mr-2"></i> Swedish Resident
+                </div>
+                <div class="status-badge red">
+                    <i class="fas fa-certificate mr-2"></i> SDI 2.0: Red (Performance)
+                </div>
+            </div>
+            
+            <a href="https://seyedehsanhadi.github.io/portfolio.html" target="_blank" class="portfolio-btn">
+                <i class="fas fa-folder-open mr-2"></i> View Portfolio
+            </a>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content lg:col-span-3">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="name">Seyed Ehsan Hadi, PhD</h1>
+                <p class="title">Materials Scientist | Characterization Expert | Project Manager</p>
+                
+                <div class="summary">
+                    Materials chemist/scientist with <strong>7+ years</strong> in advanced R&D, <strong>20+ publications and reviews</strong>, and expertise in <strong>project management</strong>, multi-scale materials characterization, teaching/mentoring, scale-up, and sustainable innovation.
+                    <br><br>
+                    - Certified Reviewer by <strong>American Chemical Society</strong>
+                    <br>
+                    - Certified as <strong>Red</strong> by SDI 2.0
+                </div>
+                
+                <div>
+                    <h2 class="text-lg font-semibold text-gray-800 mb-2">Impact Highlights</h2>
+                    <div class="border-t border-gray-300 pt-3">
+                        <ul>
+                            <li class="highlight-item">Pioneered cutting-edge <strong>characterization</strong> techniques (TEM, SEM, Ultramicrotomy, SAXS/WAXS) to accelerate material innovation.</li>
+                            <li class="highlight-item"><strong>12+ articles</strong> in high-impact journals e.g. <em>Adv. Materials</em> & <em>Ange. Chemie</em></li>
+                            <li class="highlight-item">Developed <strong>high-performance</strong> nanocomposites and sustainable hybrid foams, achieving industrially scalable results with enhanced properties.</li>
+                            <li class="highlight-item">Successfully <strong>mentored</strong> 18+ students, fostering collaboration across academia and industry.</li>
+                            <li class="highlight-item">Secured competitive fellowships and grants, including prestigious awards from <strong>Wallenberg Wood Science Center</strong> and <strong>TÜBİTAK</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <section class="content-section">
+                <h2 class="content-title"><i class="fas fa-user-graduate mr-2"></i>Education</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">PhD in Materials Chemistry</h3>
+                        <span class="timeline-meta">2019 – 2024</span>
+                    </div>
+                    <p class="timeline-subtitle">Stockholm University, Stockholm, SE</p>
+                    <p class="text-sm italic"><strong>Thesis:</strong> Colloidal Processing and Alignment of Wood-Based Dispersions and Hybrid Functional Foams</p>
+                    <p class="text-sm text-gray-600"><strong>Supervisors:</strong> Prof. Lennart Bergström, Prof. Aji Mathew</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">M.Sc. in Materials Science and Nanotechnology</h3>
+                        <span class="timeline-meta">2017 – 2019</span>
+                    </div>
+                    <p class="timeline-subtitle">Bilkent University, Ankara, TR</p>
+                    <p class="text-sm italic"><strong>Thesis:</strong> One-Pot Synthesis of Hybrid Core-Shell Nanoparticles for Antibacterial Photodynamic Therapy</p>
+                    <p class="text-sm text-gray-600"><strong>Supervisor:</strong> Prof. Dönüş Tuncel</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">B.Sc. in Chemical Engineering</h3>
+                        <span class="timeline-meta">2012 – 2017</span>
+                    </div>
+                    <p class="timeline-subtitle">University of Tehran, Tehran, IR</p>
+                    <p class="text-sm">Top 15% Graduate</p>
+                </div>
+            </section>
+            
+            <!-- Professional Experience -->
+            <section class="content-section">
+                <h2 class="content-title"><i class="fas fa-briefcase mr-2"></i>Professional Experience</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Postdoctoral Research Associate</h3>
+                        <span class="timeline-meta">2024 – Present</span>
+                    </div>
+                    <p class="timeline-subtitle">KTH Royal Institute of Technology, Sweden</p>
+                    <ul class="timeline-details">
+                        <li>Lead research on advanced fiber-based materials for sheet paper and foam applications.</li>
+                        <li>Characterize materials and analyze structure-process-property relationships to optimize nanocomposite processing.</li>
+                        <li>Collaborate with cross-functional teams to implement projects aligning with industry standards.</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Senior Graduate Research Assistant</h3>
+                        <span class="timeline-meta">2019 – 2024</span>
+                    </div>
+                    <p class="timeline-subtitle">Stockholm University, Sweden</p>
+                    <ul class="timeline-details">
+                        <li>Managed 6+ projects in experimental design, resulting in publications.</li>
+                        <li>Mentored students, fostering development and research skills.</li>
+                        <li>Developed high-performance nanocomposites, achieving 95% bulk magnetite performance.</li>
+                        <li>Optimized processes to enhance efficiency and material quality.</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Junior Graduate Research Assistant</h3>
+                        <span class="timeline-meta">2017 – 2019</span>
+                    </div>
+                    <p class="timeline-subtitle">Bilkent University, Turkey</p>
+                    <ul class="timeline-details">
+                        <li>Conducted laboratory experiments and data analysis contributing to publications.</li>
+                        <li>Assisted in developing experimental protocols to improve research accuracy.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Publications -->
+            <section class="content-section">
+                <h2 class="content-title"><i class="fas fa-book-open mr-2"></i>Selected Publications</h2>
+                
+                <ol class="list-decimal list-inside" style="counter-reset: pub-counter;">
+                    <li class="publication-item mb-3">
+                        <strong class="text-purple-600">Hadi, S. E.</strong>, Möller, E., et al. (2024). Hierarchical Incorporation of rGO into Anisotropic CNF Foams. 
+                        <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" class="text-blue-600 hover:underline" target="_blank"><strong>ACS Appl. Mater. Interfaces</strong></a>, <strong>16</strong>, 45337.
+                    </li>
+                    <li class="publication-item mb-3">
+                        Di, A., Schiele, C., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2023). Moisture-Resilient Aramid/Cellulose Nanofiber Foams. 
+                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" class="text-blue-600 hover:underline" target="_blank"><strong>Adv. Mater.</strong></a>, <strong>35</strong>, 2305195.
+                    </li>
+                    <li class="publication-item mb-3">
+                        <strong class="text-purple-600">Hadi, S. E.</strong>, Yeprem, H. A., et al. (2023). Magnetic hybrid foams from Fe3O4@TA and TOCN. 
+                        <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" class="text-blue-600 hover:underline" target="_blank"><strong>RSC Adv.</strong></a>, <strong>13</strong>, 13919.
+                    </li>
+                    <li class="publication-item mb-3">
+                        Moreno, A., Liu, J., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2021). Unravelling the hydration barrier of lignin oleate nanoparticles. 
+                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" class="text-blue-600 hover:underline" target="_blank"><strong>Angew. Chem. Int. Ed.</strong></a>, <strong>60</strong>, 20897.
+                    </li>
+                    <li class="publication-item mb-3">
+                        Özkan, M., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2020). CB[7]-capped hybrid AuNPs for PDT/PTT therapy. 
+                        <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" class="text-blue-600 hover:underline" target="_blank"><strong>ACS Appl. Polym. Mater.</strong></a>, <strong>2</strong>, 3840.
+                    </li>
+                    <li class="publication-item">
+                        Munier, P.*, <strong class="text-purple-600">Hadi, S. E.*</strong>, et al. (2022). Shear-induced orientation and relaxation of cellulose nanocrystal and montmorillonite nanoplatelet dispersions. 
+                        <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" class="text-blue-600 hover:underline" target="_blank"><strong>Soft Matter</strong></a>, <strong>18</strong>, 1234–1245.
+                    </li>
+                </ol>
+                
+                <div class="mt-6 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                    <h3 class="font-semibold text-blue-800 mb-2">Peer Review Service</h3>
+                    <p class="font-bold text-blue-700">- Certified Reviewer by American Chemical Society</p>
+                    <p class="text-sm">- Invited reviewer for <em>J. Adv. Eng. Mater., Macromol. Mater. Eng, and Appl. Polym. Sci.</em></p>
+                </div>
+            </section>
+            
+            <!-- Technical Skills -->
+            <section class="content-section">
+                <h2 class="content-title"><i class="fas fa-cogs mr-2"></i>Technical Skills</h2>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-microscope mr-2"></i>Core Expertise in Characterization and Sample Preparation Tools</h3>
+                    <ul class="skill-list">
+                        <li><strong>Mastery in Advanced Sample Preparation Techniques</strong>
+                            <ul class="ml-4 mt-1">
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cryo ultramicrotome: Leica Artos 3D</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cross-section polisher: JEOL IB-19520CCP</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> FIB-SEM: FEI Nova 600</li>
+                            </ul>
+                        </li>
+                        <li><strong>Specialized Microscopy and Imaging Proficiency</strong>
+                            <ul class="ml-4 mt-1">
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> AC-TEM/STEM: FEI Themis Z</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cryo TEM/STEM: JEOL JEM-2100F</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cryo-SEM: JEOL IT800</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> SEM/EDS/WDS: Hitachi S-4800</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> ESEM/EDS/WDS: FEI Quanta 200</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Tabletop SEMs: Hitachi TM-1000 and TM-3000</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Advanced optical microscopy: Olympus BX53M</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Inverted optical microscope: Leica DMIL</li>
+                            </ul>
+                        </li>
+                        <li><strong>Expertise in Spectroscopy and Surface Analysis</strong>
+                            <ul class="ml-4 mt-1">
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> XPS: Thermo K-Alpha</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> FT-IR: Bruker Alpha-II</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> UV-Vis: Varian Cary</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> PXRD: Panalytical</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> SAXS/WAXS: Utilized at major facilities such as MAX IV Laboratory (Sw) and the ESRF (Fr)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Competence in Particle and Thermal Analysis</strong>
+                            <ul class="ml-4 mt-1">
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> DLS: Malvern Zetasizer</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Rheometer: Anton Paar MCR 301/702e</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> TGA: TA Discovery</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> DSC: TA DSC250</li>
+                            </ul>
+                        </li>
+                        <li><strong>Mechanical Testing Expertise</strong>
+                            <ul class="ml-4 mt-1">
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Instron: 6800 Series</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-laptop-code mr-2"></i>Proficiency in Software and Programming</h3>
+                    <ul>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Software Expertise:</strong> OriginLab, MS Office, ChemDraw, HighScore Plus, LaTeX (Advanced)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Programming Languages:</strong> Python, MATLAB, C++, HTML, CSS, JavaScript (Web Development)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-users mr-2"></i>Exceptional Soft Skills</h3>
+                    <ul>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> Leadership, Teaching, Strategic Planning, Resource Allocation, Collaboration, Mentorship, Teamwork</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Additional Information -->
+            <section class="content-section">
+                <h2 class="content-title"><i class="fas fa-info-circle mr-2"></i>Additional Information</h2>
+                
+                <div class="additional-grid">
+                    <div class="additional-item">
+                        <h3 class="additional-title"><i class="fas fa-language mr-2"></i>Languages</h3>
+                        <p>English (Near-native), Persian (Native)</p>
+                    </div>
+                    
+                    <div class="additional-item">
+                        <h3 class="additional-title"><i class="fas fa-award mr-2"></i>Grants and Awards</h3>
+                        <ul>
+                            <li><i class="fas fa-star text-blue-500 mr-1"></i> Wallenberg Wood Science Center PhD Grant (2019-2023)</li>
+                            <li><i class="fas fa-star text-blue-500 mr-1"></i> Stockholm University PhD Grant (2019-2024)</li>
+                            <li><i class="fas fa-star text-blue-500 mr-1"></i> UNAM Fellowship and Bilkent University Scholarship (2017-2019)</li>
+                            <li><i class="fas fa-star text-blue-500 mr-1"></i> TÜBİTAK Fellowship (2018-2019)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="additional-item">
+                        <h3 class="additional-title"><i class="fas fa-user mr-2"></i>References</h3>
+                        <p><strong>Prof. Lennart Bergstrom</strong><br>
+                        Email: <a href="mailto:lennart.bergstrom@mmk.su.se" class="text-blue-600 hover:underline">lennart.bergstrom@mmk.su.se</a></p>
+                        <p class="mt-2"><strong>Prof. Lars Berglund</strong><br>
+                        Email: <a href="mailto:blund@kth.se" class="text-blue-600 hover:underline">blund@kth.se</a></p>
+                    </div>
+                </div>
+                
+                <div class="keyword-cloud">
+                    <span class="keyword">Materials Science</span>
+                    <span class="keyword">Nanocomposites</span>
+                    <span class="keyword">Characterization Techniques</span>
+                    <span class="keyword">Project Management</span>
+                    <span class="keyword">Peer Reviewer</span>
+                    <span class="keyword">Sustainable Materials</span>
+                    <span class="keyword">Colloidal Science</span>
+                    <span class="keyword">Nanotechnology</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
