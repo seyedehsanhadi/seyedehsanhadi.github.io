@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seyed Ehsan Hadi, PhD - Academic CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: 
+            #0a2e6b;
+            --primary-dark: #1d4ed8;
+            --secondary: #1e40af;
+            --accent: #14b8a6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --highlight: #dbeafe;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .cv-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .sidebar {
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        
+        .section-title {
+            font-weight: 600;
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-icon {
+            margin-right: 0.75rem;
+            width: 20px;
+            text-align: center;
+            color: var(--light-gray);
+        }
+        
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .status-badge.green {
+            background-color: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+        }
+        
+        .status-badge.red {
+            background-color: rgba(248, 113, 113, 0.2);
+            color: #f87171;
+        }
+        
+        .portfolio-btn {
+            display: block;
+            background-color: var(--accent);
+            color: white;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            transition: all 0.2s;
+        }
+        
+        .portfolio-btn:hover {
+            background-color: #0d9488;
+            transform: translateY(-2px);
+        }
+        
+        .main-content {
+            padding: 2.5rem;
+        }
+        
+        .header {
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .title {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .summary {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-item {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.75rem;
+        }
+        
+        .highlight-item:before {
+            content: "•";
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .content-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .content-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .content-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed var(--light-gray);
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+        
+        .timeline-meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .timeline-subtitle {
+            color: var(--gray);
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+        
+        .timeline-details {
+            padding-left: 1rem;
+        }
+        
+        .timeline-details li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .timeline-details li:before {
+            content: "•";
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .publication-item {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .publication-item:before {
+            content: counter(pub-counter) ".";
+            counter-increment: pub-counter;
+            position: absolute;
+            left: 0;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .skill-category {
+            background-color: var(--highlight);
+            padding: 1.25rem;
+            border-left: 4px solid var(--primary);
+            border-radius: 0.375rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-category-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list {
+            columns: 2;
+            column-gap: 2rem;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.5rem;
+            break-inside: avoid;
+        }
+        
+        .additional-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .additional-item {
+            background-color: var(--highlight);
+            padding: 1.25rem;
+            border-radius: 0.375rem;
+        }
+        
+        .additional-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .keyword-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .keyword {
+            background-color: var(--light-gray);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+        
+        @media (max-width: 1024px) {
+            .cv-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+                height: auto;
+            }
+            
+            .skill-list {
+                columns: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 1.5rem;
+            }
+            
+            .name {
+                font-size: 1.75rem;
+            }
+            
+            .title {
+                font-size: 1.1rem;
+            }
+            
+            .content-title {
+                font-size: 1.3rem;
+            }
+            
+            .timeline-header {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+            
+            .additional-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation for section transitions */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-section {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        
+        /* Delay animations for each section */
+        .content-section:nth-child(1) { animation-delay: 0.1s; }
+        .content-section:nth-child(2) { animation-delay: 0.2s; }
+        .content-section:nth-child(3) { animation-delay: 0.3s; }
+        .content-section:nth-child(4) { animation-delay: 0.4s; }
+        .content-section:nth-child(5) { animation-delay: 0.5s; }
+        .content-section:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <div class="cv-container grid grid-cols-1 lg:grid-cols-4">
+        <!-- Sidebar -->
+        <aside class="sidebar lg:col-span-1">
+            <img src="photo.png" alt="Seyed Ehsan Hadi" class="profile-img">
+            
+            <div class="text-center mb-6">
+                <h1 class="text-xl font-bold">Seyed Ehsan Hadi, PhD</h1>
+                <p class="text-sm opacity-80">Materials Scientist | Characterization Expert</p>
+            </div>
+            
+            <div class="mb-6">
+                <h2 class="section-title"><i class="fas fa-address-card mr-2"></i>Contact</h2>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:eshadi@kth.se" class="hover:underline">eshadi@kth.se</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                    <span>Stockholm, Sweden</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fab fa-linkedin"></i></span>
+                    <a href="https://linkedin.com/in/seyed-ehsan-hadi" target="_blank" class="hover:underline">/seyed-ehsan-hadi</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <a href="https://scholar.google.com/citations?hl=en&user=aqsQc48AAAAJ" target="_blank" class="hover:underline">Google Scholar</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fab fa-orcid"></i></span>
+                    <a href="https://orcid.org/0000-0002-5980-1641" target="_blank" class="hover:underline">ORCID</a>
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <h2 class="section-title"><i class="fas fa-info-circle mr-2"></i>Status</h2>
+                <div class="status-badge green">
+                    <i class="fas fa-check-circle mr-2"></i> Swedish Resident
+                </div>
+                <div class="status-badge red">
+                    <i class="fas fa-certificate mr-2"></i> SDI 2.0: Red (Performance)
+                </div>
+            </div>
+            
+            <a href="https://seyedehsanhadi.github.io/portfolio.html" target="_blank" class="portfolio-btn">
+                <i class="fas fa-folder-open mr-2"></i> View Portfolio
+            </a>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content lg:col-span-3">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="name">Seyed Ehsan Hadi, PhD</h1>
+                <p class="title">Materials Scientist | Characterization Expert | Project Manager</p>
+                
+                <div class="summary">
+                    Materials chemist/scientist with <strong>7+ years</strong> in advanced R&D, <strong>20+ publications and reviews</strong>, and expertise in <strong>project management</strong>, multi-scale materials characterization, teaching/mentoring, scale-up, and sustainable innovation.
+                    <br><br>
+                    - Certified Reviewer by <strong>American Chemical Society</strong>
+                    <br>
+                    - Certified as <strong>Red</strong> by SDI 2.0
+                </div>
+                
+                <div>
+                    <h2 class="text-lg font-semibold text-gray-800 mb-2">Impact Highlights</h2>
+                    <div class="border-t border-gray-300 pt-3">
+                        <ul>
+                            <li class="highlight-item">Pioneered cutting-edge <strong>characterization</strong> techniques (TEM, SEM, Ultramicrotomy, SAXS/WAXS) to accelerate material innovation.</li>
+                            <li class="highlight-item"><strong>12+ articles</strong> in high-impact journals e.g. <em>Adv. Materials</em> & <em>Ange. Chemie</em></li>
+                            <li class="highlight-item">Developed <strong>high-performance</strong> nanocomposites and sustainable hybrid foams, achieving industrially scalable results with enhanced properties.</li>
+                            <li class="highlight-item">Successfully <strong>mentored</strong> 18+ students, fostering collaboration across academia and industry.</li>
+                            <li class="highlight-item">Secured competitive fellowships and grants, including prestigious awards from <strong>Wallenberg Wood Science Center</strong> and <strong>TÜBİTAK</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <section class="content-section">
+                <h2 class="content-title"><i class="fas fa-user-graduate mr-2"></i>Education</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">PhD in Materials Chemistry</h3>
+                        <span class="timeline-meta">2019 – 2024</span>
+                    </div>
+                    <p class="timeline-subtitle">Stockholm University, Stockholm, SE</p>
+                    <p class="text-sm italic"><strong>Thesis:</strong> Colloidal Processing and Alignment of Wood-Based Dispersions and Hybrid Functional Foams</p>
+                    <p class="text-sm text-gray-600"><strong>Supervisors:</strong> Prof. Lennart Bergström, Prof. Aji Mathew</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">M.Sc. in Materials Science and Nanotechnology</h3>
+                        <span class="timeline-meta">2017 – 2019</span>
+                    </div>
+                    <p class="timeline-subtitle">Bilkent University, Ankara, TR</p>
+                    <p class="text-sm italic"><strong>Thesis:</strong> One-Pot Synthesis of Hybrid Core-Shell Nanoparticles for Antibacterial Photodynamic Therapy</p>
+                    <p class="text-sm text-gray-600"><strong>Supervisor:</strong> Prof. Dönüş Tuncel</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">B.Sc. in Chemical Engineering</h3>
+                        <span class="timeline-meta">2012 – 2017</span>
+                    </div>
+                    <p class="timeline-subtitle">University of Tehran, Tehran, IR</p>
+                    <p class="text-sm">Top 15% Graduate</p>
+                </div>
+            </section>
+            
+            <!-- Professional Experience -->
+            <section class="content-section">
+                <h2 class="content-title"><i class="fas fa-briefcase mr-2"></i>Professional Experience</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Postdoctoral Research Associate</h3>
+                        <span class="timeline-meta">2024 – Present</span>
+                    </div>
+                    <p class="timeline-subtitle">KTH Royal Institute of Technology, Sweden</p>
+                    <ul class="timeline-details">
+                        <li>Lead research on advanced fiber-based materials for sheet paper and foam applications.</li>
+                        <li>Characterize materials and analyze structure-process-property relationships to optimize nanocomposite processing.</li>
+                        <li>Collaborate with cross-functional teams to implement projects aligning with industry standards.</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Senior Graduate Research Assistant</h3>
+                        <span class="timeline-meta">2019 – 2024</span>
+                    </div>
+                    <p class="timeline-subtitle">Stockholm University, Sweden</p>
+                    <ul class="timeline-details">
+                        <li>Managed 6+ projects in experimental design, resulting in publications.</li>
+                        <li>Mentored students, fostering development and research skills.</li>
+                        <li>Developed high-performance nanocomposites, achieving 95% bulk magnetite performance.</li>
+                        <li>Optimized processes to enhance efficiency and material quality.</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Junior Graduate Research Assistant</h3>
+                        <span class="timeline-meta">2017 – 2019</span>
+                    </div>
+                    <p class="timeline-subtitle">Bilkent University, Turkey</p>
+                    <ul class="timeline-details">
+                        <li>Conducted laboratory experiments and data analysis contributing to publications.</li>
+                        <li>Assisted in developing experimental protocols to improve research accuracy.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Publications -->
+            <section class="content-section">
+                <h2 class="content-title"><i class="fas fa-book-open mr-2"></i>Selected Publications</h2>
+                
+                <ol class="list-decimal list-inside" style="counter-reset: pub-counter;">
+                    <li class="publication-item mb-3">
+                        <strong class="text-purple-600">Hadi, S. E.</strong>, Möller, E., et al. (2024). Hierarchical Incorporation of rGO into Anisotropic CNF Foams. 
+                        <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" class="text-blue-600 hover:underline" target="_blank"><strong>ACS Appl. Mater. Interfaces</strong></a>, <strong>16</strong>, 45337.
+                    </li>
+                    <li class="publication-item mb-3">
+                        Di, A., Schiele, C., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2023). Moisture-Resilient Aramid/Cellulose Nanofiber Foams. 
+                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" class="text-blue-600 hover:underline" target="_blank"><strong>Adv. Mater.</strong></a>, <strong>35</strong>, 2305195.
+                    </li>
+                    <li class="publication-item mb-3">
+                        <strong class="text-purple-600">Hadi, S. E.</strong>, Yeprem, H. A., et al. (2023). Magnetic hybrid foams from Fe3O4@TA and TOCN. 
+                        <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" class="text-blue-600 hover:underline" target="_blank"><strong>RSC Adv.</strong></a>, <strong>13</strong>, 13919.
+                    </li>
+                    <li class="publication-item mb-3">
+                        Moreno, A., Liu, J., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2021). Unravelling the hydration barrier of lignin oleate nanoparticles. 
+                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" class="text-blue-600 hover:underline" target="_blank"><strong>Angew. Chem. Int. Ed.</strong></a>, <strong>60</strong>, 20897.
+                    </li>
+                    <li class="publication-item mb-3">
+                        Özkan, M., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2020). CB[7]-capped hybrid AuNPs for PDT/PTT therapy. 
+                        <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" class="text-blue-600 hover:underline" target="_blank"><strong>ACS Appl. Polym. Mater.</strong></a>, <strong>2</strong>, 3840.
+                    </li>
+                    <li class="publication-item">
+                        Munier, P.*, <strong class="text-purple-600">Hadi, S. E.*</strong>, et al. (2022). Shear-induced orientation and relaxation of cellulose nanocrystal and montmorillonite nanoplatelet dispersions. 
+                        <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" class="text-blue-600 hover:underline" target="_blank"><strong>Soft Matter</strong></a>, <strong>18</strong>, 1234–1245.
+                    </li>
+                </ol>
+                
+                <div class="mt-6 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                    <h3 class="font-semibold text-blue-800 mb-2">Peer Review Service</h3>
+                    <p class="font-bold text-blue-700">- Certified Reviewer by American Chemical Society</p>
+                    <p class="text-sm">- Invited reviewer for <em>J. Adv. Eng. Mater., Macromol. Mater. Eng, and Appl. Polym. Sci.</em></p>
+                </div>
+            </section>
+            
+            <!-- Technical Skills -->
+            <section class="content-section">
+                <h2 class="content-title"><i class="fas fa-cogs mr-2"></i>Technical Skills</h2>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-microscope mr-2"></i>Core Expertise in Characterization and Sample Preparation Tools</h3>
+                    <ul class="skill-list">
+                        <li><strong>Mastery in Advanced Sample Preparation Techniques</strong>
+                            <ul class="ml-4 mt-1">
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cryo ultramicrotome: Leica Artos 3D</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cross-section polisher: JEOL IB-19520CCP</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> FIB-SEM: FEI Nova 600</li>
+                            </ul>
+                        </li>
+                        <li><strong>Specialized Microscopy and Imaging Proficiency</strong>
+                            <ul class="ml-4 mt-1">
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> AC-TEM/STEM: FEI Themis Z</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cryo TEM/STEM: JEOL JEM-2100F</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cryo-SEM: JEOL IT800</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> SEM/EDS/WDS: Hitachi S-4800</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> ESEM/EDS/WDS: FEI Quanta 200</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Tabletop SEMs: Hitachi TM-1000 and TM-3000</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Advanced optical microscopy: Olympus BX53M</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Inverted optical microscope: Leica DMIL</li>
+                            </ul>
+                        </li>
+                        <li><strong>Expertise in Spectroscopy and Surface Analysis</strong>
+                            <ul class="ml-4 mt-1">
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> XPS: Thermo K-Alpha</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> FT-IR: Bruker Alpha-II</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> UV-Vis: Varian Cary</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> PXRD: Panalytical</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> SAXS/WAXS: Utilized at major facilities such as MAX IV Laboratory (Sw) and the ESRF (Fr)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Competence in Particle and Thermal Analysis</strong>
+                            <ul class="ml-4 mt-1">
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> DLS: Malvern Zetasizer</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Rheometer: Anton Paar MCR 301/702e</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> TGA: TA Discovery</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> DSC: TA DSC250</li>
+                            </ul>
+                        </li>
+                        <li><strong>Mechanical Testing Expertise</strong>
+                            <ul class="ml-4 mt-1">
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Instron: 6800 Series</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-laptop-code mr-2"></i>Proficiency in Software and Programming</h3>
+                    <ul>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Software Expertise:</strong> OriginLab, MS Office, ChemDraw, HighScore Plus, LaTeX (Advanced)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Programming Languages:</strong> Python, MATLAB, C++, HTML, CSS, JavaScript (Web Development)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-users mr-2"></i>Exceptional Soft Skills</h3>
+                    <ul>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> Leadership, Teaching, Strategic Planning, Resource Allocation, Collaboration, Mentorship, Teamwork</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Additional Information -->
+            <section class="content-section">
+                <h2 class="content-title"><i class="fas fa-info-circle mr-2"></i>Additional Information</h2>
+                
+                <div class="additional-grid">
+                    <div class="additional-item">
+                        <h3 class="additional-title"><i class="fas fa-language mr-2"></i>Languages</h3>
+                        <p>English (Near-native), Persian (Native)</p>
+                    </div>
+                    
+                    <div class="additional-item">
+                        <h3 class="additional-title"><i class="fas fa-award mr-2"></i>Grants and Awards</h3>
+                        <ul>
+                            <li><i class="fas fa-star text-blue-500 mr-1"></i> Wallenberg Wood Science Center PhD Grant (2019-2023)</li>
+                            <li><i class="fas fa-star text-blue-500 mr-1"></i> Stockholm University PhD Grant (2019-2024)</li>
+                            <li><i class="fas fa-star text-blue-500 mr-1"></i> UNAM Fellowship and Bilkent University Scholarship (2017-2019)</li>
+                            <li><i class="fas fa-star text-blue-500 mr-1"></i> TÜBİTAK Fellowship (2018-2019)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="additional-item">
+                        <h3 class="additional-title"><i class="fas fa-user mr-2"></i>References</h3>
+                        <p><strong>Prof. Lennart Bergstrom</strong><br>
+                        Email: <a href="mailto:lennart.bergstrom@mmk.su.se" class="text-blue-600 hover:underline">lennart.bergstrom@mmk.su.se</a></p>
+                        <p class="mt-2"><strong>Prof. Lars Berglund</strong><br>
+                        Email: <a href="mailto:blund@kth.se" class="text-blue-600 hover:underline">blund@kth.se</a></p>
+                    </div>
+                </div>
+                
+                <div class="keyword-cloud">
+                    <span class="keyword">Materials Science</span>
+                    <span class="keyword">Nanocomposites</span>
+                    <span class="keyword">Characterization Techniques</span>
+                    <span class="keyword">Project Management</span>
+                    <span class="keyword">Peer Reviewer</span>
+                    <span class="keyword">Sustainable Materials</span>
+                    <span class="keyword">Colloidal Science</span>
+                    <span class="keyword">Nanotechnology</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
