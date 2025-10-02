@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: 
-            #0a2e6b;
+            --primary: #0a2e6b;
             --primary-dark: #1d4ed8;
             --secondary: #1e40af;
             --accent: #14b8a6;
@@ -350,7 +349,6 @@
             }
         }
         
-        /* Animation for section transitions */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -360,7 +358,6 @@
             animation: fadeIn 0.5s ease-out forwards;
         }
         
-        /* Delay animations for each section */
         .content-section:nth-child(1) { animation-delay: 0.1s; }
         .content-section:nth-child(2) { animation-delay: 0.2s; }
         .content-section:nth-child(3) { animation-delay: 0.3s; }
@@ -373,11 +370,11 @@
     <div class="cv-container grid grid-cols-1 lg:grid-cols-4">
         <!-- Sidebar -->
         <aside class="sidebar lg:col-span-1">
-<img src="assets/images/Picture.png" alt="Profile Picture" class="profile-pic">
+            <img src="assets/images/Picture.png" alt="Profile Picture" class="profile-img">
             
             <div class="text-center mb-6">
                 <h1 class="text-xl font-bold">Seyed Ehsan Hadi, PhD</h1>
-                <p class="text-sm opacity-80">Materials Scientist | Characterization Expert</p>
+                <p class="text-sm opacity-80">Materials Scientist | Characterization Specialist</p>
             </div>
             
             <div class="mb-6">
@@ -407,10 +404,10 @@
             <div class="mb-6">
                 <h2 class="section-title"><i class="fas fa-info-circle mr-2"></i>Status</h2>
                 <div class="status-badge green">
-                    <i class="fas fa-check-circle mr-2"></i> Swedish Resident
+                    <i class="fas fa-check-circle mr-2"></i> Swedish Permanent Resident
                 </div>
                 <div class="status-badge red">
-                    <i class="fas fa-certificate mr-2"></i> SDI 2.0: Red (Performance)
+                    <i class="fas fa-certificate mr-2"></i> SDI 2.0: Red Level
                 </div>
             </div>
             
@@ -424,29 +421,39 @@
             <!-- Header -->
             <div class="header">
                 <h1 class="name">Seyed Ehsan Hadi, PhD</h1>
-                <p class="title">Materials Scientist | Characterization Expert | Project Manager</p>
+                <p class="title">Materials Scientist | Characterization Specialist | R&D</p>
                 
                 <div class="summary">
-                    Materials chemist/scientist with <strong>7+ years</strong> in advanced R&D, <strong>20+ publications and reviews</strong>, and expertise in <strong>project management</strong>, multi-scale materials characterization, teaching/mentoring, scale-up, and sustainable innovation.
-                    <br><br>
-                    - Certified Reviewer by <strong>American Chemical Society</strong>
-                    <br>
-                    - Certified as <strong>Red</strong> by SDI 2.0
+                    Materials scientist with <strong>8+ years</strong> in materials R&D, specializing in multi-scale characterization and structure-property relationship analysis. Authored/co-authored <strong>17+ peer-reviewed publications</strong> in materials chemistry and nanocomposites, with hands-on experience supporting both academic research and industrial collaborations. <strong>ACS Certified Reviewer</strong> with <strong>40+ manuscript reviews</strong>. Technical expertise spans electron microscopy (AC-TEM, cryo-SEM, FEG-SEM), synchrotron-based structural analysis (SAXS/WAXS), surface characterization (XPS), and thermal property measurements. Background includes process development from lab-scale synthesis through pilot production, quality control troubleshooting, and training cross-functional teams in advanced characterization techniques.
+
+
                 </div>
                 
                 <div>
-                    <h2 class="text-lg font-semibold text-gray-800 mb-2">Impact Highlights</h2>
+                    <h2 class="text-lg font-semibold text-gray-800 mb-2">Key Achievements</h2>
                     <div class="border-t border-gray-300 pt-3">
                         <ul>
-                            <li class="highlight-item">Pioneered cutting-edge <strong>characterization</strong> techniques (TEM, SEM, Ultramicrotomy, SAXS/WAXS) to accelerate material innovation.</li>
-                            <li class="highlight-item"><strong>12+ articles</strong> in high-impact journals e.g. <em>Adv. Materials</em> & <em>Ange. Chemie</em></li>
-                            <li class="highlight-item">Developed <strong>high-performance</strong> nanocomposites and sustainable hybrid foams, achieving industrially scalable results with enhanced properties.</li>
-                            <li class="highlight-item">Successfully <strong>mentored</strong> 18+ students, fostering collaboration across academia and industry.</li>
-                            <li class="highlight-item">Secured competitive fellowships and grants, including prestigious awards from <strong>Wallenberg Wood Science Center</strong> and <strong>TÜBİTAK</strong>.</li>
+
+                            <li class="highlight-item">Delivered <strong>17+ publications</strong> in high-impact journals including <em>Advanced Materials</em>, <em>Angewandte Chemie</em>, and <em>ACS Applied Materials & Interfaces</em>.</li>
+                            
+                            <li class="highlight-item"> Developed in-situ optical microscopy system for real-time material deformation analysis.</li>
+                            
+                             <li class="highlight-item">Developed Python-based automation tools with GUI reducing data processing time by <strong>90%</strong> for XRD, and mechanical testing workflows.</li>
+                            
+                            <li class="highlight-item">Engineered magnetic nanocomposites achieving <strong>95% bulk magnetite performance</strong> through systematic process optimization validated at pilot scale.</li>
+                            
+                            <li class="highlight-item">Engineered ultra-lightweight nanolignocellulose foams with record-breaking specific compression strength candidated production for industrial applications.</li>
+
+
+                            <li class="highlight-item">Supervised and trained <strong>18+  students</strong> in advanced instrumentation, experimental design, and quality control procedures.</li>
+                            
+                            <li class="highlight-item">Coordinated international synchrotron experiments at MAX IV Laboratory (Sweden) and ESRF (France) managing multi-site research collaborations.</li>
                         </ul>
                     </div>
                 </div>
             </div>
+
+
             
             <!-- Education -->
             <section class="content-section">
@@ -457,7 +464,7 @@
                         <h3 class="timeline-title">PhD in Materials Chemistry</h3>
                         <span class="timeline-meta">2019 – 2024</span>
                     </div>
-                    <p class="timeline-subtitle">Stockholm University, Stockholm, SE</p>
+                    <p class="timeline-subtitle">Stockholm University, Stockholm, Sweden</p>
                     <p class="text-sm italic"><strong>Thesis:</strong> Colloidal Processing and Alignment of Wood-Based Dispersions and Hybrid Functional Foams</p>
                     <p class="text-sm text-gray-600"><strong>Supervisors:</strong> Prof. Lennart Bergström, Prof. Aji Mathew</p>
                 </div>
@@ -467,7 +474,7 @@
                         <h3 class="timeline-title">M.Sc. in Materials Science and Nanotechnology</h3>
                         <span class="timeline-meta">2017 – 2019</span>
                     </div>
-                    <p class="timeline-subtitle">Bilkent University, Ankara, TR</p>
+                    <p class="timeline-subtitle">Bilkent University, Ankara, Turkey</p>
                     <p class="text-sm italic"><strong>Thesis:</strong> One-Pot Synthesis of Hybrid Core-Shell Nanoparticles for Antibacterial Photodynamic Therapy</p>
                     <p class="text-sm text-gray-600"><strong>Supervisor:</strong> Prof. Dönüş Tuncel</p>
                 </div>
@@ -477,7 +484,7 @@
                         <h3 class="timeline-title">B.Sc. in Chemical Engineering</h3>
                         <span class="timeline-meta">2012 – 2017</span>
                     </div>
-                    <p class="timeline-subtitle">University of Tehran, Tehran, IR</p>
+                    <p class="timeline-subtitle">University of Tehran, Tehran, Iran</p>
                     <p class="text-sm">Top 15% Graduate</p>
                 </div>
             </section>
@@ -489,39 +496,44 @@
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <h3 class="timeline-title">Postdoctoral Research Associate</h3>
-                        <span class="timeline-meta">2024 – Present</span>
+                        <span class="timeline-meta">Jan 2024 – Present</span>
                     </div>
-                    <p class="timeline-subtitle">KTH Royal Institute of Technology, Sweden</p>
+                    <p class="timeline-subtitle">KTH Royal Institute of Technology, Stockholm, Sweden</p>
                     <ul class="timeline-details">
-                        <li>Lead research on advanced fiber-based materials for sheet paper and foam applications.</li>
-                        <li>Characterize materials and analyze structure-process-property relationships to optimize nanocomposite processing.</li>
-                        <li>Collaborate with cross-functional teams to implement projects aligning with industry standards.</li>
+                        <li>Lead advanced characterization of fiber-based nanocomposites for industrial applications.</li>
+                        <li>Developed in-situ optical microscopy system for real-time material deformation analysis.</li>
+                        <li>Created Python automation tools with GUI for XRD and mechanical testing data processing, reducing analysis time by 90%.</li>
+                        <li>Collaborate with industry partners troubleshooting manufacturing processes and quality control.</li>
+                        <li>Supervise 2 master students in advanced instrumentation, experimental design, and scientific writing.</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-header">
-                        <h3 class="timeline-title">Senior Graduate Research Assistant</h3>
-                        <span class="timeline-meta">2019 – 2024</span>
+                        <h3 class="timeline-title">PhD Researcher</h3>
+                        <span class="timeline-meta">Sep 2019 – Dec 2024</span>
                     </div>
-                    <p class="timeline-subtitle">Stockholm University, Sweden</p>
+                    <p class="timeline-subtitle">Stockholm University, Stockholm, Sweden</p>
                     <ul class="timeline-details">
-                        <li>Managed 6+ projects in experimental design, resulting in publications.</li>
-                        <li>Mentored students, fostering development and research skills.</li>
-                        <li>Developed high-performance nanocomposites, achieving 95% bulk magnetite performance.</li>
-                        <li>Optimized processes to enhance efficiency and material quality.</li>
+                        <li>Delivered 12+ publications in top-tier journals including <em>Advanced Materials</em> and <em>Angewandte Chemie</em>.</li>
+                        <li>Engineered magnetic nanocomposites achieving 95% bulk magnetite performance through systematic process optimization.</li>
+                        <li>Established complete characterization workflows using TEM, SEM, XPS, SAXS/WAXS, XRD, DSC, TGA, and rheometry.</li>
+                        <li>Coordinated international synchrotron experiments at MAX IV Laboratory (Sweden) and ESRF (France).</li>
+                        <li>Supervised and trained 18+ high school students in advanced characterization and experimental design.</li>
+                        <li>Managed multiple concurrent research projects with timeline coordination and resource allocation.</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-header">
-                        <h3 class="timeline-title">Junior Graduate Research Assistant</h3>
-                        <span class="timeline-meta">2017 – 2019</span>
+                        <h3 class="timeline-title">Research Assistant</h3>
+                        <span class="timeline-meta">Sep 2017 – Aug 2019</span>
                     </div>
-                    <p class="timeline-subtitle">Bilkent University, Turkey</p>
+                    <p class="timeline-subtitle">Bilkent University, Ankara, Turkey</p>
                     <ul class="timeline-details">
-                        <li>Conducted laboratory experiments and data analysis contributing to publications.</li>
-                        <li>Assisted in developing experimental protocols to improve research accuracy.</li>
+                        <li>Synthesized hybrid nanoparticles contributing to 3 peer-reviewed publications.</li>
+                        <li>Performed materials characterization using TEM, SEM, XPS, UV-Vis, and DLS.</li>
+                        <li>Developed standardized laboratory protocols improving synthesis reproducibility.</li>
                     </ul>
                 </div>
             </section>
@@ -532,35 +544,39 @@
                 
                 <ol class="list-decimal list-inside" style="counter-reset: pub-counter;">
                     <li class="publication-item mb-3">
-                        <strong class="text-purple-600">Hadi, S. E.</strong>, Möller, E., et al. (2024). Hierarchical Incorporation of rGO into Anisotropic CNF Foams. 
+                        <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2025). High-Performance Nanolignocellulose Foams for Sustainable Technologies.
+                        <a href="https://doi.org/10.1021/acssuschemeng.5c00761" class="text-blue-600 hover:underline" target="_blank"><strong>ACS Sustainable Chem. Eng.</strong></a>, <strong>13</strong>, 9467-9480.
+                    </li>
+                    <li class="publication-item mb-3">
+                        <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2024). Hierarchical Incorporation of rGO into Anisotropic CNF Foams. 
                         <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" class="text-blue-600 hover:underline" target="_blank"><strong>ACS Appl. Mater. Interfaces</strong></a>, <strong>16</strong>, 45337.
                     </li>
                     <li class="publication-item mb-3">
-                        Di, A., Schiele, C., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2023). Moisture-Resilient Aramid/Cellulose Nanofiber Foams. 
-                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" class="text-blue-600 hover:underline" target="_blank"><strong>Adv. Mater.</strong></a>, <strong>35</strong>, 2305195.
-                    </li>
-                    <li class="publication-item mb-3">
-                        <strong class="text-purple-600">Hadi, S. E.</strong>, Yeprem, H. A., et al. (2023). Magnetic hybrid foams from Fe3O4@TA and TOCN. 
+                        <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2023). Magnetic hybrid foams from Fe3O4@TA and TOCN. 
                         <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" class="text-blue-600 hover:underline" target="_blank"><strong>RSC Adv.</strong></a>, <strong>13</strong>, 13919.
                     </li>
                     <li class="publication-item mb-3">
-                        Moreno, A., Liu, J., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2021). Unravelling the hydration barrier of lignin oleate nanoparticles. 
-                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" class="text-blue-600 hover:underline" target="_blank"><strong>Angew. Chem. Int. Ed.</strong></a>, <strong>60</strong>, 20897.
+                        Munier, P.*, <strong class="text-purple-600">Hadi, S. E.*</strong>, et al. (2022). Shear-induced orientation of cellulose nanocrystals. 
+                        <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" class="text-blue-600 hover:underline" target="_blank"><strong>Soft Matter</strong></a>, <strong>18</strong>, 1234–1245.
                     </li>
                     <li class="publication-item mb-3">
-                        Özkan, M., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2020). CB[7]-capped hybrid AuNPs for PDT/PTT therapy. 
-                        <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" class="text-blue-600 hover:underline" target="_blank"><strong>ACS Appl. Polym. Mater.</strong></a>, <strong>2</strong>, 3840.
+                        Di, A., Schiele, C., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2023). Moisture-Resilient Aramid/Cellulose Foams. 
+                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" class="text-blue-600 hover:underline" target="_blank"><strong>Adv. Mater.</strong></a>, <strong>35</strong>, 2305195.
+                    </li>
+                    <li class="publication-item mb-3">
+                        Moreno, A., Liu, J., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2021). Hydration barrier of lignin oleate nanoparticles. 
+                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" class="text-blue-600 hover:underline" target="_blank"><strong>Angew. Chem. Int. Ed.</strong></a>, <strong>60</strong>, 20897.
                     </li>
                     <li class="publication-item">
-                        Munier, P.*, <strong class="text-purple-600">Hadi, S. E.*</strong>, et al. (2022). Shear-induced orientation and relaxation of cellulose nanocrystal and montmorillonite nanoplatelet dispersions. 
-                        <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" class="text-blue-600 hover:underline" target="_blank"><strong>Soft Matter</strong></a>, <strong>18</strong>, 1234–1245.
+                        Özkan, M., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2020). CB[7]-capped hybrid AuNPs for PDT/PTT therapy. 
+                        <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" class="text-blue-600 hover:underline" target="_blank"><strong>ACS Appl. Polym. Mater.</strong></a>, <strong>2</strong>, 3840.
                     </li>
                 </ol>
                 
                 <div class="mt-6 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                     <h3 class="font-semibold text-blue-800 mb-2">Peer Review Service</h3>
-                    <p class="font-bold text-blue-700">- Certified Reviewer by American Chemical Society</p>
-                    <p class="text-sm">- Invited reviewer for <em>J. Adv. Eng. Mater., Macromol. Mater. Eng, and Appl. Polym. Sci.</em></p>
+                    <p class="font-bold text-blue-700">ACS Certified Reviewer</p>
+                    <p class="text-sm">40+ manuscript reviews (2020-Present) for <em>Macromol. Mater. Eng., J. Appl. Polym. Sci., Adv. Eng. Mater., Polymer, Polymers</em></p>
                 </div>
             </section>
             
@@ -569,67 +585,109 @@
                 <h2 class="content-title"><i class="fas fa-cogs mr-2"></i>Technical Skills</h2>
                 
                 <div class="skill-category">
-                    <h3 class="skill-category-title"><i class="fas fa-microscope mr-2"></i>Core Expertise in Characterization and Sample Preparation Tools</h3>
+                    <h3 class="skill-category-title"><i class="fas fa-cut mr-2"></i>Advanced Sample Preparation Expertise</h3>
                     <ul class="skill-list">
-                        <li><strong>Mastery in Advanced Sample Preparation Techniques</strong>
-                            <ul class="ml-4 mt-1">
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cryo ultramicrotome: Leica Artos 3D</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cross-section polisher: JEOL IB-19520CCP</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> FIB-SEM: FEI Nova 600</li>
-                            </ul>
-                        </li>
-                        <li><strong>Specialized Microscopy and Imaging Proficiency</strong>
-                            <ul class="ml-4 mt-1">
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> AC-TEM/STEM: FEI Themis Z</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cryo TEM/STEM: JEOL JEM-2100F</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Cryo-SEM: JEOL IT800</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> SEM/EDS/WDS: Hitachi S-4800</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> ESEM/EDS/WDS: FEI Quanta 200</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Tabletop SEMs: Hitachi TM-1000 and TM-3000</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Advanced optical microscopy: Olympus BX53M</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Inverted optical microscope: Leica DMIL</li>
-                            </ul>
-                        </li>
-                        <li><strong>Expertise in Spectroscopy and Surface Analysis</strong>
-                            <ul class="ml-4 mt-1">
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> XPS: Thermo K-Alpha</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> FT-IR: Bruker Alpha-II</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> UV-Vis: Varian Cary</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> PXRD: Panalytical</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> SAXS/WAXS: Utilized at major facilities such as MAX IV Laboratory (Sw) and the ESRF (Fr)</li>
-                            </ul>
-                        </li>
-                        <li><strong>Competence in Particle and Thermal Analysis</strong>
-                            <ul class="ml-4 mt-1">
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> DLS: Malvern Zetasizer</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Rheometer: Anton Paar MCR 301/702e</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> TGA: TA Discovery</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> DSC: TA DSC250</li>
-                            </ul>
-                        </li>
-                        <li><strong>Mechanical Testing Expertise</strong>
-                            <ul class="ml-4 mt-1">
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Instron: 6800 Series</li>
-                            </ul>
-                        </li>
+                        <li><strong>Cryo-ultramicrotomy:</strong> Leica Artos 3D (ultra-thin sectioning for TEM/STEM analysis, beam-sensitive materials)</li>
+                        <li><strong>Cross-section polishing:</strong> JEOL IB-19520CCP (ion beam cross-section preparation)</li>
+                        <li><strong>FIB-SEM:</strong> FEI Nova 600 (focused ion beam lamella preparation, 3D tomography)</li>
+                        <li><strong>Sample mounting:</strong> Embedding, freeze-drying, resin infiltration for microscopy</li>
                     </ul>
                 </div>
                 
                 <div class="skill-category">
-                    <h3 class="skill-category-title"><i class="fas fa-laptop-code mr-2"></i>Proficiency in Software and Programming</h3>
-                    <ul>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Software Expertise:</strong> OriginLab, MS Office, ChemDraw, HighScore Plus, LaTeX (Advanced)</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Programming Languages:</strong> Python, MATLAB, C++, HTML, CSS, JavaScript (Web Development)</li>
+                    <h3 class="skill-category-title"><i class="fas fa-microscope mr-2"></i>Electron Microscopy & Imaging</h3>
+                    <ul class="skill-list">
+                        <li><strong>AC-TEM/STEM:</strong> FEI Themis Z (atomic resolution imaging, sub-angstrom capabilities, EELS, EDX mapping, nanoparticle analysis)</li>
+                        <li><strong>Cryo-TEM/STEM:</strong> JEOL JEM-2100F (beam-sensitive materials, biological samples, cellular structures)</li>
+                        <li><strong>Cryo-SEM:</strong> JEOL IT800 (low-temperature SEM, frost-free imaging)</li>
+                        <li><strong>HR-SEM:</strong> Hitachi S-4800 (high-resolution surface morphology, sub-nm resolution)</li>
+                        <li><strong>ESEM/EDS/WDS:</strong> FEI Quanta 200 (environmental SEM, compositional mapping, elemental analysis)</li>
+                        <li><strong>Tabletop SEM:</strong> Hitachi TM-1000, TM-3000 (rapid screening, educational applications)</li>
+                        <li><strong>Optical microscopy:</strong> Olympus BX53M (polarized light, bright/dark field), Leica DMIL (inverted microscopy)</li>
                     </ul>
                 </div>
                 
                 <div class="skill-category">
-                    <h3 class="skill-category-title"><i class="fas fa-users mr-2"></i>Exceptional Soft Skills</h3>
+                    <h3 class="skill-category-title"><i class="fas fa-atom mr-2"></i>X-ray & Synchrotron Techniques</h3>
+                    <ul class="skill-list">
+                        <li><strong>SAXS/WAXS:</strong> MAX IV Laboratory (Sweden), ESRF (France) - nanostructure analysis, crystallinity, orientation mapping, anisotropy quantification</li>
+                        <li><strong>XPS:</strong> Thermo K-Alpha (X-ray photoelectron spectroscopy - surface chemistry, oxidation states, depth profiling, elemental composition)</li>
+                        <li><strong>XRD:</strong> Panalytical (powder X-ray diffraction - phase identification, crystallinity calculation, crystal structure analysis)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-vial mr-2"></i>Spectroscopy & Chemical Analysis</h3>
+                    <ul class="skill-list">
+                        <li><strong>FT-IR:</strong> Bruker Alpha-II (functional group identification, chemical bonding analysis)</li>
+                        <li><strong>UV-Vis:</strong> Varian Cary (optical properties, absorbance, bandgap determination)</li>
+                        <li><strong>Raman spectroscopy:</strong> Molecular vibrations, phase identification, stress analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-thermometer-half mr-2"></i>Particle, Thermal & Mechanical Analysis</h3>
+                    <ul class="skill-list">
+                        <li><strong>DLS:</strong> Malvern Zetasizer (dynamic light scattering - particle size distribution, zeta potential, colloidal stability)</li>
+                        <li><strong>Rheometry:</strong> Anton Paar MCR 301, MCR 702e (viscoelastic properties, shear rheology, flow behavior)</li>
+                        <li><strong>TGA:</strong> TA Discovery (thermogravimetric analysis - decomposition, moisture content, thermal stability)</li>
+                        <li><strong>DSC:</strong> TA DSC250 (differential scanning calorimetry - heat capacity, phase transitions, glass transition temperature)</li>
+                        <li><strong>Hot Disk:</strong> Transient plane source method (thermal conductivity measurement with humidity control)</li>
+                        <li><strong>Mechanical testing:</strong> Instron 6800 Series (tensile, compression, flexural testing)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-laptop-code mr-2"></i>Programming & Software Development</h3>
+                    <ul class="skill-list">
+                        <li><strong>Python (2+ years):</strong>
+                            <ul class="ml-4 mt-1">
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Core libraries: NumPy, Pandas, SciPy, Matplotlib, Plotly (data processing, statistical analysis)</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Image analysis: scikit-image (basic)</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Machine learning: scikit-learn (basic)</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> GUI development: PySide6/Qt (custom characterization tools)</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Specialized: lmfit (adv. curve fitting, peak analysis)</li>
+                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Applications: Automated XRD/DSC/mechanical data processing, batch image analysis, custom workflows</li>
+                            </ul>
+                        </li>
+                        <li><strong>Scientific software:</strong> OriginLab (Expert level - data analysis, visualization, publication-quality figures), LaTeX (document preparation, scientific writing), MATLAB (numerical computing, data analysis)</li>
+                        <li><strong>Microscopy software:</strong> Digital Micrograph (TEM/STEM data processing, EELS/EDX analysis), ImageJ/Fiji (image processing, quantitative analysis)</li>
+                        <li><strong>Chemistry tools:</strong> ChemDraw (chemical structure drawing), HighScore Plus (XRD analysis)</li>
+                        <li><strong>Development tools:</strong> Git/GitHub (version control), VS Code, Notepad++ (code editing), Linux/Unix (basic command line)</li>
+                        <li><strong>Web development:</strong> HTML, CSS, JavaScript (portfolio websites, data visualization)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-flask mr-2"></i>Materials Synthesis & Processing</h3>
                     <ul>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> Leadership, Teaching, Strategic Planning, Resource Allocation, Collaboration, Mentorship, Teamwork</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Materials synthesis & development:</strong> Nanoparticle synthesis (sol-gel, coprecipitation, hydrothermal), surface functionalization, composite fabrication, core-shell structures</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Formulation optimization:</strong> Design of experiments (DOE), composition screening, parameter optimization for target performance specifications</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Process development & scale-up:</strong> Lab-to-pilot transition, manufacturing feasibility, reproducibility validation (>90% batch-to-batch consistency)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Quality control & assurance:</strong> In-process testing, specification development, failure analysis, root cause investigation, corrective actions</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Process optimization:</strong> Yield improvement, cycle time reduction, cost reduction, energy efficiency, waste minimization</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Colloidal processing:</strong> Dispersion stabilization, particle size control, rheology modification, shelf-life optimization</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Structure-property relationships:</strong> Microstructure characterization, property correlation, performance prediction, defect analysis</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Manufacturing support:</strong> Production troubleshooting, on-site problem solving, technical guidance, process improvement initiatives</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>SOP development & documentation:</strong> Standard operating procedures, work instructions, training materials, technical reports</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Materials characterization & testing:</strong> Physical, chemical, mechanical, and thermal property evaluation for quality acceptance</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Supplier & material evaluation:</strong> Raw material qualification, vendor assessment, cost-performance analysis</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Regulatory compliance:</strong> Safety protocols, environmental standards, material handling procedures, GMP awareness</li>
+                    </ul>
+                </div>
+
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-users mr-2"></i>Professional & Leadership Competencies</h3>
+                    <ul>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Project management:</strong> Timeline coordination, resource allocation, budget management, risk assessment, multi-project oversight</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Technical communication:</strong> Report writing, scientific presentations, data visualization, SOP documentation, peer review (40+ manuscripts)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Leadership & training:</strong> Team supervision (18+ students), mentorship, instrumentation training, safety protocols</li>
+                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Collaboration:</strong> Cross-functional teams, international partnerships, industry-academia collaboration, multi-site coordination</li>
                     </ul>
                 </div>
             </section>
+
             
             <!-- Additional Information -->
             <section class="content-section">
@@ -638,55 +696,58 @@
                 <div class="additional-grid">
                     <div class="additional-item">
                         <h3 class="additional-title"><i class="fas fa-language mr-2"></i>Languages</h3>
-                        <p>English (Near-native), Persian (Native)</p>
+                        <p><strong>English</strong> (Professional proficiency)<br>
+                        <strong>Persian</strong> (Native)<br>
+                        <strong>Swedish</strong> (Basic)</p>
                     </div>
                     
                     <div class="additional-item">
                         <h3 class="additional-title"><i class="fas fa-award mr-2"></i>Grants and Awards</h3>
                         <ul>
-                            <li><i class="fas fa-star text-blue-500 mr-1"></i> Wallenberg Wood Science Center PhD Grant (2019-2023)</li>
-                            <li><i class="fas fa-star text-blue-500 mr-1"></i> Stockholm University PhD Grant (2019-2024)</li>
-                            <li><i class="fas fa-star text-blue-500 mr-1"></i> UNAM Fellowship and Bilkent University Scholarship (2017-2019)</li>
+                            <li><i class="fas fa-star text-blue-500 mr-1"></i> Wallenberg Wood Science Center PhD Fellowship (2019-2023)</li>
+                            <li><i class="fas fa-star text-blue-500 mr-1"></i> Stockholm University PhD Fellowship (2019-2024)</li>
+                            <li><i class="fas fa-star text-blue-500 mr-1"></i> UNAM & Bilkent University Scholarship (2017-2019)</li>
                             <li><i class="fas fa-star text-blue-500 mr-1"></i> TÜBİTAK Fellowship (2018-2019)</li>
                         </ul>
                     </div>
                     
                     <div class="additional-item">
                         <h3 class="additional-title"><i class="fas fa-user mr-2"></i>References</h3>
-                        <p><strong>Prof. Lennart Bergstrom</strong><br>
-                        Email: <a href="mailto:lennart.bergstrom@mmk.su.se" class="text-blue-600 hover:underline">lennart.bergstrom@mmk.su.se</a></p>
+                        <p><strong>Prof. Lennart Bergström</strong><br>
+                        Stockholm University<br>
+                        <a href="mailto:lennart.bergstrom@mmk.su.se" class="text-blue-600 hover:underline">lennart.bergstrom@mmk.su.se</a></p>
                         <p class="mt-2"><strong>Prof. Lars Berglund</strong><br>
-                        Email: <a href="mailto:blund@kth.se" class="text-blue-600 hover:underline">blund@kth.se</a></p>
+                        KTH Royal Institute of Technology<br>
+                        <a href="mailto:blund@kth.se" class="text-blue-600 hover:underline">blund@kth.se</a></p>
                     </div>
                 </div>
                 
                 <div class="keyword-cloud">
                     <span class="keyword">Materials Science</span>
                     <span class="keyword">Nanocomposites</span>
-                    <span class="keyword">Characterization Techniques</span>
+                    <span class="keyword">TEM/SEM</span>
+                    <span class="keyword">SAXS/WAXS</span>
+                    <span class="keyword">XPS</span>
+                    <span class="keyword">Python</span>
+                    <span class="keyword">R&D</span>
                     <span class="keyword">Project Management</span>
-                    <span class="keyword">Peer Reviewer</span>
-                    <span class="keyword">Sustainable Materials</span>
-                    <span class="keyword">Colloidal Science</span>
-                    <span class="keyword">Nanotechnology</span>
+                    <span class="keyword">Data Analysis</span>
+                    <span class="keyword">Characterization</span>
                 </div>
             </section>
         </main>
     </div>
 
     <script>
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
         
-        // Intersection Observer for animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
