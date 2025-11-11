@@ -1,6 +1,6 @@
 # 🌟 Seyed Ehsan Hadi, PhD - Online CV 🌟
 
-Welcome to my professional hub! I'm **Seyed Ehsan Hadi**, a dedicated **Materials Chemist** and **Project Manager** with over **7 years** of experience in nanomaterial characterization and the development of advanced composites. This website is a comprehensive showcase of my academic journey, professional experiences, publications, skills, and a curated portfolio of my projects.
+Welcome to my professional hub! I'm **Seyed Ehsan Hadi**, a dedicated **Materials Chemist** with over **8 years** of experience in nanomaterial characterization and the development of advanced composites. This website is a comprehensive showcase of my academic journey, professional experiences, publications, skills, and a curated portfolio of my projects.
 
 ## 📚 About Me
 
