@@ -306,6 +306,47 @@
             font-size: 0.85rem;
             color: var(--gray);
         }
+
+        /* SIMPLIFIED REVIEWER PANEL */
+        .reviewer-panel {
+            background-color: var(--highlight);
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+            border-radius: 0.375rem;
+            margin-bottom: 2rem;
+        }
+
+        .reviewer-panel-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .reviewer-panel-title i {
+            margin-right: 0.5rem;
+        }
+
+        .reviewer-content {
+            color: var(--dark);
+        }
+
+        .reviewer-stats {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .reviewer-stats span {
+            font-size: 0.95rem;
+        }
+
+        .reviewer-stats strong {
+            color: var(--primary);
+        }
         
         @media (max-width: 1024px) {
             .cv-container {
@@ -323,6 +364,10 @@
         }
         
         @media (max-width: 768px) {
+            .sidebar {
+                padding: 1.5rem;
+            }
+            
             .main-content {
                 padding: 1.5rem;
             }
@@ -346,6 +391,11 @@
             
             .additional-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .reviewer-stats {
+                flex-direction: column;
+                gap: 0.5rem;
             }
         }
         
@@ -416,327 +466,717 @@
             </a>
         </aside>
         
-        <!-- Main Content -->
-        <main class="main-content lg:col-span-3">
-            <!-- Header -->
-            <div class="header">
-                <h1 class="name">Seyed Ehsan Hadi, PhD</h1>
-                <p class="title">Materials Scientist | Characterization Specialist | R&D</p>
-                
-                <div class="summary">
-                    Materials scientist with <strong>8+ years</strong> in materials R&D, specializing in multi-scale characterization and structure-property relationship analysis. Authored/co-authored <strong>17+ peer-reviewed publications</strong> in materials chemistry and nanocomposites, with hands-on experience supporting both academic research and industrial collaborations. <strong>ACS Certified Reviewer</strong> with <strong>40+ manuscript reviews</strong>. Technical expertise spans electron microscopy (AC-TEM, cryo-SEM, FEG-SEM), synchrotron-based structural analysis (SAXS/WAXS), surface characterization (XPS), and thermal property measurements. Background includes process development from lab-scale synthesis through pilot production, quality control troubleshooting, and training cross-functional teams in advanced characterization techniques.
-
-
+<!-- Main Content -->
+<main class="main-content lg:col-span-3">
+    <!-- Header -->
+    <div class="header">
+        <h1 class="name">Seyed Ehsan Hadi, PhD</h1>
+        <p class="title">Materials Scientist | Characterization Specialist | R&D</p>
+        
+        <!-- Summary with highlight box -->
+        <div style="background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #1e40af; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);">
+            <p style="color: #1e293b; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+                Materials scientist with <strong style="color: #0a2e6b;">8+ years</strong> in materials research, specializing in advanced characterization and structure-property analysis. Authored/co-authored <strong style="color: #0a2e6b;">17+ peer-reviewed publications</strong> in materials chemistry and nanocomposites. Certified peer reviewer with <strong style="color: #0a2e6b;">50+ manuscript reviews</strong> across major publishers. Technical expertise spans electron microscopy (TEM, SEM), synchrotron X-ray techniques (SAXS/WAXS), surface analysis (XPS), and thermal characterization. Experience in laboratory-scale synthesis, colloidal processing, and supporting academic-industry collaborative projects.
+            </p>
+        </div>
+        
+        <!-- Key Achievements with better visual structure -->
+        <div style="margin-top: 1rem;">
+            <div style="display: flex; align-items: center; margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 2px solid #e2e8f0;">
+                <i class="fas fa-trophy" style="color: #1e40af; font-size: 1.2rem; margin-right: 0.6rem;"></i>
+                <h2 style="font-size: 1.15rem; font-weight: 600; color: #0a2e6b; margin: 0;">Key Achievements</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0.75rem;">
+                <!-- Achievement Card 1 -->
+                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #14b8a6; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
+                    <div style="display: flex; align-items: start; gap: 0.6rem;">
+                        <i class="fas fa-book-open" style="color: #14b8a6; font-size: 1.1rem; margin-top: 0.2rem;"></i>
+                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                            Published <strong style="color: #0a2e6b;">17+ papers</strong> in journals including <em>Advanced Materials</em>, <em>Angewandte Chemie</em>, and <em>ACS Applied Materials & Interfaces</em>.
+                        </p>
+                    </div>
                 </div>
-                
-                <div>
-                    <h2 class="text-lg font-semibold text-gray-800 mb-2">Key Achievements</h2>
-                    <div class="border-t border-gray-300 pt-3">
-                        <ul>
 
-                            <li class="highlight-item">Delivered <strong>17+ publications</strong> in high-impact journals including <em>Advanced Materials</em>, <em>Angewandte Chemie</em>, and <em>ACS Applied Materials & Interfaces</em>.</li>
-                            
-                            <li class="highlight-item"> Developed in-situ optical microscopy system for real-time material deformation analysis.</li>
-                            
-                             <li class="highlight-item">Developed Python-based automation tools with GUI reducing data processing time by <strong>90%</strong> for XRD, and mechanical testing workflows.</li>
-                            
-                            <li class="highlight-item">Engineered magnetic nanocomposites achieving <strong>95% bulk magnetite performance</strong> through systematic process optimization validated at pilot scale.</li>
-                            
-                            <li class="highlight-item">Engineered ultra-lightweight nanolignocellulose foams with record-breaking specific compression strength candidated production for industrial applications.</li>
+                <!-- Achievement Card 2 -->
+                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #8b5cf6; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
+                    <div style="display: flex; align-items: start; gap: 0.6rem;">
+                        <i class="fas fa-microscope" style="color: #8b5cf6; font-size: 1.1rem; margin-top: 0.2rem;"></i>
+                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                            Developed in-situ optical microscopy setup for real-time material deformation analysis.
+                        </p>
+                    </div>
+                </div>
 
+                <!-- Achievement Card 3 -->
+                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #f59e0b; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
+                    <div style="display: flex; align-items: start; gap: 0.6rem;">
+                        <i class="fas fa-code" style="color: #f59e0b; font-size: 1.1rem; margin-top: 0.2rem;"></i>
+                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                            Created Python-based automation tools reducing XRD and mechanical testing data processing time by <strong style="color: #0a2e6b;">90%</strong>.
+                        </p>
+                    </div>
+                </div>
 
-                            <li class="highlight-item">Supervised and trained <strong>18+  students</strong> in advanced instrumentation, experimental design, and quality control procedures.</li>
-                            
-                            <li class="highlight-item">Coordinated international synchrotron experiments at MAX IV Laboratory (Sweden) and ESRF (France) managing multi-site research collaborations.</li>
-                        </ul>
+                <!-- Achievement Card 4 -->
+                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #ef4444; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
+                    <div style="display: flex; align-items: start; gap: 0.6rem;">
+                        <i class="fas fa-magnet" style="color: #ef4444; font-size: 1.1rem; margin-top: 0.2rem;"></i>
+                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                            Developed magnetic nanocomposites achieving <strong style="color: #0a2e6b;">95% bulk magnetite performance</strong> at laboratory scale.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 5 -->
+                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #10b981; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
+                    <div style="display: flex; align-items: start; gap: 0.6rem;">
+                        <i class="fas fa-leaf" style="color: #10b981; font-size: 1.1rem; margin-top: 0.2rem;"></i>
+                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                            Designed ultra-lightweight nanolignocellulose foams with record-breaking specific compression strength.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 6 -->
+                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #3b82f6; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
+                    <div style="display: flex; align-items: start; gap: 0.6rem;">
+                        <i class="fas fa-users" style="color: #3b82f6; font-size: 1.1rem; margin-top: 0.2rem;"></i>
+                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                            Trained <strong style="color: #0a2e6b;">18+ students</strong> in advanced instrumentation and experimental protocols.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 7 -->
+                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #ec4899; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
+                    <div style="display: flex; align-items: start; gap: 0.6rem;">
+                        <i class="fas fa-atom" style="color: #ec4899; font-size: 1.1rem; margin-top: 0.2rem;"></i>
+                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                            Participated in synchrotron experiments at MAX IV Laboratory (Sweden) , DESY (Germany) and ESRF (France).
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+
+<!-- COMPACT PEER REVIEW PANEL -->
+<section style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 1.25rem; border-left: 4px solid #1e40af; border-radius: 0.375rem; margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <!-- Left: Title & Badges -->
+        <div style="flex: 1; min-width: 250px;">
+            <h2 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.4rem; color: #0a2e6b; display: flex; align-items: center;">
+                <i class="fas fa-certificate" style="margin-right: 0.5rem; color: #1e40af; font-size: 1.1rem;"></i>
+                Certified Peer Reviewer
+            </h2>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem;">
+                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">ACS</span>
+                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Clarivate</span>
+                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Wiley</span>
+                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Elsevier</span>
+                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Springer</span>
+                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">ACM</span>
+                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">IOP</span>
+            </div>
+        </div>
+        
+        <!-- Right: Stats (Side by Side) -->
+        <div style="display: flex; gap: 1rem; flex-shrink: 0;">
+            <!-- Stat 1 -->
+            <div style="background-color: white; padding: 0.85rem 1rem; border-radius: 0.375rem; border: 2px solid #e2e8f0; text-align: center; min-width: 100px;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+                    <i class="fas fa-file-alt" style="font-size: 1.2rem; color: #1e40af;"></i>
+                    <strong style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; line-height: 1;">50+</strong>
+                </div>
+                <span style="font-size: 0.75rem; color: #64748b;">Manuscripts</span>
+            </div>
+            
+            <!-- Stat 2 -->
+            <div style="background-color: white; padding: 0.85rem 1rem; border-radius: 0.375rem; border: 2px solid #e2e8f0; text-align: center; min-width: 100px;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+                    <i class="fas fa-book" style="font-size: 1.2rem; color: #1e40af;"></i>
+                    <strong style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; line-height: 1;">10+</strong>
+                </div>
+                <span style="font-size: 0.75rem; color: #64748b;">Journals</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Education -->
+<section class="content-section">
+    <div style="margin-bottom: 0.85rem;">
+        <div style="display: flex; align-items: center; margin-bottom: 0.4rem;">
+            <i class="fas fa-user-graduate" style="color: #0a2e6b; font-size: 1.5rem; margin-right: 0.75rem;"></i>
+            <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Education</h2>
+        </div>
+        <div style="width: 60px; height: 3px; background-color: #0a2e6b; border-radius: 2px;"></div>
+    </div>
+    
+    <!-- Timeline Container -->
+    <div style="position: relative; padding-left: 3rem;">
+        <!-- Vertical Line -->
+        <div style="position: absolute; left: 1.5rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #0a2e6b 0%, #64748b 100%);"></div>
+        
+        <!-- PhD -->
+        <div style="position: relative; margin-bottom: 1.5rem;">
+            <!-- Degree Badge -->
+            <div style="position: absolute; left: -2.65rem; top: 0; width: 3rem; height: 3rem; background: linear-gradient(135deg, #0a2e6b 0%, #1e40af 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(10, 46, 107, 0.25); border: 2.5px solid white;">
+                <span style="color: white; font-weight: 700; font-size: 0.9rem;">PhD</span>
+            </div>
+            
+            <!-- Content -->
+            <div style="background-color: white; padding: 0.8rem; border-radius: 0.3rem; border: 2px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
+                <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <h3 style="font-size: 1rem; font-weight: 600; color: #0a2e6b; margin: 0;">
+                        PhD in Materials Chemistry
+                    </h3>
+                    <span style="background-color: #0a2e6b; color: white; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.7rem; font-weight: 500;">
+                        2019 – 2024
+                    </span>
+                </div>
+                <p style="color: #1e40af; font-weight: 500; margin: 0 0 0.4rem 0; font-size: 0.85rem;">
+                    <i class="fas fa-university" style="margin-right: 0.4rem; font-size: 0.8rem;"></i>Stockholm University, Stockholm, Sweden
+                </p>
+                <div style="background-color: #f8fafc; padding: 0.6rem; border-radius: 0.25rem; border-left: 3px solid #0a2e6b; margin-bottom: 0.35rem;">
+                    <p style="margin: 0; font-size: 0.8rem; color: #1e293b; line-height: 1.4;">
+                        <strong style="color: #0a2e6b;">Thesis:</strong> <em>Colloidal Processing and Alignment of Wood-Based Dispersions and Hybrid Functional Foams</em>
+                    </p>
+                </div>
+                <p style="margin: 0; font-size: 0.8rem; color: #64748b;">
+                    <strong style="color: #0a2e6b;">Supervisors:</strong> Prof. Lennart Bergström, Prof. Aji Mathew
+                </p>
+            </div>
+        </div>
+        
+        <!-- Master's -->
+        <div style="position: relative; margin-bottom: 1.5rem;">
+            <!-- Degree Badge -->
+            <div style="position: absolute; left: -2.65rem; top: 0; width: 3rem; height: 3rem; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(30, 64, 175, 0.25); border: 2.5px solid white;">
+                <span style="color: white; font-weight: 700; font-size: 0.85rem;">M.Sc</span>
+            </div>
+            
+            <!-- Content -->
+            <div style="background-color: white; padding: 0.8rem; border-radius: 0.3rem; border: 2px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
+                <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <h3 style="font-size: 1rem; font-weight: 600; color: #0a2e6b; margin: 0;">
+                        M.Sc. in Materials Science and Nanotechnology
+                    </h3>
+                    <span style="background-color: #1e40af; color: white; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.7rem; font-weight: 500;">
+                        2017 – 2019
+                    </span>
+                </div>
+                <p style="color: #1e40af; font-weight: 500; margin: 0 0 0.4rem 0; font-size: 0.85rem;">
+                    <i class="fas fa-university" style="margin-right: 0.4rem; font-size: 0.8rem;"></i>Bilkent University, Ankara, Turkey
+                </p>
+                <div style="background-color: #f8fafc; padding: 0.6rem; border-radius: 0.25rem; border-left: 3px solid #1e40af; margin-bottom: 0.35rem;">
+                    <p style="margin: 0; font-size: 0.8rem; color: #1e293b; line-height: 1.4;">
+                        <strong style="color: #0a2e6b;">Thesis:</strong> <em>One-Pot Synthesis of Hybrid Core-Shell Nanoparticles for Antibacterial Photodynamic Therapy</em>
+                    </p>
+                </div>
+                <p style="margin: 0; font-size: 0.8rem; color: #64748b;">
+                    <strong style="color: #0a2e6b;">Supervisor:</strong> Prof. Dönüş Tuncel
+                </p>
+            </div>
+        </div>
+        
+        <!-- Bachelor's -->
+        <div style="position: relative;">
+            <!-- Degree Badge -->
+            <div style="position: absolute; left: -2.65rem; top: 0; width: 3rem; height: 3rem; background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(59, 130, 246, 0.25); border: 2.5px solid white;">
+                <span style="color: white; font-weight: 700; font-size: 0.85rem;">B.Sc</span>
+            </div>
+            
+            <!-- Content -->
+            <div style="background-color: white; padding: 0.8rem; border-radius: 0.3rem; border: 2px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
+                <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <h3 style="font-size: 1rem; font-weight: 600; color: #0a2e6b; margin: 0;">
+                        B.Sc. in Chemical Engineering
+                    </h3>
+                    <span style="background-color: #3b82f6; color: white; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.7rem; font-weight: 500;">
+                        2012 – 2017
+                    </span>
+                </div>
+                <p style="color: #1e40af; font-weight: 500; margin: 0 0 0.4rem 0; font-size: 0.85rem;">
+                    <i class="fas fa-university" style="margin-right: 0.4rem; font-size: 0.8rem;"></i>University of Tehran, Tehran, Iran
+                </p>
+                <div style="background-color: #dbeafe; padding: 0.5rem 0.7rem; border-radius: 0.25rem; display: inline-block;">
+                    <p style="margin: 0; font-size: 0.8rem; color: #0a2e6b; font-weight: 600;">
+                        <i class="fas fa-award" style="margin-right: 0.4rem; color: #f59e0b; font-size: 0.75rem;"></i>Top 15% Graduate
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
             
-            <!-- Education -->
-            <section class="content-section">
-                <h2 class="content-title"><i class="fas fa-user-graduate mr-2"></i>Education</h2>
-                
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">PhD in Materials Chemistry</h3>
-                        <span class="timeline-meta">2019 – 2024</span>
-                    </div>
-                    <p class="timeline-subtitle">Stockholm University, Stockholm, Sweden</p>
-                    <p class="text-sm italic"><strong>Thesis:</strong> Colloidal Processing and Alignment of Wood-Based Dispersions and Hybrid Functional Foams</p>
-                    <p class="text-sm text-gray-600"><strong>Supervisors:</strong> Prof. Lennart Bergström, Prof. Aji Mathew</p>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">M.Sc. in Materials Science and Nanotechnology</h3>
-                        <span class="timeline-meta">2017 – 2019</span>
-                    </div>
-                    <p class="timeline-subtitle">Bilkent University, Ankara, Turkey</p>
-                    <p class="text-sm italic"><strong>Thesis:</strong> One-Pot Synthesis of Hybrid Core-Shell Nanoparticles for Antibacterial Photodynamic Therapy</p>
-                    <p class="text-sm text-gray-600"><strong>Supervisor:</strong> Prof. Dönüş Tuncel</p>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">B.Sc. in Chemical Engineering</h3>
-                        <span class="timeline-meta">2012 – 2017</span>
-                    </div>
-                    <p class="timeline-subtitle">University of Tehran, Tehran, Iran</p>
-                    <p class="text-sm">Top 15% Graduate</p>
-                </div>
-            </section>
+<!-- Professional Experience -->
+<section class="content-section">
+    <div style="margin-bottom: 1rem;">
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+            <i class="fas fa-briefcase" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
+            <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Professional Experience</h2>
+        </div>
+        <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
+    </div>
+
+    
+    <!-- Experience 1: Postdoc -->
+    <div style="background: linear-gradient(to right, #f0f9ff 0%, #ffffff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #14b8a6; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
+        <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.5rem;">
+            <div>
+                <h3 style="font-size: 1.1rem; font-weight: 600; color: #0a2e6b; margin: 0 0 0.15rem 0;">
+                    <i class="fas fa-circle" style="color: #14b8a6; font-size: 0.4rem; margin-right: 0.5rem;"></i>
+                    Postdoctoral Research Associate
+                </h3>
+                <p style="color: #64748b; margin: 0; font-size: 0.9rem;">
+                    <i class="fas fa-building" style="margin-right: 0.5rem;"></i>KTH Royal Institute of Technology, Stockholm, Sweden
+                </p>
+            </div>
+            <span style="background-color: #14b8a6; color: white; padding: 0.25rem 0.7rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;">
+                May 2024 – Present
+            </span>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.5rem; margin-top: 0.75rem;">
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Conduct advanced characterization of fiber-based nanocomposites for materials applications.</p>
+            </div>
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Developed in-situ optical microscopy setup for real-time material deformation analysis.</p>
+            </div>
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Created Python automation tools reducing XRD and mechanical testing data processing time by <strong style="color: #0a2e6b;">90%</strong>.</p>
+            </div>
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Collaborate with industry partners on materials characterization projects.</p>
+            </div>
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Supervise 2 master students in instrumentation and experimental design.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Experience 2: PhD -->
+    <div style="background: linear-gradient(to right, #faf5ff 0%, #ffffff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #8b5cf6; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
+        <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.5rem;">
+            <div>
+                <h3 style="font-size: 1.1rem; font-weight: 600; color: #0a2e6b; margin: 0 0 0.15rem 0;">
+                    <i class="fas fa-circle" style="color: #8b5cf6; font-size: 0.4rem; margin-right: 0.5rem;"></i>
+                    PhD Researcher
+                </h3>
+                <p style="color: #64748b; margin: 0; font-size: 0.9rem;">
+                    <i class="fas fa-building" style="margin-right: 0.5rem;"></i>Stockholm University, Stockholm, Sweden
+                </p>
+            </div>
+            <span style="background-color: #8b5cf6; color: white; padding: 0.25rem 0.7rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;">
+                Sep 2019 – May 2024
+            </span>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.5rem; margin-top: 0.75rem;">
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Published <strong style="color: #0a2e6b;">12+ papers</strong> in journals including <em>Advanced Materials</em> and <em>Angewandte Chemie</em>.</p>
+            </div>
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Developed magnetic nanocomposites achieving <strong style="color: #0a2e6b;">95% bulk magnetite performance</strong> at laboratory scale.</p>
+            </div>
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Performed comprehensive characterization using TEM, SEM, XPS, SAXS/WAXS, XRD, DSC, TGA, and rheometry.</p>
+            </div>
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Participated in synchrotron experiments at MAX IV Laboratory (Sweden) , DESY (Germany) and ESRF (France).</p>
+            </div>
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Trained <strong style="color: #0a2e6b;">18+ students</strong> in advanced characterization and laboratory protocols.</p>
+            </div>
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Managed multiple concurrent research projects with timeline coordination.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Experience 3: Research Assistant -->
+    <div style="background: linear-gradient(to right, #fef3c7 0%, #ffffff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #f59e0b; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
+        <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.5rem;">
+            <div>
+                <h3 style="font-size: 1.1rem; font-weight: 600; color: #0a2e6b; margin: 0 0 0.15rem 0;">
+                    <i class="fas fa-circle" style="color: #f59e0b; font-size: 0.4rem; margin-right: 0.5rem;"></i>
+                    Research Assistant
+                </h3>
+                <p style="color: #64748b; margin: 0; font-size: 0.9rem;">
+                    <i class="fas fa-building" style="margin-right: 0.5rem;"></i>Bilkent University, Ankara, Turkey
+                </p>
+            </div>
+            <span style="background-color: #f59e0b; color: white; padding: 0.25rem 0.7rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;">
+                Sep 2017 – Aug 2019
+            </span>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.5rem; margin-top: 0.75rem;">
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #f59e0b; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Synthesized hybrid nanoparticles contributing to <strong style="color: #0a2e6b;">3 peer-reviewed publications</strong>.</p>
+            </div>
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #f59e0b; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Performed materials characterization using TEM, SEM, XPS, UV-Vis, and DLS.</p>
+            </div>
+            <div style="display: flex; align-items: start; gap: 0.5rem;">
+                <i class="fas fa-check-circle" style="color: #f59e0b; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Developed laboratory protocols improving synthesis reproducibility.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
             
-            <!-- Professional Experience -->
-            <section class="content-section">
-                <h2 class="content-title"><i class="fas fa-briefcase mr-2"></i>Professional Experience</h2>
-                
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Postdoctoral Research Associate</h3>
-                        <span class="timeline-meta">May 2024 – Present</span>
-                    </div>
-                    <p class="timeline-subtitle">KTH Royal Institute of Technology, Stockholm, Sweden</p>
-                    <ul class="timeline-details">
-                        <li>Lead advanced characterization of fiber-based nanocomposites for industrial applications.</li>
-                        <li>Developed in-situ optical microscopy system for real-time material deformation analysis.</li>
-                        <li>Created Python automation tools with GUI for XRD and mechanical testing data processing, reducing analysis time by 90%.</li>
-                        <li>Collaborate with industry partners troubleshooting manufacturing processes and quality control.</li>
-                        <li>Supervise 2 master students in advanced instrumentation, experimental design, and scientific writing.</li>
-                    </ul>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">PhD Researcher</h3>
-                        <span class="timeline-meta">Sep 2019 – May 2024</span>
-                    </div>
-                    <p class="timeline-subtitle">Stockholm University, Stockholm, Sweden</p>
-                    <ul class="timeline-details">
-                        <li>Delivered 12+ publications in top-tier journals including <em>Advanced Materials</em> and <em>Angewandte Chemie</em>.</li>
-                        <li>Engineered magnetic nanocomposites achieving 95% bulk magnetite performance through systematic process optimization.</li>
-                        <li>Established complete characterization workflows using TEM, SEM, XPS, SAXS/WAXS, XRD, DSC, TGA, and rheometry.</li>
-                        <li>Coordinated international synchrotron experiments at MAX IV Laboratory (Sweden) and ESRF (France).</li>
-                        <li>Supervised and trained 18+ high school students in advanced characterization and experimental design.</li>
-                        <li>Managed multiple concurrent research projects with timeline coordination and resource allocation.</li>
-                    </ul>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Research Assistant</h3>
-                        <span class="timeline-meta">Sep 2017 – Aug 2019</span>
-                    </div>
-                    <p class="timeline-subtitle">Bilkent University, Ankara, Turkey</p>
-                    <ul class="timeline-details">
-                        <li>Synthesized hybrid nanoparticles contributing to 3 peer-reviewed publications.</li>
-                        <li>Performed materials characterization using TEM, SEM, XPS, UV-Vis, and DLS.</li>
-                        <li>Developed standardized laboratory protocols improving synthesis reproducibility.</li>
-                    </ul>
-                </div>
-            </section>
-            
-            <!-- Publications -->
-            <section class="content-section">
-                <h2 class="content-title"><i class="fas fa-book-open mr-2"></i>Selected Publications</h2>
-                
-                <ol class="list-decimal list-inside" style="counter-reset: pub-counter;">
-                    <li class="publication-item mb-3">
-                        <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2025). High-Performance Nanolignocellulose Foams for Sustainable Technologies.
-                        <a href="https://doi.org/10.1021/acssuschemeng.5c00761" class="text-blue-600 hover:underline" target="_blank"><strong>ACS Sustainable Chem. Eng.</strong></a>, <strong>13</strong>, 9467-9480.
-                    </li>
-                    <li class="publication-item mb-3">
-                        <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2024). Hierarchical Incorporation of rGO into Anisotropic CNF Foams. 
-                        <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" class="text-blue-600 hover:underline" target="_blank"><strong>ACS Appl. Mater. Interfaces</strong></a>, <strong>16</strong>, 45337.
-                    </li>
-                    <li class="publication-item mb-3">
-                        <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2023). Magnetic hybrid foams from Fe3O4@TA and TOCN. 
-                        <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" class="text-blue-600 hover:underline" target="_blank"><strong>RSC Adv.</strong></a>, <strong>13</strong>, 13919.
-                    </li>
-                    <li class="publication-item mb-3">
-                        Munier, P.*, <strong class="text-purple-600">Hadi, S. E.*</strong>, et al. (2022). Shear-induced orientation of cellulose nanocrystals. 
-                        <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" class="text-blue-600 hover:underline" target="_blank"><strong>Soft Matter</strong></a>, <strong>18</strong>, 1234–1245.
-                    </li>
-                    <li class="publication-item mb-3">
-                        Di, A., Schiele, C., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2023). Moisture-Resilient Aramid/Cellulose Foams. 
-                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" class="text-blue-600 hover:underline" target="_blank"><strong>Adv. Mater.</strong></a>, <strong>35</strong>, 2305195.
-                    </li>
-                    <li class="publication-item mb-3">
-                        Moreno, A., Liu, J., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2021). Hydration barrier of lignin oleate nanoparticles. 
-                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" class="text-blue-600 hover:underline" target="_blank"><strong>Angew. Chem. Int. Ed.</strong></a>, <strong>60</strong>, 20897.
-                    </li>
-                    <li class="publication-item">
-                        Özkan, M., <strong class="text-purple-600">Hadi, S. E.</strong>, et al. (2020). CB[7]-capped hybrid AuNPs for PDT/PTT therapy. 
-                        <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" class="text-blue-600 hover:underline" target="_blank"><strong>ACS Appl. Polym. Mater.</strong></a>, <strong>2</strong>, 3840.
-                    </li>
-                </ol>
-                
-                <div class="mt-6 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                    <h3 class="font-semibold text-blue-800 mb-2">Peer Review Service</h3>
-                    <p class="font-bold text-blue-700">ACS Certified Reviewer</p>
-                    <p class="text-sm">40+ manuscript reviews (2020-Present) for <em>Macromol. Mater. Eng., J. Appl. Polym. Sci., Adv. Eng. Mater., Polymer, Polymers</em></p>
-                </div>
-            </section>
-            
-            <!-- Technical Skills -->
-            <section class="content-section">
-                <h2 class="content-title"><i class="fas fa-cogs mr-2"></i>Technical Skills</h2>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title"><i class="fas fa-cut mr-2"></i>Advanced Sample Preparation Expertise</h3>
-                    <ul class="skill-list">
-                        <li><strong>Cryo-ultramicrotomy:</strong> Leica Artos 3D (ultra-thin sectioning for TEM/STEM analysis, beam-sensitive materials)</li>
-                        <li><strong>Cross-section polishing:</strong> JEOL IB-19520CCP (ion beam cross-section preparation)</li>
-                        <li><strong>FIB-SEM:</strong> FEI Nova 600 (focused ion beam lamella preparation, 3D tomography)</li>
-                        <li><strong>Sample mounting:</strong> Embedding, freeze-drying, resin infiltration for microscopy</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title"><i class="fas fa-microscope mr-2"></i>Electron Microscopy & Imaging</h3>
-                    <ul class="skill-list">
-                        <li><strong>AC-TEM/STEM:</strong> FEI Themis Z (atomic resolution imaging, sub-angstrom capabilities, EELS, EDX mapping, nanoparticle analysis)</li>
-                        <li><strong>Cryo-TEM/STEM:</strong> JEOL JEM-2100F (beam-sensitive materials, biological samples, cellular structures)</li>
-                        <li><strong>Cryo-SEM:</strong> JEOL IT800 (low-temperature SEM, frost-free imaging)</li>
-                        <li><strong>HR-SEM:</strong> Hitachi S-4800 (high-resolution surface morphology, sub-nm resolution)</li>
-                        <li><strong>ESEM/EDS/WDS:</strong> FEI Quanta 200 (environmental SEM, compositional mapping, elemental analysis)</li>
-                        <li><strong>Tabletop SEM:</strong> Hitachi TM-1000, TM-3000 (rapid screening, educational applications)</li>
-                        <li><strong>Optical microscopy:</strong> Olympus BX53M (polarized light, bright/dark field), Leica DMIL (inverted microscopy)</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title"><i class="fas fa-atom mr-2"></i>X-ray & Synchrotron Techniques</h3>
-                    <ul class="skill-list">
-                        <li><strong>SAXS/WAXS:</strong> MAX IV Laboratory (Sweden), ESRF (France) - nanostructure analysis, crystallinity, orientation mapping, anisotropy quantification</li>
-                        <li><strong>XPS:</strong> Thermo K-Alpha (X-ray photoelectron spectroscopy - surface chemistry, oxidation states, depth profiling, elemental composition)</li>
-                        <li><strong>XRD:</strong> Panalytical (powder X-ray diffraction - phase identification, crystallinity calculation, crystal structure analysis)</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title"><i class="fas fa-vial mr-2"></i>Spectroscopy & Chemical Analysis</h3>
-                    <ul class="skill-list">
-                        <li><strong>FT-IR:</strong> Bruker Alpha-II (functional group identification, chemical bonding analysis)</li>
-                        <li><strong>UV-Vis:</strong> Varian Cary (optical properties, absorbance, bandgap determination)</li>
-                        <li><strong>Raman spectroscopy:</strong> Molecular vibrations, phase identification, stress analysis</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title"><i class="fas fa-thermometer-half mr-2"></i>Particle, Thermal & Mechanical Analysis</h3>
-                    <ul class="skill-list">
-                        <li><strong>DLS:</strong> Malvern Zetasizer (dynamic light scattering - particle size distribution, zeta potential, colloidal stability)</li>
-                        <li><strong>Rheometry:</strong> Anton Paar MCR 301, MCR 702e (viscoelastic properties, shear rheology, flow behavior)</li>
-                        <li><strong>TGA:</strong> TA Discovery (thermogravimetric analysis - decomposition, moisture content, thermal stability)</li>
-                        <li><strong>DSC:</strong> TA DSC250 (differential scanning calorimetry - heat capacity, phase transitions, glass transition temperature)</li>
-                        <li><strong>Hot Disk:</strong> Transient plane source method (thermal conductivity measurement with humidity control)</li>
-                        <li><strong>Mechanical testing:</strong> Instron 6800 Series (tensile, compression, flexural testing)</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title"><i class="fas fa-laptop-code mr-2"></i>Programming & Software Development</h3>
-                    <ul class="skill-list">
-                        <li><strong>Python (2+ years):</strong>
-                            <ul class="ml-4 mt-1">
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Core libraries: NumPy, Pandas, SciPy, Matplotlib, Plotly (data processing, statistical analysis)</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Image analysis: scikit-image (basic)</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Machine learning: scikit-learn (basic)</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> GUI development: PySide6/Qt (custom characterization tools)</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Specialized: lmfit (adv. curve fitting, peak analysis)</li>
-                                <li><i class="fas fa-check text-blue-500 mr-1"></i> Applications: Automated XRD/DSC/mechanical data processing, batch image analysis, custom workflows</li>
-                            </ul>
-                        </li>
-                        <li><strong>Scientific software:</strong> OriginLab (Expert level - data analysis, visualization, publication-quality figures), LaTeX (document preparation, scientific writing), MATLAB (numerical computing, data analysis)</li>
-                        <li><strong>Microscopy software:</strong> Digital Micrograph (TEM/STEM data processing, EELS/EDX analysis), ImageJ/Fiji (image processing, quantitative analysis)</li>
-                        <li><strong>Chemistry tools:</strong> ChemDraw (chemical structure drawing), HighScore Plus (XRD analysis)</li>
-                        <li><strong>Development tools:</strong> Git/GitHub (version control), VS Code, Notepad++ (code editing), Linux/Unix (basic command line)</li>
-                        <li><strong>Web development:</strong> HTML, CSS, JavaScript (portfolio websites, data visualization)</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title"><i class="fas fa-flask mr-2"></i>Materials Synthesis & Research Process Development</h3>
-                    <ul>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Materials synthesis & development:</strong> Nanoparticle synthesis (sol-gel, coprecipitation, hydrothermal), surface functionalization, composite fabrication, core-shell structures</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Formulation optimization:</strong> Design of experiments (DOE), composition screening, systematic parameter optimization for target performance specifications</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Research-scale process development:</strong> Lab-to-pilot demonstration, formulation scale-up, experimental reproducibility validation (>90% batch-to-batch consistency in research setting)</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Research quality assurance:</strong> Materials testing protocols, experimental validation, systematic troubleshooting, data integrity, performance verification</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Process optimization:</strong> Yield improvement, cycle time reduction in lab setting, experimental efficiency, systematic optimization methodologies</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Colloidal processing:</strong> Dispersion stabilization, particle size control, rheology modification, suspension stability optimization</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Structure-property relationships:</strong> Multi-scale characterization, property correlation, performance prediction, systematic analysis of microstructure effects</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Industry collaboration:</strong> Limited exposure to industrial problem-solving through academic-industry partnerships, materials characterization support</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Research documentation:</strong> Laboratory protocols, experimental procedures, training materials for students, technical reports, scientific publications</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Materials testing & analysis:</strong> Comprehensive physical, chemical, mechanical, and thermal property evaluation for research validation</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Material evaluation:</strong> Raw material assessment, supplier comparison, cost-performance analysis for research applications</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Laboratory safety & standards:</strong> Safety protocols, chemical handling procedures, theoretical knowledge of GMP principles and quality management systems</li>
-                    </ul>
-                </div>
+<!-- Publications -->
+<section class="content-section">
+    <div style="margin-bottom: 1rem;">
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+            <i class="fas fa-book-open" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
+            <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Selected Publications</h2>
+        </div>
+        <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
+    </div>
+    
+    <ol style="list-style: decimal; padding-left: 1.5rem; margin: 0;">
+        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+            <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2025). High-Performance Nanolignocellulose Foams for Sustainable Technologies.
+            <a href="https://doi.org/10.1021/acssuschemeng.5c00761" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>ACS Sustainable Chem. Eng.</strong></a>, <strong>13</strong>, 9467-9480.
+        </li>
+        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+            <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2024). Hierarchical Incorporation of rGO into Anisotropic CNF Foams. 
+            <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>ACS Appl. Mater. Interfaces</strong></a>, <strong>16</strong>, 45337.
+        </li>
+        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+            <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2023). Magnetic hybrid foams from Fe3O4@TA and TOCN. 
+            <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>RSC Adv.</strong></a>, <strong>13</strong>, 13919.
+        </li>
+        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+            Munier, P.*, <strong style="color: #8b5cf6;">Hadi, S. E.*</strong>, et al. (2022). Shear-induced orientation of cellulose nanocrystals. 
+            <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>Soft Matter</strong></a>, <strong>18</strong>, 1234–1245.
+        </li>
+        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+            Di, A., Schiele, C., <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2023). Moisture-Resilient Aramid/Cellulose Foams. 
+            <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>Adv. Mater.</strong></a>, <strong>35</strong>, 2305195.
+        </li>
+        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+            Moreno, A., Liu, J., <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2021). Hydration barrier of lignin oleate nanoparticles. 
+            <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>Angew. Chem. Int. Ed.</strong></a>, <strong>60</strong>, 20897.
+        </li>
+        <li style="margin-bottom: 0; padding-left: 0.25rem;">
+            Özkan, M., <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2020). CB[7]-capped hybrid AuNPs for PDT/PTT therapy. 
+            <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>ACS Appl. Polym. Mater.</strong></a>, <strong>2</strong>, 3840.
+        </li>
+    </ol>
+</section>
 
 
-                
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title"><i class="fas fa-users mr-2"></i>Professional & Leadership Competencies</h3>
-                    <ul>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Project management:</strong> Timeline coordination, resource allocation, budget management, risk assessment, multi-project oversight</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Technical communication:</strong> Report writing, scientific presentations, data visualization, SOP documentation, peer review (40+ manuscripts)</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Leadership & training:</strong> Team supervision (18+ students), mentorship, instrumentation training, safety protocols</li>
-                        <li><i class="fas fa-check text-blue-500 mr-1"></i> <strong>Collaboration:</strong> Cross-functional teams, international partnerships, industry-academia collaboration, multi-site coordination</li>
-                    </ul>
-                </div>
-            </section>
 
+            
+<!-- Technical Skills -->
+<section class="content-section">
+    <div style="margin-bottom: 1rem;">
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+            <i class="fas fa-cogs" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
+            <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Technical Skills</h2>
+        </div>
+        <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
+    </div>
+    
+    <!-- Sample Preparation -->
+    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+            <i class="fas fa-cut" style="margin-right: 0.5rem;"></i>Sample Preparation
+        </h3>
+        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Cryo-ultramicrotomy:</strong> Leica Artos 3D (ultra-thin sectioning for TEM/STEM)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Cross-section polishing:</strong> JEOL IB-19520CCP (ion beam preparation)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>FIB-SEM:</strong> FEI Nova 600 (focused ion beam, 3D tomography)</li>
+            <li style="margin-bottom: 0; break-inside: avoid;"><strong>Sample mounting:</strong> Embedding, freeze-drying, resin infiltration</li>
+        </ul>
+    </div>
+    
+    <!-- Electron Microscopy -->
+    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+            <i class="fas fa-microscope" style="margin-right: 0.5rem;"></i>Electron Microscopy
+        </h3>
+        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>AC-TEM/STEM:</strong> FEI Themis Z (atomic resolution, EELS, EDX mapping)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Cryo-TEM/STEM:</strong> JEOL JEM-2100F (beam-sensitive materials)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Cryo-SEM:</strong> JEOL IT800 (low-temperature imaging)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>HR-SEM:</strong> Hitachi S-4800 (high-resolution morphology)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>ESEM/EDS/WDS:</strong> FEI Quanta 200 (compositional mapping)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Tabletop SEM:</strong> Hitachi TM-1000, TM-3000</li>
+            <li style="margin-bottom: 0; break-inside: avoid;"><strong>Optical microscopy:</strong> Olympus BX53M, Leica DMIL</li>
+        </ul>
+    </div>
+    
+    <!-- X-ray & Synchrotron -->
+    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+            <i class="fas fa-atom" style="margin-right: 0.5rem;"></i>X-ray & Synchrotron Techniques
+        </h3>
+        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>SAXS/WAXS:</strong> MAX IV Laboratory (Sweden), ESRF (France) - nanostructure analysis, crystallinity, orientation</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>XPS:</strong> Thermo K-Alpha (surface chemistry, depth profiling)</li>
+            <li style="margin-bottom: 0; break-inside: avoid;"><strong>XRD:</strong> Panalytical (phase identification, crystallinity)</li>
+        </ul>
+    </div>
+    
+    <!-- Spectroscopy -->
+    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+            <i class="fas fa-vial" style="margin-right: 0.5rem;"></i>Spectroscopy
+        </h3>
+        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>FT-IR:</strong> Bruker Alpha-II (functional group identification)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>UV-Vis:</strong> Varian Cary (optical properties)</li>
+            <li style="margin-bottom: 0; break-inside: avoid;"><strong>Raman:</strong> Molecular vibrations, phase identification</li>
+        </ul>
+    </div>
+    
+    <!-- Thermal & Mechanical -->
+    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+            <i class="fas fa-thermometer-half" style="margin-right: 0.5rem;"></i>Thermal & Mechanical Analysis
+        </h3>
+        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>DLS:</strong> Malvern Zetasizer (particle size, zeta potential)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Rheometry:</strong> Anton Paar MCR 301, MCR 702e (viscoelastic properties)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>TGA:</strong> TA Discovery (thermal stability, decomposition)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>DSC:</strong> TA DSC250 (phase transitions, glass transition)</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Hot Disk:</strong> Thermal conductivity measurement</li>
+            <li style="margin-bottom: 0; break-inside: avoid;"><strong>Mechanical testing:</strong> Instron 6800 Series (tensile, compression)</li>
+        </ul>
+    </div>
+    
+    <!-- Programming & Data Analysis -->
+    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+            <i class="fas fa-laptop-code" style="margin-right: 0.5rem;"></i>Programming & Data Analysis
+        </h3>
+        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Python (2+ years):</strong> NumPy, Pandas, SciPy, Matplotlib, Plotly, scikit-image, scikit-learn, PySide6/Qt, lmfit</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Scientific software:</strong> OriginLab, LaTeX, MATLAB</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Microscopy software:</strong> Digital Micrograph, ImageJ/Fiji</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Chemistry tools:</strong> ChemDraw, HighScore Plus</li>
+            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Development tools:</strong> Git/GitHub, VS Code, Linux/Unix</li>
+            <li style="margin-bottom: 0; break-inside: avoid;"><strong>Web development:</strong> HTML, CSS, JavaScript</li>
+        </ul>
+    </div>
+    
+    <!-- Materials Synthesis & Laboratory -->
+    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+            <i class="fas fa-flask" style="margin-right: 0.5rem;"></i>Materials Synthesis & Laboratory Methods
+        </h3>
+        <ul style="margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+            <li style="margin-bottom: 0.35rem;">
+                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                <strong>Laboratory synthesis:</strong> Nanoparticle synthesis, surface functionalization, composite fabrication
+            </li>
+            <li style="margin-bottom: 0.35rem;">
+                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                <strong>Colloidal processing:</strong> Dispersion stabilization, particle size control, rheology modification
+            </li>
+            <li style="margin-bottom: 0.35rem;">
+                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                <strong>Experimental design:</strong> Design of experiments (DOE), systematic parameter optimization
+            </li>
+            <li style="margin-bottom: 0.35rem;">
+                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                <strong>Structure-property analysis:</strong> Multi-scale characterization, property correlation
+            </li>
+            <li style="margin-bottom: 0.35rem;">
+                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                <strong>Protocol development:</strong> Laboratory procedures, training materials, technical documentation
+            </li>
+            <li style="margin-bottom: 0;">
+                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                <strong>Laboratory safety:</strong> Safety protocols, chemical handling, equipment maintenance
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Professional Skills -->
+    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+            <i class="fas fa-users" style="margin-right: 0.5rem;"></i>Professional Skills
+        </h3>
+        <ul style="margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+            <li style="margin-bottom: 0.35rem;">
+                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                <strong>Research coordination:</strong> Timeline management, resource allocation, multi-project oversight
+            </li>
+            <li style="margin-bottom: 0.35rem;">
+                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                <strong>Technical communication:</strong> Scientific writing, presentations, data visualization, peer review (50+ manuscripts)
+            </li>
+            <li style="margin-bottom: 0.35rem;">
+                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                <strong>Training & mentoring:</strong> Student supervision (18+ students), instrumentation training
+            </li>
+            <li style="margin-bottom: 0;">
+                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                <strong>Collaboration:</strong> Academic-industry partnerships, international research teams
+            </li>
+        </ul>
+    </div>
+</section>
+
+            
             
             <!-- Additional Information -->
-            <section class="content-section">
-                <h2 class="content-title"><i class="fas fa-info-circle mr-2"></i>Additional Information</h2>
-                
-                <div class="additional-grid">
-                    <div class="additional-item">
-                        <h3 class="additional-title"><i class="fas fa-language mr-2"></i>Languages</h3>
-                        <p><strong>English</strong> (Professional proficiency)<br>
-                        <strong>Persian</strong> (Native)<br>
-                        <strong>Swedish</strong> (Basic)</p>
-                    </div>
-                    
-                    <div class="additional-item">
-                        <h3 class="additional-title"><i class="fas fa-award mr-2"></i>Grants and Awards</h3>
-                        <ul>
-                            <li><i class="fas fa-star text-blue-500 mr-1"></i> Wallenberg Wood Science Center PhD Fellowship (2019-2023)</li>
-                            <li><i class="fas fa-star text-blue-500 mr-1"></i> Stockholm University PhD Fellowship (2019-2024)</li>
-                            <li><i class="fas fa-star text-blue-500 mr-1"></i> UNAM & Bilkent University Scholarship (2017-2019)</li>
-                            <li><i class="fas fa-star text-blue-500 mr-1"></i> TÜBİTAK Fellowship (2018-2019)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="additional-item">
-                        <h3 class="additional-title"><i class="fas fa-user mr-2"></i>References</h3>
-                        <p><strong>Prof. Lennart Bergström</strong><br>
-                        Stockholm University<br>
-                        <a href="mailto:lennart.bergstrom@mmk.su.se" class="text-blue-600 hover:underline">lennart.bergstrom@mmk.su.se</a></p>
-                        <p class="mt-2"><strong>Prof. Lars Berglund</strong><br>
-                        KTH Royal Institute of Technology<br>
-                        <a href="mailto:blund@kth.se" class="text-blue-600 hover:underline">blund@kth.se</a></p>
-                    </div>
-                </div>
-                
-                <div class="keyword-cloud">
-                    <span class="keyword">Materials Science</span>
-                    <span class="keyword">Nanocomposites</span>
-                    <span class="keyword">TEM/SEM</span>
-                    <span class="keyword">SAXS/WAXS</span>
-                    <span class="keyword">XPS</span>
-                    <span class="keyword">Python</span>
-                    <span class="keyword">R&D</span>
-                    <span class="keyword">Project Management</span>
-                    <span class="keyword">Data Analysis</span>
-                    <span class="keyword">Characterization</span>
-                </div>
-            </section>
+<section class="content-section">
+    <div style="margin-bottom: 1rem;">
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+            <i class="fas fa-info-circle" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
+            <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Additional Information</h2>
+        </div>
+        <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+        <!-- Languages -->
+        <div style="background-color: #dbeafe; padding: 1rem; border-left: 3px solid #1e40af; border-radius: 0.375rem;">
+            <h3 style="font-weight: 600; color: #0a2e6b; margin: 0 0 0.6rem 0; font-size: 1rem; display: flex; align-items: center;">
+                <i class="fas fa-language" style="margin-right: 0.5rem; color: #1e40af;"></i>
+                Languages
+            </h3>
+            <p style="margin: 0; font-size: 0.9rem; line-height: 1.6;">
+                <strong>English</strong> (Professional proficiency)<br>
+                <strong>Persian</strong> (Native)<br>
+                <strong>Swedish</strong> (Basic)
+            </p>
+        </div>
+        
+        <!-- Grants and Awards -->
+        <div style="background-color: #dbeafe; padding: 1rem; border-left: 3px solid #1e40af; border-radius: 0.375rem;">
+            <h3 style="font-weight: 600; color: #0a2e6b; margin: 0 0 0.6rem 0; font-size: 1rem; display: flex; align-items: center;">
+                <i class="fas fa-award" style="margin-right: 0.5rem; color: #1e40af;"></i>
+                Grants and Awards
+            </h3>
+            <ul style="margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+                <li style="margin-bottom: 0.35rem;">
+                    <i class="fas fa-star" style="color: #3b82f6; font-size: 0.7rem; margin-right: 0.35rem;"></i>
+                    Wallenberg Wood Science Center PhD Fellowship (2019-2023)
+                </li>
+                <li style="margin-bottom: 0.35rem;">
+                    <i class="fas fa-star" style="color: #3b82f6; font-size: 0.7rem; margin-right: 0.35rem;"></i>
+                    Stockholm University PhD Fellowship (2019-2024)
+                </li>
+                <li style="margin-bottom: 0.35rem;">
+                    <i class="fas fa-star" style="color: #3b82f6; font-size: 0.7rem; margin-right: 0.35rem;"></i>
+                    UNAM & Bilkent University Scholarship (2017-2019)
+                </li>
+                <li style="margin-bottom: 0;">
+                    <i class="fas fa-star" style="color: #3b82f6; font-size: 0.7rem; margin-right: 0.35rem;"></i>
+                    TÜBİTAK Fellowship (2018-2019)
+                </li>
+            </ul>
+        </div>
+        
+        <!-- References -->
+        <div style="background-color: #dbeafe; padding: 1rem; border-left: 3px solid #1e40af; border-radius: 0.375rem;">
+            <h3 style="font-weight: 600; color: #0a2e6b; margin: 0 0 0.6rem 0; font-size: 1rem; display: flex; align-items: center;">
+                <i class="fas fa-user" style="margin-right: 0.5rem; color: #1e40af;"></i>
+                References
+            </h3>
+            <div style="font-size: 0.85rem; line-height: 1.5;">
+                <p style="margin: 0 0 0.6rem 0;">
+                    <strong>Prof. Lennart Bergström</strong><br>
+                    Stockholm University<br>
+                    <a href="mailto:lennart.bergstrom@mmk.su.se" style="color: #1e40af; text-decoration: none;">lennart.bergstrom@mmk.su.se</a>
+                </p>
+                <p style="margin: 0;">
+                    <strong>Prof. Lars Berglund</strong><br>
+                    KTH Royal Institute of Technology<br>
+                    <a href="mailto:blund@kth.se" style="color: #1e40af; text-decoration: none;">blund@kth.se</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+<!-- Keyword Cloud -->
+<div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+    <!-- Core Expertise -->
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Materials Science</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Nanocomposites</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Materials Characterization</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">R&D</span>
+    
+    <!-- Microscopy -->
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">TEM/STEM</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">SEM</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Cryo-TEM</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Electron Microscopy</span>
+    
+    <!-- X-ray & Synchrotron -->
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">SAXS/WAXS</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">XPS</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">XRD</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Synchrotron</span>
+    
+    <!-- Thermal & Mechanical -->
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">DSC</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">TGA</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Rheometry</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Mechanical Testing</span>
+    
+    <!-- Materials & Processes -->
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Nanomaterials</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Colloidal Processing</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Surface Chemistry</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Nanoparticles</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Nanocellulose</span>
+    
+    <!-- Programming & Analysis -->
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Python</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Data Analysis</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">NumPy</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Pandas</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">MATLAB</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">ImageJ</span>
+    
+    <!-- Research Skills -->
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Peer Review</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Scientific Writing</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Project Management</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Experimental Design</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">DOE</span>
+    
+    <!-- Industry-Relevant -->
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Quality Control</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Process Optimization</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Problem Solving</span>
+    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Cross-functional Collaboration</span>
+</div>
+
+    </div>
+</section>
+
         </main>
     </div>
 
