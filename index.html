@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seyed Ehsan Hadi, PhD - Academic CV</title>
+    <title>Seyed Ehsan Hadi, PhD | Materials Chemist & Characterization Scientist</title>
+    <meta name="description" content="Materials Chemist / Scientist and Characterization Scientist. PhD from Stockholm University, postdoc at KTH. Specializing in method development and process-structure-property relationships.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,14 +20,14 @@
             --light-gray: #e2e8f0;
             --highlight: #dbeafe;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f1f5f9;
             color: var(--dark);
             line-height: 1.6;
         }
-        
+
         .cv-container {
             max-width: 1200px;
             margin: 2rem auto;
@@ -35,13 +36,13 @@
             overflow: hidden;
             background: white;
         }
-        
+
         .sidebar {
             background: linear-gradient(to bottom, var(--primary), var(--secondary));
             color: white;
             padding: 2rem;
         }
-        
+
         .profile-img {
             width: 150px;
             height: 150px;
@@ -51,7 +52,7 @@
             margin: 0 auto 1.5rem;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
         }
-        
+
         .section-title {
             font-weight: 600;
             color: white;
@@ -60,20 +61,20 @@
             margin-bottom: 1rem;
             font-size: 1.1rem;
         }
-        
+
         .contact-item {
             margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
         }
-        
+
         .contact-icon {
             margin-right: 0.75rem;
             width: 20px;
             text-align: center;
             color: var(--light-gray);
         }
-        
+
         .status-badge {
             display: inline-flex;
             align-items: center;
@@ -82,18 +83,18 @@
             font-size: 0.85rem;
             margin-bottom: 0.5rem;
         }
-        
+
         .status-badge.green {
             background-color: rgba(74, 222, 128, 0.2);
             color: #4ade80;
         }
-        
-        .status-badge.red {
-            background-color: rgba(248, 113, 113, 0.2);
-            color: #f87171;
+
+        .status-badge.amber {
+            background-color: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
         }
-        
-        .portfolio-btn {
+
+        .contact-btn {
             display: block;
             background-color: var(--accent);
             color: white;
@@ -101,338 +102,127 @@
             padding: 0.75rem;
             border-radius: 0.375rem;
             font-weight: 500;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             transition: all 0.2s;
+            text-decoration: none;
         }
-        
-        .portfolio-btn:hover {
+
+        .contact-btn:hover {
             background-color: #0d9488;
             transform: translateY(-2px);
         }
-        
+
+        .portfolio-btn {
+            display: block;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            text-align: center;
+            padding: 0.65rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            margin-top: 0.75rem;
+            transition: all 0.2s;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .portfolio-btn:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
         .main-content {
             padding: 2.5rem;
         }
-        
+
         .header {
             border-bottom: 1px solid var(--light-gray);
             padding-bottom: 1.5rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .name {
             font-size: 2rem;
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 0.25rem;
         }
-        
+
         .title {
             font-size: 1.25rem;
             color: var(--gray);
             margin-bottom: 1rem;
             font-weight: 500;
         }
-        
-        .summary {
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-        }
-        
-        .highlight-item {
-            margin-bottom: 0.75rem;
-            position: relative;
-            padding-left: 1.75rem;
-        }
-        
-        .highlight-item:before {
-            content: "•";
-            position: absolute;
-            left: 0.5rem;
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
+
         .content-section {
             margin-bottom: 2.5rem;
         }
-        
-        .content-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1.25rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        
-        .content-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--accent);
-            border-radius: 3px;
-        }
-        
-        .timeline-item {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px dashed var(--light-gray);
-        }
-        
-        .timeline-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .timeline-title {
-            font-weight: 600;
-            color: var(--dark);
-            font-size: 1.1rem;
-        }
-        
-        .timeline-meta {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-        
-        .timeline-subtitle {
-            color: var(--gray);
-            margin-bottom: 0.75rem;
-            font-size: 0.95rem;
-        }
-        
-        .timeline-details {
-            padding-left: 1rem;
-        }
-        
-        .timeline-details li {
-            margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        
-        .timeline-details li:before {
-            content: "•";
-            position: absolute;
-            left: 0.5rem;
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
-        .publication-item {
-            margin-bottom: 0.75rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        
-        .publication-item:before {
-            content: counter(pub-counter) ".";
-            counter-increment: pub-counter;
-            position: absolute;
-            left: 0;
-            font-weight: 600;
-            color: var(--primary);
-        }
-        
-        .skill-category {
-            background-color: var(--highlight);
-            padding: 1.25rem;
-            border-left: 4px solid var(--primary);
-            border-radius: 0.375rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .skill-category-title {
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .skill-list {
-            columns: 2;
-            column-gap: 2rem;
-        }
-        
-        .skill-list li {
-            margin-bottom: 0.5rem;
-            break-inside: avoid;
-        }
-        
-        .additional-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .additional-item {
-            background-color: var(--highlight);
-            padding: 1.25rem;
-            border-radius: 0.375rem;
-        }
-        
-        .additional-title {
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .keyword-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 2rem;
-        }
-        
-        .keyword {
-            background-color: var(--light-gray);
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            color: var(--gray);
-        }
 
-        /* SIMPLIFIED REVIEWER PANEL */
-        .reviewer-panel {
-            background-color: var(--highlight);
-            padding: 1.5rem;
-            border-left: 4px solid var(--secondary);
-            border-radius: 0.375rem;
-            margin-bottom: 2rem;
-        }
-
-        .reviewer-panel-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-        }
-
-        .reviewer-panel-title i {
-            margin-right: 0.5rem;
-        }
-
-        .reviewer-content {
-            color: var(--dark);
-        }
-
-        .reviewer-stats {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .reviewer-stats span {
-            font-size: 0.95rem;
-        }
-
-        .reviewer-stats strong {
-            color: var(--primary);
-        }
-        
         @media (max-width: 1024px) {
-            .cv-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .sidebar {
-                position: static;
-                height: auto;
-            }
-            
-            .skill-list {
-                columns: 1;
-            }
+            .cv-container { grid-template-columns: 1fr; }
+            .sidebar { position: static; height: auto; }
         }
-        
-        @media (max-width: 768px) {
-            .sidebar {
-                padding: 1.5rem;
-            }
-            
-            .main-content {
-                padding: 1.5rem;
-            }
-            
-            .name {
-                font-size: 1.75rem;
-            }
-            
-            .title {
-                font-size: 1.1rem;
-            }
-            
-            .content-title {
-                font-size: 1.3rem;
-            }
-            
-            .timeline-header {
-                flex-direction: column;
-                gap: 0.25rem;
-            }
-            
-            .additional-grid {
-                grid-template-columns: 1fr;
-            }
 
-            .reviewer-stats {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
+        @media (max-width: 768px) {
+            .sidebar { padding: 1.5rem; }
+            .main-content { padding: 1.5rem; }
+            .name { font-size: 1.75rem; }
+            .title { font-size: 1.1rem; }
         }
-        
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
-        .content-section {
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-        
-        .content-section:nth-child(1) { animation-delay: 0.1s; }
-        .content-section:nth-child(2) { animation-delay: 0.2s; }
-        .content-section:nth-child(3) { animation-delay: 0.3s; }
-        .content-section:nth-child(4) { animation-delay: 0.4s; }
-        .content-section:nth-child(5) { animation-delay: 0.5s; }
-        .content-section:nth-child(6) { animation-delay: 0.6s; }
+
+        .content-section { animation: fadeIn 0.5s ease-out forwards; }
     </style>
 </head>
 <body>
     <div class="cv-container grid grid-cols-1 lg:grid-cols-4">
         <!-- Sidebar -->
         <aside class="sidebar lg:col-span-1">
-            <img src="assets/images/Picture.png" alt="Profile Picture" class="profile-img">
-            
+            <!-- Profile picture with LinkedIn-style #OpenToWork curved frame -->
+            <div style="position: relative; width: 160px; height: 160px; margin: 0 auto 2.25rem;">
+                <!-- Green ring around photo -->
+                <div style="position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #16a34a 100%); padding: 5px; box-shadow: 0 0 24px rgba(34, 197, 94, 0.35);">
+                    <img src="assets/images/Picture.png" alt="Profile Picture" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid white; display: block;">
+                </div>
+                <!-- ━━━ #OpenToWork TOGGLE: change "block" to "none" on the next line to HIDE the badge ━━━ -->
+                <svg id="otw-badge" style="display: block; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible;" viewBox="0 0 160 160">
+                    <defs>
+                        <!-- Arc path at radius 84 from center (80,80), from 8 o'clock to 6 o'clock through 7 o'clock -->
+                        <path id="otw-text-curve" d="M 7 122 A 84 84 0 0 1 80 164" fill="none" />
+                    </defs>
+                    <!-- Green pill banner (thick stroke with rounded caps) -->
+                    <path d="M 7 122 A 84 84 0 0 1 80 164"
+                          fill="none"
+                          stroke="#16a34a"
+                          stroke-width="15"
+                          stroke-linecap="round"
+                          filter="drop-shadow(0 2px 4px rgba(0,0,0,0.25))" />
+                    <!-- Subtle inner highlight on banner -->
+                    <path d="M 8 122 A 83 83 0 0 1 80 163"
+                          fill="none"
+                          stroke="#22c55e"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          opacity="0.5" />
+                    <!-- Curved white #OPEN TO WORK text -->
+                    <text font-family="Inter, sans-serif" font-size="9" font-weight="800" fill="#ffffff" letter-spacing="0.5">
+                        <textPath href="#otw-text-curve" startOffset="50%" text-anchor="middle">#OPEN TO WORK</textPath>
+                    </text>
+                </svg>
+            </div>
+
             <div class="text-center mb-6">
                 <h1 class="text-xl font-bold">Seyed Ehsan Hadi, PhD</h1>
-                <p class="text-sm opacity-80">Materials Scientist | Characterization Specialist</p>
+                <p class="text-sm opacity-80">Materials Chemist / Scientist · Characterization Scientist</p>
             </div>
-            
+
             <div class="mb-6">
-                <h2 class="section-title"><i class="fas fa-address-card mr-2"></i>Contact</h2>
-                <div class="contact-item">
-                    <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                    <a href="mailto:eshadi@kth.se" class="hover:underline">eshadi@kth.se</a>
-                </div>
+                <h2 class="section-title"><i class="fas fa-link mr-2"></i>Connect</h2>
                 <div class="contact-item">
                     <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
                     <span>Stockholm, Sweden</span>
@@ -450,732 +240,859 @@
                     <a href="https://orcid.org/0000-0002-5980-1641" target="_blank" class="hover:underline">ORCID</a>
                 </div>
             </div>
-            
+
             <div class="mb-6">
                 <h2 class="section-title"><i class="fas fa-info-circle mr-2"></i>Status</h2>
                 <div class="status-badge green">
                     <i class="fas fa-check-circle mr-2"></i> Swedish Permanent Resident
                 </div>
-                <div class="status-badge red">
-                    <i class="fas fa-certificate mr-2"></i> SDI 2.0: Red Level
+                <div class="status-badge amber">
+                    <i class="fas fa-bolt mr-2"></i> Available Immediately
                 </div>
             </div>
-            
+
+            <a href="https://linkedin.com/in/seyed-ehsan-hadi" target="_blank" class="contact-btn">
+                <i class="fab fa-linkedin mr-2"></i> Contact via LinkedIn
+            </a>
+
             <a href="https://seyedehsanhadi.github.io/portfolio.html" target="_blank" class="portfolio-btn">
                 <i class="fas fa-folder-open mr-2"></i> View Portfolio
             </a>
         </aside>
-        
-<!-- Main Content -->
-<main class="main-content lg:col-span-3">
-    <!-- Header -->
-    <div class="header">
-        <h1 class="name">Seyed Ehsan Hadi, PhD</h1>
-        <p class="title">Materials Scientist | Characterization Specialist | R&D</p>
-        
-        <!-- Summary with highlight box -->
-        <div style="background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #1e40af; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);">
-            <p style="color: #1e293b; line-height: 1.6; margin: 0; font-size: 0.95rem;">
-                Materials scientist with <strong style="color: #0a2e6b;">8+ years</strong> in materials research, specializing in advanced characterization and structure-property analysis. Authored/co-authored <strong style="color: #0a2e6b;">15+ peer-reviewed publications</strong> in materials chemistry and nanocomposites. Certified peer reviewer with <strong style="color: #0a2e6b;">50+ manuscript reviews</strong> across major publishers. Technical expertise spans electron microscopy (TEM, SEM), synchrotron X-ray techniques (SAXS/WAXS), surface analysis (XPS), and thermal characterization. Experience in laboratory-scale synthesis, colloidal processing, and supporting academic-industry collaborative projects.
-            </p>
-        </div>
-        
-        <!-- Key Achievements with better visual structure -->
-        <div style="margin-top: 1rem;">
-            <div style="display: flex; align-items: center; margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 2px solid #e2e8f0;">
-                <i class="fas fa-trophy" style="color: #1e40af; font-size: 1.2rem; margin-right: 0.6rem;"></i>
-                <h2 style="font-size: 1.15rem; font-weight: 600; color: #0a2e6b; margin: 0;">Key Achievements</h2>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0.75rem;">
-                <!-- Achievement Card 1 -->
-                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #14b8a6; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
-                    <div style="display: flex; align-items: start; gap: 0.6rem;">
-                        <i class="fas fa-book-open" style="color: #14b8a6; font-size: 1.1rem; margin-top: 0.2rem;"></i>
-                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
-                            Published <strong style="color: #0a2e6b;">15+ papers</strong> in journals including <em>Advanced Materials</em>, <em>Angewandte Chemie</em>, and <em>ACS Applied Materials & Interfaces</em>.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Achievement Card 2 -->
-                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #8b5cf6; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
-                    <div style="display: flex; align-items: start; gap: 0.6rem;">
-                        <i class="fas fa-microscope" style="color: #8b5cf6; font-size: 1.1rem; margin-top: 0.2rem;"></i>
-                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
-                            Developed in-situ optical microscopy setup for real-time material deformation analysis.
-                        </p>
-                    </div>
-                </div>
+        <!-- Main Content -->
+        <main class="main-content lg:col-span-3">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="name">Seyed Ehsan Hadi, PhD</h1>
+                <p class="title">Materials Chemist / Scientist · Characterization Scientist · R&D</p>
 
-                <!-- Achievement Card 3 -->
-                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #f59e0b; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
-                    <div style="display: flex; align-items: start; gap: 0.6rem;">
-                        <i class="fas fa-code" style="color: #f59e0b; font-size: 1.1rem; margin-top: 0.2rem;"></i>
-                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
-                            Created Python-based automation tools reducing XRD and mechanical testing data processing time by <strong style="color: #0a2e6b;">90%</strong>.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Achievement Card 4 -->
-                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #ef4444; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
-                    <div style="display: flex; align-items: start; gap: 0.6rem;">
-                        <i class="fas fa-magnet" style="color: #ef4444; font-size: 1.1rem; margin-top: 0.2rem;"></i>
-                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
-                            Developed magnetic nanocomposites achieving <strong style="color: #0a2e6b;">95% bulk magnetite performance</strong> at laboratory scale.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Achievement Card 5 -->
-                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #10b981; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
-                    <div style="display: flex; align-items: start; gap: 0.6rem;">
-                        <i class="fas fa-leaf" style="color: #10b981; font-size: 1.1rem; margin-top: 0.2rem;"></i>
-                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
-                            Designed ultra-lightweight nanolignocellulose foams with record-breaking specific compression strength.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Achievement Card 6 -->
-                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #3b82f6; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
-                    <div style="display: flex; align-items: start; gap: 0.6rem;">
-                        <i class="fas fa-users" style="color: #3b82f6; font-size: 1.1rem; margin-top: 0.2rem;"></i>
-                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
-                            Trained <strong style="color: #0a2e6b;">18+ students</strong> in advanced instrumentation and experimental protocols.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Achievement Card 7 -->
-                <div style="background-color: white; padding: 0.85rem; border-left: 3px solid #ec4899; border-radius: 0.3rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
-                    <div style="display: flex; align-items: start; gap: 0.6rem;">
-                        <i class="fas fa-atom" style="color: #ec4899; font-size: 1.1rem; margin-top: 0.2rem;"></i>
-                        <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
-                            Participated in synchrotron experiments at MAX IV Laboratory (Sweden) , DESY (Germany) and ESRF (France).
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-<!-- COMPACT PEER REVIEW PANEL -->
-<section style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 1.25rem; border-left: 4px solid #1e40af; border-radius: 0.375rem; margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
-    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-        <!-- Left: Title & Badges -->
-        <div style="flex: 1; min-width: 250px;">
-            <h2 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.4rem; color: #0a2e6b; display: flex; align-items: center;">
-                <i class="fas fa-certificate" style="margin-right: 0.5rem; color: #1e40af; font-size: 1.1rem;"></i>
-                Certified Peer Reviewer
-            </h2>
-            
-            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem;">
-                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">ACS</span>
-                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Clarivate</span>
-                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Wiley</span>
-                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Elsevier</span>
-                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Springer</span>
-                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">ACM</span>
-                <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">IOP</span>
-            </div>
-        </div>
-        
-        <!-- Right: Stats (Side by Side) -->
-        <div style="display: flex; gap: 1rem; flex-shrink: 0;">
-            <!-- Stat 1 -->
-            <div style="background-color: white; padding: 0.85rem 1rem; border-radius: 0.375rem; border: 2px solid #e2e8f0; text-align: center; min-width: 100px;">
-                <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.25rem;">
-                    <i class="fas fa-file-alt" style="font-size: 1.2rem; color: #1e40af;"></i>
-                    <strong style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; line-height: 1;">50+</strong>
-                </div>
-                <span style="font-size: 0.75rem; color: #64748b;">Manuscripts</span>
-            </div>
-            
-            <!-- Stat 2 -->
-            <div style="background-color: white; padding: 0.85rem 1rem; border-radius: 0.375rem; border: 2px solid #e2e8f0; text-align: center; min-width: 100px;">
-                <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.25rem;">
-                    <i class="fas fa-book" style="font-size: 1.2rem; color: #1e40af;"></i>
-                    <strong style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; line-height: 1;">10+</strong>
-                </div>
-                <span style="font-size: 0.75rem; color: #64748b;">Journals</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Education -->
-<section class="content-section">
-    <div style="margin-bottom: 0.85rem;">
-        <div style="display: flex; align-items: center; margin-bottom: 0.4rem;">
-            <i class="fas fa-user-graduate" style="color: #0a2e6b; font-size: 1.5rem; margin-right: 0.75rem;"></i>
-            <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Education</h2>
-        </div>
-        <div style="width: 60px; height: 3px; background-color: #0a2e6b; border-radius: 2px;"></div>
-    </div>
-    
-    <!-- Timeline Container -->
-    <div style="position: relative; padding-left: 3rem;">
-        <!-- Vertical Line -->
-        <div style="position: absolute; left: 1.5rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #0a2e6b 0%, #64748b 100%);"></div>
-        
-        <!-- PhD -->
-        <div style="position: relative; margin-bottom: 1.5rem;">
-            <!-- Degree Badge -->
-            <div style="position: absolute; left: -2.65rem; top: 0; width: 3rem; height: 3rem; background: linear-gradient(135deg, #0a2e6b 0%, #1e40af 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(10, 46, 107, 0.25); border: 2.5px solid white;">
-                <span style="color: white; font-weight: 700; font-size: 0.9rem;">PhD</span>
-            </div>
-            
-            <!-- Content -->
-            <div style="background-color: white; padding: 0.8rem; border-radius: 0.3rem; border: 2px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
-                <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.4rem;">
-                    <h3 style="font-size: 1rem; font-weight: 600; color: #0a2e6b; margin: 0;">
-                        PhD in Materials Chemistry
-                    </h3>
-                    <span style="background-color: #0a2e6b; color: white; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.7rem; font-weight: 500;">
-                        2019 – 2024
-                    </span>
-                </div>
-                <p style="color: #1e40af; font-weight: 500; margin: 0 0 0.4rem 0; font-size: 0.85rem;">
-                    <i class="fas fa-university" style="margin-right: 0.4rem; font-size: 0.8rem;"></i>Stockholm University, Stockholm, Sweden
-                </p>
-                <div style="background-color: #f8fafc; padding: 0.6rem; border-radius: 0.25rem; border-left: 3px solid #0a2e6b; margin-bottom: 0.35rem;">
-                    <p style="margin: 0; font-size: 0.8rem; color: #1e293b; line-height: 1.4;">
-                        <strong style="color: #0a2e6b;">Thesis:</strong> <em>Colloidal Processing and Alignment of Wood-Based Dispersions and Hybrid Functional Foams</em>
+                <!-- Summary -->
+                <div style="background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #1e40af; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);">
+                    <p style="color: #1e293b; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+                        Materials chemist and characterization scientist with <strong style="color: #0a2e6b;">8+ years</strong> of hands-on experimental R&D. Specializing in <strong style="color: #0a2e6b;">method development</strong> and <strong style="color: #0a2e6b;">process-structure-property</strong> relationships. PhD from Stockholm University, postdoc at KTH. Published <strong style="color: #0a2e6b;">14 peer-reviewed papers</strong>; h-index <strong style="color: #0a2e6b;">11</strong>; <strong style="color: #0a2e6b;">310+ citations</strong>. ACS Certified Peer Reviewer with 50+ manuscript reviews. Technical depth across electron microscopy (TEM, SEM, cryo-SEM, FIB-SEM), synchrotron X-ray (SAXS/WAXS at ForMAX, DESY, ESRF), XPS, thermal analysis, mechanical testing, and nanoparticle synthesis.
                     </p>
                 </div>
-                <p style="margin: 0; font-size: 0.8rem; color: #64748b;">
-                    <strong style="color: #0a2e6b;">Supervisors:</strong> Prof. Lennart Bergström, Prof. Aji Mathew
-                </p>
-            </div>
-        </div>
-        
-        <!-- Master's -->
-        <div style="position: relative; margin-bottom: 1.5rem;">
-            <!-- Degree Badge -->
-            <div style="position: absolute; left: -2.65rem; top: 0; width: 3rem; height: 3rem; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(30, 64, 175, 0.25); border: 2.5px solid white;">
-                <span style="color: white; font-weight: 700; font-size: 0.85rem;">M.Sc</span>
-            </div>
-            
-            <!-- Content -->
-            <div style="background-color: white; padding: 0.8rem; border-radius: 0.3rem; border: 2px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
-                <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.4rem;">
-                    <h3 style="font-size: 1rem; font-weight: 600; color: #0a2e6b; margin: 0;">
-                        M.Sc. in Materials Science and Nanotechnology
-                    </h3>
-                    <span style="background-color: #1e40af; color: white; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.7rem; font-weight: 500;">
-                        2017 – 2019
-                    </span>
+
+                <!-- Key Achievements -->
+                <div style="margin-top: 1.25rem;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #14b8a6;">
+                        <i class="fas fa-trophy" style="color: #14b8a6; font-size: 1.4rem; margin-right: 0.6rem;"></i>
+                        <h2 style="font-size: 1.35rem; font-weight: 700; color: #0a2e6b; margin: 0; letter-spacing: -0.01em;">Key Achievements</h2>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem;">
+                        <!-- Card 1: Publications -->
+                        <div style="background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%); padding: 1.1rem 1rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07); border-top: 4px solid #14b8a6;">
+                            <div style="display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.3rem;">
+                                <span style="font-size: 2.2rem; font-weight: 800; color: #14b8a6; line-height: 1;">14</span>
+                                <i class="fas fa-book-open" style="color: #14b8a6; font-size: 1rem; margin-left: auto;"></i>
+                            </div>
+                            <p style="margin: 0 0 0.35rem 0; font-size: 0.8rem; font-weight: 700; color: #0a2e6b; text-transform: uppercase; letter-spacing: 0.05em;">Peer-reviewed papers</p>
+                            <p style="margin: 0; color: #475569; line-height: 1.45; font-size: 0.82rem;">h-index 11 · 310+ citations · Adv. Mater., Angew. Chem., ACS Appl. Mater. Interfaces</p>
+                        </div>
+
+                        <!-- Card 2: Instruments -->
+                        <div style="background: linear-gradient(135deg, #ffffff 0%, #fef3c7 100%); padding: 1.1rem 1rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07); border-top: 4px solid #f59e0b;">
+                            <div style="display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.3rem;">
+                                <span style="font-size: 2.2rem; font-weight: 800; color: #f59e0b; line-height: 1;">25+</span>
+                                <i class="fas fa-microscope" style="color: #f59e0b; font-size: 1rem; margin-left: auto;"></i>
+                            </div>
+                            <p style="margin: 0 0 0.35rem 0; font-size: 0.8rem; font-weight: 700; color: #0a2e6b; text-transform: uppercase; letter-spacing: 0.05em;">Scientific instruments hands-on</p>
+                            <p style="margin: 0; color: #475569; line-height: 1.45; font-size: 0.82rem;">TEM & SEM at expert level. FIB-SEM, XPS, SAXS/WAXS, XRD, plus full thermal & mechanical suite.</p>
+                        </div>
+
+                        <!-- Card 3: Custom hardware design -->
+                        <div style="background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%); padding: 1.1rem 1rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07); border-top: 4px solid #8b5cf6;">
+                            <div style="display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.3rem;">
+                                <span style="font-size: 2.2rem; font-weight: 800; color: #8b5cf6; line-height: 1;">60 fps</span>
+                                <i class="fas fa-drafting-compass" style="color: #8b5cf6; font-size: 1rem; margin-left: auto;"></i>
+                            </div>
+                            <p style="margin: 0 0 0.35rem 0; font-size: 0.8rem; font-weight: 700; color: #0a2e6b; text-transform: uppercase; letter-spacing: 0.05em;">Hands-on hardware design</p>
+                            <p style="margin: 0; color: #475569; line-height: 1.45; font-size: 0.82rem;">3 custom builds: in-situ optical tensile rig (60 fps fracture imaging on Billerud samples), casting mould for material samples, 3D-printed NMR-tube holder for SAXS measurements.</p>
+                        </div>
+
+                        <!-- Card 4: Synchrotron -->
+                        <div style="background: linear-gradient(135deg, #ffffff 0%, #fdf2f8 100%); padding: 1.1rem 1rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07); border-top: 4px solid #ec4899;">
+                            <div style="display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.3rem;">
+                                <span style="font-size: 2.2rem; font-weight: 800; color: #ec4899; line-height: 1;">3</span>
+                                <i class="fas fa-atom" style="color: #ec4899; font-size: 1rem; margin-left: auto;"></i>
+                            </div>
+                            <p style="margin: 0 0 0.35rem 0; font-size: 0.8rem; font-weight: 700; color: #0a2e6b; text-transform: uppercase; letter-spacing: 0.05em;">International synchrotron facilities</p>
+                            <p style="margin: 0; color: #475569; line-height: 1.45; font-size: 0.82rem;">Hands-on experiments at MAX IV (Sweden) and DESY (Germany); analyzed and co-published ESRF (France) datasets. Led WAXS/SAXS protocol on 10 wt% MFC gels at ForMAX.</p>
+                        </div>
+
+                        <!-- Card 5: Nanoparticle Synthesis & Cleanroom -->
+                        <div style="background: linear-gradient(135deg, #ffffff 0%, #fef2f2 100%); padding: 1.1rem 1rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07); border-top: 4px solid #ef4444;">
+                            <div style="display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.3rem;">
+                                <span style="font-size: 2.2rem; font-weight: 800; color: #ef4444; line-height: 1;">3+</span>
+                                <i class="fas fa-flask" style="color: #ef4444; font-size: 1rem; margin-left: auto;"></i>
+                            </div>
+                            <p style="margin: 0 0 0.35rem 0; font-size: 0.8rem; font-weight: 700; color: #0a2e6b; text-transform: uppercase; letter-spacing: 0.05em;">Wet chemistry & cleanroom</p>
+                            <p style="margin: 0; color: #475569; line-height: 1.45; font-size: 0.82rem;">3 published nanoparticle systems: Au core/shell with cucurbit[7]uril, Fe₃O₄ hybrid foams, lignin oleate. Wet chemical reduction, surface functionalization, host-guest assembly. Cleanroom-trained at UNAM (SCD + biological SEM).</p>
+                        </div>
+
+                        <!-- Card 6: Programming & Data Analysis -->
+                        <div style="background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%); padding: 1.1rem 1rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07); border-top: 4px solid #3b82f6;">
+                            <div style="display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.3rem;">
+                                <span style="font-size: 2.2rem; font-weight: 800; color: #3b82f6; line-height: 1;">3</span>
+                                <i class="fas fa-code" style="color: #3b82f6; font-size: 1rem; margin-left: auto;"></i>
+                            </div>
+                            <p style="margin: 0 0 0.35rem 0; font-size: 0.8rem; font-weight: 700; color: #0a2e6b; text-transform: uppercase; letter-spacing: 0.05em;">Lab-adopted Python tools built</p>
+                            <p style="margin: 0; color: #475569; line-height: 1.45; font-size: 0.82rem;">Python GUI tools for XRD, mechanical, and synchrotron data (in daily lab use; not yet open-sourced). Plus personal Chrome extensions for general workflows.</p>
+                        </div>
+                    </div>
                 </div>
-                <p style="color: #1e40af; font-weight: 500; margin: 0 0 0.4rem 0; font-size: 0.85rem;">
-                    <i class="fas fa-university" style="margin-right: 0.4rem; font-size: 0.8rem;"></i>Bilkent University, Ankara, Turkey
-                </p>
-                <div style="background-color: #f8fafc; padding: 0.6rem; border-radius: 0.25rem; border-left: 3px solid #1e40af; margin-bottom: 0.35rem;">
-                    <p style="margin: 0; font-size: 0.8rem; color: #1e293b; line-height: 1.4;">
-                        <strong style="color: #0a2e6b;">Thesis:</strong> <em>One-Pot Synthesis of Hybrid Core-Shell Nanoparticles for Antibacterial Photodynamic Therapy</em>
+            </div>
+
+            <!-- CORE COMPETENCIES (Professional Skills with Evidence) -->
+            <section class="content-section">
+                <div style="margin-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                        <i class="fas fa-star" style="color: #14b8a6; font-size: 1.5rem; margin-right: 0.75rem;"></i>
+                        <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Core Competencies <span style="font-size: 0.85rem; font-weight: 500; color: #64748b; margin-left: 0.5rem;">(each backed by evidence)</span></h2>
+                    </div>
+                    <div style="width: 60px; height: 3px; background-color: #14b8a6; border-radius: 2px;"></div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 0.75rem;">
+                    <!-- 0. Project Management & Coordination -->
+                    <div style="background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%); padding: 1rem; border-left: 4px solid #1e40af; border-radius: 0.375rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
+                        <h3 style="margin: 0 0 0.4rem 0; font-size: 0.95rem; font-weight: 600; color: #0a2e6b; display: flex; align-items: center;">
+                            <i class="fas fa-tasks" style="color: #1e40af; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Project management & coordination
+                        </h3>
+                        <p style="margin: 0; color: #1e293b; font-size: 0.85rem; line-height: 1.5;">
+                            Co-coordinated multi-institution MAX IV synchrotron campaigns end-to-end (logistics, sample prep, cross-team data analysis). Lead shared-instrument scheduling, SOP rollout, and vendor coordination at KTH. Full ownership of industry characterization projects from spec to delivery (Billerud, Borregaard, and other partners).
+                        </p>
+                    </div>
+
+                    <!-- 1. Method development -->
+                    <div style="background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%); padding: 1rem; border-left: 4px solid #14b8a6; border-radius: 0.375rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
+                        <h3 style="margin: 0 0 0.4rem 0; font-size: 0.95rem; font-weight: 600; color: #0a2e6b; display: flex; align-items: center;">
+                            <i class="fas fa-wrench" style="color: #14b8a6; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Method development
+                        </h3>
+                        <p style="margin: 0; color: #1e293b; font-size: 0.85rem; line-height: 1.5;">
+                            Designed and built an in-situ optical tensile rig from available lab components. Established the WAXS/SAXS protocol for 10 wt% MFC gels at ForMAX (now group standard). Wrote characterization SOPs adopted across the group.
+                        </p>
+                    </div>
+
+                    <!-- 2. Structure-property analysis -->
+                    <div style="background: linear-gradient(135deg, #faf5ff 0%, #ffffff 100%); padding: 1rem; border-left: 4px solid #8b5cf6; border-radius: 0.375rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
+                        <h3 style="margin: 0 0 0.4rem 0; font-size: 0.95rem; font-weight: 600; color: #0a2e6b; display: flex; align-items: center;">
+                            <i class="fas fa-project-diagram" style="color: #8b5cf6; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Process-structure-property analysis
+                        </h3>
+                        <p style="margin: 0; color: #1e293b; font-size: 0.85rem; line-height: 1.5;">
+                            PhD focused on closing the loop between processing, structure, and properties in cellulosic materials. Delivered magnetic nanocomposites at 95% of bulk magnetite performance and record specific compression strength foams.
+                        </p>
+                    </div>
+
+                    <!-- 3. Independent ownership -->
+                    <div style="background: linear-gradient(135deg, #fef3c7 0%, #ffffff 100%); padding: 1rem; border-left: 4px solid #f59e0b; border-radius: 0.375rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
+                        <h3 style="margin: 0 0 0.4rem 0; font-size: 0.95rem; font-weight: 600; color: #0a2e6b; display: flex; align-items: center;">
+                            <i class="fas fa-flag-checkered" style="color: #f59e0b; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Independent ownership & problem-solving
+                        </h3>
+                        <p style="margin: 0; color: #1e293b; font-size: 0.85rem; line-height: 1.5;">
+                            Full ownership of characterization at KTH from design through reporting. Solved measurement problems standard equipment couldn't handle. Wrote Python and AI workflows now adopted lab-wide.
+                        </p>
+                    </div>
+
+                    <!-- 4. Industry & cross-cultural collaboration -->
+                    <div style="background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%); padding: 1rem; border-left: 4px solid #ef4444; border-radius: 0.375rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
+                        <h3 style="margin: 0 0 0.4rem 0; font-size: 0.95rem; font-weight: 600; color: #0a2e6b; display: flex; align-items: center;">
+                            <i class="fas fa-globe-europe" style="color: #ef4444; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Industry & cross-cultural collaboration
+                        </h3>
+                        <p style="margin: 0; color: #1e293b; font-size: 0.85rem; line-height: 1.5;">
+                            Direct on-site work with Billerud (Sweden), Borregaard (Norway), and other industry partners. Hands-on synchrotron at MAX IV (Sweden) and DESY (Germany); analyzed ESRF (France) datasets remotely with collaborators.
+                        </p>
+                    </div>
+
+                    <!-- 5. Mentoring & knowledge transfer -->
+                    <div style="background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%); padding: 1rem; border-left: 4px solid #3b82f6; border-radius: 0.375rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
+                        <h3 style="margin: 0 0 0.4rem 0; font-size: 0.95rem; font-weight: 600; color: #0a2e6b; display: flex; align-items: center;">
+                            <i class="fas fa-chalkboard-teacher" style="color: #3b82f6; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Teaching & mentoring
+                        </h3>
+                        <p style="margin: 0; color: #1e293b; font-size: 0.85rem; line-height: 1.5;">
+                            8+ years teaching across high school, undergraduate, master's, and PhD levels. 30+ trainees total. 3 yrs TA in General Chemistry (U. Tehran, Best TA award), 5 yrs tutoring, 19 SU high school outreach students, 2 KTH master's students, plus many PhD and postdoc instrument trainings.
+                        </p>
+                    </div>
+
+                    <!-- 6. Technical communication -->
+                    <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); padding: 1rem; border-left: 4px solid #10b981; border-radius: 0.375rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
+                        <h3 style="margin: 0 0 0.4rem 0; font-size: 0.95rem; font-weight: 600; color: #0a2e6b; display: flex; align-items: center;">
+                            <i class="fas fa-pen-nib" style="color: #10b981; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Technical communication
+                        </h3>
+                        <p style="margin: 0; color: #1e293b; font-size: 0.85rem; line-height: 1.5;">
+                            14 international publications. 50+ manuscript peer reviews across ACS, Wiley, Elsevier, RSC, Springer. Trilingual: English (fluent), Persian (native), Swedish (basic).
+                        </p>
+                    </div>
+
+                    <!-- 7. Adaptability & resilience -->
+                    <div style="background: linear-gradient(135deg, #fdf2f8 0%, #ffffff 100%); padding: 1rem; border-left: 4px solid #ec4899; border-radius: 0.375rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
+                        <h3 style="margin: 0 0 0.4rem 0; font-size: 0.95rem; font-weight: 600; color: #0a2e6b; display: flex; align-items: center;">
+                            <i class="fas fa-shield-alt" style="color: #ec4899; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Adaptability & resilience
+                        </h3>
+                        <p style="margin: 0; color: #1e293b; font-size: 0.85rem; line-height: 1.5;">
+                            Alva Labs: Logic 98th%, Diligence 98th%, Resilience & Innovation 93rd%. Demonstrated through full-ownership delivery, synchrotron beamtime execution, and adaptation across three academic systems.
+                        </p>
+                    </div>
+
+                    <!-- 8. Data-driven decision making -->
+                    <div style="background: linear-gradient(135deg, #f5f3ff 0%, #ffffff 100%); padding: 1rem; border-left: 4px solid #6366f1; border-radius: 0.375rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
+                        <h3 style="margin: 0 0 0.4rem 0; font-size: 0.95rem; font-weight: 600; color: #0a2e6b; display: flex; align-items: center;">
+                            <i class="fas fa-chart-line" style="color: #6366f1; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Data-driven decision making
+                        </h3>
+                        <p style="margin: 0; color: #1e293b; font-size: 0.85rem; line-height: 1.5;">
+                            Built Python and AI pipelines for batch XRD, mechanical, and synchrotron data. Used multi-scale characterization to drive material design choices. Quantitative interpretation, not just measurement.
+                        </p>
+                    </div>
+
+                    <!-- 9. AI integration & automation -->
+                    <div style="background: linear-gradient(135deg, #ecfeff 0%, #ffffff 100%); padding: 1rem; border-left: 4px solid #0891b2; border-radius: 0.375rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
+                        <h3 style="margin: 0 0 0.4rem 0; font-size: 0.95rem; font-weight: 600; color: #0a2e6b; display: flex; align-items: center;">
+                            <i class="fas fa-robot" style="color: #0891b2; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            AI integration & automation
+                        </h3>
+                        <p style="margin: 0; color: #1e293b; font-size: 0.85rem; line-height: 1.5;">
+                            Advanced user and builder. Daily LLM workflows for research and code. Built lab-adopted Python tools, plus personal Chrome extensions. Hands-on with custom skills, API integration, and multi-step agent pipelines.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROFESSIONAL EXPERIENCE -->
+            <section class="content-section">
+                <div style="margin-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                        <i class="fas fa-briefcase" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
+                        <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Professional Experience</h2>
+                    </div>
+                    <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
+                </div>
+
+                <!-- KTH Postdoc -->
+                <div style="background: linear-gradient(to right, #f0f9ff 0%, #ffffff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #14b8a6; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
+                    <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 600; color: #0a2e6b; margin: 0 0 0.15rem 0;">
+                                <i class="fas fa-circle" style="color: #14b8a6; font-size: 0.4rem; margin-right: 0.5rem;"></i>
+                                Postdoctoral Research Associate
+                            </h3>
+                            <p style="color: #64748b; margin: 0; font-size: 0.9rem;">
+                                <i class="fas fa-building" style="margin-right: 0.5rem;"></i>KTH Royal Institute of Technology, Stockholm, Sweden
+                            </p>
+                        </div>
+                        <span style="background-color: #14b8a6; color: white; padding: 0.25rem 0.7rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;">
+                            May 2024 – May 2026
+                        </span>
+                    </div>
+
+                    <p style="margin: 0.75rem 0 0.5rem 0; color: #1e293b; font-size: 0.9rem; line-height: 1.5;">
+                        Full characterization ownership on fiber-based paper materials for mechanical performance.
                     </p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.5rem; margin-top: 0.75rem;">
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-wrench" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                <strong style="color: #0a2e6b;">Built</strong> an in-situ optical tensile rig from available lab components. Captures fracture at <strong>60 fps</strong> in real time. Used on <strong>Billerud production samples</strong> to study failure modes.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-atom" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                <strong style="color: #0a2e6b;">Led</strong> the full WAXS/SAXS campaign at <strong>ForMAX (MAX IV)</strong> on 10 wt% MFC gels and paper. Measurement protocol now group standard for wet-state cellulose.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-code" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                <strong style="color: #0a2e6b;">Wrote</strong> Python GUI tools for XRD processing, mechanical data analysis, and synchrotron data reduction (all lab-adopted, in daily use). Also built Chrome extensions for general personal workflow automation.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-handshake" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                <strong style="color: #0a2e6b;">Collaborated</strong> with Billerud (Sweden), Borregaard (Norway), and other industry partners. Defined test objectives, characterized samples, documented findings.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-clipboard-list" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                <strong style="color: #0a2e6b;">Lab management:</strong> Oversee shared instrument scheduling, maintenance coordination, SOPs, and onboarding new users.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-chalkboard-teacher" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                <strong style="color: #0a2e6b;">Trained</strong> 2 master's students in cryo-ultramicrotomy and SEM.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <p style="margin: 0; font-size: 0.8rem; color: #64748b;">
-                    <strong style="color: #0a2e6b;">Supervisor:</strong> Prof. Dönüş Tuncel
-                </p>
-            </div>
-        </div>
-        
-        <!-- Bachelor's -->
-        <div style="position: relative;">
-            <!-- Degree Badge -->
-            <div style="position: absolute; left: -2.65rem; top: 0; width: 3rem; height: 3rem; background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(59, 130, 246, 0.25); border: 2.5px solid white;">
-                <span style="color: white; font-weight: 700; font-size: 0.85rem;">B.Sc</span>
-            </div>
-            
-            <!-- Content -->
-            <div style="background-color: white; padding: 0.8rem; border-radius: 0.3rem; border: 2px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
-                <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.4rem;">
-                    <h3 style="font-size: 1rem; font-weight: 600; color: #0a2e6b; margin: 0;">
-                        B.Sc. in Chemical Engineering
-                    </h3>
-                    <span style="background-color: #3b82f6; color: white; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.7rem; font-weight: 500;">
-                        2012 – 2017
-                    </span>
-                </div>
-                <p style="color: #1e40af; font-weight: 500; margin: 0 0 0.4rem 0; font-size: 0.85rem;">
-                    <i class="fas fa-university" style="margin-right: 0.4rem; font-size: 0.8rem;"></i>University of Tehran, Tehran, Iran
-                </p>
-                <div style="background-color: #dbeafe; padding: 0.5rem 0.7rem; border-radius: 0.25rem; display: inline-block;">
-                    <p style="margin: 0; font-size: 0.8rem; color: #0a2e6b; font-weight: 600;">
-                        <i class="fas fa-award" style="margin-right: 0.4rem; color: #f59e0b; font-size: 0.75rem;"></i>Top 15% Graduate
+
+                <!-- Stockholm PhD -->
+                <div style="background: linear-gradient(to right, #faf5ff 0%, #ffffff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #8b5cf6; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
+                    <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 600; color: #0a2e6b; margin: 0 0 0.15rem 0;">
+                                <i class="fas fa-circle" style="color: #8b5cf6; font-size: 0.4rem; margin-right: 0.5rem;"></i>
+                                PhD Researcher
+                            </h3>
+                            <p style="color: #64748b; margin: 0; font-size: 0.9rem;">
+                                <i class="fas fa-building" style="margin-right: 0.5rem;"></i>Stockholm University, Stockholm, Sweden
+                            </p>
+                        </div>
+                        <span style="background-color: #8b5cf6; color: white; padding: 0.25rem 0.7rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;">
+                            Sep 2019 – May 2024
+                        </span>
+                    </div>
+
+                    <p style="margin: 0.75rem 0 0.5rem 0; color: #1e293b; font-size: 0.9rem; line-height: 1.5;">
+                        PhD in Materials Chemistry on process-structure-property relationships in cellulosic materials. Wallenberg Wood Science Center Fellow.
                     </p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.5rem; margin-top: 0.75rem;">
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-flask" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                Magnetic nanocomposites reaching <strong style="color: #0a2e6b;">95% of bulk magnetite performance</strong>, reproducible across batches.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-leaf" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                Nanolignocellulose foams with the <strong style="color: #0a2e6b;">highest specific compression strength</strong> reported for the material class.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-atom" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                Synchrotron experiments at <strong>DESY (Germany)</strong>; analyzed and co-published <strong>ESRF</strong> datasets; co-coordinated <strong>MAX IV</strong> beamtime.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-clipboard-list" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                <strong style="color: #0a2e6b;">Officially lab responsible:</strong> appointed lab-responsible during PhD. LIMS scheduling, KLARA chemical inventory, SOPs that became group standards, onboarding and training new users on SEM, UV-Vis, rheometer, and freeze dryer. Safety oversight.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-users" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                Trained <strong style="color: #0a2e6b;">many researchers</strong> on SEM, UV-Vis, rheometer, freeze dryer, and sample preparation. Supervised 19 high school students across two SU summer outreach courses.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-book-open" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                <strong style="color: #0a2e6b;">12+ papers</strong> in <em>Adv. Mater.</em>, <em>Angew. Chem.</em>, <em>ACS Appl. Mater. Interfaces</em>, <em>Soft Matter</em>.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
 
+                <!-- Bilkent MSc -->
+                <div style="background: linear-gradient(to right, #fef3c7 0%, #ffffff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #f59e0b; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
+                    <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 600; color: #0a2e6b; margin: 0 0 0.15rem 0;">
+                                <i class="fas fa-circle" style="color: #f59e0b; font-size: 0.4rem; margin-right: 0.5rem;"></i>
+                                Graduate Research Assistant (MSc)
+                            </h3>
+                            <p style="color: #64748b; margin: 0; font-size: 0.9rem;">
+                                <i class="fas fa-building" style="margin-right: 0.5rem;"></i>Bilkent University / UNAM, Ankara, Turkey
+                            </p>
+                        </div>
+                        <span style="background-color: #f59e0b; color: white; padding: 0.25rem 0.7rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;">
+                            Sep 2017 – Aug 2019
+                        </span>
+                    </div>
 
-            
-<!-- Professional Experience -->
-<section class="content-section">
-    <div style="margin-bottom: 1rem;">
-        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-            <i class="fas fa-briefcase" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
-            <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Professional Experience</h2>
-        </div>
-        <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
-    </div>
+                    <p style="margin: 0.75rem 0 0.5rem 0; color: #1e293b; font-size: 0.9rem; line-height: 1.5;">
+                        Designed, synthesized, and fully characterized cucurbit[7]uril-capped core/shell gold/conjugated oligomer nanoparticles for photodynamic and photothermal therapy against bacterial targets (E. coli). <strong>Published.</strong>
+                    </p>
 
-    
-    <!-- Experience 1: Postdoc -->
-    <div style="background: linear-gradient(to right, #f0f9ff 0%, #ffffff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #14b8a6; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
-        <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.5rem;">
-            <div>
-                <h3 style="font-size: 1.1rem; font-weight: 600; color: #0a2e6b; margin: 0 0 0.15rem 0;">
-                    <i class="fas fa-circle" style="color: #14b8a6; font-size: 0.4rem; margin-right: 0.5rem;"></i>
-                    Postdoctoral Research Associate
-                </h3>
-                <p style="color: #64748b; margin: 0; font-size: 0.9rem;">
-                    <i class="fas fa-building" style="margin-right: 0.5rem;"></i>KTH Royal Institute of Technology, Stockholm, Sweden
-                </p>
-            </div>
-            <span style="background-color: #14b8a6; color: white; padding: 0.25rem 0.7rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;">
-                May 2024 – Present
-            </span>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.5rem; margin-top: 0.75rem;">
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Conduct advanced characterization of fiber-based nanocomposites for materials applications.</p>
-            </div>
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Developed in-situ optical microscopy setup for real-time material deformation analysis.</p>
-            </div>
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Created Python automation tools reducing XRD and mechanical testing data processing time by <strong style="color: #0a2e6b;">90%</strong>.</p>
-            </div>
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Collaborate with industry partners on materials characterization projects.</p>
-            </div>
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #14b8a6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Supervise 2 master students in instrumentation and experimental design.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Experience 2: PhD -->
-    <div style="background: linear-gradient(to right, #faf5ff 0%, #ffffff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #8b5cf6; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
-        <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.5rem;">
-            <div>
-                <h3 style="font-size: 1.1rem; font-weight: 600; color: #0a2e6b; margin: 0 0 0.15rem 0;">
-                    <i class="fas fa-circle" style="color: #8b5cf6; font-size: 0.4rem; margin-right: 0.5rem;"></i>
-                    PhD Researcher
-                </h3>
-                <p style="color: #64748b; margin: 0; font-size: 0.9rem;">
-                    <i class="fas fa-building" style="margin-right: 0.5rem;"></i>Stockholm University, Stockholm, Sweden
-                </p>
-            </div>
-            <span style="background-color: #8b5cf6; color: white; padding: 0.25rem 0.7rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;">
-                Sep 2019 – May 2024
-            </span>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.5rem; margin-top: 0.75rem;">
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Published <strong style="color: #0a2e6b;">12+ papers</strong> in journals including <em>Advanced Materials</em> and <em>Angewandte Chemie</em>.</p>
-            </div>
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Developed magnetic nanocomposites achieving <strong style="color: #0a2e6b;">95% bulk magnetite performance</strong> at laboratory scale.</p>
-            </div>
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Performed comprehensive characterization using TEM, SEM, XPS, SAXS/WAXS, XRD, DSC, TGA, and rheometry.</p>
-            </div>
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Participated in synchrotron experiments at MAX IV Laboratory (Sweden) , DESY (Germany) and ESRF (France).</p>
-            </div>
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Trained <strong style="color: #0a2e6b;">18+ students</strong> in advanced characterization and laboratory protocols.</p>
-            </div>
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #8b5cf6; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Managed multiple concurrent research projects with timeline coordination.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Experience 3: Research Assistant -->
-    <div style="background: linear-gradient(to right, #fef3c7 0%, #ffffff 100%); padding: 1rem; border-radius: 0.375rem; border-left: 4px solid #f59e0b; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
-        <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.5rem;">
-            <div>
-                <h3 style="font-size: 1.1rem; font-weight: 600; color: #0a2e6b; margin: 0 0 0.15rem 0;">
-                    <i class="fas fa-circle" style="color: #f59e0b; font-size: 0.4rem; margin-right: 0.5rem;"></i>
-                    Research Assistant
-                </h3>
-                <p style="color: #64748b; margin: 0; font-size: 0.9rem;">
-                    <i class="fas fa-building" style="margin-right: 0.5rem;"></i>Bilkent University, Ankara, Turkey
-                </p>
-            </div>
-            <span style="background-color: #f59e0b; color: white; padding: 0.25rem 0.7rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;">
-                Sep 2017 – Aug 2019
-            </span>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.5rem; margin-top: 0.75rem;">
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #f59e0b; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Synthesized hybrid nanoparticles contributing to <strong style="color: #0a2e6b;">3 peer-reviewed publications</strong>.</p>
-            </div>
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #f59e0b; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Performed materials characterization using TEM, SEM, XPS, UV-Vis, and DLS.</p>
-            </div>
-            <div style="display: flex; align-items: start; gap: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #f59e0b; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
-                <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">Developed laboratory protocols improving synthesis reproducibility.</p>
-            </div>
-        </div>
-    </div>
-</section>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.5rem; margin-top: 0.75rem;">
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-flask" style="color: #f59e0b; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                <strong style="color: #0a2e6b;">Synthesis:</strong> wet chemical reduction of gold cores, surface functionalization, assembly with cucurbit[7]uril. Routine optimization of size, shape, and surface chemistry.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-microscope" style="color: #f59e0b; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                <strong style="color: #0a2e6b;">Characterization:</strong> TEM/SEM (morphology), UV-Vis (plasmon), DLS (size), zeta potential, TRF/QY/fluorescence spectroscopy, FT-IR.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-vials" style="color: #f59e0b; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                Contributed to projects on photocatalytic hydrogen production and microfluidic capsule formation.
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <i class="fas fa-snowflake" style="color: #f59e0b; font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #1e293b; line-height: 1.5; font-size: 0.9rem;">
+                                Cleanroom-trained at UNAM: supercritical drying and SEM imaging of biological samples.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            
-<!-- Publications -->
-<section class="content-section">
-    <div style="margin-bottom: 1rem;">
-        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-            <i class="fas fa-book-open" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
-            <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Selected Publications</h2>
-        </div>
-        <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
-    </div>
-    
-    <ol style="list-style: decimal; padding-left: 1.5rem; margin: 0;">
-        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
-            <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2025). High-Performance Nanolignocellulose Foams for Sustainable Technologies.
-            <a href="https://doi.org/10.1021/acssuschemeng.5c00761" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>ACS Sustainable Chem. Eng.</strong></a>, <strong>13</strong>, 9467-9480.
-        </li>
-        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
-            <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2024). Hierarchical Incorporation of rGO into Anisotropic CNF Foams. 
-            <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>ACS Appl. Mater. Interfaces</strong></a>, <strong>16</strong>, 45337.
-        </li>
-        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
-            <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2023). Magnetic hybrid foams from Fe3O4@TA and TOCN. 
-            <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>RSC Adv.</strong></a>, <strong>13</strong>, 13919.
-        </li>
-        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
-            Munier, P.*, <strong style="color: #8b5cf6;">Hadi, S. E.*</strong>, et al. (2022). Shear-induced orientation of cellulose nanocrystals. 
-            <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>Soft Matter</strong></a>, <strong>18</strong>, 1234–1245.
-        </li>
-        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
-            Di, A., Schiele, C., <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2023). Moisture-Resilient Aramid/Cellulose Foams. 
-            <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>Adv. Mater.</strong></a>, <strong>35</strong>, 2305195.
-        </li>
-        <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
-            Moreno, A., Liu, J., <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2021). Hydration barrier of lignin oleate nanoparticles. 
-            <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>Angew. Chem. Int. Ed.</strong></a>, <strong>60</strong>, 20897.
-        </li>
-        <li style="margin-bottom: 0; padding-left: 0.25rem;">
-            Özkan, M., <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2020). CB[7]-capped hybrid AuNPs for PDT/PTT therapy. 
-            <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" style="color: #1e40af; text-decoration: none;" target="_blank" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><strong>ACS Appl. Polym. Mater.</strong></a>, <strong>2</strong>, 3840.
-        </li>
-    </ol>
-</section>
+            <!-- EDUCATION -->
+            <section class="content-section">
+                <div style="margin-bottom: 0.85rem;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.4rem;">
+                        <i class="fas fa-user-graduate" style="color: #0a2e6b; font-size: 1.5rem; margin-right: 0.75rem;"></i>
+                        <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Education</h2>
+                    </div>
+                    <div style="width: 60px; height: 3px; background-color: #0a2e6b; border-radius: 2px;"></div>
+                </div>
 
+                <div style="position: relative; padding-left: 3rem;">
+                    <div style="position: absolute; left: 1.5rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #0a2e6b 0%, #64748b 100%);"></div>
 
+                    <!-- PhD -->
+                    <div style="position: relative; margin-bottom: 1.5rem;">
+                        <div style="position: absolute; left: -2.65rem; top: 0; width: 3rem; height: 3rem; background: linear-gradient(135deg, #0a2e6b 0%, #1e40af 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(10, 46, 107, 0.25); border: 2.5px solid white;">
+                            <span style="color: white; font-weight: 700; font-size: 0.9rem;">PhD</span>
+                        </div>
+                        <div style="background-color: white; padding: 0.8rem; border-radius: 0.3rem; border: 2px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
+                            <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                                <h3 style="font-size: 1rem; font-weight: 600; color: #0a2e6b; margin: 0;">PhD in Materials Chemistry</h3>
+                                <span style="background-color: #0a2e6b; color: white; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.7rem; font-weight: 500;">2019 – 2024</span>
+                            </div>
+                            <p style="color: #1e40af; font-weight: 500; margin: 0 0 0.4rem 0; font-size: 0.85rem;">
+                                <i class="fas fa-university" style="margin-right: 0.4rem; font-size: 0.8rem;"></i>Stockholm University, Stockholm, Sweden
+                            </p>
+                            <div style="background-color: #f8fafc; padding: 0.6rem; border-radius: 0.25rem; border-left: 3px solid #0a2e6b; margin-bottom: 0.35rem;">
+                                <p style="margin: 0; font-size: 0.8rem; color: #1e293b; line-height: 1.4;">
+                                    <strong style="color: #0a2e6b;">Focus:</strong> <em>Process-structure-property relationships in cellulosic materials</em>
+                                </p>
+                            </div>
+                            <p style="margin: 0; font-size: 0.8rem; color: #64748b;">
+                                <strong style="color: #0a2e6b;">Supervisors:</strong> Prof. Lennart Bergström, Prof. Aji Mathew &nbsp;·&nbsp; <strong style="color: #0a2e6b;">Wallenberg Wood Science Center Fellow</strong>
+                            </p>
+                        </div>
+                    </div>
 
-            
-<!-- Technical Skills -->
-<section class="content-section">
-    <div style="margin-bottom: 1rem;">
-        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-            <i class="fas fa-cogs" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
-            <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Technical Skills</h2>
-        </div>
-        <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
-    </div>
-    
-    <!-- Sample Preparation -->
-    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
-        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
-            <i class="fas fa-cut" style="margin-right: 0.5rem;"></i>Sample Preparation
-        </h3>
-        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Cryo-ultramicrotomy:</strong> Leica Artos 3D (ultra-thin sectioning for TEM/STEM)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Cross-section polishing:</strong> JEOL IB-19520CCP (ion beam preparation)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>FIB-SEM:</strong> FEI Nova 600 (focused ion beam, 3D tomography)</li>
-            <li style="margin-bottom: 0; break-inside: avoid;"><strong>Sample mounting:</strong> Embedding, freeze-drying, resin infiltration</li>
-        </ul>
-    </div>
-    
-    <!-- Electron Microscopy -->
-    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
-        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
-            <i class="fas fa-microscope" style="margin-right: 0.5rem;"></i>Electron Microscopy
-        </h3>
-        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>AC-TEM/STEM:</strong> FEI Themis Z (atomic resolution, EELS, EDX mapping)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Cryo-TEM/STEM:</strong> JEOL JEM-2100F (beam-sensitive materials)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Cryo-SEM:</strong> JEOL IT800 (low-temperature imaging)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>HR-SEM:</strong> Hitachi S-4800 (high-resolution morphology)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>ESEM/EDS/WDS:</strong> FEI Quanta 200 (compositional mapping)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Tabletop SEM:</strong> Hitachi TM-1000, TM-3000</li>
-            <li style="margin-bottom: 0; break-inside: avoid;"><strong>Optical microscopy:</strong> Olympus BX53M, Leica DMIL</li>
-        </ul>
-    </div>
-    
-    <!-- X-ray & Synchrotron -->
-    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
-        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
-            <i class="fas fa-atom" style="margin-right: 0.5rem;"></i>X-ray & Synchrotron Techniques
-        </h3>
-        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>SAXS/WAXS:</strong> MAX IV Laboratory (Sweden), ESRF (France) - nanostructure analysis, crystallinity, orientation</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>XPS:</strong> Thermo K-Alpha (surface chemistry, depth profiling)</li>
-            <li style="margin-bottom: 0; break-inside: avoid;"><strong>XRD:</strong> Panalytical (phase identification, crystallinity)</li>
-        </ul>
-    </div>
-    
-    <!-- Spectroscopy -->
-    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
-        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
-            <i class="fas fa-vial" style="margin-right: 0.5rem;"></i>Spectroscopy
-        </h3>
-        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>FT-IR:</strong> Bruker Alpha-II (functional group identification)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>UV-Vis:</strong> Varian Cary (optical properties)</li>
-            <li style="margin-bottom: 0; break-inside: avoid;"><strong>Raman:</strong> Molecular vibrations, phase identification</li>
-        </ul>
-    </div>
-    
-    <!-- Thermal & Mechanical -->
-    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
-        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
-            <i class="fas fa-thermometer-half" style="margin-right: 0.5rem;"></i>Thermal & Mechanical Analysis
-        </h3>
-        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>DLS:</strong> Malvern Zetasizer (particle size, zeta potential)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Rheometry:</strong> Anton Paar MCR 301, MCR 702e (viscoelastic properties)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>TGA:</strong> TA Discovery (thermal stability, decomposition)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>DSC:</strong> TA DSC250 (phase transitions, glass transition)</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Hot Disk:</strong> Thermal conductivity measurement</li>
-            <li style="margin-bottom: 0; break-inside: avoid;"><strong>Mechanical testing:</strong> Instron 6800 Series (tensile, compression)</li>
-        </ul>
-    </div>
-    
-    <!-- Programming & Data Analysis -->
-    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
-        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
-            <i class="fas fa-laptop-code" style="margin-right: 0.5rem;"></i>Programming & Data Analysis
-        </h3>
-        <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Python (2+ years):</strong> NumPy, Pandas, SciPy, Matplotlib, Plotly, scikit-image, scikit-learn, PySide6/Qt, lmfit</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Scientific software:</strong> OriginLab, LaTeX, MATLAB</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Microscopy software:</strong> Digital Micrograph, ImageJ/Fiji</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Chemistry tools:</strong> ChemDraw, HighScore Plus</li>
-            <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Development tools:</strong> Git/GitHub, VS Code, Linux/Unix</li>
-            <li style="margin-bottom: 0; break-inside: avoid;"><strong>Web development:</strong> HTML, CSS, JavaScript</li>
-        </ul>
-    </div>
-    
-    <!-- Materials Synthesis & Laboratory -->
-    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
-        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
-            <i class="fas fa-flask" style="margin-right: 0.5rem;"></i>Materials Synthesis & Laboratory Methods
-        </h3>
-        <ul style="margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
-            <li style="margin-bottom: 0.35rem;">
-                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
-                <strong>Laboratory synthesis:</strong> Nanoparticle synthesis, surface functionalization, composite fabrication
-            </li>
-            <li style="margin-bottom: 0.35rem;">
-                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
-                <strong>Colloidal processing:</strong> Dispersion stabilization, particle size control, rheology modification
-            </li>
-            <li style="margin-bottom: 0.35rem;">
-                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
-                <strong>Experimental design:</strong> Design of experiments (DOE), systematic parameter optimization
-            </li>
-            <li style="margin-bottom: 0.35rem;">
-                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
-                <strong>Structure-property analysis:</strong> Multi-scale characterization, property correlation
-            </li>
-            <li style="margin-bottom: 0.35rem;">
-                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
-                <strong>Protocol development:</strong> Laboratory procedures, training materials, technical documentation
-            </li>
-            <li style="margin-bottom: 0;">
-                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
-                <strong>Laboratory safety:</strong> Safety protocols, chemical handling, equipment maintenance
-            </li>
-        </ul>
-    </div>
-    
-    <!-- Professional Skills -->
-    <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
-        <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
-            <i class="fas fa-users" style="margin-right: 0.5rem;"></i>Professional Skills
-        </h3>
-        <ul style="margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
-            <li style="margin-bottom: 0.35rem;">
-                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
-                <strong>Research coordination:</strong> Timeline management, resource allocation, multi-project oversight
-            </li>
-            <li style="margin-bottom: 0.35rem;">
-                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
-                <strong>Technical communication:</strong> Scientific writing, presentations, data visualization, peer review (50+ manuscripts)
-            </li>
-            <li style="margin-bottom: 0.35rem;">
-                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
-                <strong>Training & mentoring:</strong> Student supervision (18+ students), instrumentation training
-            </li>
-            <li style="margin-bottom: 0;">
-                <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
-                <strong>Collaboration:</strong> Academic-industry partnerships, international research teams
-            </li>
-        </ul>
-    </div>
-</section>
+                    <!-- Master's -->
+                    <div style="position: relative; margin-bottom: 1.5rem;">
+                        <div style="position: absolute; left: -2.65rem; top: 0; width: 3rem; height: 3rem; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(30, 64, 175, 0.25); border: 2.5px solid white;">
+                            <span style="color: white; font-weight: 700; font-size: 0.85rem;">M.Sc</span>
+                        </div>
+                        <div style="background-color: white; padding: 0.8rem; border-radius: 0.3rem; border: 2px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
+                            <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                                <h3 style="font-size: 1rem; font-weight: 600; color: #0a2e6b; margin: 0;">M.Sc. in Materials Science and Nanotechnology</h3>
+                                <span style="background-color: #1e40af; color: white; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.7rem; font-weight: 500;">2017 – 2019</span>
+                            </div>
+                            <p style="color: #1e40af; font-weight: 500; margin: 0 0 0.4rem 0; font-size: 0.85rem;">
+                                <i class="fas fa-university" style="margin-right: 0.4rem; font-size: 0.8rem;"></i>Bilkent University / UNAM, Ankara, Turkey
+                            </p>
+                            <div style="background-color: #f8fafc; padding: 0.6rem; border-radius: 0.25rem; border-left: 3px solid #1e40af; margin-bottom: 0.35rem;">
+                                <p style="margin: 0; font-size: 0.8rem; color: #1e293b; line-height: 1.4;">
+                                    <strong style="color: #0a2e6b;">Focus:</strong> <em>Core/shell gold/oligomer nanoparticles for photodynamic and photothermal therapy</em>
+                                </p>
+                            </div>
+                            <p style="margin: 0; font-size: 0.8rem; color: #64748b;">
+                                <strong style="color: #0a2e6b;">Supervisor:</strong> Prof. Dönüş Tuncel &nbsp;·&nbsp; <strong style="color: #0a2e6b;">UNAM &amp; Bilkent Fellow · TUBITAK Fellow</strong>
+                            </p>
+                        </div>
+                    </div>
 
-            
-            
-            <!-- Additional Information -->
-<section class="content-section">
-    <div style="margin-bottom: 1rem;">
-        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-            <i class="fas fa-info-circle" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
-            <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Additional Information</h2>
-        </div>
-        <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
-    </div>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
-        <!-- Languages -->
-        <div style="background-color: #dbeafe; padding: 1rem; border-left: 3px solid #1e40af; border-radius: 0.375rem;">
-            <h3 style="font-weight: 600; color: #0a2e6b; margin: 0 0 0.6rem 0; font-size: 1rem; display: flex; align-items: center;">
-                <i class="fas fa-language" style="margin-right: 0.5rem; color: #1e40af;"></i>
-                Languages
-            </h3>
-            <p style="margin: 0; font-size: 0.9rem; line-height: 1.6;">
-                <strong>English</strong> (Professional proficiency)<br>
-                <strong>Persian</strong> (Native)<br>
-                <strong>Swedish</strong> (Basic)
-            </p>
-        </div>
-        
-        <!-- Grants and Awards -->
-        <div style="background-color: #dbeafe; padding: 1rem; border-left: 3px solid #1e40af; border-radius: 0.375rem;">
-            <h3 style="font-weight: 600; color: #0a2e6b; margin: 0 0 0.6rem 0; font-size: 1rem; display: flex; align-items: center;">
-                <i class="fas fa-award" style="margin-right: 0.5rem; color: #1e40af;"></i>
-                Grants and Awards
-            </h3>
-            <ul style="margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
-                <li style="margin-bottom: 0.35rem;">
-                    <i class="fas fa-star" style="color: #3b82f6; font-size: 0.7rem; margin-right: 0.35rem;"></i>
-                    Wallenberg Wood Science Center PhD Fellowship (2019-2023)
-                </li>
-                <li style="margin-bottom: 0.35rem;">
-                    <i class="fas fa-star" style="color: #3b82f6; font-size: 0.7rem; margin-right: 0.35rem;"></i>
-                    Stockholm University PhD Fellowship (2019-2024)
-                </li>
-                <li style="margin-bottom: 0.35rem;">
-                    <i class="fas fa-star" style="color: #3b82f6; font-size: 0.7rem; margin-right: 0.35rem;"></i>
-                    UNAM & Bilkent University Scholarship (2017-2019)
-                </li>
-                <li style="margin-bottom: 0;">
-                    <i class="fas fa-star" style="color: #3b82f6; font-size: 0.7rem; margin-right: 0.35rem;"></i>
-                    TÜBİTAK Fellowship (2018-2019)
-                </li>
-            </ul>
-        </div>
-        
-        <!-- References -->
-        <div style="background-color: #dbeafe; padding: 1rem; border-left: 3px solid #1e40af; border-radius: 0.375rem;">
-            <h3 style="font-weight: 600; color: #0a2e6b; margin: 0 0 0.6rem 0; font-size: 1rem; display: flex; align-items: center;">
-                <i class="fas fa-user" style="margin-right: 0.5rem; color: #1e40af;"></i>
-                References
-            </h3>
-            <div style="font-size: 0.85rem; line-height: 1.5;">
-                <p style="margin: 0 0 0.6rem 0;">
-                    <strong>Prof. Lennart Bergström</strong><br>
-                    Stockholm University<br>
-                    <a href="mailto:lennart.bergstrom@mmk.su.se" style="color: #1e40af; text-decoration: none;">lennart.bergstrom@mmk.su.se</a>
-                </p>
-                <p style="margin: 0;">
-                    <strong>Prof. Lars Berglund</strong><br>
-                    KTH Royal Institute of Technology<br>
-                    <a href="mailto:blund@kth.se" style="color: #1e40af; text-decoration: none;">blund@kth.se</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    
-<!-- Keyword Cloud -->
-<div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
-    <!-- Core Expertise -->
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Materials Science</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Nanocomposites</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Materials Characterization</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">R&D</span>
-    
-    <!-- Microscopy -->
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">TEM/STEM</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">SEM</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Cryo-TEM</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Electron Microscopy</span>
-    
-    <!-- X-ray & Synchrotron -->
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">SAXS/WAXS</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">XPS</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">XRD</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Synchrotron</span>
-    
-    <!-- Thermal & Mechanical -->
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">DSC</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">TGA</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Rheometry</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Mechanical Testing</span>
-    
-    <!-- Materials & Processes -->
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Nanomaterials</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Colloidal Processing</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Surface Chemistry</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Nanoparticles</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Nanocellulose</span>
-    
-    <!-- Programming & Analysis -->
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Python</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Data Analysis</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">NumPy</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Pandas</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">MATLAB</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">ImageJ</span>
-    
-    <!-- Research Skills -->
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Peer Review</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Scientific Writing</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Project Management</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Experimental Design</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">DOE</span>
-    
-    <!-- Industry-Relevant -->
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Quality Control</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Process Optimization</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Problem Solving</span>
-    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Cross-functional Collaboration</span>
-</div>
+                    <!-- Bachelor's -->
+                    <div style="position: relative;">
+                        <div style="position: absolute; left: -2.65rem; top: 0; width: 3rem; height: 3rem; background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(59, 130, 246, 0.25); border: 2.5px solid white;">
+                            <span style="color: white; font-weight: 700; font-size: 0.85rem;">B.Sc</span>
+                        </div>
+                        <div style="background-color: white; padding: 0.8rem; border-radius: 0.3rem; border: 2px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
+                            <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                                <h3 style="font-size: 1rem; font-weight: 600; color: #0a2e6b; margin: 0;">B.Sc. in Chemical Engineering</h3>
+                                <span style="background-color: #3b82f6; color: white; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.7rem; font-weight: 500;">2012 – 2017</span>
+                            </div>
+                            <p style="color: #1e40af; font-weight: 500; margin: 0 0 0.4rem 0; font-size: 0.85rem;">
+                                <i class="fas fa-university" style="margin-right: 0.4rem; font-size: 0.8rem;"></i>University of Tehran, Tehran, Iran
+                            </p>
+                            <div style="background-color: #dbeafe; padding: 0.5rem 0.7rem; border-radius: 0.25rem; display: inline-block;">
+                                <p style="margin: 0; font-size: 0.8rem; color: #0a2e6b; font-weight: 600;">
+                                    <i class="fas fa-award" style="margin-right: 0.4rem; color: #f59e0b; font-size: 0.75rem;"></i>Top 15% Graduate
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    </div>
-</section>
+            <!-- PUBLICATIONS -->
+            <section class="content-section">
+                <div style="margin-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                        <i class="fas fa-book-open" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
+                        <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Selected Publications</h2>
+                    </div>
+                    <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">14 papers · h-index 11 · 310+ citations</p>
+                </div>
+
+                <ol style="list-style: decimal; padding-left: 1.5rem; margin: 0;">
+                    <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+                        <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2025). High-Performance Nanolignocellulose Foams for Sustainable Technologies.
+                        <a href="https://doi.org/10.1021/acssuschemeng.5c00761" style="color: #1e40af; text-decoration: none;" target="_blank"><strong>ACS Sustainable Chem. Eng.</strong></a>
+                    </li>
+                    <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+                        <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2024). Hierarchical Incorporation of rGO into Anisotropic CNF Foams.
+                        <a href="https://pubs.acs.org/doi/10.1021/acsami.4c09654" style="color: #1e40af; text-decoration: none;" target="_blank"><strong>ACS Appl. Mater. Interfaces</strong></a>
+                    </li>
+                    <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+                        <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2023). Magnetic hybrid foams from Fe3O4@TA and TOCN.
+                        <a href="https://pubs.rsc.org/en/content/articlehtml/2023/ra/d3ra01896b" style="color: #1e40af; text-decoration: none;" target="_blank"><strong>RSC Adv.</strong></a>
+                    </li>
+                    <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+                        Munier, P.*, <strong style="color: #8b5cf6;">Hadi, S. E.*</strong>, et al. (2022). Shear-induced orientation of cellulose nanocrystals.
+                        <a href="https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm00837d" style="color: #1e40af; text-decoration: none;" target="_blank"><strong>Soft Matter</strong></a>
+                    </li>
+                    <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+                        Di, A., Schiele, C., <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2023). Moisture-Resilient Aramid/Cellulose Foams.
+                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202305195" style="color: #1e40af; text-decoration: none;" target="_blank"><strong>Adv. Mater.</strong></a>
+                    </li>
+                    <li style="margin-bottom: 0.75rem; padding-left: 0.25rem;">
+                        Moreno, A., Liu, J., <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2021). Hydration barrier of lignin oleate nanoparticles.
+                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202106743" style="color: #1e40af; text-decoration: none;" target="_blank"><strong>Angew. Chem. Int. Ed.</strong></a>
+                    </li>
+                    <li style="margin-bottom: 0; padding-left: 0.25rem;">
+                        Özkan, M., <strong style="color: #8b5cf6;">Hadi, S. E.</strong>, et al. (2020). CB[7]-capped hybrid AuNPs for PDT/PTT therapy.
+                        <a href="https://pubs.acs.org/doi/full/10.1021/acsapm.0c00540" style="color: #1e40af; text-decoration: none;" target="_blank"><strong>ACS Appl. Polym. Mater.</strong></a>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- TECHNICAL SKILLS -->
+            <section class="content-section">
+                <div style="margin-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                        <i class="fas fa-cogs" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
+                        <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Technical Skills</h2>
+                    </div>
+                    <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
+                </div>
+
+                <!-- Electron Microscopy -->
+                <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+                    <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+                        <i class="fas fa-microscope" style="margin-right: 0.5rem;"></i>Electron Microscopy
+                    </h3>
+                    <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>AC-TEM/STEM:</strong> FEI Themis Z (atomic resolution, EELS, EDX mapping)</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Cryo-TEM:</strong> JEOL JEM-2100F (beam-sensitive materials)</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Cryo-SEM:</strong> JEOL IT800 (low-temperature imaging)</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>HR-SEM:</strong> Hitachi S-4800 (high-resolution morphology)</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>ESEM/EDS/WDS:</strong> FEI Quanta 200 (compositional mapping)</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>FIB-SEM:</strong> FEI Nova 600 (3D tomography, basic)</li>
+                        <li style="margin-bottom: 0; break-inside: avoid;"><strong>Tabletop SEM:</strong> Hitachi TM-1000, TM-3000</li>
+                    </ul>
+                </div>
+
+                <!-- X-ray & Synchrotron -->
+                <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+                    <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+                        <i class="fas fa-atom" style="margin-right: 0.5rem;"></i>X-ray & Synchrotron
+                    </h3>
+                    <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Synchrotron SAXS/WAXS:</strong> ForMAX (MAX IV), DESY, ESRF. Nanostructure analysis, crystallinity, orientation</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>XPS:</strong> Thermo K-Alpha (surface chemistry, depth profiling)</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>XRD:</strong> Panalytical (phase identification, crystallinity)</li>
+                        <li style="margin-bottom: 0; break-inside: avoid;"><strong>XRF:</strong> Elemental composition analysis</li>
+                    </ul>
+                </div>
+
+                <!-- Spectroscopy -->
+                <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+                    <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+                        <i class="fas fa-vial" style="margin-right: 0.5rem;"></i>Spectroscopy & Light Microscopy
+                    </h3>
+                    <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>FT-IR:</strong> Bruker Alpha-II</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>UV-Vis:</strong> Varian Cary</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Raman:</strong> Molecular vibrations, phase ID</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Fluorescence spectroscopy:</strong> TRF, QY</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Polarized light microscopy:</strong> Olympus BX53M</li>
+                        <li style="margin-bottom: 0; break-inside: avoid;"><strong>Confocal & fluorescence microscopy</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Thermal & Mechanical -->
+                <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+                    <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+                        <i class="fas fa-thermometer-half" style="margin-right: 0.5rem;"></i>Thermal, Mechanical & Surface
+                    </h3>
+                    <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>TGA:</strong> TA Discovery</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>DSC:</strong> TA DSC250</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Rheometry:</strong> Anton Paar MCR 301, MCR 702e</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Hot Disk:</strong> Thermal conductivity</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Mechanical:</strong> Instron 6800 (tensile/compression)</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>BET:</strong> Surface area, N2 adsorption</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>DLS / Zeta potential:</strong> Malvern Zetasizer</li>
+                        <li style="margin-bottom: 0; break-inside: avoid;"><strong>AFM:</strong> Basic operation</li>
+                    </ul>
+                </div>
+
+                <!-- Sample Preparation -->
+                <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+                    <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+                        <i class="fas fa-cut" style="margin-right: 0.5rem;"></i>Sample Preparation
+                    </h3>
+                    <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Ultramicrotomy / Cryo-ultramicrotomy:</strong> Leica Artos 3D</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>BIB / Cross-section polishing:</strong> JEOL IB-19520CCP</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>SCD / CPD:</strong> Supercritical drying</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Sputter coating:</strong> Au/Pt/C</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Plasma cleaning:</strong> TEM grid preparation</li>
+                        <li style="margin-bottom: 0; break-inside: avoid;"><strong>Embedding, freeze-drying, resin infiltration</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Nanoparticle Synthesis -->
+                <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+                    <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+                        <i class="fas fa-flask" style="margin-right: 0.5rem;"></i>Nanoparticle Synthesis & Materials Processing
+                    </h3>
+                    <ul style="margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+                        <li style="margin-bottom: 0.35rem;">
+                            <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                            <strong>Nanoparticle synthesis:</strong> Wet chemical reduction of gold cores, surface functionalization, assembly with cucurbit[7]uril, core/shell architectures
+                        </li>
+                        <li style="margin-bottom: 0.35rem;">
+                            <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                            <strong>Colloidal processing:</strong> Dispersion stabilization, particle size control, rheology modification
+                        </li>
+                        <li style="margin-bottom: 0.35rem;">
+                            <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                            <strong>Structure-property analysis:</strong> Multi-scale characterization, property correlation
+                        </li>
+                        <li style="margin-bottom: 0;">
+                            <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                            <strong>Protocol development:</strong> SOPs, training materials, technical documentation
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Programming -->
+                <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+                    <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+                        <i class="fas fa-laptop-code" style="margin-right: 0.5rem;"></i>Programming & Data Analysis
+                    </h3>
+                    <ul style="columns: 2; column-gap: 1.5rem; margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Python:</strong> NumPy, Pandas, SciPy, Matplotlib, PySide6/Qt, lmfit. GUI tools for XRD, mechanical, and synchrotron data (lab-adopted)</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Browser automation:</strong> Chrome extensions for general personal workflows (not lab-specific)</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Scientific software:</strong> OriginLab, MATLAB (basic), LaTeX</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Microscopy software:</strong> Digital Micrograph, ImageJ/Fiji</li>
+                        <li style="margin-bottom: 0.35rem; break-inside: avoid;"><strong>Lab systems:</strong> LIMS, KLARA</li>
+                        <li style="margin-bottom: 0; break-inside: avoid;"><strong>Development tools:</strong> Git/GitHub, VS Code, Linux/Unix</li>
+                    </ul>
+                </div>
+
+                <!-- AI Tools & Agent Workflows -->
+                <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+                    <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+                        <i class="fas fa-robot" style="margin-right: 0.5rem;"></i>AI Tools & Agent Workflows <span style="font-size: 0.75rem; font-weight: 500; color: #64748b; margin-left: 0.5rem;">(advanced user + builder)</span>
+                    </h3>
+                    <ul style="margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+                        <li style="margin-bottom: 0.35rem;">
+                            <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                            <strong>Build:</strong> Python tools, Chrome extensions, and characterization pipelines. Custom skills, multi-step agent workflows.
+                        </li>
+                        <li style="margin-bottom: 0;">
+                            <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                            <strong>Integrate:</strong> API calls, structured outputs, tool-calling, and prompt engineering for reproducible scientific workflows.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Teaching & Mentoring -->
+                <div style="background-color: #dbeafe; padding: 0.9rem; border-left: 4px solid #0a2e6b; border-radius: 0.3rem; margin-bottom: 0.9rem;">
+                    <h3 style="font-weight: 600; color: #0a2e6b; margin-bottom: 0.5rem; display: flex; align-items: center; font-size: 1rem;">
+                        <i class="fas fa-chalkboard-teacher" style="margin-right: 0.5rem;"></i>Teaching & Mentoring (8+ years)
+                    </h3>
+                    <ul style="margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+                        <li style="margin-bottom: 0.35rem;">
+                            <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                            <strong>Teaching Assistant (3 years):</strong> General Chemistry I and II at University of Tehran. Discussion sessions, lectures, exam preparation. Awarded Best Teaching Assistant, Faculty of Engineering.
+                        </li>
+                        <li style="margin-bottom: 0.35rem;">
+                            <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                            <strong>Private tutoring (5 years):</strong> Chemistry and science coaching at Dr. Moein High School alongside undergraduate studies.
+                        </li>
+                        <li style="margin-bottom: 0.35rem;">
+                            <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                            <strong>High school outreach (Stockholm University):</strong> Supervised 19 high school students across two SU summer research courses (11 + 8) in experimental design, characterization, and data interpretation.
+                        </li>
+                        <li style="margin-bottom: 0.35rem;">
+                            <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                            <strong>Master's supervision (KTH):</strong> 2 master's students in experimental design, advanced instrumentation training (cryo-ultramicrotomy, SEM), and manuscript preparation.
+                        </li>
+                        <li style="margin-bottom: 0;">
+                            <i class="fas fa-check" style="color: #3b82f6; font-size: 0.75rem; margin-right: 0.35rem;"></i>
+                            <strong>Instrument training:</strong> Trained many PhD researchers and postdocs on SEM, UV-Vis, rheometer, freeze dryer, and sample preparation (PhD era). Cryo-ultramicrotomy training added during postdoc at KTH. Wrote SOPs and verified competency before independent use.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- PEER REVIEW PANEL -->
+            <section style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 1.25rem; border-left: 4px solid #1e40af; border-radius: 0.375rem; margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <h2 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.4rem; color: #0a2e6b; display: flex; align-items: center;">
+                            <i class="fas fa-certificate" style="margin-right: 0.5rem; color: #1e40af; font-size: 1.1rem;"></i>
+                            Certified Peer Reviewer
+                        </h2>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem;">
+                            <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">ACS</span>
+                            <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Wiley</span>
+                            <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Elsevier</span>
+                            <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Springer</span>
+                            <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">RSC</span>
+                            <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">Clarivate</span>
+                            <span style="background-color: white; color: #0a2e6b; padding: 0.3rem 0.7rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; border: 2px solid #1e40af; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">IOP</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem; flex-shrink: 0;">
+                        <div style="background-color: white; padding: 0.85rem 1rem; border-radius: 0.375rem; border: 2px solid #e2e8f0; text-align: center; min-width: 100px;">
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+                                <i class="fas fa-file-alt" style="font-size: 1.2rem; color: #1e40af;"></i>
+                                <strong style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; line-height: 1;">50+</strong>
+                            </div>
+                            <span style="font-size: 0.75rem; color: #64748b;">Manuscripts</span>
+                        </div>
+                        <div style="background-color: white; padding: 0.85rem 1rem; border-radius: 0.375rem; border: 2px solid #e2e8f0; text-align: center; min-width: 100px;">
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+                                <i class="fas fa-book" style="font-size: 1.2rem; color: #1e40af;"></i>
+                                <strong style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; line-height: 1;">14+</strong>
+                            </div>
+                            <span style="font-size: 0.75rem; color: #64748b;">Journals</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ADDITIONAL INFORMATION -->
+            <section class="content-section">
+                <div style="margin-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                        <i class="fas fa-info-circle" style="color: #1e40af; font-size: 1.5rem; margin-right: 0.75rem;"></i>
+                        <h2 style="font-size: 1.5rem; font-weight: 700; color: #0a2e6b; margin: 0;">Additional Information</h2>
+                    </div>
+                    <div style="width: 60px; height: 3px; background-color: #1e40af; border-radius: 2px;"></div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+                    <!-- Languages -->
+                    <div style="background-color: #dbeafe; padding: 1rem; border-left: 3px solid #1e40af; border-radius: 0.375rem;">
+                        <h3 style="font-weight: 600; color: #0a2e6b; margin: 0 0 0.6rem 0; font-size: 1rem; display: flex; align-items: center;">
+                            <i class="fas fa-language" style="margin-right: 0.5rem; color: #1e40af;"></i>
+                            Languages
+                        </h3>
+                        <p style="margin: 0; font-size: 0.9rem; line-height: 1.6;">
+                            <strong>English</strong> (Professional)<br>
+                            <strong>Persian</strong> (Native)<br>
+                            <strong>Swedish</strong> (Basic)
+                        </p>
+                    </div>
+
+                    <!-- Grants and Awards -->
+                    <div style="background-color: #dbeafe; padding: 1rem; border-left: 3px solid #1e40af; border-radius: 0.375rem;">
+                        <h3 style="font-weight: 600; color: #0a2e6b; margin: 0 0 0.6rem 0; font-size: 1rem; display: flex; align-items: center;">
+                            <i class="fas fa-award" style="margin-right: 0.5rem; color: #1e40af;"></i>
+                            Grants and Awards
+                        </h3>
+                        <ul style="margin: 0; padding-left: 1rem; font-size: 0.85rem; line-height: 1.5;">
+                            <li style="margin-bottom: 0.35rem;">Wallenberg Wood Science Center Fellowship (2019–2023)</li>
+                            <li style="margin-bottom: 0.35rem;">Stockholm University PhD Fellowship (2019–2024)</li>
+                            <li style="margin-bottom: 0.35rem;">UNAM & Bilkent University Scholarship (2017–2019)</li>
+                            <li style="margin-bottom: 0.35rem;">TÜBİTAK Fellowship (2018–2019)</li>
+                            <li style="margin-bottom: 0;">Best Teaching Assistant, Faculty of Engineering (University of Tehran)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Profile Indicators -->
+                    <div style="background-color: #dbeafe; padding: 1rem; border-left: 3px solid #1e40af; border-radius: 0.375rem;">
+                        <h3 style="font-weight: 600; color: #0a2e6b; margin: 0 0 0.6rem 0; font-size: 1rem; display: flex; align-items: center;">
+                            <i class="fas fa-chart-bar" style="margin-right: 0.5rem; color: #1e40af;"></i>
+                            Profile Indicators
+                        </h3>
+                        <p style="margin: 0 0 0.5rem 0; font-size: 0.85rem; line-height: 1.5;">
+                            <strong>Alva Labs:</strong> Logic 98th%, Diligence 98th%, Resilience & Innovation 93rd%
+                        </p>
+                        <p style="margin: 0; font-size: 0.85rem; line-height: 1.5;">
+                            <strong>SDI 2.0:</strong> Red Core Motive (Assertive-Directing, Results-Oriented)
+                        </p>
+                    </div>
+
+                    <!-- References -->
+                    <div style="background-color: #dbeafe; padding: 1rem; border-left: 3px solid #1e40af; border-radius: 0.375rem;">
+                        <h3 style="font-weight: 600; color: #0a2e6b; margin: 0 0 0.6rem 0; font-size: 1rem; display: flex; align-items: center;">
+                            <i class="fas fa-user" style="margin-right: 0.5rem; color: #1e40af;"></i>
+                            References
+                        </h3>
+                        <p style="margin: 0; font-size: 0.85rem; line-height: 1.5;">
+                            References from industry and academia available upon request.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Keyword Cloud -->
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Materials Science</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Characterization Science</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Structure-Property</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">R&D</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">TEM/STEM</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">SEM</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Cryo-SEM</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">FIB-SEM</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">SAXS/WAXS</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">XPS</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">XRD</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Synchrotron</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">DSC / TGA</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Rheometry</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Mechanical Testing</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">BET</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Nanoparticle Synthesis</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Gold Nanoparticles</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Core/Shell</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Nanocellulose</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Nanocomposites</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Python</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Data Analysis</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Method Development</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">SOP Writing</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Lab Management</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Peer Review</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Scientific Writing</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Experimental Design</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">LLMs</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">AI Agents</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Prompt Engineering</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Lab Automation</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Teaching</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Mentoring</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Student Supervision</span>
+                    <span style="background-color: #e2e8f0; padding: 0.3rem 0.7rem; border-radius: 15px; font-size: 0.8rem; color: #64748b;">Instrument Training</span>
+                </div>
+            </section>
 
         </main>
     </div>
@@ -1184,12 +1101,10 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1198,7 +1113,7 @@
                 }
             });
         }, { threshold: 0.1 });
-        
+
         document.querySelectorAll('.content-section').forEach(section => {
             observer.observe(section);
         });
